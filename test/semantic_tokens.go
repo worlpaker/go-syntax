@@ -507,6 +507,7 @@ type cancelCtx struct {
 
 // function body
 func main() {
+	type foo34 context.Context // v0.1.1
 	var foox map[FooX]string
 	var fooy map[FooX]interface{}
 	bar := 15

@@ -1559,7 +1559,7 @@
 			"patterns": [
 				{
 					"comment": "Other type names declaration",
-					"match": "(?:^(\\btype\\b)(?:\\s*)([[:alnum:]\\<\\>\\.\\*\\-\\_]+)(?:\\s)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
+					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([[:alnum:]\\<\\>\\.\\*\\-\\_]+)(?:\\s)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
 					"captures": {
 						"1": {
 							"name": "keyword.type.go"
