@@ -2,15 +2,17 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.1]
+
+- Fixes unnecessary highlighting (struct expressions, other type names)
+
 ## [0.2.0]
 
 - Stable Version
 
 ## [0.1.1]
 
-### Bug Fixes
-
-- Type name in function
+- Fixes other type names declaration in function
 
 ## [0.1.0]
 

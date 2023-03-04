@@ -2479,7 +2479,7 @@
 #            ^ source.go
 #             ^^^^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.other.period.go
-#                     ^^^^^^^^ source.go entity.name.type.go
+#                     ^^^^^^^ source.go entity.name.type.go
 >
 >type ZooX <-chan context.Context
 #^^^^ source.go keyword.type.go
@@ -2488,9 +2488,10 @@
 #         ^ source.go
 #          ^^ source.go keyword.operator.channel.go
 #            ^^^^ source.go keyword.channel.go
-#                ^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
+#                 ^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.other.period.go
-#                         ^^^^^^^^ source.go entity.name.type.go
+#                         ^^^^^^^ source.go entity.name.type.go
 >
 >type Middlewares []func(http.Handler) http.Handler
 #^^^^ source.go keyword.type.go
@@ -2505,9 +2506,10 @@
 #                            ^ source.go punctuation.other.period.go
 #                             ^^^^^^^ source.go entity.name.type.go
 #                                    ^ source.go punctuation.definition.end.bracket.round.go
-#                                     ^^^^^ source.go entity.name.type.go
+#                                     ^ source.go
+#                                      ^^^^ source.go entity.name.type.go
 #                                          ^ source.go punctuation.other.period.go
-#                                           ^^^^^^^^ source.go entity.name.type.go
+#                                           ^^^^^^^ source.go entity.name.type.go
 >
 >type Middleware []func(http.Handler) <-chan http.Handler
 #^^^^ source.go keyword.type.go
@@ -2522,12 +2524,13 @@
 #                           ^ source.go punctuation.other.period.go
 #                            ^^^^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.definition.end.bracket.round.go
-#                                    ^ source.go entity.name.type.go
-#                                     ^^ source.go entity.name.type.go keyword.operator.channel.go
-#                                       ^^^^ source.go entity.name.type.go keyword.channel.go
-#                                           ^^^^^ source.go entity.name.type.go
+#                                    ^ source.go
+#                                     ^^ source.go keyword.operator.channel.go
+#                                       ^^^^ source.go keyword.channel.go
+#                                           ^ source.go
+#                                            ^^^^ source.go entity.name.type.go
 #                                                ^ source.go punctuation.other.period.go
-#                                                 ^^^^^^^^ source.go entity.name.type.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
 >
 >type Foo4 *sync.Mutex
 #^^^^ source.go keyword.type.go
@@ -2537,7 +2540,7 @@
 #          ^ source.go keyword.operator.address.go
 #           ^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.other.period.go
-#                ^^^^^^ source.go entity.name.type.go
+#                ^^^^^ source.go entity.name.type.go
 >
 >type Foo6 interface{ FooX }
 #^^^^ source.go keyword.type.go
@@ -3128,7 +3131,7 @@
 #           ^ source.go keyword.operator.address.go
 #            ^^^^^^^ source.go entity.name.type.go
 #                   ^ source.go punctuation.other.period.go
-#                    ^^^^^^^^ source.go entity.name.type.go
+#                    ^^^^^^^ source.go entity.name.type.go
 >
 >type Foo20 struct {
 #^^^^ source.go keyword.type.go
@@ -3185,7 +3188,7 @@
 #          ^ source.go
 #           ^^^^^^^ source.go entity.name.type.go
 #                  ^ source.go punctuation.other.period.go
-#                   ^^^^^^^^ source.go entity.name.type.go
+#                   ^^^^^^^ source.go entity.name.type.go
 >
 >type Foo23 map[string]interface{}
 #^^^^ source.go keyword.type.go
@@ -3938,21 +3941,6 @@
 #          ^ source.go punctuation.definition.end.bracket.round.go
 #           ^ source.go
 #            ^ source.go punctuation.definition.begin.bracket.curly.go
->	type foo34 context.Context // v0.1.1
-#^ source.go
-# ^^^^ source.go keyword.type.go
-#     ^ source.go
-#      ^^^^^ source.go entity.name.type.go
-#           ^ source.go
-#            ^^^^^^^ source.go entity.name.type.go
-#                   ^ source.go punctuation.other.period.go
-#                    ^^^^^^^^ source.go entity.name.type.go
-#                            ^^ source.go entity.name.type.go comment.line.double-slash.go punctuation.definition.comment.go
-#                              ^^^ source.go entity.name.type.go comment.line.double-slash.go
-#                                 ^ source.go punctuation.other.period.go
-#                                  ^ source.go constant.numeric.decimal.go
-#                                   ^ source.go constant.numeric.decimal.point.go
-#                                    ^ source.go constant.numeric.decimal.go
 >	var foox map[FooX]string
 #^ source.go
 # ^^^ source.go keyword.var.go
@@ -4531,6 +4519,94 @@
 #   ^ source.go punctuation.definition.begin.bracket.round.go
 #    ^ source.go variable.other.go
 #     ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	type foo34 context.Context //v0.1.1
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.other.period.go
+#                    ^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go
+#                            ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                              ^^^^^^ source.go comment.line.double-slash.go
+>
+>	//v0.2.1
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^ source.go comment.line.double-slash.go
+>	if foo == "foo" {
+#^ source.go
+# ^^ source.go keyword.control.go
+#   ^ source.go
+#    ^^^ source.go variable.other.go
+#       ^ source.go
+#        ^^ source.go keyword.operator.comparison.go
+#          ^ source.go
+#           ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#            ^^^ source.go string.quoted.double.go
+#               ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		fmt.Println("foo")
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^ source.go string.quoted.double.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                   ^ source.go punctuation.definition.end.bracket.round.go
+>	} else if foo == "bar" {
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go
+#   ^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^ source.go keyword.control.go
+#          ^ source.go
+#           ^^^ source.go variable.other.go
+#              ^ source.go
+#               ^^ source.go keyword.operator.comparison.go
+#                 ^ source.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                   ^^^ source.go string.quoted.double.go
+#                      ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>		fmt.Println("bar")
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^ source.go string.quoted.double.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                   ^ source.go punctuation.definition.end.bracket.round.go
+>	} else {
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go
+#   ^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.curly.go
+>		fmt.Println("foobar")
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^^^^ source.go string.quoted.double.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                      ^ source.go punctuation.definition.end.bracket.round.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
 >
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go

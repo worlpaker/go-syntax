@@ -507,7 +507,6 @@ type cancelCtx struct {
 
 // function body
 func main() {
-	type foo34 context.Context // v0.1.1
 	var foox map[FooX]string
 	var fooy map[FooX]interface{}
 	bar := 15
@@ -573,5 +572,16 @@ func main() {
 	}
 	var m http.Handler
 	mw(m)
+
+	type foo34 context.Context //v0.1.1
+
+	//v0.2.1
+	if foo == "foo" {
+		fmt.Println("foo")
+	} else if foo == "bar" {
+		fmt.Println("bar")
+	} else {
+		fmt.Println("foobar")
+	}
 
 }

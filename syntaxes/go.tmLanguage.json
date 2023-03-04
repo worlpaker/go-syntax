@@ -1353,7 +1353,7 @@
 				},
 				{
 					"comment": "struct expression before curly bracket",
-					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b)",
+					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b)",
 					"captures": {
 						"1": {
 							"name": "entity.name.type.go"
@@ -1584,17 +1584,8 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:[^\\.\\*\\,]+)",
-									"captures": {
-										"0": {
-											"patterns": [
-												{
-													"include": "#type-declarations"
-												}
-											],
-											"name": "entity.name.type.go"
-										}
-									}
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
 								},
 								{
 									"include": "$self"
