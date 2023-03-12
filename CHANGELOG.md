@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.3]
+
+- Stable Version
+
 ## [0.2.2]
 
 - Fixes unnecessary highlighting (control keywords)
