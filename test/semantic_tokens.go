@@ -584,4 +584,13 @@ func main() {
 		fmt.Println("foobar")
 	}
 
+	//v0.2.2
+	foo022 := func() {
+		for {
+			switch {
+			}
+			select {}
+		}
+	}
+	foo022()
 }

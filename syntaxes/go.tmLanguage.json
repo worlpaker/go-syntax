@@ -1353,7 +1353,7 @@
 				},
 				{
 					"comment": "struct expression before curly bracket",
-					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b)",
+					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
 						"1": {
 							"name": "entity.name.type.go"

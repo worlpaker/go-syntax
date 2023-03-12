@@ -4608,6 +4608,51 @@
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
 >
+>	//v0.2.2
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^ source.go comment.line.double-slash.go
+>	foo022 := func() {
+#^ source.go
+# ^^^^^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^ source.go keyword.operator.assignment.go
+#          ^ source.go
+#           ^^^^ source.go keyword.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go punctuation.definition.end.bracket.round.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		for {
+#^^ source.go
+#  ^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.curly.go
+>			switch {
+#^^^ source.go
+#   ^^^^^^ source.go keyword.control.go
+#         ^ source.go variable.other.go
+#          ^ source.go punctuation.definition.begin.bracket.curly.go
+>			}
+#^^^ source.go
+#   ^ source.go punctuation.definition.end.bracket.curly.go
+>			select {}
+#^^^ source.go
+#   ^^^^^^ source.go keyword.control.go
+#         ^ source.go
+#          ^ source.go punctuation.definition.begin.bracket.curly.go
+#           ^ source.go punctuation.definition.end.bracket.curly.go
+>		}
+#^^ source.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	foo022()
+#^ source.go
+# ^^^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
