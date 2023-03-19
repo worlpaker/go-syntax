@@ -30,6 +30,8 @@ With this extension, your favorite theme can color your code better.
 
 ![ayudark_after](examples/ayudark_after.png)
 
+**⚠️ Note**: [Gopls semanticTokens setting](https://github.com/golang/vscode-go/wiki/settings#uisemantictokens) is disabled by default and shouldn't be enabled if you want to use this extension.
+
 ## Contributing
 
 Yes, please! Feel free to contribute.
