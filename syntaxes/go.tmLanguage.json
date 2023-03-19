@@ -43,6 +43,9 @@
 					"include": "#other_type_name_declaration"
 				},
 				{
+					"include": "#struct_interface_declaration"
+				},
+				{
 					"include": "#type-declarations"
 				},
 				{
@@ -50,9 +53,6 @@
 				},
 				{
 					"include": "#syntax_errors"
-				},
-				{
-					"include": "#struct_interface_declaration"
 				},
 				{
 					"include": "#switch_types"
@@ -304,6 +304,10 @@
 				{
 					"match": "\\bimport\\b",
 					"name": "keyword.control.import.go"
+				},
+				{
+					"match": "\\btype\\b",
+					"name": "keyword.type.go"
 				}
 			]
 		},
@@ -1353,7 +1357,7 @@
 				},
 				{
 					"comment": "struct expression before curly bracket",
-					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
+					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(\\[[^\\]]+\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
 						"1": {
 							"name": "entity.name.type.go"
@@ -1363,6 +1367,36 @@
 						},
 						"3": {
 							"name": "entity.name.type.go"
+						},
+						"4": {
+							"patterns": [
+								{
+									"begin": "\\[",
+									"beginCaptures": {
+										"0": {
+											"name": "punctuation.definition.begin.bracket.square.go"
+										}
+									},
+									"end": "\\]",
+									"endCaptures": {
+										"0": {
+											"name": "punctuation.definition.end.bracket.square.go"
+										}
+									},
+									"patterns": [
+										{
+											"include": "#type-declarations"
+										},
+										{
+											"match": "\\w+",
+											"name": "entity.name.type.go"
+										},
+										{
+											"include": "$self"
+										}
+									]
+								}
+							]
 						}
 					}
 				},
@@ -1447,6 +1481,28 @@
 										},
 										{
 											"include": "#type-declarations"
+										},
+										{
+											"match": "(\\w+)(\\[)([^\\]]+)(\\])",
+											"captures": {
+												"1": {
+													"name": "entity.name.type.go"
+												},
+												"2": {
+													"name": "punctuation.definition.begin.bracket.square.go"
+												},
+												"3": {
+													"patterns": [
+														{
+															"include": "#type-declarations"
+														}
+													],
+													"name": "entity.name.type.go"
+												},
+												"4": {
+													"name": "punctuation.definition.end.bracket.square.go"
+												}
+											}
 										},
 										{
 											"match": "(?:[^\\.\\*]+)",
@@ -1659,28 +1715,47 @@
 			"name": "entity.name.function.support.builtin.go"
 		},
 		"struct_interface_declaration": {
-			"patterns": [
-				{
-					"comment": "struct, interface type declarations",
-					"begin": "\\b(type)\\s+",
-					"beginCaptures": {
-						"1": {
-							"name": "keyword.type.go"
-						}
-					},
-					"end": "(?!\\G)",
+			"comment": "struct, interface type declarations",
+			"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s+)([\\w\\.]+)(\\[[^\\]]+\\])?)",
+			"captures": {
+				"1": {
+					"name": "keyword.type.go"
+				},
+				"2": {
 					"patterns": [
-						{
-							"match": "\\d\\w*",
-							"name": "invalid.illegal.identifier.go"
-						},
 						{
 							"match": "\\w+",
 							"name": "entity.name.type.go"
 						}
 					]
+				},
+				"3": {
+					"patterns": [
+						{
+							"begin": "\\[",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.begin.bracket.square.go"
+								}
+							},
+							"end": "\\]",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.square.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#generic_param_types"
+								},
+								{
+									"include": "$self"
+								}
+							]
+						}
+					]
 				}
-			]
+			}
 		},
 		"switch_types": {
 			"begin": "(?<=\\bswitch\\b\\s)(?:(\\w+\\s\\:\\=)\\s+([\\w\\.\\*\\(\\)\\[\\]]+))(\\.\\(\\btype\\b\\)\\s+)(\\{)",

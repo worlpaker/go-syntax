@@ -593,4 +593,43 @@ func main() {
 		}
 	}
 	foo022()
+
+	//v0.2.4
+	type Spec interface {
+		[]string | string
+	}
+
+	type TestModel[TGen Spec] struct {
+		a int
+		b TGen
+	}
+
+	type TestModel2[foo Spec, bar FooX] struct {
+		a int
+		b foo
+		c *bar
+	}
+
+	type Foo30 []func(http.Handler) <-chan http.Handler
+
+	type Pointer[foo any] struct {
+		_ [0]*foo
+	}
+
+	type Pointers struct {
+		foo int
+	}
+
+	var _ = &Pointer[Pointers]{}
+
+	type response context.Context
+
+	type Pointerx struct {
+		foo    int
+		bar    *Pointer[*response]
+		foobar Pointer[response]
+		foo1   Pointer[int]
+		bar1   map[response]interface{}
+	}
+
 }

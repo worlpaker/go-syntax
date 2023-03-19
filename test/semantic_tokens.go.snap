@@ -4653,6 +4653,252 @@
 # ^^^^^^ source.go entity.name.function.support.go
 #       ^ source.go punctuation.definition.begin.bracket.round.go
 #        ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	//v0.2.4
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^ source.go comment.line.double-slash.go
+>	type Spec interface {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^^^ source.go keyword.interface.go
+#                    ^ source.go
+#                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>		[]string | string
+#^^ source.go
+#  ^ source.go punctuation.definition.begin.bracket.square.go
+#   ^ source.go punctuation.definition.end.bracket.square.go
+#    ^^^^^^ source.go storage.type.string.go
+#          ^ source.go
+#           ^ source.go keyword.operator.arithmetic.bitwise.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type TestModel[TGen Spec] struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^^^^ source.go variable.other.go
+#                    ^ source.go
+#                     ^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go
+#                           ^^^^^^ source.go keyword.struct.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a int
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go
+#    ^^^ source.go storage.type.numeric.go
+>		b TGen
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go
+#    ^^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type TestModel2[foo Spec, bar FooX] struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^^^ source.go variable.other.go
+#                    ^ source.go
+#                     ^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.comma.go
+#                          ^ source.go
+#                           ^^^ source.go variable.other.go
+#                              ^ source.go
+#                               ^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go
+#                                     ^^^^^^ source.go keyword.struct.go
+#                                           ^ source.go
+#                                            ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a int
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go
+#    ^^^ source.go storage.type.numeric.go
+>		b foo
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go
+#    ^^^ source.go entity.name.type.go
+>		c *bar
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go
+#    ^ source.go keyword.operator.address.go
+#     ^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type Foo30 []func(http.Handler) <-chan http.Handler
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^ source.go keyword.function.go
+#                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                   ^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.other.period.go
+#                        ^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                ^ source.go
+#                                 ^^ source.go keyword.operator.channel.go
+#                                   ^^^^ source.go keyword.channel.go
+#                                       ^ source.go
+#                                        ^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.period.go
+#                                             ^^^^^^^ source.go entity.name.type.go
+>
+>	type Pointer[foo any] struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^ source.go variable.other.go
+#                 ^ source.go
+#                  ^^^ source.go entity.name.type.any.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go
+#                       ^^^^^^ source.go keyword.struct.go
+#                             ^ source.go
+#                              ^ source.go punctuation.definition.begin.bracket.curly.go
+>		_ [0]*foo
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.square.go
+#     ^ source.go constant.numeric.decimal.go
+#      ^ source.go punctuation.definition.end.bracket.square.go
+#       ^ source.go keyword.operator.address.go
+#        ^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type Pointers struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go
+#               ^^^^^^ source.go keyword.struct.go
+#                     ^ source.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>		foo int
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go
+#      ^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	var _ = &Pointer[Pointers]{}
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^ source.go keyword.operator.assignment.go
+#        ^ source.go
+#         ^ source.go keyword.operator.address.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                  ^^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.curly.go
+#                            ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type response context.Context
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go
+#               ^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.other.period.go
+#                       ^^^^^^^ source.go entity.name.type.go
+>
+>	type Pointerx struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go
+#               ^^^^^^ source.go keyword.struct.go
+#                     ^ source.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>		foo    int
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^^^ source.go
+#        ^ source.go
+#         ^^^ source.go storage.type.numeric.go
+>		bar    *Pointer[*response]
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^^^ source.go
+#        ^ source.go
+#         ^ source.go keyword.operator.address.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                  ^ source.go entity.name.type.go keyword.operator.address.go
+#                   ^^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+>		foobar Pointer[response]
+#^^ source.go
+#  ^^^^^^ source.go variable.other.go
+#        ^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+>		foo1   Pointer[int]
+#^^ source.go
+#  ^^^^ source.go variable.other.go
+#      ^^ source.go
+#        ^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^^^ source.go entity.name.type.go storage.type.numeric.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+>		bar1   map[response]interface{}
+#^^ source.go
+#  ^^^^ source.go variable.other.go
+#      ^^ source.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^^^^^^^ source.go keyword.interface.go
+#                               ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                ^ source.go punctuation.definition.end.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
