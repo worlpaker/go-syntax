@@ -5561,3 +5561,78 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func DecrementInLoop() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^^^^^^^^^^ source.go entity.name.function.go
+#                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+#                      ^ source.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>	j := 10
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^ source.go constant.numeric.decimal.go
+>	for i := 0; i < 10; i++ {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.terminator.go
+#            ^ source.go
+#             ^ source.go variable.other.go
+#              ^ source.go
+#               ^ source.go keyword.operator.comparison.go
+#                ^ source.go
+#                 ^^ source.go constant.numeric.decimal.go
+#                   ^ source.go punctuation.terminator.go
+#                    ^ source.go
+#                     ^ source.go variable.other.go
+#                      ^^ source.go keyword.operator.increment.go
+#                        ^ source.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	for i := 0; i < 10; i-- {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.terminator.go
+#            ^ source.go
+#             ^ source.go variable.other.go
+#              ^ source.go
+#               ^ source.go keyword.operator.comparison.go
+#                ^ source.go
+#                 ^^ source.go constant.numeric.decimal.go
+#                   ^ source.go punctuation.terminator.go
+#                    ^^ source.go variable.other.go
+#                      ^^ source.go keyword.operator.decrement.go
+#                        ^ source.go variable.other.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	j++
+#^ source.go
+# ^ source.go variable.other.go
+#  ^^ source.go keyword.operator.increment.go
+>	j--
+#^ source.go
+# ^ source.go variable.other.go
+#  ^^ source.go keyword.operator.decrement.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

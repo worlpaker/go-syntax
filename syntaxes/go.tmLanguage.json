@@ -1661,7 +1661,7 @@
 									"include": "#operators"
 								},
 								{
-									"match": "(?:[^\\!]+)",
+									"match": "(?:[^\\!\\-]+)",
 									"name": "variable.other.go"
 								}
 							]

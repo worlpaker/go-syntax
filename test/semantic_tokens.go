@@ -723,3 +723,13 @@ func Bar43(w http.ResponseWriter, HTTPStatusCode int) error {
 			"error":  http.StatusText(HTTPStatusCode),
 		})
 }
+
+func DecrementInLoop() {
+	j := 10
+	for i := 0; i < 10; i++ {
+	}
+	for i := 0; i < 10; i-- {
+	}
+	j++
+	j--
+}
