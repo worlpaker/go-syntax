@@ -1333,9 +1333,6 @@
 				"1": {
 					"patterns": [
 						{
-							"include": "#type-declarations"
-						},
-						{
 							"match": "\\d\\w*",
 							"name": "invalid.illegal.identifier.go"
 						},

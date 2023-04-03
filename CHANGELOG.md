@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.5]
+
+- Fixes different colors (storage types) in support functions
+
 ## [0.2.4]
 
 - Adds generic support to the struct

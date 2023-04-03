@@ -648,7 +648,7 @@
 #        ^ source.go punctuation.definition.begin.bracket.round.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
-#           ^^^^ source.go storage.type.byte.go
+#           ^^^^ source.go entity.name.function.support.go
 #               ^ source.go punctuation.definition.begin.bracket.round.go
 #                ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
 #                 ^^^ source.go string.quoted.double.go
@@ -4901,4 +4901,517 @@
 >
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
+>
+>//v0.2.5
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^ source.go comment.line.double-slash.go
+>type TestStorageTypes struct{}
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go
+#                      ^^^^^^ source.go keyword.struct.go
+#                            ^ source.go punctuation.definition.begin.bracket.curly.go
+#                             ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) TestingStorageTypes() error {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^^^^^^^^^^^^^ source.go entity.name.function.go
+#                                             ^ source.go punctuation.definition.begin.bracket.round.go
+#                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                               ^ source.go
+#                                                ^^^^^ source.go storage.type.error.go
+#                                                     ^ source.go
+#                                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>	t.normalName()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go punctuation.definition.end.bracket.round.go
+>	t.bool()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
+>	t.byte()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
+>	t.error()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^ source.go entity.name.function.support.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go punctuation.definition.end.bracket.round.go
+>	t.complex64()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^^^ source.go entity.name.function.support.go
+#            ^ source.go punctuation.definition.begin.bracket.round.go
+#             ^ source.go punctuation.definition.end.bracket.round.go
+>	t.complex128()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go punctuation.definition.end.bracket.round.go
+>	t.float32()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+>	t.float64()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+>	t.int()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^ source.go entity.name.function.support.go
+#      ^ source.go punctuation.definition.begin.bracket.round.go
+#       ^ source.go punctuation.definition.end.bracket.round.go
+>	t.int8()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
+>	t.int16()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^ source.go entity.name.function.support.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go punctuation.definition.end.bracket.round.go
+>	t.int32()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^ source.go entity.name.function.support.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go punctuation.definition.end.bracket.round.go
+>	t.int64()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^ source.go entity.name.function.support.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go punctuation.definition.end.bracket.round.go
+>	t.uint()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
+>	t.uint8()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^ source.go entity.name.function.support.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go punctuation.definition.end.bracket.round.go
+>	t.uint16()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^ source.go entity.name.function.support.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.end.bracket.round.go
+>	t.uint32()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^ source.go entity.name.function.support.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.end.bracket.round.go
+>	t.uint64()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^ source.go entity.name.function.support.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.end.bracket.round.go
+>	t.rune()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
+>	t.string()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^ source.go entity.name.function.support.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.end.bracket.round.go
+>	t.uintptr()
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	return nil
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^ source.go constant.language.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) normalName() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^^^^ source.go entity.name.function.go
+#                                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                                     ^ source.go punctuation.definition.end.bracket.round.go
+#                                      ^ source.go
+#                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                        ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) bool() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^ source.go entity.name.function.go
+#                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                  ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) byte() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^ source.go entity.name.function.go
+#                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                  ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) error() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^ source.go entity.name.function.go
+#                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) complex64() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^^^ source.go entity.name.function.go
+#                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                     ^ source.go
+#                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                       ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) complex128() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^^^^ source.go entity.name.function.go
+#                                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                                     ^ source.go punctuation.definition.end.bracket.round.go
+#                                      ^ source.go
+#                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                        ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) float32() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^ source.go entity.name.function.go
+#                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                     ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) float64() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^ source.go entity.name.function.go
+#                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                     ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) int() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^ source.go entity.name.function.go
+#                             ^ source.go punctuation.definition.begin.bracket.round.go
+#                              ^ source.go punctuation.definition.end.bracket.round.go
+#                               ^ source.go
+#                                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                 ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) int8() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^ source.go entity.name.function.go
+#                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                  ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) int16() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^ source.go entity.name.function.go
+#                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) int32() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^ source.go entity.name.function.go
+#                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) int64() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^ source.go entity.name.function.go
+#                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) uint() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^ source.go entity.name.function.go
+#                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                  ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) uint8() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^ source.go entity.name.function.go
+#                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) uint16() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^ source.go entity.name.function.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                    ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) uint32() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^ source.go entity.name.function.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                    ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) uint64() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^ source.go entity.name.function.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                    ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) rune() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^ source.go entity.name.function.go
+#                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                  ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) string() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^ source.go entity.name.function.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                    ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) uintptr() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^^^^^ source.go entity.name.function.go
+#                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                     ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (t TestStorageTypes) any() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.other.go
+#        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^^^ source.go entity.name.function.go
+#                             ^ source.go punctuation.definition.begin.bracket.round.go
+#                              ^ source.go punctuation.definition.end.bracket.round.go
+#                               ^ source.go
+#                                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                 ^ source.go punctuation.definition.end.bracket.curly.go
 >

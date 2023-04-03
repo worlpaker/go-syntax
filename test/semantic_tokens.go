@@ -633,3 +633,76 @@ func main() {
 	}
 
 }
+
+//v0.2.5
+type TestStorageTypes struct{}
+
+func (t TestStorageTypes) TestingStorageTypes() error {
+	t.normalName()
+	t.bool()
+	t.byte()
+	t.error()
+	t.complex64()
+	t.complex128()
+	t.float32()
+	t.float64()
+	t.int()
+	t.int8()
+	t.int16()
+	t.int32()
+	t.int64()
+	t.uint()
+	t.uint8()
+	t.uint16()
+	t.uint32()
+	t.uint64()
+	t.rune()
+	t.string()
+	t.uintptr()
+
+	return nil
+}
+
+func (t TestStorageTypes) normalName() {}
+
+func (t TestStorageTypes) bool() {}
+
+func (t TestStorageTypes) byte() {}
+
+func (t TestStorageTypes) error() {}
+
+func (t TestStorageTypes) complex64() {}
+
+func (t TestStorageTypes) complex128() {}
+
+func (t TestStorageTypes) float32() {}
+
+func (t TestStorageTypes) float64() {}
+
+func (t TestStorageTypes) int() {}
+
+func (t TestStorageTypes) int8() {}
+
+func (t TestStorageTypes) int16() {}
+
+func (t TestStorageTypes) int32() {}
+
+func (t TestStorageTypes) int64() {}
+
+func (t TestStorageTypes) uint() {}
+
+func (t TestStorageTypes) uint8() {}
+
+func (t TestStorageTypes) uint16() {}
+
+func (t TestStorageTypes) uint32() {}
+
+func (t TestStorageTypes) uint64() {}
+
+func (t TestStorageTypes) rune() {}
+
+func (t TestStorageTypes) string() {}
+
+func (t TestStorageTypes) uintptr() {}
+
+func (t TestStorageTypes) any() {}
