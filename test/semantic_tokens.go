@@ -4,6 +4,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
@@ -634,7 +635,7 @@ func main() {
 
 }
 
-//v0.2.5
+// v0.2.5
 type TestStorageTypes struct{}
 
 func (t TestStorageTypes) TestingStorageTypes() error {
@@ -706,3 +707,19 @@ func (t TestStorageTypes) string() {}
 func (t TestStorageTypes) uintptr() {}
 
 func (t TestStorageTypes) any() {}
+
+// v0.2.6
+func Bar42(w http.ResponseWriter, r *http.Request) context.Context {
+	w.Write([]byte("Foo"))
+	var a context.Context
+	return a
+}
+
+func Bar43(w http.ResponseWriter, HTTPStatusCode int) error {
+	w.WriteHeader(HTTPStatusCode)
+	return json.NewEncoder(w).Encode(
+		map[string]interface{}{
+			"status": HTTPStatusCode,
+			"error":  http.StatusText(HTTPStatusCode),
+		})
+}

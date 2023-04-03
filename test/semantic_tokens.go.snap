@@ -16,6 +16,11 @@
 # ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
 #  ^^^^^^^ source.go string.quoted.double.go entity.name.import.go
 #         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	"encoding/json"
+#^ source.go
+# ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#  ^^^^^^^^^^^^^ source.go string.quoted.double.go entity.name.import.go
+#               ^ source.go string.quoted.double.go punctuation.definition.string.end.go
 >	"fmt"
 #^ source.go
 # ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -648,7 +653,7 @@
 #        ^ source.go punctuation.definition.begin.bracket.round.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
-#           ^^^^ source.go entity.name.function.support.go
+#           ^^^^ source.go storage.type.byte.go
 #               ^ source.go punctuation.definition.begin.bracket.round.go
 #                ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
 #                 ^^^ source.go string.quoted.double.go
@@ -4902,9 +4907,9 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
->//v0.2.5
+>// v0.2.5
 #^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
-#  ^^^^^^ source.go comment.line.double-slash.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
 >type TestStorageTypes struct{}
 #^^^^ source.go keyword.type.go
 #    ^ source.go
@@ -5414,4 +5419,145 @@
 #                               ^ source.go
 #                                ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                 ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.2.6
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar42(w http.ResponseWriter, r *http.Request) context.Context {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.other.go
+#            ^ source.go
+#             ^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^ source.go variable.other.go
+#                                   ^ source.go
+#                                    ^ source.go keyword.operator.address.go
+#                                     ^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.period.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                  ^ source.go
+#                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.other.period.go
+#                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                  ^ source.go
+#                                                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	w.Write([]byte("Foo"))
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^ source.go entity.name.function.support.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go punctuation.definition.end.bracket.square.go
+#           ^^^^ source.go storage.type.byte.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                 ^^^ source.go string.quoted.double.go
+#                    ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+#                      ^ source.go punctuation.definition.end.bracket.round.go
+>	var a context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.period.go
+#               ^^^^^^^^ source.go entity.name.type.go
+>	return a
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar43(w http.ResponseWriter, HTTPStatusCode int) error {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.other.go
+#            ^ source.go
+#             ^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^^^^^ source.go variable.other.go
+#                                                ^ source.go
+#                                                 ^^^ source.go storage.type.numeric.go
+#                                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                                     ^ source.go
+#                                                      ^^^^^ source.go storage.type.error.go
+#                                                           ^ source.go
+#                                                            ^ source.go punctuation.definition.begin.bracket.curly.go
+>	w.WriteHeader(HTTPStatusCode)
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^^^^^^^^^^ source.go entity.name.function.support.go
+#              ^ source.go punctuation.definition.begin.bracket.round.go
+#               ^^^^^^^^^^^^^^ source.go variable.other.go
+#                             ^ source.go punctuation.definition.end.bracket.round.go
+>	return json.NewEncoder(w).Encode(
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.period.go
+#             ^^^^^^^^^^ source.go entity.name.function.support.go
+#                       ^ source.go punctuation.definition.begin.bracket.round.go
+#                        ^ source.go variable.other.go
+#                         ^ source.go punctuation.definition.end.bracket.round.go
+#                          ^ source.go punctuation.other.period.go
+#                           ^^^^^^ source.go entity.name.function.support.go
+#                                 ^ source.go punctuation.definition.begin.bracket.round.go
+>		map[string]interface{}{
+#^^ source.go
+#  ^^^ source.go keyword.map.go
+#     ^ source.go punctuation.definition.begin.bracket.square.go
+#      ^^^^^^ source.go storage.type.string.go
+#            ^ source.go punctuation.definition.end.bracket.square.go
+#             ^^^^^^^^^ source.go keyword.interface.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                       ^ source.go punctuation.definition.end.bracket.curly.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>			"status": HTTPStatusCode,
+#^^^ source.go
+#   ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#    ^^^^^^ source.go string.quoted.double.go
+#          ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#           ^ source.go punctuation.other.colon.go
+#            ^ source.go
+#             ^^^^^^^^^^^^^^ source.go variable.other.go
+#                           ^ source.go punctuation.other.comma.go
+>			"error":  http.StatusText(HTTPStatusCode),
+#^^^ source.go
+#   ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#    ^^^^^ source.go string.quoted.double.go
+#         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#          ^ source.go punctuation.other.colon.go
+#           ^^ source.go
+#             ^^^^ source.go variable.other.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^^^^ source.go entity.name.function.support.go
+#                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                             ^^^^^^^^^^^^^^ source.go variable.other.go
+#                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                            ^ source.go punctuation.other.comma.go
+>		})
+#^^ source.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
+#   ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
 >

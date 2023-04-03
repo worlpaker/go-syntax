@@ -1328,7 +1328,7 @@
 		},
 		"support_functions": {
 			"comment": "Support Functions",
-			"match": "(?:(\\w+)(?=\\())",
+			"match": "(?:(?<!\\])(\\w+)(?=\\())",
 			"captures": {
 				"1": {
 					"patterns": [
