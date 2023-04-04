@@ -733,3 +733,48 @@ func DecrementInLoop() {
 	j++
 	j--
 }
+
+// v0.2.7
+func TypesSupportFunction() {
+	var t1 bool
+	var t2 byte
+	var t3 error
+	var t4 complex64
+	var t5 complex128
+	var t6 float32
+	var t7 float64
+	var t8 int
+	var t9 int8
+	var t10 int16
+	var t11 int32
+	var t12 int64
+	var t13 uint
+	var t14 uint8
+	var t15 uint16
+	var t16 uint32
+	var t17 uint64
+	var t18 rune
+	var t19 string
+	var t20 uintptr
+	a1 := bool(t1)
+	a2 := byte(t2)
+	a3 := error(t3)
+	a4 := complex64(t4)
+	a5 := complex128(t5)
+	a6 := float32(t6)
+	a7 := float64(t7)
+	a8 := int(t8)
+	a9 := int8(t9)
+	a10 := int16(t10)
+	a11 := int32(t11)
+	a12 := int64(t12)
+	a13 := uint(t13)
+	a14 := uint8(t14)
+	a15 := uint16(t15)
+	a16 := uint32(t16)
+	a17 := uint64(t17)
+	a18 := rune(t18)
+	a19 := string(t19)
+	a20 := uintptr(t20)
+	fmt.Sprintln(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20)
+}

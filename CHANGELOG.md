@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.7]
+
+- Fixes different colors (storage types) in support functions with a new solution
+
 ## [0.2.6]
 
 - Fixes decrementing operator highlighting in for loop

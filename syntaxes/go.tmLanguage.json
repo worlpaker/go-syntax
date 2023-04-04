@@ -1328,10 +1328,16 @@
 		},
 		"support_functions": {
 			"comment": "Support Functions",
-			"match": "(?:(?<!\\])(\\w+)(?=\\())",
+			"match": "(?:(?:((?<=\\.)\\w+)|(\\w+))(?=\\())",
 			"captures": {
 				"1": {
+					"name": "entity.name.function.support.go"
+				},
+				"2": {
 					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
 						{
 							"match": "\\d\\w*",
 							"name": "invalid.illegal.identifier.go"
