@@ -778,3 +778,148 @@ func TypesSupportFunction() {
 	a20 := uintptr(t20)
 	fmt.Sprintln(a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20)
 }
+
+// v0.2.8
+func Bar44(context.Context, context.Context)
+
+func Bar45(foo, bar,
+	foobar context.Context)
+
+func Bar46(foo, bar,
+	foobar chan<- context.Context)
+
+func Bar47(
+	context.Context, context.Context,
+	context.Context)
+
+func Bar48(chan context.Context, context.Context,
+	string, context.Context)
+
+func Bar49(<-chan context.Context, context.Context,
+	string, chan<- context.Context)
+
+func Bar50(context.Context, <-chan context.Context,
+	string, chan<- context.Context)
+
+func Bar51(context.Context, <-chan func() context.Context,
+	string, chan<- context.Context)
+
+func Bar52(func() <-chan context.Context, context.Context,
+	string, chan<- context.Context)
+
+func Bar53(chan<- func() context.Context, func() context.Context,
+	string, chan<- context.Context)
+
+func Bar54(context.Context, func(), map[Foo17]interface{},
+	context.Context, func(), io.ReadCloser, io.ReadCloser, context.Context,
+	string, func(context.Context), *io.Writer, *io.Reader,
+	context.Context, context.Context, context.Context,
+	string, chan func(context.Context), bool, io.Reader,
+	string, <-chan func(context.Context), bool, chan<- io.Reader,
+	error, map[Foo17]interface{}, context.Context) {
+}
+
+func Bar56(context.Context, func(), map[Foo17]interface{}, context.Context, func(), io.ReadCloser, io.ReadCloser, context.Context, string, func(context.Context), *io.Writer, *io.Reader, context.Context, context.Context, context.Context, string, chan func(context.Context), bool, io.Reader, string, <-chan func(context.Context), bool, chan<- io.Reader, error, map[Foo17]interface{}, context.Context) {
+}
+func Bar57(context.Context, func(), <-chan context.Context)
+
+func Bar58(<-chan context.Context, chan func(), <-chan context.Context)
+
+func Bar59(<-chan context.Context, func(), chan<- func(context.Context), <-chan context.Context)
+
+func Bar60(context.CancelCauseFunc, string)
+
+func Bar61(foo context.Context, bar context.Context) {}
+
+func Bar62(foo, bar, foobar context.Context)
+
+func Bar63(
+	foo, bar, foobar context.Context) {
+}
+
+func Bar64(
+	context.CancelCauseFunc, context.CancelFunc, context.Context) {
+}
+
+func Bar65(
+	context.CancelCauseFunc,
+	context.CancelFunc,
+	context.Context) {
+}
+
+func Bar66(context.Context, bool, byte, error, error, complex64, complex128, float32, float64, int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, rune, string, uintptr, context.Context, context.Context, bool, byte, complex64, complex128, float32, float64, int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, rune, string, uintptr) {
+}
+
+func Bar67() (context.Context, bool, byte, error, complex64, complex128, float32, float64, int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, rune, string, uintptr, context.Context) {
+	var t0 context.Context
+	var t1 bool
+	var t2 byte
+	var t3 error
+	var t4 complex64
+	var t5 complex128
+	var t6 float32
+	var t7 float64
+	var t8 int
+	var t9 int8
+	var t10 int16
+	var t11 int32
+	var t12 int64
+	var t13 uint
+	var t14 uint8
+	var t15 uint16
+	var t16 uint32
+	var t17 uint64
+	var t18 rune
+	var t19 string
+	var t20 uintptr
+	var t21 context.Context
+	return t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21
+}
+
+func Bar68(t0 context.Context, t1 bool, t2 byte, t3 error, t4 complex64, t5 complex128, t6 float32, t7 float64, t8 int, t9 int8, t10 int16, t11 int32, t12 int64, t13 uint, t14 uint8, t15 uint16, t16 uint32, t17 uint64, t18 rune, t19 string, t20 uintptr, t21 context.Context) (bool, byte, error, complex64, complex128, float32, float64, int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, rune, string, uintptr) {
+	a1 := bool(t1)
+	a2 := byte(t2)
+	a3 := error(t3)
+	a4 := complex64(t4)
+	a5 := complex128(t5)
+	a6 := float32(t6)
+	a7 := float64(t7)
+	a8 := int(t8)
+	a9 := int8(t9)
+	a10 := int16(t10)
+	a11 := int32(t11)
+	a12 := int64(t12)
+	a13 := uint(t13)
+	a14 := uint8(t14)
+	a15 := uint16(t15)
+	a16 := uint32(t16)
+	a17 := uint64(t17)
+	a18 := rune(t18)
+	a19 := string(t19)
+	a20 := uintptr(t20)
+	return a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20
+}
+
+func Bar69() (bool, byte, error, complex64, complex128, float32, float64, int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, rune, string, uintptr) {
+	var t1 bool
+	var t2 byte
+	var t3 error
+	var t4 complex64
+	var t5 complex128
+	var t6 float32
+	var t7 float64
+	var t8 int
+	var t9 int8
+	var t10 int16
+	var t11 int32
+	var t12 int64
+	var t13 uint
+	var t14 uint8
+	var t15 uint16
+	var t16 uint32
+	var t17 uint64
+	var t18 rune
+	var t19 string
+	var t20 uintptr
+	return t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20
+}
