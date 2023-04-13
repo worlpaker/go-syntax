@@ -8033,3 +8033,714 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.9
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>type cell struct{}
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                 ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type board struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>	matrixCells        [][]cell
+#^ source.go
+# ^^^^^^^^^^^ source.go variable.other.go
+#            ^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^^ source.go entity.name.type.go
+>	matrixCellsPointer *[][]cell
+#^ source.go
+# ^^^^^^^^^^^^^^^^^^ source.go variable.other.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^^^^ source.go entity.name.type.go
+>	rowCells           []cell
+#^ source.go
+# ^^^^^^^^ source.go variable.other.go
+#         ^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^^ source.go entity.name.type.go
+>	rowCellsPointer    *[]cell
+#^ source.go
+# ^^^^^^^^^^^^^^^ source.go variable.other.go
+#                ^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^^^^ source.go entity.name.type.go
+>	matrixInts         [][]int
+#^ source.go
+# ^^^^^^^^^^ source.go variable.other.go
+#           ^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^ source.go storage.type.numeric.go
+>	matrixIntsPointer  *[][]int
+#^ source.go
+# ^^^^^^^^^^^^^^^^^ source.go variable.other.go
+#                  ^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^^^ source.go storage.type.numeric.go
+>	m0                 map[cell]interface{}
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^^^ source.go keyword.map.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^^^^^^^^^ source.go keyword.interface.go
+#                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                       ^ source.go punctuation.definition.end.bracket.curly.go
+>	m1                 []<-chan cell
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^ source.go keyword.operator.channel.go
+#                        ^^^^ source.go keyword.channel.go
+#                            ^^^^^ source.go entity.name.type.go
+>	m2                 *[]chan<- cell
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^^^^ source.go keyword.channel.go
+#                           ^^ source.go keyword.operator.channel.go
+#                             ^^^^^ source.go entity.name.type.go
+>	m3                 [][]map[cell]interface{}
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^ source.go keyword.map.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^^^^^^^^^ source.go keyword.interface.go
+#                                          ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                           ^ source.go punctuation.definition.end.bracket.curly.go
+>	m4                 *[][]map[cell]interface{}
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^^^ source.go keyword.map.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^^^^^^^^^ source.go keyword.interface.go
+#                                           ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                            ^ source.go punctuation.definition.end.bracket.curly.go
+>	m5                 [][]<-chan func()
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^ source.go keyword.operator.channel.go
+#                          ^^^^ source.go keyword.channel.go
+#                              ^ source.go entity.name.type.go
+#                               ^^^^ source.go entity.name.type.go keyword.function.go
+#                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                    ^ source.go punctuation.definition.end.bracket.round.go
+>	m6                 *[][]chan<- func()
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^^^^ source.go keyword.channel.go
+#                             ^^ source.go keyword.operator.channel.go
+#                               ^ source.go entity.name.type.go
+#                                ^^^^ source.go entity.name.type.go keyword.function.go
+#                                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                                     ^ source.go punctuation.definition.end.bracket.round.go
+>	m7                 [][]context.Context
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.period.go
+#                                ^^^^^^^ source.go entity.name.type.go
+>	m8                 *[][]context.Context
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.period.go
+#                                 ^^^^^^^ source.go entity.name.type.go
+>	m9                 [][][][][][][][][]context.Context
+#^ source.go
+# ^^ source.go variable.other.go
+#   ^^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^^^^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.other.period.go
+#                                              ^^^^^^^ source.go entity.name.type.go
+>	m10                *[][][][][][][][][]context.Context
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.period.go
+#                                               ^^^^^^^ source.go entity.name.type.go
+>	m11                [][][][][][][][][]cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^ source.go entity.name.type.go
+>	m12                *[][][][][][][][][]cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go entity.name.type.go
+>	m13                [][][][][][][][][]cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^ source.go entity.name.type.go
+>	m14                *[][][][][][][][][]cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go entity.name.type.go
+>	m15                [][][][][][][][][]<-chan cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^ source.go keyword.operator.channel.go
+#                                        ^^^^ source.go keyword.channel.go
+#                                            ^^^^^ source.go entity.name.type.go
+>	m16                *[][][][][][][][][]chan<- cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go keyword.channel.go
+#                                           ^^ source.go keyword.operator.channel.go
+#                                             ^^^^^ source.go entity.name.type.go
+>	m17                [][][][][][][][][]<-chan map[cell]interface{}
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^ source.go keyword.operator.channel.go
+#                                        ^^^^ source.go keyword.channel.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^^^ source.go entity.name.type.go keyword.map.go
+#                                                ^ source.go entity.name.type.go punctuation.definition.begin.bracket.square.go
+#                                                 ^^^^ source.go entity.name.type.go entity.name.type.go
+#                                                     ^ source.go entity.name.type.go punctuation.definition.end.bracket.square.go
+#                                                      ^^^^^^^^^ source.go entity.name.type.go keyword.interface.go
+#                                                               ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                ^ source.go punctuation.definition.end.bracket.curly.go
+>	m18                *[][][][][][][][][]chan<- map[cell]interface{}
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go keyword.channel.go
+#                                           ^^ source.go keyword.operator.channel.go
+#                                             ^ source.go entity.name.type.go
+#                                              ^^^ source.go entity.name.type.go keyword.map.go
+#                                                 ^ source.go entity.name.type.go punctuation.definition.begin.bracket.square.go
+#                                                  ^^^^ source.go entity.name.type.go entity.name.type.go
+#                                                      ^ source.go entity.name.type.go punctuation.definition.end.bracket.square.go
+#                                                       ^^^^^^^^^ source.go entity.name.type.go keyword.interface.go
+#                                                                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                 ^ source.go punctuation.definition.end.bracket.curly.go
+>	m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^ source.go keyword.function.go
+#                                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                                           ^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.other.period.go
+#                                                ^^^^^^^ source.go entity.name.type.go
+#                                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                                        ^ source.go entity.name.type.go
+#                                                         ^^ source.go entity.name.type.go keyword.operator.channel.go
+#                                                           ^^^^ source.go entity.name.type.go keyword.channel.go
+#                                                               ^^^^^ source.go entity.name.type.go
+#                                                                    ^ source.go punctuation.other.period.go
+#                                                                     ^^^^^^^ source.go entity.name.type.go
+>	m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go keyword.function.go
+#                                           ^ source.go punctuation.definition.begin.bracket.round.go
+#                                            ^^^ source.go variable.other.go
+#                                               ^ source.go
+#                                                ^^^^ source.go entity.name.type.go
+#                                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                                     ^ source.go
+#                                                      ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                       ^^^^ source.go variable.other.go
+#                                                           ^ source.go punctuation.other.comma.go
+#                                                            ^ source.go
+#                                                             ^^^^ source.go variable.other.go
+#                                                                 ^ source.go punctuation.other.comma.go
+#                                                                  ^ source.go
+#                                                                   ^^^^^^ source.go variable.other.go
+#                                                                         ^ source.go
+#                                                                          ^^ source.go entity.name.type.go
+#                                                                            ^ source.go punctuation.other.period.go
+#                                                                             ^^^^^^ source.go entity.name.type.go
+#                                                                                   ^ source.go punctuation.definition.end.bracket.round.go
+>	m21                [][][][][][][][][]func() <-chan cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^ source.go keyword.function.go
+#                                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^^ source.go entity.name.type.go keyword.operator.channel.go
+#                                               ^^^^ source.go entity.name.type.go keyword.channel.go
+#                                                   ^^^^^ source.go entity.name.type.go
+>	m22                *[][][][][][][][][]func() chan<- cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^^^^^^^^^^^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go keyword.function.go
+#                                           ^ source.go punctuation.definition.begin.bracket.round.go
+#                                            ^ source.go punctuation.definition.end.bracket.round.go
+#                                             ^ source.go entity.name.type.go
+#                                              ^^^^ source.go entity.name.type.go keyword.channel.go
+#                                                  ^^ source.go entity.name.type.go keyword.operator.channel.go
+#                                                    ^^^^^ source.go entity.name.type.go
+>	m23, m24, m25      [][][][][][][][][]cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^^ source.go variable.other.go
+#         ^ source.go punctuation.other.comma.go
+#          ^ source.go
+#           ^^^ source.go variable.other.go
+#              ^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^ source.go entity.name.type.go
+>	m26, m27, m28      *[][][][][][][][][]cell
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^^ source.go variable.other.go
+#         ^ source.go punctuation.other.comma.go
+#          ^ source.go
+#           ^^^ source.go variable.other.go
+#              ^^^^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^ source.go punctuation.definition.end.bracket.square.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                       ^^^^ source.go entity.name.type.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>type board2 struct{ foo [][]cell }
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^ source.go keyword.struct.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                   ^ source.go
+#                    ^^^ source.go variable.other.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^^^^ source.go entity.name.type.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type board3 struct{ foo *[][]cell }
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^ source.go keyword.struct.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                   ^ source.go
+#                    ^^^ source.go variable.other.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
+#                             ^^^^ source.go entity.name.type.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.end.bracket.curly.go
+>

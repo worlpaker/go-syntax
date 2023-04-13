@@ -923,3 +923,43 @@ func Bar69() (bool, byte, error, complex64, complex128, float32, float64, int, i
 	var t20 uintptr
 	return t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20
 }
+
+// v0.2.9
+type cell struct{}
+
+type board struct {
+	matrixCells        [][]cell
+	matrixCellsPointer *[][]cell
+	rowCells           []cell
+	rowCellsPointer    *[]cell
+	matrixInts         [][]int
+	matrixIntsPointer  *[][]int
+	m0                 map[cell]interface{}
+	m1                 []<-chan cell
+	m2                 *[]chan<- cell
+	m3                 [][]map[cell]interface{}
+	m4                 *[][]map[cell]interface{}
+	m5                 [][]<-chan func()
+	m6                 *[][]chan<- func()
+	m7                 [][]context.Context
+	m8                 *[][]context.Context
+	m9                 [][][][][][][][][]context.Context
+	m10                *[][][][][][][][][]context.Context
+	m11                [][][][][][][][][]cell
+	m12                *[][][][][][][][][]cell
+	m13                [][][][][][][][][]cell
+	m14                *[][][][][][][][][]cell
+	m15                [][][][][][][][][]<-chan cell
+	m16                *[][][][][][][][][]chan<- cell
+	m17                [][][][][][][][][]<-chan map[cell]interface{}
+	m18                *[][][][][][][][][]chan<- map[cell]interface{}
+	m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
+	m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
+	m21                [][][][][][][][][]func() <-chan cell
+	m22                *[][][][][][][][][]func() chan<- cell
+	m23, m24, m25      [][][][][][][][][]cell
+	m26, m27, m28      *[][][][][][][][][]cell
+}
+type board2 struct{ foo [][]cell }
+
+type board3 struct{ foo *[][]cell }
