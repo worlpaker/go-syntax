@@ -963,3 +963,169 @@ type board struct {
 type board2 struct{ foo [][]cell }
 
 type board3 struct{ foo *[][]cell }
+
+// v0.2.10
+type Foo35 struct {
+	foo struct {
+		foo context.Context
+		bar struct {
+			foo context.Context
+			bar struct {
+				foo context.Context
+			}
+			foobar context.Context
+		}
+	}
+	bar context.Context
+}
+
+type Foo36 struct {
+	foo, bar context.Context
+	foo0     func()
+	bar0     struct {
+		foo context.Context
+		bar struct {
+			foo  func()
+			foo0 func(context.Context)
+			foo1 struct{}
+			foo2 chan context.Context
+			foo3 func()
+		}
+	}
+	foobar context.Context
+}
+
+type Foo37 struct {
+	Foo struct {
+		matrixCells        [][]cell
+		matrixCellsPointer *[][]cell
+		rowCells           []cell
+		rowCellsPointer    *[]cell
+		matrixInts         [][]int
+		matrixIntsPointer  *[][]int
+		m0                 map[cell]interface{}
+		m1                 []<-chan cell
+		m2                 *[]chan<- cell
+		m3                 [][]map[cell]interface{}
+		m4                 *[][]map[cell]interface{}
+		m5                 [][]<-chan func()
+		m6                 *[][]chan<- func()
+		m7                 [][]context.Context
+		m8                 *[][]context.Context
+		m9                 [][][][][][][][][]context.Context
+		m10                *[][][][][][][][][]context.Context
+		m11                [][][][][][][][][]cell
+		m12                *[][][][][][][][][]cell
+		m13                [][][][][][][][][]cell
+		m14                *[][][][][][][][][]cell
+		m15                [][][][][][][][][]<-chan cell
+		m16                *[][][][][][][][][]chan<- cell
+		m17                [][][][][][][][][]<-chan map[cell]interface{}
+		m18                *[][][][][][][][][]chan<- map[cell]interface{}
+		m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
+		m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
+		m21                [][][][][][][][][]func() <-chan cell
+		m22                *[][][][][][][][][]func() chan<- cell
+		m23, m24, m25      [][][][][][][][][]cell
+		m26, m27, m28      *[][][][][][][][][]cell
+	}
+	timerCtx struct {
+		cancelCtx
+		timer *time.Timer // Under cancelCtx.mu.
+
+		deadline time.Time
+	}
+	Foo25 struct {
+		Foo15
+		*Foo17
+		Foo    func() (context.Context, func(), io.ReadCloser, error, map[Foo17]interface{})
+		Bar    func() (foo context.Context, bar io.ReadCloser, err error)
+		Fooo   Foo17
+		Barr   string
+		Foo2   map[Foo17]interface{}
+		Bar2   func(foo FooX) (foox, barx, foobar io.Writer)
+		FooBar *Foo17
+		Foo3   func() (foo context.Context, bar io.ReadCloser, foobar *map[Foo17]interface{})
+		Bar3   func() map[Foo17]interface{}
+		Foo4   chan<- Foo17
+		Bar4   <-chan Foo17
+		Foo5   chan *Foo17
+		Bar5   chan Foo17
+		Foo6   []func(http.Handler) http.Handler
+		Bar6   func() context.Context
+		Foo7   []func(http.Handler) <-chan http.Handler
+		Bar7   []nodeTyp
+		Foo8   [ntCatchAll + 1]nodeTyp
+		Bar8   []*nodeTyp
+	}
+	bar string
+}
+type pageInfo struct {
+	EndCursor string `json:"end_cursor"`
+	NextPage  bool   `json:"has_next_page"`
+}
+type PageData struct {
+	Rhxgis    string
+	EntryData struct {
+		ProfilePage struct {
+			Graphql struct {
+				User struct {
+					Id    string
+					Media struct {
+						PageInfo pageInfo
+					}
+				}
+			}
+		}
+	}
+}
+
+type mainPageData struct {
+	Rhxgis    string `json:"rhx_gis"`
+	EntryData struct {
+		ProfilePage []struct {
+			Graphql struct {
+				User struct {
+					Id    string `json:"id"`
+					Media struct {
+						Edges []struct {
+							Node struct {
+								ImageURL     string `json:"display_url"`
+								ThumbnailURL string `json:"thumbnail_src"`
+								IsVideo      bool   `json:"is_video"`
+								Date         int    `json:"date"`
+								Dimensions   struct {
+									Width  int `json:"width"`
+									Height int `json:"height"`
+								} `json:"dimensions"`
+							} `json:"Node"`
+						}
+						PageInfo pageInfo `json:"page_info"`
+					} `json:"edge_owner_to_timeline_media"`
+				} `json:"user"`
+			} `json:"graphql"`
+		} `json:"ProfilePage"`
+	} `json:"entry_data"`
+}
+
+type nextPageData struct {
+	Data struct {
+		User struct {
+			Container struct {
+				PageInfo pageInfo `json:"page_info"`
+				Edges    []struct {
+					Node struct {
+						ImageURL     string `json:"display_url"`
+						ThumbnailURL string `json:"thumbnail_src"`
+						IsVideo      bool   `json:"is_video"`
+						Date         int    `json:"taken_at_timestamp"`
+						Dimensions   struct {
+							Width  int `json:"width"`
+							Height int `json:"height"`
+						}
+					}
+				} `json:"edges"`
+			} `json:"edge_owner_to_timeline_media"`
+		}
+	} `json:"data"`
+}

@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.10]
+
+- Fixes small bugs in struct fields
+
 ## [0.2.9]
 
 - Fixes incorrect highlighting for multidimensional slice type in struct's fields
