@@ -155,7 +155,7 @@
 			"patterns": [
 				{
 					"comment": "Other map type names (struct/interface)",
-					"match": "(?:(\\bmap\\b)(\\[[\\w\\.\\*\\-]+\\])?)",
+					"match": "(?:(\\bmap\\b)(\\[[\\w\\.\\*\\-]+\\])?((?!(?:[\\*]+)?\\bmap\\b)[\\w\\.\\*\\-]+)?)",
 					"captures": {
 						"1": {
 							"name": "keyword.map.go"
@@ -178,6 +178,17 @@
 								{
 									"match": "\\]",
 									"name": "punctuation.definition.end.bracket.square.go"
+								},
+								{
+									"match": "\\w+",
+									"name": "entity.name.type.go"
+								}
+							]
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
 								},
 								{
 									"match": "\\w+",

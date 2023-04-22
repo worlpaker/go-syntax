@@ -10400,3 +10400,148 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.11
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo38() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+#            ^ source.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type foo string
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go storage.type.string.go
+>	type bar interface{}
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^^^^ source.go keyword.interface.go
+#                   ^ source.go punctuation.definition.begin.bracket.curly.go
+#                    ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = make(map[string]Context)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make(map[string]*Context)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^ source.go keyword.operator.address.go
+#                      ^^^^^^^ source.go entity.name.type.go
+#                             ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make(map[Context]map[Context]*map[Context]*Context)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^ source.go keyword.map.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go keyword.operator.address.go
+#                                   ^^^ source.go keyword.map.go
+#                                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                               ^ source.go keyword.operator.address.go
+#                                                ^^^^^^^ source.go entity.name.type.go
+#                                                       ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make(map[Context]interface{})
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^^^^^^^ source.go keyword.interface.go
+#                               ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                ^ source.go punctuation.definition.end.bracket.curly.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make(map[Context]map[Context]*map[Context]interface{})
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^ source.go keyword.map.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go keyword.operator.address.go
+#                                   ^^^ source.go keyword.map.go
+#                                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                               ^^^^^^^^^ source.go keyword.interface.go
+#                                                        ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                         ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                          ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = map[foo]bar{"foo": "bar"}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go keyword.map.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^^^ source.go entity.name.type.go
+#            ^ source.go punctuation.definition.end.bracket.square.go
+#             ^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                 ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                  ^^^ source.go string.quoted.double.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                      ^ source.go punctuation.other.colon.go
+#                       ^ source.go
+#                        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                         ^^^ source.go string.quoted.double.go
+#                            ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                             ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

@@ -1129,3 +1129,15 @@ type nextPageData struct {
 		}
 	} `json:"data"`
 }
+
+// v0.2.11
+func Foo38() {
+	type foo string
+	type bar interface{}
+	_ = make(map[string]Context)
+	_ = make(map[string]*Context)
+	_ = make(map[Context]map[Context]*map[Context]*Context)
+	_ = make(map[Context]interface{})
+	_ = make(map[Context]map[Context]*map[Context]interface{})
+	_ = map[foo]bar{"foo": "bar"}
+}
