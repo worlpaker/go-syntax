@@ -1171,3 +1171,17 @@ type Foo44 interface {
 type hello interface {
 	bar(bar *FooX) <-chan func() *[]context.Context //foo
 }
+
+type Generic interface {
+	*[]Foo39 | FooX | map[FooX]string
+}
+
+func Foo45[T Generic](a string) string {
+	return "foo"
+}
+
+func Foo46() {
+	_ = Foo45[map[FooX]string]("bar")
+	_ = Foo45[FooX]("bar")
+	_ = Foo45[*[]Foo39]("bar")
+}

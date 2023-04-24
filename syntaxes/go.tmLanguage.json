@@ -1339,7 +1339,7 @@
 		},
 		"support_functions": {
 			"comment": "Support Functions",
-			"match": "(?:(?:((?<=\\.)\\w+)|(\\w+))(?=\\())",
+			"match": "(?:(?:((?<=\\.)\\w+)|(\\w+))(\\[(?:.*?)?\\])?(?=\\())",
 			"captures": {
 				"1": {
 					"name": "entity.name.function.support.go"
@@ -1356,6 +1356,37 @@
 						{
 							"match": "\\w+",
 							"name": "entity.name.function.support.go"
+						}
+					]
+				},
+				"3": {
+					"patterns": [
+						{
+							"include": "#map_other_types"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"include": "#storage_types"
+						},
+						{
+							"include": "#operators"
+						},
+						{
+							"include": "#delimiters"
+						},
+						{
+							"include": "#keywords"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
 						}
 					]
 				}
@@ -1642,7 +1673,7 @@
 							]
 						},
 						{
-							"include":"#support_functions"
+							"include": "#support_functions"
 						},
 						{
 							"comment": "single declaration | with or declarations",

@@ -10767,3 +10767,121 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>type Generic interface {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^ source.go entity.name.type.go
+#            ^ source.go
+#             ^^^^^^^^^ source.go keyword.interface.go
+#                      ^ source.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>	*[]Foo39 | FooX | map[FooX]string
+#^ source.go
+# ^ source.go keyword.operator.arithmetic.go
+#  ^ source.go punctuation.definition.begin.bracket.square.go
+#   ^ source.go punctuation.definition.end.bracket.square.go
+#    ^^^^^ source.go entity.name.type.go
+#         ^^ source.go
+#           ^ source.go
+#            ^^^^ source.go entity.name.type.go
+#                ^^ source.go
+#                  ^ source.go
+#                   ^^^ source.go keyword.map.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.definition.end.bracket.square.go
+#                            ^^^^^^ source.go storage.type.string.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo45[T Generic](a string) string {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go variable.other.go
+#            ^ source.go
+#             ^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^ source.go punctuation.definition.begin.bracket.round.go
+#                      ^ source.go variable.other.go
+#                       ^ source.go
+#                        ^^^^^^ source.go storage.type.string.go
+#                              ^ source.go punctuation.definition.end.bracket.round.go
+#                               ^ source.go
+#                                ^^^^^^ source.go storage.type.string.go
+#                                      ^ source.go
+#                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>	return "foo"
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^^^ source.go string.quoted.double.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo46() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+#            ^ source.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	_ = Foo45[map[FooX]string]("bar")
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^ source.go keyword.map.go
+#              ^ source.go punctuation.definition.begin.bracket.square.go
+#               ^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^^^^^^ source.go storage.type.string.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go punctuation.definition.begin.bracket.round.go
+#                            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                             ^^^ source.go string.quoted.double.go
+#                                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = Foo45[FooX]("bar")
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^ source.go punctuation.definition.begin.bracket.round.go
+#                 ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                  ^^^ source.go string.quoted.double.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                      ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = Foo45[*[]Foo39]("bar")
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go keyword.operator.arithmetic.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                      ^^^ source.go string.quoted.double.go
+#                         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                          ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
