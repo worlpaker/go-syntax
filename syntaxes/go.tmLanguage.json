@@ -1446,8 +1446,8 @@
 					}
 				},
 				{
-					"comment": "struct/interface types in-line | switch type keyword",
-					"match": "(?:(?<=\\.\\(|\\.\\(\\*)(?:(\\btype\\b)|([\\w\\.]+))(?=\\)))",
+					"comment": "struct/interface types in-line (type assertion) | switch type keyword",
+					"match": "(?:(?<=\\.\\(|\\.\\(\\[\\])(?:(\\btype\\b)|([\\w\\.\\[\\]\\*]+))(?=\\)))",
 					"captures": {
 						"1": {
 							"name": "keyword.type.go"
@@ -1458,7 +1458,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:[^\\.]+)",
+									"match": "(?:\\w+)",
 									"name": "entity.name.type.go"
 								}
 							]

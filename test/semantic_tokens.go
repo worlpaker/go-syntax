@@ -1185,3 +1185,13 @@ func Foo46() {
 	_ = Foo45[FooX]("bar")
 	_ = Foo45[*[]Foo39]("bar")
 }
+
+func Foo47() {
+	var a interface{}
+	_ = a.(FooX)
+	_ = a.(*FooX)
+	_ = a.(*[]FooX)
+	_ = a.([]FooX)
+	_ = a.([]*FooX)
+	_ = a.(map[FooX]interface{})
+}
