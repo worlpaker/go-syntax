@@ -1141,3 +1141,33 @@ func Foo38() {
 	_ = make(map[Context]map[Context]*map[Context]interface{})
 	_ = map[foo]bar{"foo": "bar"}
 }
+
+// v0.2.12
+type Foo39 struct{}
+
+type Foo40 interface{ *[]Foo39 | Bar70 }
+
+type Foo41 interface{ <-chan func() []*Foo39 }
+
+type Foo42 interface {
+	Foo39 //bar
+}
+
+type Bar70 interface {
+	Foo39 | []FooX
+}
+
+type Bar71 interface {
+	Foo39 | *[]FooX
+}
+type Foo43 interface {
+	FooX | <-chan *[]context.Context | chan *[]context.Context | chan<- *[]context.Context //foo
+}
+
+type Foo44 interface {
+	chan *[]context.Context | FooX | func() <-chan *[]context.Context //bar
+}
+
+type hello interface {
+	bar(bar *FooX) <-chan func() *[]context.Context //foo
+}
