@@ -2,6 +2,12 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.12]
+
+- Adds generic support to support functions
+
+- Fixes small bugs (interface types, type assertions)
+
 ## [0.2.11]
 
 - Fixes small bug in map types
