@@ -935,6 +935,9 @@
 							"include": "#imports"
 						}
 					]
+				},
+				{
+					"include":"$self"
 				}
 			]
 		},

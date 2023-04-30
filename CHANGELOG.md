@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.13]
+
+- Fixes a small bug in import
+
 ## [0.2.12]
 
 - Adds generic support to support functions
