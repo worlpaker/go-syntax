@@ -1195,3 +1195,14 @@ func Foo47() {
 	_ = a.([]*FooX)
 	_ = a.(map[FooX]interface{})
 }
+
+// v0.2.14
+func Foo48() {
+	_ = new(FooX)
+	_ = new(*FooX)
+	_ = new(*[]FooX)
+	_ = new([]FooX)
+	_ = new([]*FooX)
+	_ = new(map[FooX]interface{})
+	_ = new(context.Context)
+}

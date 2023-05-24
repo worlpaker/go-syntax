@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.14]
+
+- Adds type support to the new keyword (to instantiate a struct).
+
 ## [0.2.13]
 
 - Fixes a small bug in import

@@ -937,7 +937,7 @@
 					]
 				},
 				{
-					"include":"$self"
+					"include": "$self"
 				}
 			]
 		},
@@ -1808,8 +1808,37 @@
 		},
 		"built_in_functions": {
 			"comment": "Built-in functions",
-			"match": "\\b(append|cap|close|complex|copy|delete|imag|len|make|new|panic|print|println|real|recover)\\b(?=\\()",
-			"name": "entity.name.function.support.builtin.go"
+			"patterns": [
+				{
+					"match": "\\b(append|cap|close|complex|copy|delete|imag|len|make|panic|print|println|real|recover)\\b(?=\\()",
+					"name": "entity.name.function.support.builtin.go"
+				},
+				{
+					"match": "(?:(\\bnew\\b)(\\()([^\\)]+)(\\)))",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.support.builtin.go"
+						},
+						"2": {
+							"name": "punctuation.definition.begin.bracket.round.go"
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "\\w+",
+									"name": "entity.name.type.go"
+								}
+							]
+						},
+						"4": {
+							"name": "punctuation.definition.end.bracket.round.go"
+						}
+					}
+				}
+			]
 		},
 		"struct_interface_declaration": {
 			"comment": "struct, interface type declarations",
