@@ -11087,3 +11087,123 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.15
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo49(a struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.other.go
+#            ^ source.go
+#             ^^^^^^ source.go keyword.struct.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.curly.go
+>	b    Foo11
+#^ source.go
+# ^ source.go variable.other.go
+#  ^^^ source.go
+#     ^ source.go
+#      ^^^^^ source.go entity.name.type.go
+>	c    FooX
+#^ source.go
+# ^ source.go variable.other.go
+#  ^^^ source.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+>	d    map[FooX]chan<- func(f FooX)
+#^ source.go
+# ^ source.go variable.other.go
+#  ^^^ source.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.definition.end.bracket.square.go
+#               ^^^^ source.go keyword.channel.go
+#                   ^^ source.go keyword.operator.channel.go
+#                     ^ source.go
+#                      ^^^^ source.go keyword.function.go
+#                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                           ^ source.go variable.other.go
+#                            ^ source.go
+#                             ^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+>	e, f Foo07
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.go
+#     ^ source.go
+#      ^^^^^ source.go entity.name.type.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	go func(a struct {
+#^ source.go
+# ^^ source.go keyword.control.go
+#   ^ source.go
+#    ^^^^ source.go keyword.function.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go variable.other.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		b    Foo11
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^^^ source.go
+#      ^ source.go
+#       ^^^^^ source.go entity.name.type.go
+>		c    FooX
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^^^ source.go
+#      ^ source.go
+#       ^^^^ source.go entity.name.type.go
+>		d    map[FooX]chan<- func(f FooX)
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^^^ source.go
+#      ^ source.go
+#       ^^^ source.go keyword.map.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^^^^ source.go keyword.channel.go
+#                    ^^ source.go keyword.operator.channel.go
+#                      ^ source.go
+#                       ^^^^ source.go keyword.function.go
+#                           ^ source.go punctuation.definition.begin.bracket.round.go
+#                            ^ source.go variable.other.go
+#                             ^ source.go
+#                              ^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+>		e, f Foo07
+#^^ source.go
+#  ^ source.go variable.other.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^ source.go variable.other.go
+#      ^ source.go
+#       ^^^^^ source.go entity.name.type.go
+>	}) {
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>	}(a)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.begin.bracket.round.go
+#   ^ source.go variable.other.go
+#    ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

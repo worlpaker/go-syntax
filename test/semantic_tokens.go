@@ -1206,3 +1206,19 @@ func Foo48() {
 	_ = new(map[FooX]interface{})
 	_ = new(context.Context)
 }
+
+// v0.2.15
+func Foo49(a struct {
+	b    Foo11
+	c    FooX
+	d    map[FooX]chan<- func(f FooX)
+	e, f Foo07
+}) {
+	go func(a struct {
+		b    Foo11
+		c    FooX
+		d    map[FooX]chan<- func(f FooX)
+		e, f Foo07
+	}) {
+	}(a)
+}

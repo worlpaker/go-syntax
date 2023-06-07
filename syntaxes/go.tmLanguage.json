@@ -1092,6 +1092,9 @@
 		"function_param_types": {
 			"patterns": [
 				{
+					"include": "#struct_variables_types"
+				},
+				{
 					"comment": "one type only",
 					"match": "(?:(?:(?<=\\()|^(?:\\s*))(?:\\s*)?([[:alnum:]\\.\\*\\-\\<\\>\\_\\[\\]\\{\\}]+)(?=\\)))",
 					"captures": {
