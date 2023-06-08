@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.16]
+
+- Adds a new icon
+
 ## [0.2.15]
 
 - Fixes a small bug related to structs in function parameters
