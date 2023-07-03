@@ -114,6 +114,9 @@
 				},
 				{
 					"include": "#terminators"
+				},
+				{
+					"include": "#generic_types"
 				}
 			]
 		},
@@ -943,7 +946,7 @@
 		},
 		"function_declaration": {
 			"comment": "Function declarations",
-			"begin": "(?:^(\\bfunc\\b)(?:\\s+(\\([^\\)]+\\)\\s+)?(?:(\\w+)(?=\\(|\\[))?))",
+			"begin": "(?:^(\\bfunc\\b)(?:\\s*(\\([^\\)]+\\)\\s*)?(?:(\\w+)(?=\\(|\\[))?))",
 			"beginCaptures": {
 				"patterns": [
 					{
@@ -970,7 +973,7 @@
 							},
 							"patterns": [
 								{
-									"match": "(?:(\\w+(?:\\s+))?([\\w\\.\\*]+)(\\[(?:[\\w\\.\\*]+)\\])?)",
+									"match": "(?:(\\w+(?:\\s+))?([\\w\\.\\*\\[\\]]+))",
 									"captures": {
 										"1": {
 											"name": "variable.other.go"
@@ -983,28 +986,6 @@
 												{
 													"match": "\\w+",
 													"name": "entity.name.type.go"
-												}
-											]
-										},
-										"3": {
-											"patterns": [
-												{
-													"include": "#storage_types"
-												},
-												{
-													"include": "#operators"
-												},
-												{
-													"match": "\\w+",
-													"name": "entity.name.type.go"
-												},
-												{
-													"match": "\\[",
-													"name": "punctuation.definition.begin.bracket.square.go"
-												},
-												{
-													"match": "\\]",
-													"name": "punctuation.definition.end.bracket.square.go"
 												}
 											]
 										}
@@ -2122,6 +2103,43 @@
 					]
 				}
 			]
+		},
+		"generic_types": {
+			"match": "(?:([\\w\\.]+)(\\[[\\w\\.\\*]+\\]))",
+			"captures": {
+				"1": {
+					"match": "\\w+",
+					"name": "entity.name.type.go"
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#storage_types"
+						},
+						{
+							"include": "#keywords"
+						},
+						{
+							"include": "#operators"
+						},
+						{
+							"match": "\\w+",
+							"name": "entity.name.type.go"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"include": "$self"
+						}
+					]
+				}
+			}
 		},
 		"other_variables": {
 			"match": "(?:\\w+)",

@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.18]
+
+- Enhances generic support in all types
+
 ## [0.2.17]
 
 - Enhances generic support in function declarations

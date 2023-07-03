@@ -1243,3 +1243,117 @@ func (myvar *newstructG[newstruct1]) Hi() {
 func (myvar *newstruct1) Hello() {
 
 }
+
+// v0.2.18
+func Foo50(newstructG[newstruct1], newstructG[newstruct2]) {}
+
+func Foo51(*newstructG[newstruct1], *newstructG[newstruct2]) {}
+
+func Foo52(foo, bar,
+	foobar newstructG[newstruct1])
+
+func Foo53(foo, bar,
+	foobar chan<- *newstructG[newstruct2])
+
+func Foo54(
+	newstructG[newstruct1], newstructG[newstruct2],
+	newstructG[newstruct1])
+
+func Foo55(chan newstructG[newstruct1], newstructG[newstruct2],
+	string, newstructG[newstruct2], int64)
+
+func Foo56(<-chan *newstructG[newstruct1], newstructG[newstruct1],
+	string, chan<- newstructG[newstruct2])
+
+func Foo57(newstructG[newstruct1], <-chan newstructG[newstruct2],
+	string, chan<- newstructG[newstruct1], chan int16)
+
+func Foo58(newstructG[newstruct1], <-chan func() newstructG[newstruct2],
+	string, chan<- newstructG[newstruct2])
+
+func Foo59(func() <-chan newstructG[newstruct1], newstructG[newstruct2],
+	string, chan<- newstructG[newstruct2])
+
+func Foo60(chan<- func() newstructG[newstruct1], func() newstructG[newstruct2],
+	string, chan<- newstructG[newstruct2])
+
+func Foo61(newstructG[newstruct1], func(), map[Foo17]interface{},
+	newstructG[newstruct2], func(), io.ReadCloser, io.ReadCloser, context.Context,
+	string, func(newstructG[newstruct1]), *io.Writer, *io.Reader,
+	context.Context, context.Context, context.Context,
+	string, chan func(*newstructG[newstruct2]), bool, io.Reader,
+	string, <-chan func(context.Context), bool, chan<- io.Reader,
+	error, map[Foo17]interface{}, newstructG[newstruct1]) {
+}
+
+func Foo62(newstructG[newstruct1], func(), map[Foo17]interface{}, newstructG[newstruct2], func(), io.ReadCloser, io.ReadCloser, context.Context, string, func(newstructG[newstruct1]), *io.Writer, *io.Reader, context.Context, newstructG[newstruct2], *newstructG[newstruct2], string, chan func(context.Context), bool, io.Reader, string, <-chan func(newstructG[newstruct1]), bool, chan<- io.Reader, error, map[Foo17]interface{}, newstructG[newstruct2]) {
+}
+func Foo63(newstructG[newstruct1], func(), <-chan newstructG[newstruct2])
+
+func Foo64(<-chan context.Context, <-chan newstructG[newstruct1], chan func(), <-chan context.Context)
+
+func Foo65(<-chan context.Context, func(), chan<- func(newstructG[newstruct1]), <-chan newstructG[newstruct2])
+
+func Foo66(newstructG[newstruct1], string)
+
+func Foo67(foo newstructG[newstruct1], bar newstructG[newstruct2]) {}
+
+func Foo68(foo, bar, foobar newstructG[newstruct1])
+
+func Foo69(
+	foo, bar, foobar newstructG[newstruct2]) {
+}
+
+func Foo70(
+	context.CancelCauseFunc, context.CancelFunc, context.Context, newstructG[newstruct1]) {
+}
+
+func Foo71(
+	context.CancelCauseFunc,
+	context.CancelFunc,
+	context.Context,
+	newstructG[newstruct1],
+	newstructG[newstruct2]) {
+}
+
+func Foo72(
+	context.CancelCauseFunc,
+	context.CancelFunc,
+	context.Context,
+	*newstructG[newstruct1],
+	*newstructG[newstruct2],
+) {
+}
+
+func Foo73(bar newstructG[newstruct1]) {}
+
+func Foo74(foo newstructG[newstruct1], bar *newstructG[newstruct2]) {}
+
+func Foo75(
+	foo *newstructG[newstruct1],
+	bar newstructG[newstruct2],
+) {
+
+}
+
+func Foo76() {
+	type foo newstructG[newstruct1]
+	type bar newstructG[newstruct2]
+	type foox *newstructG[newstruct1]
+	type barx *newstructG[newstruct2]
+	type foobar map[newstructG[newstruct1]]interface{}
+
+	var xfoo newstructG[newstruct1]
+	var xbar newstructG[newstruct2]
+	var xfoox *newstructG[newstruct1]
+	var xbarx *newstructG[newstruct2]
+	var foobarx map[newstructG[newstruct1]]interface{}
+
+	type foo0 = newstructG[newstruct1]
+	type bar0 = newstructG[newstruct2]
+	type foox0 *newstructG[newstruct1]
+	type barx0 *newstructG[newstruct2]
+	type foobar0 = map[newstructG[newstruct1]]interface{}
+
+	_, _, _, _, _ = xfoo, xbar, xfoox, xbarx, foobarx
+}
