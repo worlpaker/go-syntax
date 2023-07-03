@@ -1222,3 +1222,24 @@ func Foo49(a struct {
 	}) {
 	}(a)
 }
+
+// v0.2.17
+type newstruct1 struct{}
+type newstruct2 struct{}
+
+type newGeneric interface {
+	newstruct1 | newstruct2
+}
+
+type newstructG[T newGeneric] struct {
+	name string
+	age  T
+}
+
+func (myvar *newstructG[newstruct1]) Hi() {
+
+}
+
+func (myvar *newstruct1) Hello() {
+
+}

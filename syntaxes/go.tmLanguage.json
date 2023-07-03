@@ -970,7 +970,7 @@
 							},
 							"patterns": [
 								{
-									"match": "([[:alnum:]\\.\\-\\_]+(?:\\s+))?([[:alnum:]\\*\\.\\-\\_]+)",
+									"match": "(?:(\\w+(?:\\s+))?([\\w\\.\\*]+)(\\[(?:[\\w\\.\\*]+)\\])?)",
 									"captures": {
 										"1": {
 											"name": "variable.other.go"
@@ -981,8 +981,30 @@
 													"include": "#type-declarations"
 												},
 												{
-													"match": "(?:[^\\.]+)",
+													"match": "\\w+",
 													"name": "entity.name.type.go"
+												}
+											]
+										},
+										"3": {
+											"patterns": [
+												{
+													"include": "#storage_types"
+												},
+												{
+													"include": "#operators"
+												},
+												{
+													"match": "\\w+",
+													"name": "entity.name.type.go"
+												},
+												{
+													"match": "\\[",
+													"name": "punctuation.definition.begin.bracket.square.go"
+												},
+												{
+													"match": "\\]",
+													"name": "punctuation.definition.end.bracket.square.go"
 												}
 											]
 										}
