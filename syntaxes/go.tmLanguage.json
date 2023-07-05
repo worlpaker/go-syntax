@@ -2105,6 +2105,7 @@
 			]
 		},
 		"generic_types": {
+			"comment":"Generic support for all types",
 			"match": "(?:([\\w\\.]+)(\\[[\\w\\.\\*]+\\]))",
 			"captures": {
 				"1": {
