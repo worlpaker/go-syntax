@@ -976,7 +976,7 @@
 									"match": "(?:(\\w+(?:\\s+))?([\\w\\.\\*\\[\\]]+))",
 									"captures": {
 										"1": {
-											"name": "variable.other.go"
+											"name": "variable.parameter.go"
 										},
 										"2": {
 											"patterns": [
@@ -1194,9 +1194,20 @@
 			"patterns": [
 				{
 					"comment": "multiple params and types | multiple types one param",
-					"match": "(?:(?<=(?:\\w|\\-)\\s))((?:\\s*)[\\w\\.\\*]+)",
+					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)([\\w\\.\\*]+))",
 					"captures": {
 						"1": {
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.parameter.go"
+								}
+							]
+						},
+						"2": {
 							"patterns": [
 								{
 									"include": "#type-declarations"
@@ -1214,7 +1225,7 @@
 					"match": "(?:(?:(?<=\\[)|^\\s*)([\\w\\.]+)(?=\\s+\\w+\\s\\|)|([\\w\\.]+(?=\\s*\\|)|(?<=\\|\\s)[\\w\\.]+(?=\\])|(?:[\\w\\.]+(?=\\]))))",
 					"captures": {
 						"1": {
-							"name": "variable.other.go"
+							"name": "variable.parameter.go"
 						},
 						"2": {
 							"patterns": [
@@ -1228,6 +1239,9 @@
 							]
 						}
 					}
+				},
+				{
+					"include": "#parameter_variables"
 				}
 			]
 		},
@@ -2105,7 +2119,7 @@
 			]
 		},
 		"generic_types": {
-			"comment":"Generic support for all types",
+			"comment": "Generic support for all types",
 			"match": "(?:([\\w\\.]+)(\\[[\\w\\.\\*]+\\]))",
 			"captures": {
 				"1": {
@@ -2141,6 +2155,16 @@
 					]
 				}
 			}
+		},
+		"parameter_variables": {
+			"comment": "Parameter variables, can include specific types",
+			"match": "(?:\\w+)",
+			"name": "variable.parameter.go",
+			"patterns": [
+				{
+					"include": "$self"
+				}
+			]
 		},
 		"other_variables": {
 			"match": "(?:\\w+)",

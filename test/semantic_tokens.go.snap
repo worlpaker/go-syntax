@@ -94,7 +94,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -112,7 +112,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -154,7 +154,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
-#          ^ source.go variable.other.go
+#          ^ source.go variable.parameter.go
 #           ^ source.go
 #            ^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.end.bracket.square.go
@@ -682,7 +682,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
-#          ^ source.go variable.other.go
+#          ^ source.go variable.parameter.go
 #           ^ source.go
 #            ^ source.go keyword.operator.address.go
 #             ^^^^ source.go entity.name.type.go
@@ -723,7 +723,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
-#          ^ source.go variable.other.go
+#          ^ source.go variable.parameter.go
 #           ^ source.go
 #            ^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.end.bracket.square.go
@@ -755,12 +755,12 @@
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 >	T FooX, F *context.Context, X Foo15](foo, bar, foobar T) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^ source.go entity.name.type.go
 #       ^ source.go punctuation.other.comma.go
 #        ^ source.go
-#         ^ source.go variable.other.go
+#         ^ source.go variable.parameter.go
 #          ^ source.go
 #           ^ source.go keyword.operator.address.go
 #            ^^^^^^^ source.go entity.name.type.go
@@ -768,7 +768,7 @@
 #                    ^^^^^^^ source.go entity.name.type.go
 #                           ^ source.go punctuation.other.comma.go
 #                            ^ source.go
-#                             ^ source.go variable.other.go
+#                             ^ source.go variable.parameter.go
 #                              ^ source.go
 #                               ^^^^^ source.go entity.name.type.go
 #                                    ^ source.go punctuation.definition.end.bracket.square.go
@@ -794,7 +794,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.square.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.definition.end.bracket.square.go
@@ -824,26 +824,26 @@
 #          ^ source.go punctuation.definition.begin.bracket.square.go
 >	a,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 >	b,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 >	c int, d, e, f FooX](foo a, bar f) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^ source.go storage.type.numeric.go
 #      ^ source.go punctuation.other.comma.go
 #       ^ source.go
-#        ^ source.go variable.other.go
+#        ^ source.go variable.parameter.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^ source.go variable.other.go
+#              ^ source.go variable.parameter.go
 #               ^ source.go
 #                ^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.definition.end.bracket.square.go
@@ -867,30 +867,30 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.square.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^ source.go variable.other.go
+#              ^ source.go variable.parameter.go
 #               ^ source.go punctuation.other.comma.go
 #                ^ source.go
-#                 ^ source.go variable.other.go
+#                 ^ source.go variable.parameter.go
 #                  ^ source.go punctuation.other.comma.go
 #                   ^ source.go
-#                    ^ source.go variable.other.go
+#                    ^ source.go variable.parameter.go
 #                     ^ source.go punctuation.other.comma.go
 #                      ^ source.go
-#                       ^ source.go variable.other.go
+#                       ^ source.go variable.parameter.go
 #                        ^ source.go
 #                         ^^^ source.go storage.type.numeric.go
 #                            ^ source.go punctuation.other.comma.go
 #                             ^ source.go
-#                              ^^ source.go variable.other.go
+#                              ^^ source.go variable.parameter.go
 #                                ^ source.go punctuation.other.comma.go
 #                                 ^ source.go
-#                                  ^^ source.go variable.other.go
+#                                  ^^ source.go variable.parameter.go
 #                                    ^ source.go punctuation.other.comma.go
 #                                     ^ source.go
-#                                      ^^ source.go variable.other.go
+#                                      ^^ source.go variable.parameter.go
 #                                        ^ source.go
 #                                         ^^^^^^ source.go storage.type.string.go
 #                                               ^ source.go punctuation.definition.end.bracket.square.go
@@ -1494,7 +1494,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -1734,24 +1734,24 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
->func Bar37(ah string) {}
+>func Bar37(bar string) {}
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^ source.go variable.other.go
-#             ^ source.go
-#              ^^^^^^ source.go storage.type.string.go
-#                    ^ source.go punctuation.definition.end.bracket.round.go
-#                     ^ source.go
-#                      ^ source.go punctuation.definition.begin.bracket.curly.go
-#                       ^ source.go punctuation.definition.end.bracket.curly.go
+#           ^^^ source.go variable.other.go
+#              ^ source.go
+#               ^^^^^^ source.go storage.type.string.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+#                      ^ source.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                        ^ source.go punctuation.definition.end.bracket.curly.go
 >
 >func (s *Foo15) Bar38(a chan<- int) {
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.definition.end.bracket.round.go
@@ -1792,7 +1792,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^^^^^^ source.go entity.name.type.go
 #                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -4682,7 +4682,7 @@
 #     ^ source.go
 #      ^^^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.definition.begin.bracket.square.go
-#                ^^^^ source.go variable.other.go
+#                ^^^^ source.go variable.parameter.go
 #                    ^ source.go
 #                     ^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.definition.end.bracket.square.go
@@ -4710,12 +4710,12 @@
 #     ^ source.go
 #      ^^^^^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.begin.bracket.square.go
-#                 ^^^ source.go variable.other.go
+#                 ^^^ source.go variable.parameter.go
 #                    ^ source.go
 #                     ^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.other.comma.go
 #                          ^ source.go
-#                           ^^^ source.go variable.other.go
+#                           ^^^ source.go variable.parameter.go
 #                              ^ source.go
 #                               ^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.definition.end.bracket.square.go
@@ -4771,7 +4771,7 @@
 #     ^ source.go
 #      ^^^^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.definition.begin.bracket.square.go
-#              ^^^ source.go variable.other.go
+#              ^^^ source.go variable.parameter.go
 #                 ^ source.go
 #                  ^^^ source.go entity.name.type.any.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
@@ -4914,7 +4914,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5085,7 +5085,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5100,7 +5100,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5115,7 +5115,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5130,7 +5130,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5145,7 +5145,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5160,7 +5160,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5175,7 +5175,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5190,7 +5190,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5205,7 +5205,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5220,7 +5220,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5235,7 +5235,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5250,7 +5250,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5265,7 +5265,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5280,7 +5280,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5295,7 +5295,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5310,7 +5310,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5325,7 +5325,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5340,7 +5340,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5355,7 +5355,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5370,7 +5370,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5385,7 +5385,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -5400,7 +5400,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^ source.go variable.other.go
+#      ^^ source.go variable.parameter.go
 #        ^^^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
@@ -10799,7 +10799,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.square.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.definition.end.bracket.square.go
@@ -11249,7 +11249,7 @@
 #    ^ source.go
 #     ^^^^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.definition.begin.bracket.square.go
-#                ^ source.go variable.other.go
+#                ^ source.go variable.parameter.go
 #                 ^ source.go
 #                  ^^^^^^^^^^ source.go entity.name.type.go
 #                            ^ source.go punctuation.definition.end.bracket.square.go
@@ -11275,7 +11275,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^^^^^ source.go variable.other.go
+#      ^^^^^^ source.go variable.parameter.go
 #            ^ source.go keyword.operator.address.go
 #             ^^^^^^^^^^ source.go entity.name.type.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -11296,7 +11296,7 @@
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^^^^^ source.go variable.other.go
+#      ^^^^^^ source.go variable.parameter.go
 #            ^ source.go keyword.operator.address.go
 #             ^^^^^^^^^^ source.go entity.name.type.go
 #                       ^ source.go punctuation.definition.end.bracket.round.go
@@ -12569,6 +12569,464 @@
 #                                         ^ source.go punctuation.other.comma.go
 #                                          ^ source.go
 #                                           ^^^^^^^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.2.19
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>type newstruct3 struct{}
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go
+#                ^^^^^^ source.go keyword.struct.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                       ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo77[foo newstruct1](bar foo) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                           ^^^ source.go variable.other.go
+#                              ^ source.go
+#                               ^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo78[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo newstruct1](bar context.Context) {
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^ source.go punctuation.definition.begin.bracket.round.go
+#                 ^^^ source.go variable.other.go
+#                    ^ source.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.period.go
+#                             ^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                     ^ source.go
+#                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo79[foo newstruct1 | newstruct2 | newstruct3]() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go
+#                          ^ source.go keyword.operator.arithmetic.bitwise.go
+#                           ^ source.go
+#                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go
+#                                       ^ source.go keyword.operator.arithmetic.bitwise.go
+#                                        ^ source.go
+#                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                     ^ source.go punctuation.definition.end.bracket.round.go
+#                                                      ^ source.go
+#                                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo80[foo newstruct1 | newstruct2 | string | newstruct3]() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go
+#                          ^ source.go keyword.operator.arithmetic.bitwise.go
+#                           ^ source.go
+#                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go
+#                                       ^ source.go keyword.operator.arithmetic.bitwise.go
+#                                        ^ source.go
+#                                         ^^^^^^ source.go storage.type.string.go
+#                                               ^ source.go
+#                                                ^ source.go keyword.operator.arithmetic.bitwise.go
+#                                                 ^ source.go
+#                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                             ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                                               ^ source.go
+#                                                                ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo81[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo newstruct1 |
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go
+#                ^ source.go keyword.operator.arithmetic.bitwise.go
+>		newstruct2 | string | newstruct3]() {
+#^^ source.go
+#  ^^^^^^^^^^ source.go entity.name.type.go
+#            ^ source.go
+#             ^ source.go keyword.operator.arithmetic.bitwise.go
+#              ^ source.go
+#               ^^^^^^ source.go storage.type.string.go
+#                     ^ source.go
+#                      ^ source.go keyword.operator.arithmetic.bitwise.go
+#                       ^ source.go
+#                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                     ^ source.go
+#                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo82[foo newstruct1 |
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^^^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go
+#                          ^ source.go keyword.operator.arithmetic.bitwise.go
+>	newstruct2 | string | newstruct3]() {
+#^ source.go
+# ^^^^^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^ source.go keyword.operator.arithmetic.bitwise.go
+#             ^ source.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go
+#                     ^ source.go keyword.operator.arithmetic.bitwise.go
+#                      ^ source.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                                   ^ source.go punctuation.definition.end.bracket.round.go
+#                                    ^ source.go
+#                                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo83[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	bar,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	foobar newstruct1,
+#^ source.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^^^^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.comma.go
+>]() {
+#^ source.go punctuation.definition.end.bracket.square.go
+# ^ source.go punctuation.definition.begin.bracket.round.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo84[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	bar,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	foobar newstruct1]() {
+#^ source.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^^^^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.definition.end.bracket.square.go
+#                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+#                     ^ source.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo85[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	bar,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	foobar newstruct1]() {
+#^ source.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^^^^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.definition.end.bracket.square.go
+#                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+#                     ^ source.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo86[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	bar,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+>	foobar newstruct1,
+#^ source.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^^^^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.comma.go
+>	foox,
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+>	barx,
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+>	foobarx newstruct2,
+#^ source.go
+# ^^^^^^^ source.go variable.parameter.go
+#        ^ source.go
+#         ^^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.other.comma.go
+>]() {
+#^ source.go punctuation.definition.end.bracket.square.go
+# ^ source.go punctuation.definition.begin.bracket.round.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo87[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo, bar, foobar newstruct1,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^^ source.go variable.parameter.go
+#         ^ source.go punctuation.other.comma.go
+#          ^ source.go
+#           ^^^^^^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^^^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.comma.go
+>	foox, barx, foobarx newstruct2]() {
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^^^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo88[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo, bar, foobar newstruct1,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^^ source.go variable.parameter.go
+#         ^ source.go punctuation.other.comma.go
+#          ^ source.go
+#           ^^^^^^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^^^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.comma.go
+>	foox, barx, foobarx newstruct2,
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^^^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.comma.go
+>	fooy, bary, foobary newstruct3,
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^^^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.comma.go
+>]() {
+#^ source.go punctuation.definition.end.bracket.square.go
+# ^ source.go punctuation.definition.begin.bracket.round.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo89[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	foo, bar, foobar newstruct1,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^^ source.go variable.parameter.go
+#         ^ source.go punctuation.other.comma.go
+#          ^ source.go
+#           ^^^^^^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^^^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.comma.go
+>	foox, barx, foobarx newstruct2,
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^^^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.comma.go
+>	fooy, bary, foobary newstruct3]() {
+#^ source.go
+# ^^^^ source.go variable.parameter.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^^^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo90[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+>	ce newstruct1,
+#^ source.go
+# ^^ source.go variable.parameter.go
+#   ^ source.go
+#    ^^^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.comma.go
+>	de newstruct2,
+#^ source.go
+# ^^ source.go variable.parameter.go
+#   ^ source.go
+#    ^^^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.comma.go
+>	fe newstruct3,
+#^ source.go
+# ^^ source.go variable.parameter.go
+#   ^ source.go
+#    ^^^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.comma.go
+>](){
+#^ source.go punctuation.definition.end.bracket.square.go
+# ^ source.go punctuation.definition.begin.bracket.round.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >

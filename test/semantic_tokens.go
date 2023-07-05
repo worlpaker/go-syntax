@@ -218,7 +218,7 @@ func Bar35(
 func Bar36(context.Context, context.Context) {
 }
 
-func Bar37(ah string) {}
+func Bar37(bar string) {}
 
 func (s *Foo15) Bar38(a chan<- int) {
 
@@ -1356,4 +1356,88 @@ func Foo76() {
 	type foobar0 = map[newstructG[newstruct1]]interface{}
 
 	_, _, _, _, _ = xfoo, xbar, xfoox, xbarx, foobarx
+}
+
+// v0.2.19
+type newstruct3 struct{}
+
+func Foo77[foo newstruct1](bar foo) {
+
+}
+
+func Foo78[
+	foo newstruct1](bar context.Context) {
+}
+
+func Foo79[foo newstruct1 | newstruct2 | newstruct3]() {
+
+}
+
+func Foo80[foo newstruct1 | newstruct2 | string | newstruct3]() {
+
+}
+
+func Foo81[
+	foo newstruct1 |
+		newstruct2 | string | newstruct3]() {
+}
+
+func Foo82[foo newstruct1 |
+	newstruct2 | string | newstruct3]() {
+}
+
+func Foo83[
+	foo,
+	bar,
+	foobar newstruct1,
+]() {
+
+}
+
+func Foo84[
+	foo,
+	bar,
+	foobar newstruct1]() {
+}
+
+func Foo85[
+	foo,
+	bar,
+	foobar newstruct1]() {
+}
+
+func Foo86[
+	foo,
+	bar,
+	foobar newstruct1,
+	foox,
+	barx,
+	foobarx newstruct2,
+]() {
+}
+
+func Foo87[
+	foo, bar, foobar newstruct1,
+	foox, barx, foobarx newstruct2]() {
+}
+
+func Foo88[
+	foo, bar, foobar newstruct1,
+	foox, barx, foobarx newstruct2,
+	fooy, bary, foobary newstruct3,
+]() {
+}
+
+func Foo89[
+	foo, bar, foobar newstruct1,
+	foox, barx, foobarx newstruct2,
+	fooy, bary, foobary newstruct3]() {
+}
+
+func Foo90[
+	ce newstruct1,
+	de newstruct2,
+	fe newstruct3,
+](){
+
 }
