@@ -3112,12 +3112,12 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	name string
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^ source.go storage.type.string.go
 >	age  int
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^ source.go
 #      ^^^ source.go storage.type.numeric.go
@@ -3150,16 +3150,16 @@
 # ^^^^^ source.go entity.name.type.go
 >	Foo       Foo16
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^ source.go
 #          ^ source.go
 #           ^^^^^ source.go entity.name.type.go
 >	FFoo, Bar string
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^ source.go punctuation.other.comma.go
 #      ^ source.go
-#       ^^^ source.go variable.other.go
+#       ^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 >}
@@ -3173,10 +3173,10 @@
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 #                  ^ source.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.other.property.go
 #                      ^ source.go punctuation.other.comma.go
 #                       ^ source.go
-#                        ^^^ source.go variable.other.go
+#                        ^^^ source.go variable.other.property.go
 #                           ^ source.go
 #                            ^^^^^ source.go entity.name.type.go
 #                                 ^ source.go
@@ -3212,10 +3212,10 @@
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 #                  ^ source.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.other.property.go
 #                      ^ source.go punctuation.other.comma.go
 #                       ^ source.go
-#                        ^^^ source.go variable.other.go
+#                        ^^^ source.go variable.other.property.go
 #                           ^ source.go
 #                            ^^^^ source.go entity.name.type.go
 #                                ^ source.go
@@ -3231,10 +3231,10 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	foo, bar string
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go punctuation.other.comma.go
 #     ^ source.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^^^ source.go storage.type.string.go
 >}
@@ -3259,12 +3259,12 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	name string
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^ source.go storage.type.string.go
 >	age  int
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^ source.go
 #      ^^^ source.go storage.type.numeric.go
@@ -3295,7 +3295,7 @@
 #  ^^^^^ source.go entity.name.type.go
 >	Foo    func() (context.Context, func(), io.ReadCloser, error, map[Foo17]interface{})
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -3331,7 +3331,7 @@
 #                                                                                    ^ source.go punctuation.definition.end.bracket.round.go
 >	Bar    func() (foo context.Context, bar io.ReadCloser, err error)
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -3359,19 +3359,19 @@
 #                                                                 ^ source.go punctuation.definition.end.bracket.round.go
 >	Fooo   Foo17
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^^ source.go entity.name.type.go
 >	Barr   string
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^^^ source.go storage.type.string.go
 >	Foo2   map[Foo17]interface{}
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^ source.go keyword.map.go
@@ -3383,7 +3383,7 @@
 #                            ^ source.go punctuation.definition.end.bracket.curly.go
 >	Bar2   func(foo FooX) (foox, barx, foobar io.Writer)
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -3408,13 +3408,13 @@
 #                                                    ^ source.go punctuation.definition.end.bracket.round.go
 >	FooBar *Foo17
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^^ source.go entity.name.type.go
 >	Foo3   func() (foo context.Context, bar io.ReadCloser, foobar *map[Foo17]interface{})
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -3449,7 +3449,7 @@
 #                                                                                     ^ source.go punctuation.definition.end.bracket.round.go
 >	Bar3   func() map[Foo17]interface{}
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -3465,7 +3465,7 @@
 #                                   ^ source.go punctuation.definition.end.bracket.curly.go
 >	Foo4   chan<- Foo17
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.channel.go
@@ -3473,7 +3473,7 @@
 #              ^^^^^^ source.go entity.name.type.go
 >	Bar4   <-chan Foo17
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^ source.go keyword.operator.channel.go
@@ -3481,7 +3481,7 @@
 #              ^^^^^^ source.go entity.name.type.go
 >	Foo5   chan *Foo17
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^^ source.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
@@ -3489,14 +3489,14 @@
 #              ^^^^^ source.go entity.name.type.go
 >	Bar5   chan Foo17
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^^ source.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
 #             ^^^^^ source.go entity.name.type.go
 >	Foo6   []func(http.Handler) http.Handler
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3512,7 +3512,7 @@
 #                                  ^^^^^^^ source.go entity.name.type.go
 >	Bar6   func() context.Context
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -3523,7 +3523,7 @@
 #                       ^^^^^^^ source.go entity.name.type.go
 >	Foo7   []func(http.Handler) <-chan http.Handler
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3542,7 +3542,7 @@
 #                                         ^^^^^^^ source.go entity.name.type.go
 >	Bar7   []nodeTyp
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3550,7 +3550,7 @@
 #          ^^^^^^^ source.go entity.name.type.go
 >	Foo8   [ntCatchAll + 1]nodeTyp
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3563,7 +3563,7 @@
 #                        ^^^^^^^ source.go entity.name.type.go
 >	Bar8   []*nodeTyp
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^ source.go
 #       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3593,7 +3593,7 @@
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 #                  ^ source.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.other.property.go
 #                      ^ source.go
 #                       ^^ source.go keyword.operator.channel.go
 #                         ^^^^ source.go keyword.channel.go
@@ -3620,7 +3620,7 @@
 #  ^^^^^ source.go entity.name.type.go
 >	Email      context.Context `json:"Email"`
 #^ source.go
-# ^^^^^ source.go variable.other.go
+# ^^^^^ source.go variable.other.property.go
 #      ^^^^^ source.go
 #           ^ source.go
 #            ^^^^^^^ source.go entity.name.type.go
@@ -3632,7 +3632,7 @@
 #                                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	Password   string          `json:"Password"`
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^^ source.go
 #           ^ source.go
 #            ^^^^^^ source.go storage.type.string.go
@@ -3642,7 +3642,7 @@
 #                                            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	First_name string          `json:"First_name"`
 #^ source.go
-# ^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^ source.go variable.other.property.go
 #           ^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 #                  ^^^^^^^^^^ source.go
@@ -3651,7 +3651,7 @@
 #                                              ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	Last_name  string          `json:"Last_name"`
 #^ source.go
-# ^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^ source.go
 #            ^^^^^^ source.go storage.type.string.go
@@ -3661,7 +3661,7 @@
 #                                             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	Birth_date *int            `json:"Birth_date"`
 #^ source.go
-# ^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^ source.go variable.other.property.go
 #           ^ source.go
 #            ^ source.go keyword.operator.address.go
 #             ^^^ source.go storage.type.numeric.go
@@ -3671,7 +3671,7 @@
 #                                              ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	Gender     *string         `json:"Gender"`
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.other.property.go
 #       ^^^^ source.go
 #           ^ source.go
 #            ^ source.go keyword.operator.address.go
@@ -3841,7 +3841,7 @@
 # ^^^^^^^^^ source.go entity.name.type.go
 >	timer *time.Timer // Under cancelCtx.mu.
 #^ source.go
-# ^^^^^ source.go variable.other.go
+# ^^^^^ source.go variable.other.property.go
 #      ^ source.go
 #       ^ source.go keyword.operator.address.go
 #        ^^^^ source.go entity.name.type.go
@@ -3853,7 +3853,7 @@
 >
 >	deadline time.Time
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
@@ -3881,7 +3881,7 @@
 >
 >	mu       sync.Mutex        // protects following fields
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^ source.go
 #         ^ source.go
 #          ^^^^ source.go entity.name.type.go
@@ -3892,7 +3892,7 @@
 #                              ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >	done     atomic.Value      // of chan struct{}, created lazily, closed by first cancel call
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^^^ source.go
 #         ^ source.go
 #          ^^^^^^ source.go entity.name.type.go
@@ -3903,7 +3903,7 @@
 #                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >	children map[FooX]struct{} // set to nil by the first cancel call
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^ source.go keyword.map.go
 #             ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3917,7 +3917,7 @@
 #                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >	err      error             // set to non-nil by the first cancel call
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^ source.go
 #         ^ source.go
 #          ^^^^^ source.go storage.type.error.go
@@ -4692,12 +4692,12 @@
 #                                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >		a int
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go
 #    ^^^ source.go storage.type.numeric.go
 >		b TGen
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go
 #    ^^^^ source.go entity.name.type.go
 >	}
@@ -4725,17 +4725,17 @@
 #                                            ^ source.go punctuation.definition.begin.bracket.curly.go
 >		a int
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go
 #    ^^^ source.go storage.type.numeric.go
 >		b foo
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go
 #    ^^^ source.go entity.name.type.go
 >		c *bar
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go
 #    ^ source.go keyword.operator.address.go
 #     ^^^ source.go entity.name.type.go
@@ -4781,7 +4781,7 @@
 #                              ^ source.go punctuation.definition.begin.bracket.curly.go
 >		_ [0]*foo
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go
 #    ^ source.go punctuation.definition.begin.bracket.square.go
 #     ^ source.go constant.numeric.decimal.go
@@ -4803,7 +4803,7 @@
 #                      ^ source.go punctuation.definition.begin.bracket.curly.go
 >		foo int
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^ source.go storage.type.numeric.go
 >	}
@@ -4847,13 +4847,13 @@
 #                      ^ source.go punctuation.definition.begin.bracket.curly.go
 >		foo    int
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^ source.go
 #        ^ source.go
 #         ^^^ source.go storage.type.numeric.go
 >		bar    *Pointer[*response]
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^ source.go
 #        ^ source.go
 #         ^ source.go keyword.operator.address.go
@@ -4864,7 +4864,7 @@
 #                           ^ source.go punctuation.definition.end.bracket.square.go
 >		foobar Pointer[response]
 #^^ source.go
-#  ^^^^^^ source.go variable.other.go
+#  ^^^^^^ source.go variable.other.property.go
 #        ^ source.go
 #         ^^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.begin.bracket.square.go
@@ -4872,7 +4872,7 @@
 #                         ^ source.go punctuation.definition.end.bracket.square.go
 >		foo1   Pointer[int]
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^^^^ source.go entity.name.type.go
@@ -4881,7 +4881,7 @@
 #                    ^ source.go punctuation.definition.end.bracket.square.go
 >		bar1   map[response]interface{}
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^ source.go keyword.map.go
@@ -8046,7 +8046,7 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	matrixCells        [][]cell
 #^ source.go
-# ^^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^^ source.go variable.other.property.go
 #            ^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8056,7 +8056,7 @@
 #                        ^^^^ source.go entity.name.type.go
 >	matrixCellsPointer *[][]cell
 #^ source.go
-# ^^^^^^^^^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^^^^^^^^^ source.go variable.other.property.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8066,7 +8066,7 @@
 #                         ^^^^ source.go entity.name.type.go
 >	rowCells           []cell
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8074,7 +8074,7 @@
 #                      ^^^^ source.go entity.name.type.go
 >	rowCellsPointer    *[]cell
 #^ source.go
-# ^^^^^^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^^^^^^ source.go variable.other.property.go
 #                ^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8083,7 +8083,7 @@
 #                       ^^^^ source.go entity.name.type.go
 >	matrixInts         [][]int
 #^ source.go
-# ^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^ source.go variable.other.property.go
 #           ^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8093,7 +8093,7 @@
 #                        ^^^ source.go storage.type.numeric.go
 >	matrixIntsPointer  *[][]int
 #^ source.go
-# ^^^^^^^^^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^^^^^^^^^ source.go variable.other.property.go
 #                  ^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8104,7 +8104,7 @@
 #                         ^^^ source.go storage.type.numeric.go
 >	m0                 map[cell]interface{}
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^^^ source.go keyword.map.go
@@ -8116,7 +8116,7 @@
 #                                       ^ source.go punctuation.definition.end.bracket.curly.go
 >	m1                 []<-chan cell
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8126,7 +8126,7 @@
 #                            ^^^^^ source.go entity.name.type.go
 >	m2                 *[]chan<- cell
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8137,7 +8137,7 @@
 #                             ^^^^^ source.go entity.name.type.go
 >	m3                 [][]map[cell]interface{}
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8153,7 +8153,7 @@
 #                                           ^ source.go punctuation.definition.end.bracket.curly.go
 >	m4                 *[][]map[cell]interface{}
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8170,7 +8170,7 @@
 #                                            ^ source.go punctuation.definition.end.bracket.curly.go
 >	m5                 [][]<-chan func()
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8185,7 +8185,7 @@
 #                                    ^ source.go punctuation.definition.end.bracket.round.go
 >	m6                 *[][]chan<- func()
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8201,7 +8201,7 @@
 #                                     ^ source.go punctuation.definition.end.bracket.round.go
 >	m7                 [][]context.Context
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8213,7 +8213,7 @@
 #                                ^^^^^^^ source.go entity.name.type.go
 >	m8                 *[][]context.Context
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8226,7 +8226,7 @@
 #                                 ^^^^^^^ source.go entity.name.type.go
 >	m9                 [][][][][][][][][]context.Context
 #^ source.go
-# ^^ source.go variable.other.go
+# ^^ source.go variable.other.property.go
 #   ^^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8252,7 +8252,7 @@
 #                                              ^^^^^^^ source.go entity.name.type.go
 >	m10                *[][][][][][][][][]context.Context
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8279,7 +8279,7 @@
 #                                               ^^^^^^^ source.go entity.name.type.go
 >	m11                [][][][][][][][][]cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8303,7 +8303,7 @@
 #                                      ^^^^ source.go entity.name.type.go
 >	m12                *[][][][][][][][][]cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8328,7 +8328,7 @@
 #                                       ^^^^ source.go entity.name.type.go
 >	m13                [][][][][][][][][]cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8352,7 +8352,7 @@
 #                                      ^^^^ source.go entity.name.type.go
 >	m14                *[][][][][][][][][]cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8377,7 +8377,7 @@
 #                                       ^^^^ source.go entity.name.type.go
 >	m15                [][][][][][][][][]<-chan cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8403,7 +8403,7 @@
 #                                            ^^^^^ source.go entity.name.type.go
 >	m16                *[][][][][][][][][]chan<- cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8430,7 +8430,7 @@
 #                                             ^^^^^ source.go entity.name.type.go
 >	m17                [][][][][][][][][]<-chan map[cell]interface{}
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8463,7 +8463,7 @@
 #                                                                ^ source.go punctuation.definition.end.bracket.curly.go
 >	m18                *[][][][][][][][][]chan<- map[cell]interface{}
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8497,7 +8497,7 @@
 #                                                                 ^ source.go punctuation.definition.end.bracket.curly.go
 >	m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8532,7 +8532,7 @@
 #                                                                     ^^^^^^^ source.go entity.name.type.go
 >	m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8576,7 +8576,7 @@
 #                                                                                   ^ source.go punctuation.definition.end.bracket.round.go
 >	m21                [][][][][][][][][]func() <-chan cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8606,7 +8606,7 @@
 #                                                   ^^^^^ source.go entity.name.type.go
 >	m22                *[][][][][][][][][]func() chan<- cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8637,13 +8637,13 @@
 #                                                    ^^^^^ source.go entity.name.type.go
 >	m23, m24, m25      [][][][][][][][][]cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go punctuation.other.comma.go
 #     ^ source.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.other.property.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.other.property.go
 #              ^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8667,13 +8667,13 @@
 #                                      ^^^^ source.go entity.name.type.go
 >	m26, m27, m28      *[][][][][][][][][]cell
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go punctuation.other.comma.go
 #     ^ source.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.other.property.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.other.property.go
 #              ^^^^^ source.go
 #                   ^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
@@ -8706,7 +8706,7 @@
 #            ^^^^^^ source.go keyword.struct.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 #                   ^ source.go
-#                    ^^^ source.go variable.other.go
+#                    ^^^ source.go variable.other.property.go
 #                       ^ source.go
 #                        ^ source.go punctuation.definition.begin.bracket.square.go
 #                         ^ source.go punctuation.definition.end.bracket.square.go
@@ -8724,7 +8724,7 @@
 #            ^^^^^^ source.go keyword.struct.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 #                   ^ source.go
-#                    ^^^ source.go variable.other.go
+#                    ^^^ source.go variable.other.property.go
 #                       ^ source.go
 #                        ^ source.go keyword.operator.arithmetic.go
 #                         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8748,42 +8748,42 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	foo struct {
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^^^^^^ source.go keyword.struct.go
 #           ^ source.go
 #            ^ source.go punctuation.definition.begin.bracket.curly.go
 >		foo context.Context
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.other.period.go
 #              ^^^^^^^ source.go entity.name.type.go
 >		bar struct {
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^ source.go keyword.struct.go
 #            ^ source.go
 #             ^ source.go punctuation.definition.begin.bracket.curly.go
 >			foo context.Context
 #^^^ source.go
-#   ^^^ source.go variable.other.go
+#   ^^^ source.go variable.other.property.go
 #      ^ source.go
 #       ^^^^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
 #               ^^^^^^^ source.go entity.name.type.go
 >			bar struct {
 #^^^ source.go
-#   ^^^ source.go variable.other.go
+#   ^^^ source.go variable.other.property.go
 #      ^ source.go
 #       ^^^^^^ source.go keyword.struct.go
 #             ^ source.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
 >				foo context.Context
 #^^^^ source.go
-#    ^^^ source.go variable.other.go
+#    ^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.other.period.go
@@ -8793,7 +8793,7 @@
 #   ^ source.go punctuation.definition.end.bracket.curly.go
 >			foobar context.Context
 #^^^ source.go
-#   ^^^^^^ source.go variable.other.go
+#   ^^^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.other.period.go
@@ -8806,7 +8806,7 @@
 # ^ source.go punctuation.definition.end.bracket.curly.go
 >	bar context.Context
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^^^^^^^ source.go entity.name.type.go
 #            ^ source.go punctuation.other.period.go
@@ -8824,17 +8824,17 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	foo, bar context.Context
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go punctuation.other.comma.go
 #     ^ source.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.other.period.go
 #                  ^^^^^^^ source.go entity.name.type.go
 >	foo0     func()
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^^^^ source.go
 #         ^ source.go
 #          ^^^^ source.go keyword.function.go
@@ -8842,28 +8842,28 @@
 #               ^ source.go punctuation.definition.end.bracket.round.go
 >	bar0     struct {
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^^^ source.go keyword.struct.go
 #                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 >		foo context.Context
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.other.period.go
 #              ^^^^^^^ source.go entity.name.type.go
 >		bar struct {
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^ source.go keyword.struct.go
 #            ^ source.go
 #             ^ source.go punctuation.definition.begin.bracket.curly.go
 >			foo  func()
 #^^^ source.go
-#   ^^^ source.go variable.other.go
+#   ^^^ source.go variable.other.property.go
 #      ^ source.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
@@ -8871,7 +8871,7 @@
 #             ^ source.go punctuation.definition.end.bracket.round.go
 >			foo0 func(context.Context)
 #^^^ source.go
-#   ^^^^ source.go variable.other.go
+#   ^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
@@ -8881,14 +8881,14 @@
 #                            ^ source.go punctuation.definition.end.bracket.round.go
 >			foo1 struct{}
 #^^^ source.go
-#   ^^^^ source.go variable.other.go
+#   ^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^^^^^^ source.go keyword.struct.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
 #               ^ source.go punctuation.definition.end.bracket.curly.go
 >			foo2 chan context.Context
 #^^^ source.go
-#   ^^^^ source.go variable.other.go
+#   ^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
@@ -8897,7 +8897,7 @@
 #                     ^^^^^^^ source.go entity.name.type.go
 >			foo3 func()
 #^^^ source.go
-#   ^^^^ source.go variable.other.go
+#   ^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
@@ -8910,7 +8910,7 @@
 # ^ source.go punctuation.definition.end.bracket.curly.go
 >	foobar context.Context
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.other.period.go
@@ -8928,14 +8928,14 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >	Foo struct {
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^^^^^^ source.go keyword.struct.go
 #           ^ source.go
 #            ^ source.go punctuation.definition.begin.bracket.curly.go
 >		matrixCells        [][]cell
 #^^ source.go
-#  ^^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^^ source.go variable.other.property.go
 #             ^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8945,7 +8945,7 @@
 #                         ^^^^ source.go entity.name.type.go
 >		matrixCellsPointer *[][]cell
 #^^ source.go
-#  ^^^^^^^^^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^^^^^^^^^ source.go variable.other.property.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8955,7 +8955,7 @@
 #                          ^^^^ source.go entity.name.type.go
 >		rowCells           []cell
 #^^ source.go
-#  ^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^ source.go variable.other.property.go
 #          ^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8963,7 +8963,7 @@
 #                       ^^^^ source.go entity.name.type.go
 >		rowCellsPointer    *[]cell
 #^^ source.go
-#  ^^^^^^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^^^^^^ source.go variable.other.property.go
 #                 ^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -8972,7 +8972,7 @@
 #                        ^^^^ source.go entity.name.type.go
 >		matrixInts         [][]int
 #^^ source.go
-#  ^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^ source.go variable.other.property.go
 #            ^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8982,7 +8982,7 @@
 #                         ^^^ source.go storage.type.numeric.go
 >		matrixIntsPointer  *[][]int
 #^^ source.go
-#  ^^^^^^^^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^^^^^^^^ source.go variable.other.property.go
 #                   ^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -8993,7 +8993,7 @@
 #                          ^^^ source.go storage.type.numeric.go
 >		m0                 map[cell]interface{}
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^^^ source.go keyword.map.go
@@ -9005,7 +9005,7 @@
 #                                        ^ source.go punctuation.definition.end.bracket.curly.go
 >		m1                 []<-chan cell
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9015,7 +9015,7 @@
 #                             ^^^^^ source.go entity.name.type.go
 >		m2                 *[]chan<- cell
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9026,7 +9026,7 @@
 #                              ^^^^^ source.go entity.name.type.go
 >		m3                 [][]map[cell]interface{}
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9042,7 +9042,7 @@
 #                                            ^ source.go punctuation.definition.end.bracket.curly.go
 >		m4                 *[][]map[cell]interface{}
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9059,7 +9059,7 @@
 #                                             ^ source.go punctuation.definition.end.bracket.curly.go
 >		m5                 [][]<-chan func()
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9074,7 +9074,7 @@
 #                                     ^ source.go punctuation.definition.end.bracket.round.go
 >		m6                 *[][]chan<- func()
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9090,7 +9090,7 @@
 #                                      ^ source.go punctuation.definition.end.bracket.round.go
 >		m7                 [][]context.Context
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9102,7 +9102,7 @@
 #                                 ^^^^^^^ source.go entity.name.type.go
 >		m8                 *[][]context.Context
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9115,7 +9115,7 @@
 #                                  ^^^^^^^ source.go entity.name.type.go
 >		m9                 [][][][][][][][][]context.Context
 #^^ source.go
-#  ^^ source.go variable.other.go
+#  ^^ source.go variable.other.property.go
 #    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9141,7 +9141,7 @@
 #                                               ^^^^^^^ source.go entity.name.type.go
 >		m10                *[][][][][][][][][]context.Context
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9168,7 +9168,7 @@
 #                                                ^^^^^^^ source.go entity.name.type.go
 >		m11                [][][][][][][][][]cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9192,7 +9192,7 @@
 #                                       ^^^^ source.go entity.name.type.go
 >		m12                *[][][][][][][][][]cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9217,7 +9217,7 @@
 #                                        ^^^^ source.go entity.name.type.go
 >		m13                [][][][][][][][][]cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9241,7 +9241,7 @@
 #                                       ^^^^ source.go entity.name.type.go
 >		m14                *[][][][][][][][][]cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9266,7 +9266,7 @@
 #                                        ^^^^ source.go entity.name.type.go
 >		m15                [][][][][][][][][]<-chan cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9292,7 +9292,7 @@
 #                                             ^^^^^ source.go entity.name.type.go
 >		m16                *[][][][][][][][][]chan<- cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9319,7 +9319,7 @@
 #                                              ^^^^^ source.go entity.name.type.go
 >		m17                [][][][][][][][][]<-chan map[cell]interface{}
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9352,7 +9352,7 @@
 #                                                                 ^ source.go punctuation.definition.end.bracket.curly.go
 >		m18                *[][][][][][][][][]chan<- map[cell]interface{}
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9386,7 +9386,7 @@
 #                                                                  ^ source.go punctuation.definition.end.bracket.curly.go
 >		m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9421,7 +9421,7 @@
 #                                                                      ^^^^^^^ source.go entity.name.type.go
 >		m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9465,7 +9465,7 @@
 #                                                                                    ^ source.go punctuation.definition.end.bracket.round.go
 >		m21                [][][][][][][][][]func() <-chan cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9495,7 +9495,7 @@
 #                                                    ^^^^^ source.go entity.name.type.go
 >		m22                *[][][][][][][][][]func() chan<- cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9526,13 +9526,13 @@
 #                                                     ^^^^^ source.go entity.name.type.go
 >		m23, m24, m25      [][][][][][][][][]cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go punctuation.other.comma.go
 #      ^ source.go
-#       ^^^ source.go variable.other.go
+#       ^^^ source.go variable.other.property.go
 #          ^ source.go punctuation.other.comma.go
 #           ^ source.go
-#            ^^^ source.go variable.other.go
+#            ^^^ source.go variable.other.property.go
 #               ^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9556,13 +9556,13 @@
 #                                       ^^^^ source.go entity.name.type.go
 >		m26, m27, m28      *[][][][][][][][][]cell
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go punctuation.other.comma.go
 #      ^ source.go
-#       ^^^ source.go variable.other.go
+#       ^^^ source.go variable.other.property.go
 #          ^ source.go punctuation.other.comma.go
 #           ^ source.go
-#            ^^^ source.go variable.other.go
+#            ^^^ source.go variable.other.property.go
 #               ^^^^^ source.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
@@ -9590,7 +9590,7 @@
 # ^ source.go punctuation.definition.end.bracket.curly.go
 >	timerCtx struct {
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^^^ source.go keyword.struct.go
 #                ^ source.go
@@ -9601,7 +9601,7 @@
 #  ^^^^^^^^^ source.go entity.name.type.go
 >		timer *time.Timer // Under cancelCtx.mu.
 #^^ source.go
-#  ^^^^^ source.go variable.other.go
+#  ^^^^^ source.go variable.other.property.go
 #       ^ source.go
 #        ^ source.go keyword.operator.address.go
 #         ^^^^ source.go entity.name.type.go
@@ -9613,7 +9613,7 @@
 >
 >		deadline time.Time
 #^^ source.go
-#  ^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.other.period.go
@@ -9623,7 +9623,7 @@
 # ^ source.go punctuation.definition.end.bracket.curly.go
 >	Foo25 struct {
 #^ source.go
-# ^^^^^ source.go variable.other.go
+# ^^^^^ source.go variable.other.property.go
 #      ^ source.go
 #       ^^^^^^ source.go keyword.struct.go
 #             ^ source.go
@@ -9639,7 +9639,7 @@
 #   ^^^^^ source.go entity.name.type.go
 >		Foo    func() (context.Context, func(), io.ReadCloser, error, map[Foo17]interface{})
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
@@ -9675,7 +9675,7 @@
 #                                                                                     ^ source.go punctuation.definition.end.bracket.round.go
 >		Bar    func() (foo context.Context, bar io.ReadCloser, err error)
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
@@ -9703,19 +9703,19 @@
 #                                                                  ^ source.go punctuation.definition.end.bracket.round.go
 >		Fooo   Foo17
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^^ source.go entity.name.type.go
 >		Barr   string
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^^^ source.go storage.type.string.go
 >		Foo2   map[Foo17]interface{}
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^ source.go keyword.map.go
@@ -9727,7 +9727,7 @@
 #                             ^ source.go punctuation.definition.end.bracket.curly.go
 >		Bar2   func(foo FooX) (foox, barx, foobar io.Writer)
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
@@ -9752,13 +9752,13 @@
 #                                                     ^ source.go punctuation.definition.end.bracket.round.go
 >		FooBar *Foo17
 #^^ source.go
-#  ^^^^^^ source.go variable.other.go
+#  ^^^^^^ source.go variable.other.property.go
 #        ^ source.go
 #         ^ source.go keyword.operator.address.go
 #          ^^^^^ source.go entity.name.type.go
 >		Foo3   func() (foo context.Context, bar io.ReadCloser, foobar *map[Foo17]interface{})
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
@@ -9793,7 +9793,7 @@
 #                                                                                      ^ source.go punctuation.definition.end.bracket.round.go
 >		Bar3   func() map[Foo17]interface{}
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
@@ -9809,7 +9809,7 @@
 #                                    ^ source.go punctuation.definition.end.bracket.curly.go
 >		Foo4   chan<- Foo17
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.channel.go
@@ -9817,7 +9817,7 @@
 #               ^^^^^^ source.go entity.name.type.go
 >		Bar4   <-chan Foo17
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^ source.go keyword.operator.channel.go
@@ -9825,7 +9825,7 @@
 #               ^^^^^^ source.go entity.name.type.go
 >		Foo5   chan *Foo17
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^^ source.go
 #         ^^^^ source.go keyword.channel.go
 #             ^ source.go
@@ -9833,14 +9833,14 @@
 #               ^^^^^ source.go entity.name.type.go
 >		Bar5   chan Foo17
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^^ source.go
 #         ^^^^ source.go keyword.channel.go
 #             ^ source.go
 #              ^^^^^ source.go entity.name.type.go
 >		Foo6   []func(http.Handler) http.Handler
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9856,7 +9856,7 @@
 #                                   ^^^^^^^ source.go entity.name.type.go
 >		Bar6   func() context.Context
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
@@ -9867,7 +9867,7 @@
 #                        ^^^^^^^ source.go entity.name.type.go
 >		Foo7   []func(http.Handler) <-chan http.Handler
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9886,7 +9886,7 @@
 #                                          ^^^^^^^ source.go entity.name.type.go
 >		Bar7   []nodeTyp
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9894,7 +9894,7 @@
 #           ^^^^^^^ source.go entity.name.type.go
 >		Foo8   [ntCatchAll + 1]nodeTyp
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9907,7 +9907,7 @@
 #                         ^^^^^^^ source.go entity.name.type.go
 >		Bar8   []*nodeTyp
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^^ source.go
 #        ^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9919,7 +9919,7 @@
 # ^ source.go punctuation.definition.end.bracket.curly.go
 >	bar string
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^^^^^^ source.go storage.type.string.go
 >}
@@ -9934,7 +9934,7 @@
 #                     ^ source.go punctuation.definition.begin.bracket.curly.go
 >	EndCursor string `json:"end_cursor"`
 #^ source.go
-# ^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 #                 ^ source.go
@@ -9943,7 +9943,7 @@
 #                                    ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	NextPage  bool   `json:"has_next_page"`
 #^ source.go
-# ^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^ source.go
 #           ^^^^ source.go storage.type.boolean.go
@@ -9963,54 +9963,54 @@
 #                     ^ source.go punctuation.definition.begin.bracket.curly.go
 >	Rhxgis    string
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.other.property.go
 #       ^^^ source.go
 #          ^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 >	EntryData struct {
 #^ source.go
-# ^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >		ProfilePage struct {
 #^^ source.go
-#  ^^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^^ source.go variable.other.property.go
 #             ^ source.go
 #              ^^^^^^ source.go keyword.struct.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.curly.go
 >			Graphql struct {
 #^^^ source.go
-#   ^^^^^^^ source.go variable.other.go
+#   ^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >				User struct {
 #^^^^ source.go
-#    ^^^^ source.go variable.other.go
+#    ^^^^ source.go variable.other.property.go
 #        ^ source.go
 #         ^^^^^^ source.go keyword.struct.go
 #               ^ source.go
 #                ^ source.go punctuation.definition.begin.bracket.curly.go
 >					Id    string
 #^^^^^ source.go
-#     ^^ source.go variable.other.go
+#     ^^ source.go variable.other.property.go
 #       ^^^ source.go
 #          ^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 >					Media struct {
 #^^^^^ source.go
-#     ^^^^^ source.go variable.other.go
+#     ^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >						PageInfo pageInfo
 #^^^^^^ source.go
-#      ^^^^^^^^ source.go variable.other.go
+#      ^^^^^^^^ source.go variable.other.property.go
 #              ^ source.go
 #               ^^^^^^^^ source.go entity.name.type.go
 >					}
@@ -10041,7 +10041,7 @@
 #                         ^ source.go punctuation.definition.begin.bracket.curly.go
 >	Rhxgis    string `json:"rhx_gis"`
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.other.property.go
 #       ^^^ source.go
 #          ^ source.go
 #           ^^^^^^ source.go storage.type.string.go
@@ -10051,35 +10051,35 @@
 #                                 ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >	EntryData struct {
 #^ source.go
-# ^^^^^^^^^ source.go variable.other.go
+# ^^^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >		ProfilePage []struct {
 #^^ source.go
-#  ^^^^^^^^^^^ source.go variable.other.go
+#  ^^^^^^^^^^^ source.go variable.other.property.go
 #             ^^^ source.go
 #                ^^^^^^ source.go keyword.struct.go
 #                      ^ source.go
 #                       ^ source.go punctuation.definition.begin.bracket.curly.go
 >			Graphql struct {
 #^^^ source.go
-#   ^^^^^^^ source.go variable.other.go
+#   ^^^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >				User struct {
 #^^^^ source.go
-#    ^^^^ source.go variable.other.go
+#    ^^^^ source.go variable.other.property.go
 #        ^ source.go
 #         ^^^^^^ source.go keyword.struct.go
 #               ^ source.go
 #                ^ source.go punctuation.definition.begin.bracket.curly.go
 >					Id    string `json:"id"`
 #^^^^^ source.go
-#     ^^ source.go variable.other.go
+#     ^^ source.go variable.other.property.go
 #       ^^^ source.go
 #          ^ source.go
 #           ^^^^^^ source.go storage.type.string.go
@@ -10089,28 +10089,28 @@
 #                            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >					Media struct {
 #^^^^^ source.go
-#     ^^^^^ source.go variable.other.go
+#     ^^^^^ source.go variable.other.property.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >						Edges []struct {
 #^^^^^^ source.go
-#      ^^^^^ source.go variable.other.go
+#      ^^^^^ source.go variable.other.property.go
 #           ^^^ source.go
 #              ^^^^^^ source.go keyword.struct.go
 #                    ^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.curly.go
 >							Node struct {
 #^^^^^^^ source.go
-#       ^^^^ source.go variable.other.go
+#       ^^^^ source.go variable.other.property.go
 #           ^ source.go
 #            ^^^^^^ source.go keyword.struct.go
 #                  ^ source.go
 #                   ^ source.go punctuation.definition.begin.bracket.curly.go
 >								ImageURL     string `json:"display_url"`
 #^^^^^^^^ source.go
-#        ^^^^^^^^ source.go variable.other.go
+#        ^^^^^^^^ source.go variable.other.property.go
 #                ^^^^ source.go
 #                    ^ source.go
 #                     ^^^^^^ source.go storage.type.string.go
@@ -10120,7 +10120,7 @@
 #                                               ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >								ThumbnailURL string `json:"thumbnail_src"`
 #^^^^^^^^ source.go
-#        ^^^^^^^^^^^^ source.go variable.other.go
+#        ^^^^^^^^^^^^ source.go variable.other.property.go
 #                    ^ source.go
 #                     ^^^^^^ source.go storage.type.string.go
 #                           ^ source.go
@@ -10129,7 +10129,7 @@
 #                                                 ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >								IsVideo      bool   `json:"is_video"`
 #^^^^^^^^ source.go
-#        ^^^^^^^ source.go variable.other.go
+#        ^^^^^^^ source.go variable.other.property.go
 #               ^^^^^ source.go
 #                    ^ source.go
 #                     ^^^^ source.go storage.type.boolean.go
@@ -10139,7 +10139,7 @@
 #                                            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >								Date         int    `json:"date"`
 #^^^^^^^^ source.go
-#        ^^^^ source.go variable.other.go
+#        ^^^^ source.go variable.other.property.go
 #            ^^^^^^^^ source.go
 #                    ^ source.go
 #                     ^^^ source.go storage.type.numeric.go
@@ -10149,14 +10149,14 @@
 #                                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >								Dimensions   struct {
 #^^^^^^^^ source.go
-#        ^^^^^^^^^^^^ source.go variable.other.go
+#        ^^^^^^^^^^^^ source.go variable.other.property.go
 #                    ^ source.go
 #                     ^^^^^^ source.go keyword.struct.go
 #                           ^ source.go
 #                            ^ source.go punctuation.definition.begin.bracket.curly.go
 >									Width  int `json:"width"`
 #^^^^^^^^^ source.go
-#         ^^^^^ source.go variable.other.go
+#         ^^^^^ source.go variable.other.property.go
 #              ^ source.go
 #               ^ source.go
 #                ^^^ source.go storage.type.numeric.go
@@ -10166,7 +10166,7 @@
 #                                 ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >									Height int `json:"height"`
 #^^^^^^^^^ source.go
-#         ^^^^^^ source.go variable.other.go
+#         ^^^^^^ source.go variable.other.property.go
 #               ^ source.go
 #                ^^^ source.go storage.type.numeric.go
 #                   ^ source.go
@@ -10192,7 +10192,7 @@
 #      ^ source.go punctuation.definition.end.bracket.curly.go
 >						PageInfo pageInfo `json:"page_info"`
 #^^^^^^ source.go
-#      ^^^^^^^^ source.go variable.other.go
+#      ^^^^^^^^ source.go variable.other.property.go
 #              ^ source.go
 #               ^^^^^^^^ source.go entity.name.type.go
 #                       ^ source.go
@@ -10247,28 +10247,28 @@
 #                         ^ source.go punctuation.definition.begin.bracket.curly.go
 >	Data struct {
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^ source.go keyword.struct.go
 #            ^ source.go
 #             ^ source.go punctuation.definition.begin.bracket.curly.go
 >		User struct {
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^ source.go
 #       ^^^^^^ source.go keyword.struct.go
 #             ^ source.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
 >			Container struct {
 #^^^ source.go
-#   ^^^^^^^^^ source.go variable.other.go
+#   ^^^^^^^^^ source.go variable.other.property.go
 #            ^ source.go
 #             ^^^^^^ source.go keyword.struct.go
 #                   ^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.curly.go
 >				PageInfo pageInfo `json:"page_info"`
 #^^^^ source.go
-#    ^^^^^^^^ source.go variable.other.go
+#    ^^^^^^^^ source.go variable.other.property.go
 #            ^ source.go
 #             ^^^^^^^^ source.go entity.name.type.go
 #                     ^ source.go
@@ -10277,21 +10277,21 @@
 #                                       ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >				Edges    []struct {
 #^^^^ source.go
-#    ^^^^^^^^ source.go variable.other.go
+#    ^^^^^^^^ source.go variable.other.property.go
 #            ^^^ source.go
 #               ^^^^^^ source.go keyword.struct.go
 #                     ^ source.go
 #                      ^ source.go punctuation.definition.begin.bracket.curly.go
 >					Node struct {
 #^^^^^ source.go
-#     ^^^^ source.go variable.other.go
+#     ^^^^ source.go variable.other.property.go
 #         ^ source.go
 #          ^^^^^^ source.go keyword.struct.go
 #                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 >						ImageURL     string `json:"display_url"`
 #^^^^^^ source.go
-#      ^^^^^^^^ source.go variable.other.go
+#      ^^^^^^^^ source.go variable.other.property.go
 #              ^^^^ source.go
 #                  ^ source.go
 #                   ^^^^^^ source.go storage.type.string.go
@@ -10301,7 +10301,7 @@
 #                                             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >						ThumbnailURL string `json:"thumbnail_src"`
 #^^^^^^ source.go
-#      ^^^^^^^^^^^^ source.go variable.other.go
+#      ^^^^^^^^^^^^ source.go variable.other.property.go
 #                  ^ source.go
 #                   ^^^^^^ source.go storage.type.string.go
 #                         ^ source.go
@@ -10310,7 +10310,7 @@
 #                                               ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >						IsVideo      bool   `json:"is_video"`
 #^^^^^^ source.go
-#      ^^^^^^^ source.go variable.other.go
+#      ^^^^^^^ source.go variable.other.property.go
 #             ^^^^^ source.go
 #                  ^ source.go
 #                   ^^^^ source.go storage.type.boolean.go
@@ -10320,7 +10320,7 @@
 #                                          ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >						Date         int    `json:"taken_at_timestamp"`
 #^^^^^^ source.go
-#      ^^^^ source.go variable.other.go
+#      ^^^^ source.go variable.other.property.go
 #          ^^^^^^^^ source.go
 #                  ^ source.go
 #                   ^^^ source.go storage.type.numeric.go
@@ -10330,14 +10330,14 @@
 #                                                    ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >						Dimensions   struct {
 #^^^^^^ source.go
-#      ^^^^^^^^^^^^ source.go variable.other.go
+#      ^^^^^^^^^^^^ source.go variable.other.property.go
 #                  ^ source.go
 #                   ^^^^^^ source.go keyword.struct.go
 #                         ^ source.go
 #                          ^ source.go punctuation.definition.begin.bracket.curly.go
 >							Width  int `json:"width"`
 #^^^^^^^ source.go
-#       ^^^^^ source.go variable.other.go
+#       ^^^^^ source.go variable.other.property.go
 #            ^ source.go
 #             ^ source.go
 #              ^^^ source.go storage.type.numeric.go
@@ -10347,7 +10347,7 @@
 #                               ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >							Height int `json:"height"`
 #^^^^^^^ source.go
-#       ^^^^^^ source.go variable.other.go
+#       ^^^^^^ source.go variable.other.property.go
 #             ^ source.go
 #              ^^^ source.go storage.type.numeric.go
 #                 ^ source.go
@@ -11102,19 +11102,19 @@
 #                    ^ source.go punctuation.definition.begin.bracket.curly.go
 >	b    Foo11
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.other.property.go
 #  ^^^ source.go
 #     ^ source.go
 #      ^^^^^ source.go entity.name.type.go
 >	c    FooX
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.other.property.go
 #  ^^^ source.go
 #     ^ source.go
 #      ^^^^ source.go entity.name.type.go
 >	d    map[FooX]chan<- func(f FooX)
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.other.property.go
 #  ^^^ source.go
 #     ^ source.go
 #      ^^^ source.go keyword.map.go
@@ -11132,10 +11132,10 @@
 #                                 ^ source.go punctuation.definition.end.bracket.round.go
 >	e, f Foo07
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.other.property.go
 #  ^ source.go punctuation.other.comma.go
 #   ^ source.go
-#    ^ source.go variable.other.go
+#    ^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^ source.go entity.name.type.go
 >}) {
@@ -11156,19 +11156,19 @@
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >		b    Foo11
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^^^ source.go
 #      ^ source.go
 #       ^^^^^ source.go entity.name.type.go
 >		c    FooX
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^^^ source.go
 #      ^ source.go
 #       ^^^^ source.go entity.name.type.go
 >		d    map[FooX]chan<- func(f FooX)
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^^^ source.go
 #      ^ source.go
 #       ^^^ source.go keyword.map.go
@@ -11186,10 +11186,10 @@
 #                                  ^ source.go punctuation.definition.end.bracket.round.go
 >		e, f Foo07
 #^^ source.go
-#  ^ source.go variable.other.go
+#  ^ source.go variable.other.property.go
 #   ^ source.go punctuation.other.comma.go
 #    ^ source.go
-#     ^ source.go variable.other.go
+#     ^ source.go variable.other.property.go
 #      ^ source.go
 #       ^^^^^ source.go entity.name.type.go
 >	}) {
@@ -11259,12 +11259,12 @@
 #                                     ^ source.go punctuation.definition.begin.bracket.curly.go
 >	name string
 #^ source.go
-# ^^^^ source.go variable.other.go
+# ^^^^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^^ source.go storage.type.string.go
 >	age  T
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.other.property.go
 #    ^ source.go
 #     ^ source.go
 #      ^ source.go entity.name.type.go

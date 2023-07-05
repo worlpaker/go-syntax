@@ -1547,7 +1547,7 @@
 								},
 								{
 									"match": "(?:\\w+)",
-									"name": "variable.other.go"
+									"name": "variable.other.property.go"
 								}
 							]
 						},
@@ -1619,7 +1619,7 @@
 					"beginCaptures": {
 						"1": {
 							"match": "(?:\\w+)",
-							"name": "variable.other.go"
+							"name": "variable.other.property.go"
 						},
 						"2": {
 							"name": "keyword.struct.go"
