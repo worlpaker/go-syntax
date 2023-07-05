@@ -901,7 +901,7 @@
 					"match": "((?!\\s+\")[^\\s]*)?\\s*((\")([^\"]*)(\"))",
 					"captures": {
 						"1": {
-							"name": "variable.other.go"
+							"name": "variable.other.import.go"
 						},
 						"2": {
 							"name": "string.quoted.double.go"
