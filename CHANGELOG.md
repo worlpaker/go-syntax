@@ -2,6 +2,20 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.20]
+
+Starting from version 0.2.19, the extension will provide significantly enhanced support for variables compared to previous versions.
+
+Details:
+
+- Variable parameters in functions and generics will be scoped as "variable.parameter.go"
+
+- Variable names in structs and struct initialization will be scoped as "variable.other.property.go"
+
+- Variable names in imports will be scoped as "variable.other.import.go"
+
+- Loop label names will be scoped as "variable.other.label.go"
+
 ## [0.2.19]
 
 Add support for:
