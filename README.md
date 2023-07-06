@@ -14,14 +14,6 @@ With this extension, your favorite theme can color your code better.
 
 ![dark+_after](examples/dark+_after.png)
 
-### Before (Dracula Theme)
-
-![dracula_before](examples/dracula_before.png)
-
-### After (Dracula Theme)
-
-![dracula_after](examples/dracula_after.png)
-
 ### Before (Ayu Dark Theme)
 
 ![ayudark_before](examples/ayudark_before.png)
