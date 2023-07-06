@@ -1115,26 +1115,6 @@
 					}
 				},
 				{
-					"comment": "multiple params and types | multiple types one param",
-					"match": "(?:(?<=(?:\\w|\\-)\\s))((?:\\s*)(?:(?:[\\[\\]\\.\\*]+)?\\bfunc\\b\\((?:[^\\)]+)?\\))?\\s*(?!(?:[\\.\\[\\]\\*]+)?\\bfunc\\b)[\\w\\*\\.\\[\\]]+)",
-					"captures": {
-						"1": {
-							"patterns": [
-								{
-									"include": "#functions"
-								},
-								{
-									"include": "#type-declarations"
-								},
-								{
-									"match": "(?:\\w+)",
-									"name": "entity.name.type.go"
-								}
-							]
-						}
-					}
-				},
-				{
 					"comment": "multiple types | multiple parameters one type -with multilines",
 					"match": "(?:((?:^\\s*|(?<=\\())\\w+\\,\\s?(?:(?:\\s\\w+\\,\\s?)+)?$)|((?:^\\s*|(?<=\\())(?:(?:(?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?\\bfunc\\b\\((?:[^\\)]+)?\\))|(?:(?:\\bfunc\\b\\((?:[^\\)]+)?\\)\\s+)?(?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?(?:\\bfunc\\b\\((?:[^\\)]+)?\\)\\s+)?(?:[\\w\\.\\*\\[\\]\\{\\}]+)))\\,\\s?(?:(?:\\s*(?:(?:(?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?\\bfunc\\b\\((?:[^\\)]+)?\\))|(?:(?:\\bfunc\\b\\((?:[^\\)]+)?\\)\\s+)?(?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?(?:\\bfunc\\b\\((?:[^\\)]+)?\\)\\s+)?(?:[\\w\\.\\*\\[\\]\\{\\}]+)))\\,\\s+?)+)?$))",
 					"captures": {
@@ -1145,7 +1125,7 @@
 								},
 								{
 									"match": "(?:\\w+)",
-									"name": "variable.other.go"
+									"name": "variable.parameter.go"
 								}
 							]
 						},
@@ -1170,6 +1150,54 @@
 					"match": "((?:(?<=\\()|(?:^\\s*))(?:(?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?(?:(?:(?:\\bfunc\\b\\([^\\)]+\\))|(?:[\\w\\.\\*\\(\\)\\[\\]\\{\\}]+))\\,(?:\\s+)?)+)+(?:(?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?(?:(?:\\bfunc\\b\\([^\\)]+\\))|(?:[\\w\\.\\*\\(\\)\\[\\]\\{\\}]+)))(?:\\,(?:\\s+)?)?(?=\\)))",
 					"captures": {
 						"1": {
+							"patterns": [
+								{
+									"include": "#functions"
+								},
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
+								}
+							]
+						}
+					}
+				},
+				{
+					"comment":"manual struct types declaration",
+					"match": "((?:(?:\\w+\\,\\s+)+)?\\w+)\\s+(?=\\bstruct\\b\\s*\\{)",
+					"captures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.parameter.go"
+								}
+							]
+						}
+					}
+				},
+				{
+					"comment": "multiple params and types | multiple params one type | one param one type",
+					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)((?:\\s*(?:\\<\\-\\s*?)?\\bchan\\b(?:\\s*?\\<\\-)?\\s*)?(?:(?:[\\[\\]\\.\\*]+)?\\bfunc\\b\\((?:[^\\)]+)?\\))?\\s*(?!(?:(?:[\\.\\[\\]\\*]+)?\\bfunc\\b))(?:[\\w\\*\\.\\[\\]]+)))",
+					"captures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.parameter.go"
+								}
+							]
+						},
+						"2": {
 							"patterns": [
 								{
 									"include": "#functions"

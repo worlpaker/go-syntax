@@ -1351,8 +1351,8 @@ func Foo76() {
 
 	type foo0 = newstructG[newstruct1]
 	type bar0 = newstructG[newstruct2]
-	type foox0 *newstructG[newstruct1]
-	type barx0 *newstructG[newstruct2]
+	type foox0 = *newstructG[newstruct1]
+	type barx0 = *newstructG[newstruct2]
 	type foobar0 = map[newstructG[newstruct1]]interface{}
 
 	_, _, _, _, _ = xfoo, xbar, xfoox, xbarx, foobarx
@@ -1435,9 +1435,16 @@ func Foo89[
 }
 
 func Foo90[
-	ce newstruct1,
-	de newstruct2,
-	fe newstruct3,
+	foo newstruct1,
+	bar newstruct2,
+	foobar newstruct3,
 ](){
 
 }
+
+func Foo91(struct {
+	b    Foo11
+	c    FooX
+	d    map[FooX]chan<- func(f FooX)
+	e, f Foo07
+}) {}

@@ -68,7 +68,7 @@
 #    ^ source.go
 #     ^^^ source.go entity.name.function.go
 #        ^ source.go punctuation.definition.begin.bracket.round.go
-#         ^^^ source.go variable.other.go
+#         ^^^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 #                   ^ source.go punctuation.definition.end.bracket.round.go
@@ -80,7 +80,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.round.go
-#          ^^^ source.go variable.other.go
+#          ^^^ source.go variable.parameter.go
 #             ^ source.go
 #              ^^^^^^ source.go storage.type.string.go
 #                    ^ source.go punctuation.definition.end.bracket.round.go
@@ -101,7 +101,7 @@
 #              ^ source.go
 #               ^^^ source.go entity.name.function.go
 #                  ^ source.go punctuation.definition.begin.bracket.round.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^^^^^^ source.go storage.type.string.go
 #                             ^ source.go punctuation.definition.end.bracket.round.go
@@ -119,7 +119,7 @@
 #              ^ source.go
 #               ^^^ source.go entity.name.function.go
 #                  ^ source.go punctuation.definition.begin.bracket.round.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^^^ source.go entity.name.type.any.go
 #                          ^ source.go punctuation.definition.end.bracket.round.go
@@ -133,7 +133,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.round.go
-#          ^^^ source.go variable.other.go
+#          ^^^ source.go variable.parameter.go
 #             ^ source.go
 #              ^^^^^^ source.go storage.type.string.go
 #                    ^ source.go punctuation.definition.end.bracket.round.go
@@ -159,7 +159,7 @@
 #            ^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.end.bracket.square.go
 #                 ^ source.go punctuation.definition.begin.bracket.round.go
-#                  ^^^ source.go variable.other.go
+#                  ^^^ source.go variable.parameter.go
 #                     ^ source.go
 #                      ^ source.go entity.name.type.go
 #                       ^ source.go punctuation.definition.end.bracket.round.go
@@ -186,7 +186,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^ source.go keyword.operator.channel.go
 #               ^^^^ source.go keyword.channel.go
@@ -225,7 +225,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.round.go
-#          ^^^ source.go variable.other.go
+#          ^^^ source.go variable.parameter.go
 #             ^ source.go
 #              ^^^ source.go keyword.map.go
 #                 ^ source.go punctuation.definition.begin.bracket.square.go
@@ -236,7 +236,7 @@
 #                                 ^ source.go punctuation.definition.end.bracket.curly.go
 #                                  ^ source.go punctuation.other.comma.go
 #                                   ^ source.go
-#                                    ^^^ source.go variable.other.go
+#                                    ^^^ source.go variable.parameter.go
 #                                       ^ source.go
 #                                        ^^^ source.go entity.name.type.any.go
 #                                           ^ source.go punctuation.definition.end.bracket.round.go
@@ -281,14 +281,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.other.period.go
 #                  ^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                                ^ source.go punctuation.other.comma.go
 #                                 ^ source.go
-#                                  ^ source.go variable.other.go
+#                                  ^ source.go variable.parameter.go
 #                                   ^ source.go
 #                                    ^ source.go keyword.operator.address.go
 #                                     ^^^^ source.go entity.name.type.go
@@ -328,7 +328,7 @@
 #    ^ source.go
 #     ^^^ source.go entity.name.function.go
 #        ^ source.go punctuation.definition.begin.bracket.round.go
-#         ^^^ source.go variable.other.go
+#         ^^^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^ source.go keyword.operator.ellipsis.go
 #                ^^^^ source.go keyword.function.go
@@ -346,7 +346,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^^^^^^^^^ source.go variable.other.go
+#           ^^^^^^^^^^^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^^^ source.go keyword.operator.ellipsis.go
 #                          ^^^^ source.go keyword.function.go
@@ -397,7 +397,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^^^^^^^^^ source.go variable.other.go
+#           ^^^^^^^^^^^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
 #                        ^ source.go punctuation.definition.end.bracket.square.go
@@ -413,7 +413,7 @@
 #                                                 ^^^^^^^ source.go entity.name.type.go
 #                                                        ^ source.go punctuation.other.comma.go
 #                                                         ^ source.go
-#                                                          ^^^^^^^^ source.go variable.other.go
+#                                                          ^^^^^^^^ source.go variable.parameter.go
 #                                                                  ^ source.go
 #                                                                   ^^^^ source.go entity.name.type.go
 #                                                                       ^ source.go punctuation.other.period.go
@@ -447,14 +447,14 @@
 #                                                                   ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                    ^ source.go
 #                                                                     ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                                      ^^^ source.go variable.other.go
+#                                                                      ^^^ source.go variable.parameter.go
 #                                                                         ^ source.go
 #                                                                          ^^^^^^^ source.go entity.name.type.go
 #                                                                                 ^ source.go punctuation.other.period.go
 #                                                                                  ^^^^^^^ source.go entity.name.type.go
 #                                                                                         ^ source.go punctuation.other.comma.go
 #                                                                                          ^ source.go
-#                                                                                           ^^^ source.go variable.other.go
+#                                                                                           ^^^ source.go variable.parameter.go
 #                                                                                              ^ source.go
 #                                                                                               ^^^^^^ source.go storage.type.string.go
 #                                                                                                     ^ source.go punctuation.definition.end.bracket.round.go
@@ -464,7 +464,7 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.round.go
-#          ^^^^ source.go variable.other.go
+#          ^^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^^^^^ source.go entity.name.type.go
 #                      ^ source.go punctuation.other.period.go
@@ -475,20 +475,20 @@
 #                                    ^ source.go
 #                                     ^^^^ source.go keyword.function.go
 #                                         ^ source.go punctuation.definition.begin.bracket.round.go
-#                                          ^^^ source.go variable.other.go
+#                                          ^^^ source.go variable.parameter.go
 #                                             ^ source.go
 #                                              ^^^^^^^ source.go entity.name.type.go
 #                                                     ^ source.go punctuation.other.period.go
 #                                                      ^^^^^^^ source.go entity.name.type.go
 #                                                             ^ source.go punctuation.other.comma.go
 #                                                              ^ source.go
-#                                                               ^^^ source.go variable.other.go
+#                                                               ^^^ source.go variable.parameter.go
 #                                                                  ^ source.go
 #                                                                   ^^^^ source.go storage.type.boolean.go
 #                                                                       ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                        ^ source.go punctuation.other.comma.go
 #                                                                         ^ source.go
-#                                                                          ^^^^^^^ source.go variable.other.go
+#                                                                          ^^^^^^^ source.go variable.parameter.go
 #                                                                                 ^ source.go
 #                                                                                  ^^ source.go entity.name.type.go
 #                                                                                    ^ source.go punctuation.other.period.go
@@ -496,14 +496,14 @@
 #                                                                                           ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                                            ^ source.go
 #                                                                                             ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                                                              ^^^ source.go variable.other.go
+#                                                                                              ^^^ source.go variable.parameter.go
 #                                                                                                 ^ source.go
 #                                                                                                  ^^^^^^^ source.go entity.name.type.go
 #                                                                                                         ^ source.go punctuation.other.period.go
 #                                                                                                          ^^^^^^^ source.go entity.name.type.go
 #                                                                                                                 ^ source.go punctuation.other.comma.go
 #                                                                                                                  ^ source.go
-#                                                                                                                   ^^^ source.go variable.other.go
+#                                                                                                                   ^^^ source.go variable.parameter.go
 #                                                                                                                      ^ source.go
 #                                                                                                                       ^^^^^^ source.go storage.type.string.go
 #                                                                                                                             ^ source.go punctuation.definition.end.bracket.round.go
@@ -520,28 +520,28 @@
 #                          ^ source.go
 #                           ^^^^ source.go keyword.function.go
 #                               ^ source.go punctuation.definition.begin.bracket.round.go
-#                                ^^^ source.go variable.other.go
+#                                ^^^ source.go variable.parameter.go
 #                                   ^ source.go
 #                                    ^^^^^^^ source.go entity.name.type.go
 #                                           ^ source.go punctuation.other.period.go
 #                                            ^^^^^^^ source.go entity.name.type.go
 #                                                   ^ source.go punctuation.other.comma.go
 #                                                    ^ source.go
-#                                                     ^^^ source.go variable.other.go
+#                                                     ^^^ source.go variable.parameter.go
 #                                                        ^ source.go
 #                                                         ^^^^^^ source.go storage.type.string.go
 #                                                               ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                 ^ source.go
 #                                                                  ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                                   ^^^ source.go variable.other.go
+#                                                                   ^^^ source.go variable.parameter.go
 #                                                                      ^ source.go
 #                                                                       ^^^^^^^ source.go entity.name.type.go
 #                                                                              ^ source.go punctuation.other.period.go
 #                                                                               ^^^^^^^ source.go entity.name.type.go
 #                                                                                      ^ source.go punctuation.other.comma.go
 #                                                                                       ^ source.go
-#                                                                                        ^^^ source.go variable.other.go
+#                                                                                        ^^^ source.go variable.parameter.go
 #                                                                                           ^ source.go
 #                                                                                            ^^^^^^ source.go storage.type.string.go
 #                                                                                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -625,14 +625,14 @@
 #    ^ source.go
 #     ^^^^ source.go entity.name.function.go
 #         ^ source.go punctuation.definition.begin.bracket.round.go
-#          ^ source.go variable.other.go
+#          ^ source.go variable.parameter.go
 #           ^ source.go
 #            ^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.other.period.go
 #                 ^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                               ^ source.go punctuation.other.comma.go
 #                                ^ source.go
-#                                 ^ source.go variable.other.go
+#                                 ^ source.go variable.parameter.go
 #                                  ^ source.go
 #                                   ^ source.go keyword.operator.address.go
 #                                    ^^^^ source.go entity.name.type.go
@@ -703,12 +703,12 @@
 #                                                ^^^ source.go storage.type.numeric.go
 #                                                   ^ source.go punctuation.definition.end.bracket.square.go
 #                                                    ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                     ^^^ source.go variable.other.go
+#                                                     ^^^ source.go variable.parameter.go
 #                                                        ^ source.go
 #                                                         ^ source.go entity.name.type.go
 #                                                          ^ source.go punctuation.other.comma.go
 #                                                           ^ source.go
-#                                                            ^^^ source.go variable.other.go
+#                                                            ^^^ source.go variable.parameter.go
 #                                                               ^ source.go
 #                                                                ^ source.go entity.name.type.go
 #                                                                 ^ source.go punctuation.definition.end.bracket.round.go
@@ -728,7 +728,7 @@
 #            ^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.end.bracket.square.go
 #                 ^ source.go punctuation.definition.begin.bracket.round.go
-#                  ^^^ source.go variable.other.go
+#                  ^^^ source.go variable.parameter.go
 #                     ^ source.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -736,7 +736,7 @@
 #                         ^ source.go entity.name.type.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go variable.other.go
+#                            ^^^ source.go variable.parameter.go
 #                               ^ source.go
 #                                ^ source.go punctuation.definition.begin.bracket.square.go
 #                                 ^ source.go punctuation.definition.end.bracket.square.go
@@ -773,13 +773,13 @@
 #                               ^^^^^ source.go entity.name.type.go
 #                                    ^ source.go punctuation.definition.end.bracket.square.go
 #                                     ^ source.go punctuation.definition.begin.bracket.round.go
-#                                      ^^^ source.go variable.other.go
+#                                      ^^^ source.go variable.parameter.go
 #                                         ^ source.go punctuation.other.comma.go
 #                                          ^ source.go
-#                                           ^^^ source.go variable.other.go
+#                                           ^^^ source.go variable.parameter.go
 #                                              ^ source.go punctuation.other.comma.go
 #                                               ^ source.go
-#                                                ^^^^^^ source.go variable.other.go
+#                                                ^^^^^^ source.go variable.parameter.go
 #                                                      ^ source.go
 #                                                       ^ source.go entity.name.type.go
 #                                                        ^ source.go punctuation.definition.end.bracket.round.go
@@ -799,7 +799,7 @@
 #             ^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.definition.end.bracket.square.go
 #                  ^ source.go punctuation.definition.begin.bracket.round.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
 #                        ^ source.go punctuation.definition.end.bracket.square.go
@@ -807,7 +807,7 @@
 #                          ^ source.go entity.name.type.go
 #                           ^ source.go punctuation.other.comma.go
 #                            ^ source.go
-#                             ^^^ source.go variable.other.go
+#                             ^^^ source.go variable.parameter.go
 #                                ^ source.go
 #                                 ^ source.go entity.name.type.go
 #                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -848,12 +848,12 @@
 #                ^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.definition.end.bracket.square.go
 #                     ^ source.go punctuation.definition.begin.bracket.round.go
-#                      ^^^ source.go variable.other.go
+#                      ^^^ source.go variable.parameter.go
 #                         ^ source.go
 #                          ^ source.go entity.name.type.go
 #                           ^ source.go punctuation.other.comma.go
 #                            ^ source.go
-#                             ^^^ source.go variable.other.go
+#                             ^^^ source.go variable.parameter.go
 #                                ^ source.go
 #                                 ^ source.go entity.name.type.go
 #                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -895,12 +895,12 @@
 #                                         ^^^^^^ source.go storage.type.string.go
 #                                               ^ source.go punctuation.definition.end.bracket.square.go
 #                                                ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                 ^^^ source.go variable.other.go
+#                                                 ^^^ source.go variable.parameter.go
 #                                                    ^ source.go
 #                                                     ^ source.go entity.name.type.go
 #                                                      ^ source.go punctuation.other.comma.go
 #                                                       ^ source.go
-#                                                        ^^^ source.go variable.other.go
+#                                                        ^^^ source.go variable.parameter.go
 #                                                           ^ source.go
 #                                                            ^ source.go entity.name.type.go
 #                                                             ^ source.go punctuation.definition.end.bracket.round.go
@@ -974,15 +974,15 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 >	b,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 >	c int) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^ source.go storage.type.numeric.go
 #      ^ source.go punctuation.definition.end.bracket.round.go
@@ -1073,24 +1073,24 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a, b,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 #   ^ source.go
-#    ^ source.go variable.other.go
+#    ^ source.go variable.parameter.go
 #     ^ source.go punctuation.other.comma.go
 >	f context.Context, c, d context.Context) (context.Context, context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^^^^ source.go entity.name.type.go
 #          ^ source.go punctuation.other.period.go
 #           ^^^^^^^ source.go entity.name.type.go
 #                  ^ source.go punctuation.other.comma.go
 #                   ^ source.go
-#                    ^ source.go variable.other.go
+#                    ^ source.go variable.parameter.go
 #                     ^ source.go punctuation.other.comma.go
 #                      ^ source.go
-#                       ^ source.go variable.other.go
+#                       ^ source.go variable.parameter.go
 #                        ^ source.go
 #                         ^^^^^^^ source.go entity.name.type.go
 #                                ^ source.go punctuation.other.period.go
@@ -1127,7 +1127,7 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a map[string]interface{},
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^ source.go keyword.map.go
 #      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -1139,20 +1139,20 @@
 #                         ^ source.go punctuation.other.comma.go
 >	b, f context.Context, c, d context.Context) (foo map[string]interface{}, bar context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 #   ^ source.go
-#    ^ source.go variable.other.go
+#    ^ source.go variable.parameter.go
 #     ^ source.go
 #      ^^^^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.other.period.go
 #              ^^^^^^^ source.go entity.name.type.go
 #                     ^ source.go punctuation.other.comma.go
 #                      ^ source.go
-#                       ^ source.go variable.other.go
+#                       ^ source.go variable.parameter.go
 #                        ^ source.go punctuation.other.comma.go
 #                         ^ source.go
-#                          ^ source.go variable.other.go
+#                          ^ source.go variable.parameter.go
 #                           ^ source.go
 #                            ^^^^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.other.period.go
@@ -1160,7 +1160,7 @@
 #                                           ^ source.go punctuation.definition.end.bracket.round.go
 #                                            ^ source.go
 #                                             ^ source.go punctuation.definition.begin.bracket.round.go
-#                                              ^^^ source.go variable.other.go
+#                                              ^^^ source.go variable.parameter.go
 #                                                 ^ source.go
 #                                                  ^^^ source.go keyword.map.go
 #                                                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -1171,7 +1171,7 @@
 #                                                                       ^ source.go punctuation.definition.end.bracket.curly.go
 #                                                                        ^ source.go punctuation.other.comma.go
 #                                                                         ^ source.go
-#                                                                          ^^^ source.go variable.other.go
+#                                                                          ^^^ source.go variable.parameter.go
 #                                                                             ^ source.go
 #                                                                              ^^^^^^^ source.go entity.name.type.go
 #                                                                                     ^ source.go punctuation.other.period.go
@@ -1195,12 +1195,12 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 #                   ^ source.go punctuation.other.comma.go
 #                    ^ source.go
-#                     ^ source.go variable.other.go
+#                     ^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^^^^^^^ source.go entity.name.type.go
 #                              ^ source.go punctuation.other.period.go
@@ -1214,7 +1214,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^ source.go variable.other.go
+#           ^^ source.go variable.parameter.go
 #             ^ source.go
 #              ^^ source.go keyword.operator.channel.go
 #                ^^^^ source.go keyword.channel.go
@@ -1233,7 +1233,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^ source.go keyword.map.go
 #                  ^ source.go punctuation.definition.begin.bracket.square.go
@@ -1255,14 +1255,14 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a context.Context, b <-chan string,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^^^^ source.go entity.name.type.go
 #          ^ source.go punctuation.other.period.go
 #           ^^^^^^^ source.go entity.name.type.go
 #                  ^ source.go punctuation.other.comma.go
 #                   ^ source.go
-#                    ^ source.go variable.other.go
+#                    ^ source.go variable.parameter.go
 #                     ^ source.go
 #                      ^^ source.go keyword.operator.channel.go
 #                        ^^^^ source.go keyword.channel.go
@@ -1271,7 +1271,7 @@
 #                                   ^ source.go punctuation.other.comma.go
 >	c context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^^^^ source.go entity.name.type.go
 #          ^ source.go punctuation.other.period.go
@@ -1289,7 +1289,7 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a chan<- context.Context, b <-chan struct{}, c context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^ source.go keyword.channel.go
 #       ^^ source.go keyword.operator.channel.go
@@ -1299,7 +1299,7 @@
 #                  ^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.other.comma.go
 #                          ^ source.go
-#                           ^ source.go variable.other.go
+#                           ^ source.go variable.parameter.go
 #                            ^ source.go
 #                             ^^ source.go keyword.operator.channel.go
 #                               ^^^^ source.go keyword.channel.go
@@ -1309,7 +1309,7 @@
 #                                           ^ source.go punctuation.definition.end.bracket.curly.go
 #                                            ^ source.go punctuation.other.comma.go
 #                                             ^ source.go
-#                                              ^ source.go variable.other.go
+#                                              ^ source.go variable.parameter.go
 #                                               ^ source.go
 #                                                ^^^^^^^ source.go entity.name.type.go
 #                                                       ^ source.go punctuation.other.period.go
@@ -1327,13 +1327,13 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a, b, c <-chan context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 #   ^ source.go
-#    ^ source.go variable.other.go
+#    ^ source.go variable.parameter.go
 #     ^ source.go punctuation.other.comma.go
 #      ^ source.go
-#       ^ source.go variable.other.go
+#       ^ source.go variable.parameter.go
 #        ^ source.go
 #         ^^ source.go keyword.operator.channel.go
 #           ^^^^ source.go keyword.channel.go
@@ -1380,15 +1380,15 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 >	b,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 >	c context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^^^^ source.go entity.name.type.go
 #          ^ source.go punctuation.other.period.go
@@ -1501,7 +1501,7 @@
 #              ^ source.go
 #               ^^^^^ source.go entity.name.function.go
 #                    ^ source.go punctuation.definition.begin.bracket.round.go
-#                     ^^^ source.go variable.other.go
+#                     ^^^ source.go variable.parameter.go
 #                        ^ source.go
 #                         ^^^^^^ source.go storage.type.string.go
 #                               ^ source.go punctuation.definition.end.bracket.round.go
@@ -1650,13 +1650,13 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a, b, c context.Context) (foo context.Context, bar error) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go punctuation.other.comma.go
 #   ^ source.go
-#    ^ source.go variable.other.go
+#    ^ source.go variable.parameter.go
 #     ^ source.go punctuation.other.comma.go
 #      ^ source.go
-#       ^ source.go variable.other.go
+#       ^ source.go variable.parameter.go
 #        ^ source.go
 #         ^^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.other.period.go
@@ -1664,14 +1664,14 @@
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go
 #                          ^ source.go punctuation.definition.begin.bracket.round.go
-#                           ^^^ source.go variable.other.go
+#                           ^^^ source.go variable.parameter.go
 #                              ^ source.go
 #                               ^^^^^^^ source.go entity.name.type.go
 #                                      ^ source.go punctuation.other.period.go
 #                                       ^^^^^^^ source.go entity.name.type.go
 #                                              ^ source.go punctuation.other.comma.go
 #                                               ^ source.go
-#                                                ^^^ source.go variable.other.go
+#                                                ^^^ source.go variable.parameter.go
 #                                                   ^ source.go
 #                                                    ^^^^^ source.go storage.type.error.go
 #                                                         ^ source.go punctuation.definition.end.bracket.round.go
@@ -1697,14 +1697,14 @@
 >
 >	foo context.Context, bar context.Context) {
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.parameter.go
 #    ^ source.go
 #     ^^^^^^^ source.go entity.name.type.go
 #            ^ source.go punctuation.other.period.go
 #             ^^^^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.other.comma.go
 #                     ^ source.go
-#                      ^^^ source.go variable.other.go
+#                      ^^^ source.go variable.parameter.go
 #                         ^ source.go
 #                          ^^^^^^^ source.go entity.name.type.go
 #                                 ^ source.go punctuation.other.period.go
@@ -1739,7 +1739,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^^^^ source.go storage.type.string.go
 #                     ^ source.go punctuation.definition.end.bracket.round.go
@@ -1758,7 +1758,7 @@
 #               ^ source.go
 #                ^^^^^ source.go entity.name.function.go
 #                     ^ source.go punctuation.definition.begin.bracket.round.go
-#                      ^ source.go variable.other.go
+#                      ^ source.go variable.parameter.go
 #                       ^ source.go
 #                        ^^^^ source.go keyword.channel.go
 #                            ^^ source.go keyword.operator.channel.go
@@ -1799,7 +1799,7 @@
 #                   ^ source.go
 #                    ^^^^^ source.go entity.name.function.go
 #                         ^ source.go punctuation.definition.begin.bracket.round.go
-#                          ^^^ source.go variable.other.go
+#                          ^^^ source.go variable.parameter.go
 #                             ^ source.go
 #                              ^^^ source.go entity.name.type.any.go
 #                                 ^ source.go punctuation.definition.end.bracket.round.go
@@ -1849,7 +1849,7 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a map[string]interface{}, b <-chan *context.Context, c context.Context) context.Context {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^ source.go keyword.map.go
 #      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -1860,7 +1860,7 @@
 #                        ^ source.go punctuation.definition.end.bracket.curly.go
 #                         ^ source.go punctuation.other.comma.go
 #                          ^ source.go
-#                           ^ source.go variable.other.go
+#                           ^ source.go variable.parameter.go
 #                            ^ source.go
 #                             ^^ source.go keyword.operator.channel.go
 #                               ^^^^ source.go keyword.channel.go
@@ -1871,7 +1871,7 @@
 #                                             ^^^^^^^ source.go entity.name.type.go
 #                                                    ^ source.go punctuation.other.comma.go
 #                                                     ^ source.go
-#                                                      ^ source.go variable.other.go
+#                                                      ^ source.go variable.parameter.go
 #                                                       ^ source.go
 #                                                        ^^^^^^^ source.go entity.name.type.go
 #                                                               ^ source.go punctuation.other.period.go
@@ -1898,7 +1898,7 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	a *context.Context,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^ source.go keyword.operator.address.go
 #    ^^^^^^^ source.go entity.name.type.go
@@ -1907,13 +1907,13 @@
 #                   ^ source.go punctuation.other.comma.go
 >	b string,
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^^^ source.go storage.type.string.go
 #         ^ source.go punctuation.other.comma.go
 >	c context.Context) (context.Context, string, context.Context) {
 #^ source.go
-# ^ source.go variable.other.go
+# ^ source.go variable.parameter.go
 #  ^ source.go
 #   ^^^^^^^ source.go entity.name.type.go
 #          ^ source.go punctuation.other.period.go
@@ -1955,12 +1955,12 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.other.comma.go
 #                     ^ source.go
-#                      ^^^ source.go variable.other.go
+#                      ^^^ source.go variable.parameter.go
 #                         ^ source.go
 #                          ^^^ source.go entity.name.type.any.go
 #                             ^ source.go punctuation.definition.end.bracket.round.go
@@ -2031,15 +2031,15 @@
 #    ^ source.go
 #     ^^^^^^^^^ source.go entity.name.function.go
 #              ^ source.go punctuation.definition.begin.bracket.round.go
-#               ^^^^^^ source.go variable.other.go
+#               ^^^^^^ source.go variable.parameter.go
 #                     ^ source.go
 #                      ^^^^^^^ source.go entity.name.type.go
 #                             ^ source.go punctuation.other.comma.go
 #                              ^ source.go
-#                               ^^^ source.go variable.other.go
+#                               ^^^ source.go variable.parameter.go
 #                                  ^ source.go punctuation.other.comma.go
 #                                   ^ source.go
-#                                    ^^^ source.go variable.other.go
+#                                    ^^^ source.go variable.parameter.go
 #                                       ^ source.go
 #                                        ^^^ source.go entity.name.type.any.go
 #                                           ^ source.go punctuation.definition.end.bracket.round.go
@@ -2104,7 +2104,7 @@
 #    ^ source.go
 #     ^^^^^^^^^^^^^^^ source.go entity.name.function.go
 #                    ^ source.go punctuation.definition.begin.bracket.round.go
-#                     ^^^^^^ source.go variable.other.go
+#                     ^^^^^^ source.go variable.parameter.go
 #                           ^ source.go
 #                            ^^^^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.definition.end.bracket.round.go
@@ -2723,14 +2723,14 @@
 #^ source.go
 # ^^^ source.go entity.name.function.support.go
 #    ^ source.go punctuation.definition.begin.bracket.round.go
-#     ^ source.go variable.other.go
+#     ^ source.go variable.parameter.go
 #      ^ source.go
 #       ^^^^ source.go entity.name.type.go
 #           ^ source.go punctuation.other.period.go
 #            ^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^ source.go variable.other.go
+#                            ^ source.go variable.parameter.go
 #                             ^ source.go
 #                              ^ source.go keyword.operator.address.go
 #                               ^^^^ source.go entity.name.type.go
@@ -2739,14 +2739,14 @@
 #                                           ^ source.go punctuation.definition.end.bracket.round.go
 #                                            ^ source.go
 #                                             ^ source.go punctuation.definition.begin.bracket.round.go
-#                                              ^^^ source.go variable.other.go
+#                                              ^^^ source.go variable.parameter.go
 #                                                 ^ source.go
 #                                                  ^^^^^^^ source.go entity.name.type.go
 #                                                         ^ source.go punctuation.other.period.go
 #                                                          ^^^^^^^ source.go entity.name.type.go
 #                                                                 ^ source.go punctuation.other.comma.go
 #                                                                  ^ source.go
-#                                                                   ^^^ source.go variable.other.go
+#                                                                   ^^^ source.go variable.parameter.go
 #                                                                      ^ source.go
 #                                                                       ^^^^^^ source.go storage.type.string.go
 #                                                                             ^ source.go punctuation.definition.end.bracket.round.go
@@ -2782,7 +2782,7 @@
 #             ^ source.go
 #              ^^^^ source.go keyword.function.go
 #                  ^ source.go punctuation.definition.begin.bracket.round.go
-#                   ^^^ source.go variable.other.go
+#                   ^^^ source.go variable.parameter.go
 #                      ^ source.go
 #                       ^^^^^^^ source.go entity.name.type.go
 #                              ^ source.go punctuation.other.period.go
@@ -2791,14 +2791,14 @@
 #                                       ^ source.go punctuation.definition.end.bracket.round.go
 #                                        ^ source.go
 #                                         ^ source.go punctuation.definition.begin.bracket.round.go
-#                                          ^^^ source.go variable.other.go
+#                                          ^^^ source.go variable.parameter.go
 #                                             ^ source.go
 #                                              ^^^^^^^ source.go entity.name.type.go
 #                                                     ^ source.go punctuation.other.period.go
 #                                                      ^^^^^^^ source.go entity.name.type.go
 #                                                             ^ source.go punctuation.other.comma.go
 #                                                              ^ source.go
-#                                                               ^^^ source.go variable.other.go
+#                                                               ^^^ source.go variable.parameter.go
 #                                                                  ^ source.go
 #                                                                   ^^^^^^ source.go storage.type.string.go
 #                                                                         ^ source.go punctuation.definition.end.bracket.round.go
@@ -2806,7 +2806,7 @@
 #^ source.go
 # ^^^^ source.go entity.name.function.support.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.parameter.go
 #         ^ source.go
 #          ^ source.go keyword.operator.address.go
 #           ^^^^^^^ source.go entity.name.type.go
@@ -2825,14 +2825,14 @@
 #                                                     ^ source.go punctuation.definition.end.bracket.round.go
 #                                                      ^ source.go
 #                                                       ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                        ^^^^ source.go variable.other.go
+#                                                        ^^^^ source.go variable.parameter.go
 #                                                            ^ source.go
 #                                                             ^^^^^^^ source.go entity.name.type.go
 #                                                                    ^ source.go punctuation.other.period.go
 #                                                                     ^^^^^^^ source.go entity.name.type.go
 #                                                                            ^ source.go punctuation.other.comma.go
 #                                                                             ^ source.go
-#                                                                              ^^^^ source.go variable.other.go
+#                                                                              ^^^^ source.go variable.parameter.go
 #                                                                                  ^ source.go
 #                                                                                   ^^^^^^ source.go storage.type.string.go
 #                                                                                         ^ source.go punctuation.definition.end.bracket.round.go
@@ -2847,7 +2847,7 @@
 #                      ^ source.go
 #                       ^^^^ source.go keyword.function.go
 #                           ^ source.go punctuation.definition.begin.bracket.round.go
-#                            ^^^ source.go variable.other.go
+#                            ^^^ source.go variable.parameter.go
 #                               ^ source.go
 #                                ^^^^ source.go keyword.channel.go
 #                                    ^^ source.go keyword.operator.channel.go
@@ -2857,7 +2857,7 @@
 #                                               ^^^^^^^ source.go entity.name.type.go
 #                                                      ^ source.go punctuation.other.comma.go
 #                                                       ^ source.go
-#                                                        ^^^ source.go variable.other.go
+#                                                        ^^^ source.go variable.parameter.go
 #                                                           ^ source.go
 #                                                            ^^^^^^ source.go storage.type.string.go
 #                                                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -2870,14 +2870,14 @@
 #                                                                               ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                                ^ source.go
 #                                                                                 ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                                                  ^^^ source.go variable.other.go
+#                                                                                  ^^^ source.go variable.parameter.go
 #                                                                                     ^ source.go
 #                                                                                      ^^^^^^^ source.go entity.name.type.go
 #                                                                                             ^ source.go punctuation.other.period.go
 #                                                                                              ^^^^^^^ source.go entity.name.type.go
 #                                                                                                     ^ source.go punctuation.other.comma.go
 #                                                                                                      ^ source.go
-#                                                                                                       ^^^ source.go variable.other.go
+#                                                                                                       ^^^ source.go variable.parameter.go
 #                                                                                                          ^ source.go
 #                                                                                                           ^^^^^^ source.go storage.type.string.go
 #                                                                                                                 ^ source.go punctuation.definition.end.bracket.round.go
@@ -2915,7 +2915,7 @@
 #^ source.go
 # ^^^^ source.go entity.name.function.support.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.parameter.go
 #         ^ source.go
 #          ^ source.go keyword.operator.address.go
 #           ^^^^^^^ source.go entity.name.type.go
@@ -2937,7 +2937,7 @@
 #^ source.go
 # ^^^^ source.go entity.name.function.support.go
 #     ^ source.go punctuation.definition.begin.bracket.round.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.parameter.go
 #         ^ source.go
 #          ^^^^^^ source.go storage.type.string.go
 #                ^ source.go punctuation.definition.end.bracket.round.go
@@ -2980,20 +2980,20 @@
 #^ source.go
 # ^^^^^ source.go entity.name.function.support.go
 #      ^ source.go punctuation.definition.begin.bracket.round.go
-#       ^^^^ source.go variable.other.go
+#       ^^^^ source.go variable.parameter.go
 #           ^ source.go
 #            ^^^ source.go entity.name.type.any.go
 #               ^ source.go punctuation.definition.end.bracket.round.go
 #                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.round.go
-#                  ^^^ source.go variable.other.go
+#                  ^^^ source.go variable.parameter.go
 #                     ^ source.go
 #                      ^^^^^^^ source.go entity.name.type.go
 #                             ^ source.go punctuation.other.period.go
 #                              ^^^^^^^ source.go entity.name.type.go
 #                                     ^ source.go punctuation.other.comma.go
 #                                      ^ source.go
-#                                       ^^^ source.go variable.other.go
+#                                       ^^^ source.go variable.parameter.go
 #                                          ^ source.go
 #                                           ^^^^^^^ source.go entity.name.type.go
 #                                                  ^ source.go punctuation.other.period.go
@@ -3003,7 +3003,7 @@
 #^ source.go
 # ^^^^^ source.go entity.name.function.support.go
 #      ^ source.go punctuation.definition.begin.bracket.round.go
-#       ^^^ source.go variable.other.go
+#       ^^^ source.go variable.parameter.go
 #          ^ source.go
 #           ^^^ source.go keyword.map.go
 #              ^ source.go punctuation.definition.begin.bracket.square.go
@@ -3062,14 +3062,14 @@
 #^ source.go
 # ^^^ source.go entity.name.function.support.go
 #    ^ source.go punctuation.definition.begin.bracket.round.go
-#     ^ source.go variable.other.go
+#     ^ source.go variable.parameter.go
 #      ^ source.go
 #       ^^^^^^ source.go storage.type.string.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
 #              ^ source.go
 #               ^^^^ source.go keyword.function.go
 #                   ^ source.go punctuation.definition.begin.bracket.round.go
-#                    ^ source.go variable.other.go
+#                    ^ source.go variable.parameter.go
 #                     ^ source.go
 #                      ^^^^^ source.go entity.name.type.go
 #                           ^ source.go punctuation.definition.end.bracket.round.go
@@ -3077,13 +3077,13 @@
 #^ source.go
 # ^^^ source.go entity.name.function.support.go
 #    ^ source.go punctuation.definition.begin.bracket.round.go
-#     ^ source.go variable.other.go
+#     ^ source.go variable.parameter.go
 #      ^ source.go
 #       ^^^^ source.go storage.type.boolean.go
 #           ^ source.go punctuation.definition.end.bracket.round.go
 #            ^ source.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
-#              ^^^ source.go variable.other.go
+#              ^^^ source.go variable.parameter.go
 #                 ^ source.go
 #                  ^^^^^ source.go storage.type.error.go
 #                       ^ source.go punctuation.definition.end.bracket.round.go
@@ -3091,7 +3091,7 @@
 #^ source.go
 # ^^^^^^ source.go entity.name.function.support.go
 #       ^ source.go punctuation.definition.begin.bracket.round.go
-#        ^ source.go variable.other.go
+#        ^ source.go variable.parameter.go
 #         ^ source.go
 #          ^^^^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.other.period.go
@@ -3339,21 +3339,21 @@
 #             ^ source.go punctuation.definition.end.bracket.round.go
 #              ^ source.go
 #               ^ source.go punctuation.definition.begin.bracket.round.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go
 #                    ^^^^^^^ source.go entity.name.type.go
 #                           ^ source.go punctuation.other.period.go
 #                            ^^^^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.other.comma.go
 #                                    ^ source.go
-#                                     ^^^ source.go variable.other.go
+#                                     ^^^ source.go variable.parameter.go
 #                                        ^ source.go
 #                                         ^^ source.go entity.name.type.go
 #                                           ^ source.go punctuation.other.period.go
 #                                            ^^^^^^^^^^ source.go entity.name.type.go
 #                                                      ^ source.go punctuation.other.comma.go
 #                                                       ^ source.go
-#                                                        ^^^ source.go variable.other.go
+#                                                        ^^^ source.go variable.parameter.go
 #                                                           ^ source.go
 #                                                            ^^^^^ source.go storage.type.error.go
 #                                                                 ^ source.go punctuation.definition.end.bracket.round.go
@@ -3388,19 +3388,19 @@
 #       ^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
-#             ^^^ source.go variable.other.go
+#             ^^^ source.go variable.parameter.go
 #                ^ source.go
 #                 ^^^^ source.go entity.name.type.go
 #                     ^ source.go punctuation.definition.end.bracket.round.go
 #                      ^ source.go
 #                       ^ source.go punctuation.definition.begin.bracket.round.go
-#                        ^^^^ source.go variable.other.go
+#                        ^^^^ source.go variable.parameter.go
 #                            ^ source.go punctuation.other.comma.go
 #                             ^ source.go
-#                              ^^^^ source.go variable.other.go
+#                              ^^^^ source.go variable.parameter.go
 #                                  ^ source.go punctuation.other.comma.go
 #                                   ^ source.go
-#                                    ^^^^^^ source.go variable.other.go
+#                                    ^^^^^^ source.go variable.parameter.go
 #                                          ^ source.go
 #                                           ^^ source.go entity.name.type.go
 #                                             ^ source.go punctuation.other.period.go
@@ -3422,21 +3422,21 @@
 #             ^ source.go punctuation.definition.end.bracket.round.go
 #              ^ source.go
 #               ^ source.go punctuation.definition.begin.bracket.round.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go
 #                    ^^^^^^^ source.go entity.name.type.go
 #                           ^ source.go punctuation.other.period.go
 #                            ^^^^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.other.comma.go
 #                                    ^ source.go
-#                                     ^^^ source.go variable.other.go
+#                                     ^^^ source.go variable.parameter.go
 #                                        ^ source.go
 #                                         ^^ source.go entity.name.type.go
 #                                           ^ source.go punctuation.other.period.go
 #                                            ^^^^^^^^^^ source.go entity.name.type.go
 #                                                      ^ source.go punctuation.other.comma.go
 #                                                       ^ source.go
-#                                                        ^^^^^^ source.go variable.other.go
+#                                                        ^^^^^^ source.go variable.parameter.go
 #                                                              ^ source.go
 #                                                               ^ source.go keyword.operator.address.go
 #                                                                ^^^ source.go keyword.map.go
@@ -4025,7 +4025,7 @@
 #           ^ source.go
 #            ^^^^ source.go keyword.function.go
 #                ^ source.go punctuation.definition.begin.bracket.round.go
-#                 ^ source.go variable.other.go
+#                 ^ source.go variable.parameter.go
 #                  ^ source.go
 #                   ^^^^^^^^^ source.go keyword.interface.go
 #                            ^ source.go punctuation.definition.begin.bracket.curly.go
@@ -4284,7 +4284,7 @@
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
-#              ^ source.go variable.other.go
+#              ^ source.go variable.parameter.go
 #               ^ source.go
 #                ^^^^^^ source.go storage.type.string.go
 #                      ^ source.go punctuation.definition.end.bracket.round.go
@@ -4396,7 +4396,7 @@
 #      ^ source.go
 #       ^^^^ source.go keyword.function.go
 #           ^ source.go punctuation.definition.begin.bracket.round.go
-#            ^ source.go variable.other.go
+#            ^ source.go variable.parameter.go
 #             ^ source.go
 #              ^^^^^^^ source.go entity.name.type.go
 #                     ^ source.go punctuation.other.period.go
@@ -4445,7 +4445,7 @@
 #      ^ source.go
 #       ^^^^ source.go keyword.function.go
 #           ^ source.go punctuation.definition.begin.bracket.round.go
-#            ^^^^ source.go variable.other.go
+#            ^^^^ source.go variable.parameter.go
 #                ^ source.go
 #                 ^^^^ source.go entity.name.type.go
 #                     ^ source.go punctuation.other.period.go
@@ -4467,14 +4467,14 @@
 #                         ^ source.go punctuation.definition.begin.bracket.round.go
 #                          ^^^^ source.go keyword.function.go
 #                              ^ source.go punctuation.definition.begin.bracket.round.go
-#                               ^ source.go variable.other.go
+#                               ^ source.go variable.parameter.go
 #                                ^ source.go
 #                                 ^^^^ source.go entity.name.type.go
 #                                     ^ source.go punctuation.other.period.go
 #                                      ^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                                                    ^ source.go punctuation.other.comma.go
 #                                                     ^ source.go
-#                                                      ^ source.go variable.other.go
+#                                                      ^ source.go variable.parameter.go
 #                                                       ^ source.go
 #                                                        ^ source.go keyword.operator.address.go
 #                                                         ^^^^ source.go entity.name.type.go
@@ -5419,14 +5419,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.other.period.go
 #                  ^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                                ^ source.go punctuation.other.comma.go
 #                                 ^ source.go
-#                                  ^ source.go variable.other.go
+#                                  ^ source.go variable.parameter.go
 #                                   ^ source.go
 #                                    ^ source.go keyword.operator.address.go
 #                                     ^^^^ source.go entity.name.type.go
@@ -5476,14 +5476,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.other.period.go
 #                  ^^^^^^^^^^^^^^ source.go entity.name.type.go
 #                                ^ source.go punctuation.other.comma.go
 #                                 ^ source.go
-#                                  ^^^^^^^^^^^^^^ source.go variable.other.go
+#                                  ^^^^^^^^^^^^^^ source.go variable.parameter.go
 #                                                ^ source.go
 #                                                 ^^^ source.go storage.type.numeric.go
 #                                                    ^ source.go punctuation.definition.end.bracket.round.go
@@ -6069,14 +6069,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go punctuation.other.comma.go
 #               ^ source.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go punctuation.other.comma.go
 >	foobar context.Context)
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.parameter.go
 #       ^ source.go
 #        ^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.other.period.go
@@ -6088,14 +6088,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go punctuation.other.comma.go
 #               ^ source.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go punctuation.other.comma.go
 >	foobar chan<- context.Context)
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.parameter.go
 #       ^ source.go
 #        ^^^^ source.go keyword.channel.go
 #            ^^ source.go keyword.operator.channel.go
@@ -6739,14 +6739,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^^^^^ source.go entity.name.type.go
 #                      ^ source.go punctuation.other.period.go
 #                       ^^^^^^^ source.go entity.name.type.go
 #                              ^ source.go punctuation.other.comma.go
 #                               ^ source.go
-#                                ^^^ source.go variable.other.go
+#                                ^^^ source.go variable.parameter.go
 #                                   ^ source.go
 #                                    ^^^^^^^ source.go entity.name.type.go
 #                                           ^ source.go punctuation.other.period.go
@@ -6761,13 +6761,13 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go punctuation.other.comma.go
 #               ^ source.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go punctuation.other.comma.go
 #                    ^ source.go
-#                     ^^^^^^ source.go variable.other.go
+#                     ^^^^^^ source.go variable.parameter.go
 #                           ^ source.go
 #                            ^^^^^^^ source.go entity.name.type.go
 #                                   ^ source.go punctuation.other.period.go
@@ -6781,13 +6781,13 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	foo, bar, foobar context.Context) {
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.parameter.go
 #    ^ source.go punctuation.other.comma.go
 #     ^ source.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.parameter.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^^^^^^ source.go variable.other.go
+#           ^^^^^^ source.go variable.parameter.go
 #                 ^ source.go
 #                  ^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.other.period.go
@@ -7309,114 +7309,114 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^ source.go variable.other.go
+#           ^^ source.go variable.parameter.go
 #             ^ source.go
 #              ^^^^^^^ source.go entity.name.type.go
 #                     ^ source.go punctuation.other.period.go
 #                      ^^^^^^^ source.go entity.name.type.go
 #                             ^ source.go punctuation.other.comma.go
 #                              ^ source.go
-#                               ^^ source.go variable.other.go
+#                               ^^ source.go variable.parameter.go
 #                                 ^ source.go
 #                                  ^^^^ source.go storage.type.boolean.go
 #                                      ^ source.go punctuation.other.comma.go
 #                                       ^ source.go
-#                                        ^^ source.go variable.other.go
+#                                        ^^ source.go variable.parameter.go
 #                                          ^ source.go
 #                                           ^^^^ source.go storage.type.byte.go
 #                                               ^ source.go punctuation.other.comma.go
 #                                                ^ source.go
-#                                                 ^^ source.go variable.other.go
+#                                                 ^^ source.go variable.parameter.go
 #                                                   ^ source.go
 #                                                    ^^^^^ source.go storage.type.error.go
 #                                                         ^ source.go punctuation.other.comma.go
 #                                                          ^ source.go
-#                                                           ^^ source.go variable.other.go
+#                                                           ^^ source.go variable.parameter.go
 #                                                             ^ source.go
 #                                                              ^^^^^^^^^ source.go storage.type.numeric.go
 #                                                                       ^ source.go punctuation.other.comma.go
 #                                                                        ^ source.go
-#                                                                         ^^ source.go variable.other.go
+#                                                                         ^^ source.go variable.parameter.go
 #                                                                           ^ source.go
 #                                                                            ^^^^^^^^^^ source.go storage.type.numeric.go
 #                                                                                      ^ source.go punctuation.other.comma.go
 #                                                                                       ^ source.go
-#                                                                                        ^^ source.go variable.other.go
+#                                                                                        ^^ source.go variable.parameter.go
 #                                                                                          ^ source.go
 #                                                                                           ^^^^^^^ source.go storage.type.numeric.go
 #                                                                                                  ^ source.go punctuation.other.comma.go
 #                                                                                                   ^ source.go
-#                                                                                                    ^^ source.go variable.other.go
+#                                                                                                    ^^ source.go variable.parameter.go
 #                                                                                                      ^ source.go
 #                                                                                                       ^^^^^^^ source.go storage.type.numeric.go
 #                                                                                                              ^ source.go punctuation.other.comma.go
 #                                                                                                               ^ source.go
-#                                                                                                                ^^ source.go variable.other.go
+#                                                                                                                ^^ source.go variable.parameter.go
 #                                                                                                                  ^ source.go
 #                                                                                                                   ^^^ source.go storage.type.numeric.go
 #                                                                                                                      ^ source.go punctuation.other.comma.go
 #                                                                                                                       ^ source.go
-#                                                                                                                        ^^ source.go variable.other.go
+#                                                                                                                        ^^ source.go variable.parameter.go
 #                                                                                                                          ^ source.go
 #                                                                                                                           ^^^^ source.go storage.type.numeric.go
 #                                                                                                                               ^ source.go punctuation.other.comma.go
 #                                                                                                                                ^ source.go
-#                                                                                                                                 ^^^ source.go variable.other.go
+#                                                                                                                                 ^^^ source.go variable.parameter.go
 #                                                                                                                                    ^ source.go
 #                                                                                                                                     ^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                          ^ source.go punctuation.other.comma.go
 #                                                                                                                                           ^ source.go
-#                                                                                                                                            ^^^ source.go variable.other.go
+#                                                                                                                                            ^^^ source.go variable.parameter.go
 #                                                                                                                                               ^ source.go
 #                                                                                                                                                ^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                     ^ source.go punctuation.other.comma.go
 #                                                                                                                                                      ^ source.go
-#                                                                                                                                                       ^^^ source.go variable.other.go
+#                                                                                                                                                       ^^^ source.go variable.parameter.go
 #                                                                                                                                                          ^ source.go
 #                                                                                                                                                           ^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                                ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                 ^ source.go
-#                                                                                                                                                                  ^^^ source.go variable.other.go
+#                                                                                                                                                                  ^^^ source.go variable.parameter.go
 #                                                                                                                                                                     ^ source.go
 #                                                                                                                                                                      ^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                                          ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                           ^ source.go
-#                                                                                                                                                                            ^^^ source.go variable.other.go
+#                                                                                                                                                                            ^^^ source.go variable.parameter.go
 #                                                                                                                                                                               ^ source.go
 #                                                                                                                                                                                ^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                                                     ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                      ^ source.go
-#                                                                                                                                                                                       ^^^ source.go variable.other.go
+#                                                                                                                                                                                       ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                          ^ source.go
 #                                                                                                                                                                                           ^^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                                                                 ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                                  ^ source.go
-#                                                                                                                                                                                                   ^^^ source.go variable.other.go
+#                                                                                                                                                                                                   ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                                      ^ source.go
 #                                                                                                                                                                                                       ^^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                                                                             ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                                              ^ source.go
-#                                                                                                                                                                                                               ^^^ source.go variable.other.go
+#                                                                                                                                                                                                               ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                                                  ^ source.go
 #                                                                                                                                                                                                                   ^^^^^^ source.go storage.type.numeric.go
 #                                                                                                                                                                                                                         ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                                                          ^ source.go
-#                                                                                                                                                                                                                           ^^^ source.go variable.other.go
+#                                                                                                                                                                                                                           ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                                                              ^ source.go
 #                                                                                                                                                                                                                               ^^^^ source.go storage.type.rune.go
 #                                                                                                                                                                                                                                   ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                                                                    ^ source.go
-#                                                                                                                                                                                                                                     ^^^ source.go variable.other.go
+#                                                                                                                                                                                                                                     ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                                                                        ^ source.go
 #                                                                                                                                                                                                                                         ^^^^^^ source.go storage.type.string.go
 #                                                                                                                                                                                                                                               ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                                                                                ^ source.go
-#                                                                                                                                                                                                                                                 ^^^ source.go variable.other.go
+#                                                                                                                                                                                                                                                 ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                                                                                    ^ source.go
 #                                                                                                                                                                                                                                                     ^^^^^^^ source.go storage.type.uintptr.go
 #                                                                                                                                                                                                                                                            ^ source.go punctuation.other.comma.go
 #                                                                                                                                                                                                                                                             ^ source.go
-#                                                                                                                                                                                                                                                              ^^^ source.go variable.other.go
+#                                                                                                                                                                                                                                                              ^^^ source.go variable.parameter.go
 #                                                                                                                                                                                                                                                                 ^ source.go
 #                                                                                                                                                                                                                                                                  ^^^^^^^ source.go entity.name.type.go
 #                                                                                                                                                                                                                                                                         ^ source.go punctuation.other.period.go
@@ -8556,19 +8556,19 @@
 #                                      ^ source.go punctuation.definition.end.bracket.square.go
 #                                       ^^^^ source.go keyword.function.go
 #                                           ^ source.go punctuation.definition.begin.bracket.round.go
-#                                            ^^^ source.go variable.other.go
+#                                            ^^^ source.go variable.parameter.go
 #                                               ^ source.go
 #                                                ^^^^ source.go entity.name.type.go
 #                                                    ^ source.go punctuation.definition.end.bracket.round.go
 #                                                     ^ source.go
 #                                                      ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                       ^^^^ source.go variable.other.go
+#                                                       ^^^^ source.go variable.parameter.go
 #                                                           ^ source.go punctuation.other.comma.go
 #                                                            ^ source.go
-#                                                             ^^^^ source.go variable.other.go
+#                                                             ^^^^ source.go variable.parameter.go
 #                                                                 ^ source.go punctuation.other.comma.go
 #                                                                  ^ source.go
-#                                                                   ^^^^^^ source.go variable.other.go
+#                                                                   ^^^^^^ source.go variable.parameter.go
 #                                                                         ^ source.go
 #                                                                          ^^ source.go entity.name.type.go
 #                                                                            ^ source.go punctuation.other.period.go
@@ -9445,19 +9445,19 @@
 #                                       ^ source.go punctuation.definition.end.bracket.square.go
 #                                        ^^^^ source.go keyword.function.go
 #                                            ^ source.go punctuation.definition.begin.bracket.round.go
-#                                             ^^^ source.go variable.other.go
+#                                             ^^^ source.go variable.parameter.go
 #                                                ^ source.go
 #                                                 ^^^^ source.go entity.name.type.go
 #                                                     ^ source.go punctuation.definition.end.bracket.round.go
 #                                                      ^ source.go
 #                                                       ^ source.go punctuation.definition.begin.bracket.round.go
-#                                                        ^^^^ source.go variable.other.go
+#                                                        ^^^^ source.go variable.parameter.go
 #                                                            ^ source.go punctuation.other.comma.go
 #                                                             ^ source.go
-#                                                              ^^^^ source.go variable.other.go
+#                                                              ^^^^ source.go variable.parameter.go
 #                                                                  ^ source.go punctuation.other.comma.go
 #                                                                   ^ source.go
-#                                                                    ^^^^^^ source.go variable.other.go
+#                                                                    ^^^^^^ source.go variable.parameter.go
 #                                                                          ^ source.go
 #                                                                           ^^ source.go entity.name.type.go
 #                                                                             ^ source.go punctuation.other.period.go
@@ -9683,21 +9683,21 @@
 #              ^ source.go punctuation.definition.end.bracket.round.go
 #               ^ source.go
 #                ^ source.go punctuation.definition.begin.bracket.round.go
-#                 ^^^ source.go variable.other.go
+#                 ^^^ source.go variable.parameter.go
 #                    ^ source.go
 #                     ^^^^^^^ source.go entity.name.type.go
 #                            ^ source.go punctuation.other.period.go
 #                             ^^^^^^^ source.go entity.name.type.go
 #                                    ^ source.go punctuation.other.comma.go
 #                                     ^ source.go
-#                                      ^^^ source.go variable.other.go
+#                                      ^^^ source.go variable.parameter.go
 #                                         ^ source.go
 #                                          ^^ source.go entity.name.type.go
 #                                            ^ source.go punctuation.other.period.go
 #                                             ^^^^^^^^^^ source.go entity.name.type.go
 #                                                       ^ source.go punctuation.other.comma.go
 #                                                        ^ source.go
-#                                                         ^^^ source.go variable.other.go
+#                                                         ^^^ source.go variable.parameter.go
 #                                                            ^ source.go
 #                                                             ^^^^^ source.go storage.type.error.go
 #                                                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -9732,19 +9732,19 @@
 #        ^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
-#              ^^^ source.go variable.other.go
+#              ^^^ source.go variable.parameter.go
 #                 ^ source.go
 #                  ^^^^ source.go entity.name.type.go
 #                      ^ source.go punctuation.definition.end.bracket.round.go
 #                       ^ source.go
 #                        ^ source.go punctuation.definition.begin.bracket.round.go
-#                         ^^^^ source.go variable.other.go
+#                         ^^^^ source.go variable.parameter.go
 #                             ^ source.go punctuation.other.comma.go
 #                              ^ source.go
-#                               ^^^^ source.go variable.other.go
+#                               ^^^^ source.go variable.parameter.go
 #                                   ^ source.go punctuation.other.comma.go
 #                                    ^ source.go
-#                                     ^^^^^^ source.go variable.other.go
+#                                     ^^^^^^ source.go variable.parameter.go
 #                                           ^ source.go
 #                                            ^^ source.go entity.name.type.go
 #                                              ^ source.go punctuation.other.period.go
@@ -9766,21 +9766,21 @@
 #              ^ source.go punctuation.definition.end.bracket.round.go
 #               ^ source.go
 #                ^ source.go punctuation.definition.begin.bracket.round.go
-#                 ^^^ source.go variable.other.go
+#                 ^^^ source.go variable.parameter.go
 #                    ^ source.go
 #                     ^^^^^^^ source.go entity.name.type.go
 #                            ^ source.go punctuation.other.period.go
 #                             ^^^^^^^ source.go entity.name.type.go
 #                                    ^ source.go punctuation.other.comma.go
 #                                     ^ source.go
-#                                      ^^^ source.go variable.other.go
+#                                      ^^^ source.go variable.parameter.go
 #                                         ^ source.go
 #                                          ^^ source.go entity.name.type.go
 #                                            ^ source.go punctuation.other.period.go
 #                                             ^^^^^^^^^^ source.go entity.name.type.go
 #                                                       ^ source.go punctuation.other.comma.go
 #                                                        ^ source.go
-#                                                         ^^^^^^ source.go variable.other.go
+#                                                         ^^^^^^ source.go variable.parameter.go
 #                                                               ^ source.go
 #                                                                ^ source.go keyword.operator.address.go
 #                                                                 ^^^ source.go keyword.map.go
@@ -10742,7 +10742,7 @@
 #^ source.go
 # ^^^ source.go entity.name.function.support.go
 #    ^ source.go punctuation.definition.begin.bracket.round.go
-#     ^^^ source.go variable.other.go
+#     ^^^ source.go variable.parameter.go
 #        ^ source.go
 #         ^ source.go keyword.operator.address.go
 #          ^^^^ source.go entity.name.type.go
@@ -10804,7 +10804,7 @@
 #             ^^^^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.definition.end.bracket.square.go
 #                     ^ source.go punctuation.definition.begin.bracket.round.go
-#                      ^ source.go variable.other.go
+#                      ^ source.go variable.parameter.go
 #                       ^ source.go
 #                        ^^^^^^ source.go storage.type.string.go
 #                              ^ source.go punctuation.definition.end.bracket.round.go
@@ -11095,7 +11095,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^ source.go variable.other.go
+#           ^ source.go variable.parameter.go
 #            ^ source.go
 #             ^^^^^^ source.go keyword.struct.go
 #                   ^ source.go
@@ -11126,7 +11126,7 @@
 #                     ^ source.go
 #                      ^^^^ source.go keyword.function.go
 #                          ^ source.go punctuation.definition.begin.bracket.round.go
-#                           ^ source.go variable.other.go
+#                           ^ source.go variable.parameter.go
 #                            ^ source.go
 #                             ^^^^ source.go entity.name.type.go
 #                                 ^ source.go punctuation.definition.end.bracket.round.go
@@ -11149,7 +11149,7 @@
 #   ^ source.go
 #    ^^^^ source.go keyword.function.go
 #        ^ source.go punctuation.definition.begin.bracket.round.go
-#         ^ source.go variable.other.go
+#         ^ source.go variable.parameter.go
 #          ^ source.go
 #           ^^^^^^ source.go keyword.struct.go
 #                 ^ source.go
@@ -11180,7 +11180,7 @@
 #                      ^ source.go
 #                       ^^^^ source.go keyword.function.go
 #                           ^ source.go punctuation.definition.begin.bracket.round.go
-#                            ^ source.go variable.other.go
+#                            ^ source.go variable.parameter.go
 #                             ^ source.go
 #                              ^^^^ source.go entity.name.type.go
 #                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -11360,14 +11360,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go punctuation.other.comma.go
 #               ^ source.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go punctuation.other.comma.go
 >	foobar newstructG[newstruct1])
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.parameter.go
 #       ^ source.go
 #        ^^^^^^^^^^ source.go entity.name.type.go
 #                  ^ source.go punctuation.definition.begin.bracket.square.go
@@ -11380,14 +11380,14 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go punctuation.other.comma.go
 #               ^ source.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go punctuation.other.comma.go
 >	foobar chan<- *newstructG[newstruct2])
 #^ source.go
-# ^^^^^^ source.go variable.other.go
+# ^^^^^^ source.go variable.parameter.go
 #       ^ source.go
 #        ^^^^ source.go keyword.channel.go
 #            ^^ source.go keyword.operator.channel.go
@@ -12091,7 +12091,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12099,7 +12099,7 @@
 #                                    ^ source.go punctuation.definition.end.bracket.square.go
 #                                     ^ source.go punctuation.other.comma.go
 #                                      ^ source.go
-#                                       ^^^ source.go variable.other.go
+#                                       ^^^ source.go variable.parameter.go
 #                                          ^ source.go
 #                                           ^^^^^^^^^^ source.go entity.name.type.go
 #                                                     ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12115,13 +12115,13 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go punctuation.other.comma.go
 #               ^ source.go
-#                ^^^ source.go variable.other.go
+#                ^^^ source.go variable.parameter.go
 #                   ^ source.go punctuation.other.comma.go
 #                    ^ source.go
-#                     ^^^^^^ source.go variable.other.go
+#                     ^^^^^^ source.go variable.parameter.go
 #                           ^ source.go
 #                            ^^^^^^^^^^ source.go entity.name.type.go
 #                                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12136,13 +12136,13 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	foo, bar, foobar newstructG[newstruct2]) {
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.parameter.go
 #    ^ source.go punctuation.other.comma.go
 #     ^ source.go
-#      ^^^ source.go variable.other.go
+#      ^^^ source.go variable.parameter.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^^^^^^ source.go variable.other.go
+#           ^^^^^^ source.go variable.parameter.go
 #                 ^ source.go
 #                  ^^^^^^^^^^ source.go entity.name.type.go
 #                            ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12279,7 +12279,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12295,7 +12295,7 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.round.go
-#           ^^^ source.go variable.other.go
+#           ^^^ source.go variable.parameter.go
 #              ^ source.go
 #               ^^^^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12303,7 +12303,7 @@
 #                                    ^ source.go punctuation.definition.end.bracket.square.go
 #                                     ^ source.go punctuation.other.comma.go
 #                                      ^ source.go
-#                                       ^^^ source.go variable.other.go
+#                                       ^^^ source.go variable.parameter.go
 #                                          ^ source.go
 #                                           ^ source.go keyword.operator.address.go
 #                                            ^^^^^^^^^^ source.go entity.name.type.go
@@ -12322,7 +12322,7 @@
 #          ^ source.go punctuation.definition.begin.bracket.round.go
 >	foo *newstructG[newstruct1],
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.parameter.go
 #    ^ source.go
 #     ^ source.go keyword.operator.address.go
 #      ^^^^^^^^^^ source.go entity.name.type.go
@@ -12332,7 +12332,7 @@
 #                            ^ source.go punctuation.other.comma.go
 >	bar newstructG[newstruct2],
 #^ source.go
-# ^^^ source.go variable.other.go
+# ^^^ source.go variable.parameter.go
 #    ^ source.go
 #     ^^^^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.definition.begin.bracket.square.go
@@ -12497,28 +12497,32 @@
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
 #                        ^^^^^^^^^^ source.go entity.name.type.go
 #                                  ^ source.go punctuation.definition.end.bracket.square.go
->	type foox0 *newstructG[newstruct1]
+>	type foox0 = *newstructG[newstruct1]
 #^ source.go
 # ^^^^ source.go keyword.type.go
 #     ^ source.go
 #      ^^^^^ source.go entity.name.type.go
 #           ^ source.go
-#            ^ source.go keyword.operator.address.go
-#             ^^^^^^^^^^ source.go entity.name.type.go
-#                       ^ source.go punctuation.definition.begin.bracket.square.go
-#                        ^^^^^^^^^^ source.go entity.name.type.go
-#                                  ^ source.go punctuation.definition.end.bracket.square.go
->	type barx0 *newstructG[newstruct2]
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^ source.go keyword.operator.address.go
+#               ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^^^^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+>	type barx0 = *newstructG[newstruct2]
 #^ source.go
 # ^^^^ source.go keyword.type.go
 #     ^ source.go
 #      ^^^^^ source.go entity.name.type.go
 #           ^ source.go
-#            ^ source.go keyword.operator.address.go
-#             ^^^^^^^^^^ source.go entity.name.type.go
-#                       ^ source.go punctuation.definition.begin.bracket.square.go
-#                        ^^^^^^^^^^ source.go entity.name.type.go
-#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^ source.go keyword.operator.address.go
+#               ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^^^^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
 >	type foobar0 = map[newstructG[newstruct1]]interface{}
 #^ source.go
 # ^^^^ source.go keyword.type.go
@@ -12594,7 +12598,7 @@
 #               ^^^^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.definition.end.bracket.square.go
 #                          ^ source.go punctuation.definition.begin.bracket.round.go
-#                           ^^^ source.go variable.other.go
+#                           ^^^ source.go variable.parameter.go
 #                              ^ source.go
 #                               ^^^ source.go entity.name.type.go
 #                                  ^ source.go punctuation.definition.end.bracket.round.go
@@ -12616,7 +12620,7 @@
 #     ^^^^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.definition.end.bracket.square.go
 #                ^ source.go punctuation.definition.begin.bracket.round.go
-#                 ^^^ source.go variable.other.go
+#                 ^^^ source.go variable.parameter.go
 #                    ^ source.go
 #                     ^^^^^^^ source.go entity.name.type.go
 #                            ^ source.go punctuation.other.period.go
@@ -13003,24 +13007,24 @@
 #    ^ source.go
 #     ^^^^^ source.go entity.name.function.go
 #          ^ source.go punctuation.definition.begin.bracket.square.go
->	ce newstruct1,
+>	foo newstruct1,
 #^ source.go
-# ^^ source.go variable.parameter.go
-#   ^ source.go
-#    ^^^^^^^^^^ source.go entity.name.type.go
-#              ^ source.go punctuation.other.comma.go
->	de newstruct2,
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.other.comma.go
+>	bar newstruct2,
 #^ source.go
-# ^^ source.go variable.parameter.go
-#   ^ source.go
-#    ^^^^^^^^^^ source.go entity.name.type.go
-#              ^ source.go punctuation.other.comma.go
->	fe newstruct3,
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.other.comma.go
+>	foobar newstruct3,
 #^ source.go
-# ^^ source.go variable.parameter.go
-#   ^ source.go
-#    ^^^^^^^^^^ source.go entity.name.type.go
-#              ^ source.go punctuation.other.comma.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^^^^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.comma.go
 >](){
 #^ source.go punctuation.definition.end.bracket.square.go
 # ^ source.go punctuation.definition.begin.bracket.round.go
@@ -13030,3 +13034,55 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Foo91(struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>	b    Foo11
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^ source.go
+#     ^ source.go
+#      ^^^^^ source.go entity.name.type.go
+>	c    FooX
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^ source.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+>	d    map[FooX]chan<- func(f FooX)
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^ source.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.definition.end.bracket.square.go
+#               ^^^^ source.go keyword.channel.go
+#                   ^^ source.go keyword.operator.channel.go
+#                     ^ source.go
+#                      ^^^^ source.go keyword.function.go
+#                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                           ^ source.go variable.parameter.go
+#                            ^ source.go
+#                             ^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+>	e, f Foo07
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.property.go
+#     ^ source.go
+#      ^^^^^ source.go entity.name.type.go
+>}) {}
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+#    ^ source.go punctuation.definition.end.bracket.curly.go
