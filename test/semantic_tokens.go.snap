@@ -564,7 +564,7 @@
 #        ^ source.go keyword.operator.address.go
 #         ^^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
-#               ^^^^ source.go variable.other.go
+#               ^^^^ source.go variable.other.property.go
 #                   ^ source.go punctuation.other.colon.go
 #                    ^ source.go
 #                     ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -572,7 +572,7 @@
 #                         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go variable.other.go
+#                            ^^^ source.go variable.other.property.go
 #                               ^ source.go punctuation.other.colon.go
 #                                ^ source.go
 #                                 ^^ source.go constant.numeric.decimal.go
@@ -600,7 +600,7 @@
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
 >		name: "Foo",
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^ source.go punctuation.other.colon.go
 #       ^ source.go
 #        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -609,7 +609,7 @@
 #             ^ source.go punctuation.other.comma.go
 >		age:  100,
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go punctuation.other.colon.go
 #      ^^ source.go
 #        ^^^ source.go constant.numeric.decimal.go
@@ -4201,7 +4201,7 @@
 #            ^ source.go punctuation.definition.begin.bracket.curly.go
 >		name: "foo",
 #^^ source.go
-#  ^^^^ source.go variable.other.go
+#  ^^^^ source.go variable.other.property.go
 #      ^ source.go punctuation.other.colon.go
 #       ^ source.go
 #        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -4210,7 +4210,7 @@
 #             ^ source.go punctuation.other.comma.go
 >		age:  28}
 #^^ source.go
-#  ^^^ source.go variable.other.go
+#  ^^^ source.go variable.other.property.go
 #     ^ source.go punctuation.other.colon.go
 #      ^^ source.go
 #        ^^ source.go constant.numeric.decimal.go
@@ -4223,7 +4223,7 @@
 #      ^ source.go
 #       ^^^^^ source.go entity.name.type.go
 #            ^ source.go punctuation.definition.begin.bracket.curly.go
-#             ^^^^ source.go variable.other.go
+#             ^^^^ source.go variable.other.property.go
 #                 ^ source.go punctuation.other.colon.go
 #                  ^ source.go
 #                   ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -4231,7 +4231,7 @@
 #                       ^ source.go string.quoted.double.go punctuation.definition.string.end.go
 #                        ^ source.go punctuation.other.comma.go
 #                         ^ source.go
-#                          ^^^ source.go variable.other.go
+#                          ^^^ source.go variable.other.property.go
 #                             ^ source.go punctuation.other.colon.go
 #                              ^ source.go
 #                               ^^ source.go constant.numeric.decimal.go
@@ -13025,11 +13025,12 @@
 #       ^ source.go
 #        ^^^^^^^^^^ source.go entity.name.type.go
 #                  ^ source.go punctuation.other.comma.go
->](){
+>]() {
 #^ source.go punctuation.definition.end.bracket.square.go
 # ^ source.go punctuation.definition.begin.bracket.round.go
 #  ^ source.go punctuation.definition.end.bracket.round.go
-#   ^ source.go punctuation.definition.begin.bracket.curly.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
 >
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -13080,9 +13081,140 @@
 #    ^ source.go variable.other.property.go
 #     ^ source.go
 #      ^^^^^ source.go entity.name.type.go
->}) {}
+>}) {
 #^ source.go punctuation.definition.end.bracket.curly.go
 # ^ source.go punctuation.definition.end.bracket.round.go
 #  ^ source.go
 #   ^ source.go punctuation.definition.begin.bracket.curly.go
-#    ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo92() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+#            ^ source.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	_ = Foo11{}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.definition.begin.bracket.curly.go
+#           ^ source.go punctuation.definition.end.bracket.curly.go
+>	
+>	_ = &Foo11{}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^ source.go keyword.operator.address.go
+#      ^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.curly.go
+#            ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = Foo11{name: "foo", age: 100}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.definition.begin.bracket.curly.go
+#           ^^^^ source.go variable.other.property.go
+#               ^ source.go punctuation.other.colon.go
+#                ^ source.go
+#                 ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                  ^^^ source.go string.quoted.double.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                      ^ source.go punctuation.other.comma.go
+#                       ^ source.go
+#                        ^^^ source.go variable.other.property.go
+#                           ^ source.go punctuation.other.colon.go
+#                            ^ source.go
+#                             ^^^ source.go constant.numeric.decimal.go
+#                                ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = &Foo11{name: "foo", age: 100}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^ source.go keyword.operator.address.go
+#      ^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.curly.go
+#            ^^^^ source.go variable.other.property.go
+#                ^ source.go punctuation.other.colon.go
+#                 ^ source.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                   ^^^ source.go string.quoted.double.go
+#                      ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^^^ source.go variable.other.property.go
+#                            ^ source.go punctuation.other.colon.go
+#                             ^ source.go
+#                              ^^^ source.go constant.numeric.decimal.go
+#                                 ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = Foo11{
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.definition.begin.bracket.curly.go
+>		name: "foo",
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^^^ source.go string.quoted.double.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#             ^ source.go punctuation.other.comma.go
+>		age:  100,
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^ source.go
+#        ^^^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = &Foo11{
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^ source.go keyword.operator.address.go
+#      ^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.curly.go
+>		name: "foo",
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^^^ source.go string.quoted.double.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#             ^ source.go punctuation.other.comma.go
+>		age:  100,
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^ source.go
+#        ^^^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

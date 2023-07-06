@@ -1438,7 +1438,7 @@ func Foo90[
 	foo newstruct1,
 	bar newstruct2,
 	foobar newstruct3,
-](){
+]() {
 
 }
 
@@ -1447,4 +1447,21 @@ func Foo91(struct {
 	c    FooX
 	d    map[FooX]chan<- func(f FooX)
 	e, f Foo07
-}) {}
+}) {
+}
+
+func Foo92() {
+	_ = Foo11{}
+	
+	_ = &Foo11{}
+	_ = Foo11{name: "foo", age: 100}
+	_ = &Foo11{name: "foo", age: 100}
+	_ = Foo11{
+		name: "foo",
+		age:  100,
+	}
+	_ = &Foo11{
+		name: "foo",
+		age:  100,
+	}
+}

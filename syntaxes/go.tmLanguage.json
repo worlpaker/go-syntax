@@ -1166,7 +1166,7 @@
 					}
 				},
 				{
-					"comment":"manual struct types declaration",
+					"comment": "manual struct types declaration",
 					"match": "((?:(?:\\w+\\,\\s+)+)?\\w+)\\s+(?=\\bstruct\\b\\s*\\{)",
 					"captures": {
 						"1": {
@@ -1452,19 +1452,27 @@
 					"include": "#storage_types"
 				},
 				{
+					"include": "#property_variables"
+				},
+				{
+					"include": "#switch_normal_case_variables"
+				},
+				{
 					"comment": "struct expression before curly bracket",
-					"match": "(?:([[:alnum:]\\-\\_]*)(\\.))?([[:alnum:]\\-\\_]*)(\\[[^\\]]+\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
+					"match": "((?:(?:\\w+\\.)+)?\\w+)(\\[[^\\]]+\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
 						"1": {
-							"name": "entity.name.type.go"
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "\\w+",
+									"name": "entity.name.type.go"
+								}
+							]
 						},
 						"2": {
-							"name": "punctuation.other.period.go"
-						},
-						"3": {
-							"name": "entity.name.type.go"
-						},
-						"4": {
 							"patterns": [
 								{
 									"begin": "\\[",
@@ -1982,18 +1990,27 @@
 			},
 			"patterns": [
 				{
-					"match": "(?:(?<=\\bcase\\b)\\s+([\\w\\,\\.\\s\\*]+\\:)$)",
+					"include": "#type-declarations"
+				},
+				{
+					"match": "(?:^\\s*(\\bcase\\b))(?:\\s+)([\\w\\.\\,\\*\\=\\<\\>\\!\\s]+)(:)$",
 					"captures": {
 						"1": {
+							"name": "keyword.control.go"
+						},
+						"2": {
 							"patterns": [
 								{
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
+						},
+						"3": {
+							"name": "punctuation.other.colon.go"
 						}
 					}
 				},
@@ -2193,6 +2210,49 @@
 					"include": "$self"
 				}
 			]
+		},
+		"switch_normal_case_variables": {
+			"comment": "variables after case control keyword in switch expression",
+			"match": "(?:^\\s*(\\bcase\\b))(?:\\s+)([\\w\\.\\,\\*\\=\\<\\>\\!\\s]+)(:)$",
+			"captures": {
+				"1": {
+					"name": "keyword.control.go"
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "variable.other.go"
+						}
+					]
+				},
+				"3": {
+					"name": "punctuation.other.colon.go"
+				}
+			}
+		},
+		"property_variables": {
+			"comment": "Property variables in struct",
+			"match": "(?:(\\w+)(\\:)(?!\\=))",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "#keywords"
+						},
+						{
+							"match": "\\w+",
+							"name": "variable.other.property.go"
+						}
+					]
+				},
+				"2": {
+					"name": "punctuation.other.colon.go"
+				}
+			}
 		},
 		"other_variables": {
 			"match": "(?:\\w+)",
