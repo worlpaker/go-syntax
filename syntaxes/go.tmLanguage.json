@@ -1452,6 +1452,9 @@
 					"include": "#storage_types"
 				},
 				{
+					"include": "#label_loop_variable"
+				},
+				{
 					"include": "#property_variables"
 				},
 				{
@@ -2251,6 +2254,23 @@
 				},
 				"2": {
 					"name": "punctuation.other.colon.go"
+				}
+			}
+		},
+		"label_loop_variable": {
+			"comment": "labeled loop variable name",
+			"match": "((?:^\\s*\\w+:$)|(?:^\\s*\\bbreak\\b\\s+\\w+$))",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "variable.other.label.go"
+						}
+					]
 				}
 			}
 		},

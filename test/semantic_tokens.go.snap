@@ -13106,7 +13106,7 @@
 #     ^^^^^ source.go entity.name.type.go
 #          ^ source.go punctuation.definition.begin.bracket.curly.go
 #           ^ source.go punctuation.definition.end.bracket.curly.go
->	
+>
 >	_ = &Foo11{}
 #^ source.go
 # ^ source.go variable.other.assignment.go
@@ -13343,6 +13343,113 @@
 #^^ source.go
 #  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
 #    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo93() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+#            ^ source.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+>outerLoop:
+#^^^^^^^^^ source.go variable.other.label.go
+#         ^ source.go punctuation.other.colon.go
+>	for i := 0; i < 3; i++ {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.terminator.go
+#            ^ source.go
+#             ^ source.go variable.other.go
+#              ^ source.go
+#               ^ source.go keyword.operator.comparison.go
+#                ^ source.go
+#                 ^ source.go constant.numeric.decimal.go
+#                  ^ source.go punctuation.terminator.go
+#                   ^ source.go
+#                    ^ source.go variable.other.go
+#                     ^^ source.go keyword.operator.increment.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>	innerLoop:
+#^ source.go
+# ^^^^^^^^^ source.go variable.other.label.go
+#          ^ source.go punctuation.other.colon.go
+>		for j := 0; j < 3; j++ {
+#^^ source.go
+#  ^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^ source.go keyword.operator.assignment.go
+#          ^ source.go
+#           ^ source.go constant.numeric.decimal.go
+#            ^ source.go punctuation.terminator.go
+#             ^ source.go
+#              ^ source.go variable.other.go
+#               ^ source.go
+#                ^ source.go keyword.operator.comparison.go
+#                 ^ source.go
+#                  ^ source.go constant.numeric.decimal.go
+#                   ^ source.go punctuation.terminator.go
+#                    ^ source.go
+#                     ^ source.go variable.other.go
+#                      ^^ source.go keyword.operator.increment.go
+#                        ^ source.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+>			if i == 1 && j == 1 {
+#^^^ source.go
+#   ^^ source.go keyword.control.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go
+#        ^^ source.go keyword.operator.comparison.go
+#          ^ source.go
+#           ^ source.go constant.numeric.decimal.go
+#            ^ source.go
+#             ^^ source.go keyword.operator.logical.go
+#               ^ source.go
+#                ^ source.go variable.other.go
+#                 ^ source.go
+#                  ^^ source.go keyword.operator.comparison.go
+#                    ^ source.go
+#                     ^ source.go constant.numeric.decimal.go
+#                      ^ source.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>				break outerLoop
+#^^^^ source.go
+#    ^^^^^ source.go keyword.control.go
+#         ^ source.go
+#          ^^^^^^^^^ source.go variable.other.label.go
+>			} else {
+#^^^ source.go
+#   ^ source.go punctuation.definition.end.bracket.curly.go
+#    ^ source.go
+#     ^^^^ source.go keyword.control.go
+#         ^ source.go
+#          ^ source.go punctuation.definition.begin.bracket.curly.go
+>				break innerLoop
+#^^^^ source.go
+#    ^^^^^ source.go keyword.control.go
+#         ^ source.go
+#          ^^^^^^^^^ source.go variable.other.label.go
+>			}
+#^^^ source.go
+#   ^ source.go punctuation.definition.end.bracket.curly.go
+>		}
+#^^ source.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go

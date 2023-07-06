@@ -1452,7 +1452,7 @@ func Foo91(struct {
 
 func Foo92() {
 	_ = Foo11{}
-	
+
 	_ = &Foo11{}
 	_ = Foo11{name: "foo", age: 100}
 	_ = &Foo11{name: "foo", age: 100}
@@ -1485,5 +1485,19 @@ func Foo92() {
 		// Code to execute
 	case value3:
 		// Code to execute
+	}
+}
+
+func Foo93() {
+outerLoop:
+	for i := 0; i < 3; i++ {
+	innerLoop:
+		for j := 0; j < 3; j++ {
+			if i == 1 && j == 1 {
+				break outerLoop
+			} else {
+				break innerLoop
+			}
+		}
 	}
 }
