@@ -1464,4 +1464,26 @@ func Foo92() {
 		name: "foo",
 		age:  100,
 	}
+	variable := 10
+	value1, value2, value3 := 10, 20, 30
+	switch variable {
+	case value1, value2:
+		// Code to execute
+	case value3:
+		// Code to execute
+	}
+	switch {
+	case variable == value1:
+		// Code to execute
+	case variable > value2:
+		// Code to execute
+	}
+	switch variable {
+	case value1:
+		// Code to execute
+	case value2:
+		// Code to execute
+	case value3:
+		// Code to execute
+	}
 }

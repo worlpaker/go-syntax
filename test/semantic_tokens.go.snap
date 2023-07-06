@@ -13215,6 +13215,137 @@
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
+>	variable := 10
+#^ source.go
+# ^^^^^^^^ source.go variable.other.assignment.go
+#         ^ source.go
+#          ^^ source.go keyword.operator.assignment.go
+#            ^ source.go
+#             ^^ source.go constant.numeric.decimal.go
+>	value1, value2, value3 := 10, 20, 30
+#^ source.go
+# ^^^^^^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^^^^^^ source.go variable.other.assignment.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^^^^^^ source.go variable.other.assignment.go
+#                       ^ source.go
+#                        ^^ source.go keyword.operator.assignment.go
+#                          ^ source.go
+#                           ^^ source.go constant.numeric.decimal.go
+#                             ^ source.go punctuation.other.comma.go
+#                              ^ source.go
+#                               ^^ source.go constant.numeric.decimal.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^ source.go constant.numeric.decimal.go
+>	switch variable {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^^^^^^^^^^ source.go variable.other.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case value1, value2:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.comma.go
+#             ^ source.go
+#              ^^^^^^ source.go variable.other.go
+#                    ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	case value3:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	switch {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go variable.other.go
+#        ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case variable == value1:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^^^ source.go variable.other.go
+#              ^ source.go
+#               ^^ source.go keyword.operator.comparison.go
+#                 ^ source.go
+#                  ^^^^^^ source.go variable.other.go
+#                        ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	case variable > value2:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^^^ source.go variable.other.go
+#              ^ source.go
+#               ^ source.go keyword.operator.comparison.go
+#                ^ source.go
+#                 ^^^^^^ source.go variable.other.go
+#                       ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	switch variable {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^^^^^^^^^^ source.go variable.other.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case value1:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	case value2:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	case value3:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
