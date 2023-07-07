@@ -1501,3 +1501,15 @@ outerLoop:
 		}
 	}
 }
+
+// v0.2.21
+func Foo94[foo newstructG[newstruct1]](bar string) {}
+
+func Foo95[foo newstructG[newstruct1], bar newstructG[newstruct2], cedi newstructG[newstruct1]]() {}
+
+func Foo96[foo newstructG[newstruct1] | newstructG[newstruct2] | newstruct3]() {}
+
+func Foo97() {
+	foo := make([]int, 1)
+	foo[0] = 10
+}

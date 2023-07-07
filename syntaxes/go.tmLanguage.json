@@ -1221,8 +1221,11 @@
 		"generic_param_types": {
 			"patterns": [
 				{
+					"include": "#generic_types"
+				},
+				{
 					"comment": "multiple params and types | multiple types one param",
-					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)([\\w\\.\\*]+))",
+					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)([\\w\\.\\*]+)(?!.*\\[))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1241,7 +1244,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:[^\\.]+)",
+									"match": "(?:\\w+)",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1261,7 +1264,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:[^\\.]+)",
+									"match": "(?:\\w+)",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -2168,7 +2171,7 @@
 		},
 		"generic_types": {
 			"comment": "Generic support for all types",
-			"match": "(?:([\\w\\.]+)(\\[[\\w\\.\\*]+\\]))",
+			"match": "(?:([\\w\\.]+)(\\[(?!\\d+\\])[\\w\\.\\*]+\\]))",
 			"captures": {
 				"1": {
 					"match": "\\w+",
