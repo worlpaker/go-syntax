@@ -1505,11 +1505,35 @@ outerLoop:
 // v0.2.21
 func Foo94[foo newstructG[newstruct1]](bar string) {}
 
-func Foo95[foo newstructG[newstruct1], bar newstructG[newstruct2], cedi newstructG[newstruct1]]() {}
+func Foo95[foo newstructG[newstruct1], bar newstructG[newstruct2], foobar newstructG[newstruct1]]() {}
 
 func Foo96[foo newstructG[newstruct1] | newstructG[newstruct2] | newstruct3]() {}
 
 func Foo97() {
 	foo := make([]int, 1)
 	foo[0] = 10
+}
+
+// v0.2.22
+func Foo98[T FooX](foo T) {}
+
+func Foo99() {
+	var (
+		xfoo    newstructG[newstruct1]
+		xbar    newstructG[newstruct2]
+		xfoox   *newstructG[newstruct1]
+		xbarx   *newstructG[newstruct2]
+		foobarx map[newstructG[newstruct1]]interface{}
+	)
+	_, _, _, _, _ = xfoo, xbar, xbarx, xfoox, foobarx
+
+	bar := "foo"
+	foo := map[string]int{bar: 1}
+	_ = foo[bar]
+	fmt.Sprintln(foo[bar])
+
+	_ = newstructG[newstruct1]{}
+	foox := FooX{}
+	Foo98[FooX](FooX{})
+	Foo98[FooX](foox)
 }

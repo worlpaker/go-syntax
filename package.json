@@ -2,7 +2,7 @@
   "name": "go-syntax",
   "displayName": "Go Syntax",
   "description": "Rich Syntax Highlighting for Go language",
-  "version": "0.2.21",
+  "version": "0.2.22",
   "author": "Furkan Ozalp <furkanozalp@gmail.com>",
   "publisher": "furkanozalp",
   "license": "MIT",

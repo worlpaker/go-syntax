@@ -2,13 +2,17 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.22]
+
+- Fixes small bugs in all types
+
 ## [0.2.21]
 
 - Fixes small bugs in generic types
 
 ## [0.2.20]
 
-Starting from version 0.2.19, the extension will provide significantly enhanced support for variables compared to previous versions.
+Starting from now, the extension will provide significantly enhanced support for variables compared to previous versions.
 
 Details:
 
