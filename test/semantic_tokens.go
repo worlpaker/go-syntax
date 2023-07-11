@@ -1537,3 +1537,18 @@ func Foo99() {
 	Foo98[FooX](FooX{})
 	Foo98[FooX](foox)
 }
+
+// v0.2.23
+func Foo100() {
+	outerLoop:
+		for i := 0; i < 3; i++ {
+		innerLoop:
+			for j := 0; j < 3; j++ {
+				if i == 1 && j == 1 {
+					goto outerLoop
+				} else {
+					break innerLoop
+				}
+			}
+		}
+	}
