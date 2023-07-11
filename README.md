@@ -24,7 +24,7 @@ With this extension, your favorite theme can color your code better.
 
 ## About
 
-Go Syntax improves your coding experience by providing client-side syntax highlighting based on TextMate Language Rules. This means you can enjoy advanced code coloring without relying on the Language Server Protocol (LSP).
+Go Syntax improves your coding experience by providing client-side syntax highlighting based on [TextMate Language Grammars](https://macromates.com/manual/en/language_grammars). This means you can enjoy advanced code coloring without relying on the Language Server Protocol (LSP).
 
 **⚠️ Note**: [Gopls semanticTokens setting](https://github.com/golang/vscode-go/wiki/settings#uisemantictokens) is disabled by default and shouldn't be enabled if you want to use this extension.
 
