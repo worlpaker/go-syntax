@@ -2282,7 +2282,7 @@
 		},
 		"label_loop_variable": {
 			"comment": "labeled loop variable name",
-			"match": "((?:^\\s*\\w+:$)|(?:^\\s*(?:\\bbreak\\b|\\bgoto\\b)\\s+\\w+$))",
+			"match": "((?:^\\s*\\w+:$)|(?:^\\s*(?:\\bbreak\\b|\\bgoto\\b|\\bcontinue\\b)\\s+\\w+(?:\\s*\/(?:\/|\\*)\\s*.*)?$))",
 			"captures": {
 				"1": {
 					"patterns": [

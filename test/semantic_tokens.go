@@ -1540,15 +1540,33 @@ func Foo99() {
 
 // v0.2.23
 func Foo100() {
-	outerLoop:
-		for i := 0; i < 3; i++ {
-		innerLoop:
-			for j := 0; j < 3; j++ {
-				if i == 1 && j == 1 {
-					goto outerLoop
-				} else {
-					break innerLoop
-				}
+outerLoop:
+	for i := 0; i < 3; i++ {
+	innerLoop:
+		for j := 0; j < 3; j++ {
+			if i == 1 && j == 1 {
+				goto outerLoop
+			} else {
+				break innerLoop
 			}
 		}
 	}
+}
+
+// v0.2.24
+func Foo101() {
+outerLoop:
+	for i := 0; i < 3; i++ {
+	innerLoop:
+		for j := 0; j < 3; j++ {
+			if i == 1 && j == 1 {
+				goto outerLoop /* Jump to the outer loop */
+			} else if i == 2 && j == 2 {
+				break outerLoop // Break out of the outer loop
+			} else if i == 0 && j == 0 {
+				continue innerLoop //Continue to the next iteration of the inner loop
+			}
+			fmt.Println(i, j)
+		}
+	}
+}
