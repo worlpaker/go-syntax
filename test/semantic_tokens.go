@@ -6,6 +6,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"go/ast"
 	"io"
 	"log"
 	"net/http"
@@ -1569,4 +1570,22 @@ outerLoop:
 			fmt.Println(i, j)
 		}
 	}
+}
+
+// v0.2.25
+func Foo102(expr ast.Expr) interface{} {
+	switch x := expr.(type) { // first
+	case *ast.BasicLit: // comment
+		return x.Value
+	case *ast.CompositeLit: /* comment */
+		switch x.Type.(type) { /* second */
+		case *ast.MapType: // comment
+			m := make(map[interface{}]interface{})
+			for _, el := range x.Elts {
+				_ = el.(*ast.KeyValueExpr)
+			}
+			return m
+		}
+	}
+	return nil
 }
