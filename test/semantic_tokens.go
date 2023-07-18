@@ -1594,3 +1594,10 @@ func Foo102(expr ast.Expr) interface{} {
 type newGeneric2 interface {
 	newstructG[newstruct1] | newstructG[newstruct2] // comment
 }
+
+// v0.2.27
+type newGeneric3 interface {
+	newstructG[newstruct1] | newstructG[newstruct2] | // comment
+		// comment
+		int | float64
+}

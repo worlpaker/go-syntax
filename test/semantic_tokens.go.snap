@@ -2621,7 +2621,8 @@
 #                   ^ source.go punctuation.definition.begin.bracket.curly.go
 #                    ^ source.go
 #                     ^^^^ source.go entity.name.type.go
-#                         ^^ source.go
+#                         ^ source.go
+#                          ^ source.go keyword.operator.arithmetic.bitwise.go
 #                           ^ source.go
 #                            ^ source.go keyword.operator.address.go
 #                             ^^^^^^^ source.go entity.name.type.go
@@ -2641,7 +2642,8 @@
 >	FooX | Foo11
 #^ source.go
 # ^^^^ source.go entity.name.type.go
-#     ^^ source.go
+#     ^ source.go
+#      ^ source.go keyword.operator.arithmetic.bitwise.go
 #       ^ source.go
 #        ^^^^^ source.go entity.name.type.go
 >}
@@ -2658,7 +2660,8 @@
 >	FooX | <-chan *context.Context
 #^ source.go
 # ^^^^ source.go entity.name.type.go
-#     ^^ source.go
+#     ^ source.go
+#      ^ source.go keyword.operator.arithmetic.bitwise.go
 #       ^ source.go
 #        ^^ source.go keyword.operator.channel.go
 #          ^^^^ source.go keyword.channel.go
@@ -2683,7 +2686,8 @@
 # ^^^^ source.go keyword.channel.go
 #     ^ source.go
 #      ^^^^ source.go entity.name.type.go
-#          ^^ source.go
+#          ^ source.go
+#           ^ source.go keyword.operator.arithmetic.bitwise.go
 #            ^ source.go
 #             ^^^^ source.go keyword.channel.go
 #                 ^ source.go
@@ -3706,12 +3710,14 @@
 >	Foo28 | sync.Mutex | int
 #^ source.go
 # ^^^^^ source.go entity.name.type.go
-#      ^^ source.go
+#      ^ source.go
+#       ^ source.go keyword.operator.arithmetic.bitwise.go
 #        ^ source.go
 #         ^^^^ source.go entity.name.type.go
 #             ^ source.go punctuation.other.period.go
 #              ^^^^^ source.go entity.name.type.go
-#                   ^^ source.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.bitwise.go
 #                     ^ source.go
 #                      ^^^ source.go storage.type.numeric.go
 >}
@@ -3728,13 +3734,16 @@
 >	string | int64 | int32 | []byte
 #^ source.go
 # ^^^^^^ source.go storage.type.string.go
-#       ^^ source.go
+#       ^ source.go
+#        ^ source.go keyword.operator.arithmetic.bitwise.go
 #         ^ source.go
 #          ^^^^^ source.go storage.type.numeric.go
-#               ^^ source.go
+#               ^ source.go
+#                ^ source.go keyword.operator.arithmetic.bitwise.go
 #                 ^ source.go
 #                  ^^^^^ source.go storage.type.numeric.go
-#                       ^^ source.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
 #                         ^ source.go
 #                          ^ source.go punctuation.definition.begin.bracket.square.go
 #                           ^ source.go punctuation.definition.end.bracket.square.go
@@ -3754,13 +3763,16 @@
 #^ source.go
 # ^ source.go keyword.operator.address.go
 #  ^^^^^^ source.go storage.type.string.go
-#        ^^ source.go
+#        ^ source.go
+#         ^ source.go keyword.operator.arithmetic.bitwise.go
 #          ^ source.go
 #           ^^^^^ source.go storage.type.numeric.go
-#                ^^ source.go
+#                ^ source.go
+#                 ^ source.go keyword.operator.arithmetic.bitwise.go
 #                  ^ source.go
 #                   ^^^^^ source.go storage.type.numeric.go
-#                        ^^ source.go
+#                        ^ source.go
+#                         ^ source.go keyword.operator.arithmetic.bitwise.go
 #                          ^ source.go
 #                           ^ source.go punctuation.definition.begin.bracket.square.go
 #                            ^ source.go punctuation.definition.end.bracket.square.go
@@ -4674,7 +4686,8 @@
 #  ^ source.go punctuation.definition.begin.bracket.square.go
 #   ^ source.go punctuation.definition.end.bracket.square.go
 #    ^^^^^^ source.go storage.type.string.go
-#          ^^ source.go
+#          ^ source.go
+#           ^ source.go keyword.operator.arithmetic.bitwise.go
 #            ^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >	}
@@ -10561,7 +10574,8 @@
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
 #                        ^ source.go punctuation.definition.end.bracket.square.go
 #                         ^^^^^ source.go entity.name.type.go
-#                              ^^ source.go
+#                              ^ source.go
+#                               ^ source.go keyword.operator.arithmetic.bitwise.go
 #                                ^ source.go
 #                                 ^^^^^ source.go entity.name.type.go
 #                                      ^ source.go
@@ -10617,7 +10631,8 @@
 >	Foo39 | []FooX
 #^ source.go
 # ^^^^^ source.go entity.name.type.go
-#      ^^ source.go
+#      ^ source.go
+#       ^ source.go keyword.operator.arithmetic.bitwise.go
 #        ^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
@@ -10636,7 +10651,8 @@
 >	Foo39 | *[]FooX
 #^ source.go
 # ^^^^^ source.go entity.name.type.go
-#      ^^ source.go
+#      ^ source.go
+#       ^ source.go keyword.operator.arithmetic.bitwise.go
 #        ^ source.go
 #         ^ source.go keyword.operator.arithmetic.go
 #          ^ source.go punctuation.definition.begin.bracket.square.go
@@ -10655,7 +10671,8 @@
 >	FooX | <-chan *[]context.Context | chan *[]context.Context | chan<- *[]context.Context //foo
 #^ source.go
 # ^^^^ source.go entity.name.type.go
-#     ^^ source.go
+#     ^ source.go
+#      ^ source.go keyword.operator.arithmetic.bitwise.go
 #       ^ source.go
 #        ^^ source.go keyword.operator.channel.go
 #          ^^^^ source.go keyword.channel.go
@@ -10666,7 +10683,8 @@
 #                  ^^^^^^^ source.go entity.name.type.go
 #                         ^ source.go punctuation.other.period.go
 #                          ^^^^^^^ source.go entity.name.type.go
-#                                 ^^ source.go
+#                                 ^ source.go
+#                                  ^ source.go keyword.operator.arithmetic.bitwise.go
 #                                   ^ source.go
 #                                    ^^^^ source.go keyword.channel.go
 #                                        ^ source.go
@@ -10676,7 +10694,8 @@
 #                                            ^^^^^^^ source.go entity.name.type.go
 #                                                   ^ source.go punctuation.other.period.go
 #                                                    ^^^^^^^ source.go entity.name.type.go
-#                                                           ^^ source.go
+#                                                           ^ source.go
+#                                                            ^ source.go keyword.operator.arithmetic.bitwise.go
 #                                                             ^ source.go
 #                                                              ^^^^ source.go keyword.channel.go
 #                                                                  ^^ source.go keyword.operator.channel.go
@@ -10711,10 +10730,12 @@
 #         ^^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.other.period.go
 #                 ^^^^^^^ source.go entity.name.type.go
-#                        ^^ source.go
+#                        ^ source.go
+#                         ^ source.go keyword.operator.arithmetic.bitwise.go
 #                          ^ source.go
 #                           ^^^^ source.go entity.name.type.go
-#                               ^^ source.go
+#                               ^ source.go
+#                                ^ source.go keyword.operator.arithmetic.bitwise.go
 #                                 ^ source.go
 #                                  ^^^^ source.go keyword.function.go
 #                                      ^ source.go punctuation.definition.begin.bracket.round.go
@@ -10786,10 +10807,12 @@
 #  ^ source.go punctuation.definition.begin.bracket.square.go
 #   ^ source.go punctuation.definition.end.bracket.square.go
 #    ^^^^^ source.go entity.name.type.go
-#         ^^ source.go
+#         ^ source.go
+#          ^ source.go keyword.operator.arithmetic.bitwise.go
 #           ^ source.go
 #            ^^^^ source.go entity.name.type.go
-#                ^^ source.go
+#                ^ source.go
+#                 ^ source.go keyword.operator.arithmetic.bitwise.go
 #                  ^ source.go
 #                   ^^^ source.go keyword.map.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -11243,7 +11266,8 @@
 >	newstruct1 | newstruct2
 #^ source.go
 # ^^^^^^^^^^ source.go entity.name.type.go
-#           ^^ source.go
+#           ^ source.go
+#            ^ source.go keyword.operator.arithmetic.bitwise.go
 #             ^ source.go
 #              ^^^^^^^^^^ source.go entity.name.type.go
 >}
@@ -14261,7 +14285,8 @@
 #           ^ source.go punctuation.definition.begin.bracket.square.go
 #            ^^^^^^^^^^ source.go entity.name.type.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
-#                       ^^ source.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
 #                         ^ source.go
 #                          ^^^^^^^^^^ source.go entity.name.type.go
 #                                    ^ source.go punctuation.definition.begin.bracket.square.go
@@ -14270,6 +14295,49 @@
 #                                                ^ source.go
 #                                                 ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
 #                                                   ^^^^^^^^ source.go comment.line.double-slash.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.2.27
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>type newGeneric3 interface {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
+#                 ^^^^^^^^^ source.go keyword.interface.go
+#                          ^ source.go
+#                           ^ source.go punctuation.definition.begin.bracket.curly.go
+>	newstructG[newstruct1] | newstructG[newstruct2] | // comment
+#^ source.go
+# ^^^^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
+#                         ^ source.go
+#                          ^^^^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                ^ source.go
+#                                                 ^ source.go keyword.operator.arithmetic.bitwise.go
+#                                                  ^ source.go
+#                                                   ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                     ^^^^^^^^ source.go comment.line.double-slash.go
+>		// comment
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^ source.go comment.line.double-slash.go
+>		int | float64
+#^^ source.go
+#  ^^^ source.go storage.type.numeric.go
+#     ^ source.go
+#      ^ source.go keyword.operator.arithmetic.bitwise.go
+#       ^ source.go
+#        ^^^^^^^ source.go storage.type.numeric.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >

@@ -1750,7 +1750,7 @@
 						},
 						{
 							"comment": "single declaration | with or declarations",
-							"match": "(?:(?:\\s+\\|)?([\\w\\.\\[\\]\\*]+)(?:\\s+\\|)?)",
+							"match": "((?:\\s+\\|)?(?:[\\w\\.\\[\\]\\*]+)(?:\\s+\\|)?)",
 							"captures": {
 								"1": {
 									"patterns": [
