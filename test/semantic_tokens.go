@@ -1589,3 +1589,8 @@ func Foo102(expr ast.Expr) interface{} {
 	}
 	return nil
 }
+
+// v0.2.26
+type newGeneric2 interface {
+	newstructG[newstruct1] | newstructG[newstruct2] // comment
+}

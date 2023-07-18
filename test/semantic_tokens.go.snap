@@ -14244,3 +14244,32 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.26
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>type newGeneric2 interface {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
+#                 ^^^^^^^^^ source.go keyword.interface.go
+#                          ^ source.go
+#                           ^ source.go punctuation.definition.begin.bracket.curly.go
+>	newstructG[newstruct1] | newstructG[newstruct2] // comment
+#^ source.go
+# ^^^^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^^ source.go
+#                         ^ source.go
+#                          ^^^^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                ^ source.go
+#                                                 ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                   ^^^^^^^^ source.go comment.line.double-slash.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

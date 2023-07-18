@@ -1758,6 +1758,9 @@
 											"include": "#type-declarations"
 										},
 										{
+											"include": "#generic_types"
+										},
+										{
 											"match": "(?:\\w+)",
 											"name": "entity.name.type.go"
 										}
