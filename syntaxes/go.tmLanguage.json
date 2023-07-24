@@ -1028,7 +1028,7 @@
 							"include": "#type-declarations"
 						},
 						{
-							"match": "(?:[^\\.\\*]+)",
+							"match": "(?:\\w+)",
 							"name": "entity.name.type.go"
 						}
 					]
@@ -1185,7 +1185,7 @@
 				},
 				{
 					"comment": "manual struct types declaration",
-					"match": "((?:(?:\\w+\\,\\s+)+)?\\w+)\\s+(?=\\bstruct\\b\\s*\\{)",
+					"match": "((?:(?:\\w+\\,\\s+)+)?\\w+)\\s+(?=(?:\\[\\])?\\bstruct\\b\\s*\\{)",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -2051,7 +2051,7 @@
 		},
 		"var_const_single_assignment": {
 			"comment": "var and const with single type assignment",
-			"match": "(?:(?<=\\bvar\\b|\\bconst\\b)(?:\\s*)(\\w+(?:(?:\\,\\s\\w+)+)?)(?:\\s*)([[:alnum:]\\.\\-\\_\\<\\>\\*\\[\\]]+(?:\\s*))?(\\=)?)",
+			"match": "(?:(?<=\\bvar\\b|\\bconst\\b)(?:\\s*)(\\w+(?:(?:\\,\\s\\w+)+)?)(?:\\s*)(?:(?!(?:\\[\\])?\\bstruct\\b\\s*\\{)([[:alnum:]\\.\\-\\_\\<\\>\\*\\[\\]]+(?:\\s*)))?(\\=)?)",
 			"captures": {
 				"1": {
 					"patterns": [
@@ -2059,7 +2059,7 @@
 							"include": "#delimiters"
 						},
 						{
-							"match": "(?:[^\\,]+)",
+							"match": "(?:\\w+)",
 							"name": "variable.other.assignment.go"
 						}
 					]
@@ -2073,7 +2073,7 @@
 							"include": "#generic_types"
 						},
 						{
-							"match": "(?:[^\\.]+)",
+							"match": "(?:\\w+)",
 							"name": "entity.name.type.go"
 						}
 					]

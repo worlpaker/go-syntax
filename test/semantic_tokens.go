@@ -1601,3 +1601,68 @@ type newGeneric3 interface {
 		// comment
 		int | float64
 }
+
+// v0.2.28
+func Foo103(
+	foo []string,
+	bar string,
+	foobar []struct {
+		Path       string
+		LineNumber int
+		Line       string
+	}) {
+}
+
+func Foo104(struct {
+	Path       context.Context
+	LineNumber int
+	Line       string
+}) {
+}
+
+func Foo105([]struct {
+	Path       context.Context
+	LineNumber int
+	Line       string
+}) {
+}
+
+func Foo106(foo []string, bar string, foobar []struct {
+	Path       string
+	LineNumber int
+	Line       string
+}) {
+}
+
+func Foo107() {
+	foo := struct {
+		Path       string
+		LineNumber int
+		Line       string
+	}{
+		Path:       "foo",
+		LineNumber: 100,
+		Line:       "bar",
+	}
+
+	bar := []struct {
+		Path       string
+		LineNumber int
+		Line       string
+	}{
+		{
+			Path:       "foo",
+			LineNumber: 100,
+			Line:       "bar",
+		},
+	}
+
+	var foobar []struct {
+		Path       context.Context
+		LineNumber int
+		Line       string
+	}
+
+	_, _, _ = foo, bar, foobar
+
+}

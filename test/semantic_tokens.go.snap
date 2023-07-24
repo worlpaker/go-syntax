@@ -203,7 +203,8 @@
 #                                    ^ source.go
 #                                     ^^ source.go keyword.operator.channel.go
 #                                       ^^^^ source.go keyword.channel.go
-#                                           ^^^^^^^^ source.go entity.name.type.go
+#                                           ^ source.go
+#                                            ^^^^^^^ source.go entity.name.type.go
 #                                                   ^ source.go punctuation.other.period.go
 #                                                    ^^^^^^^ source.go entity.name.type.go
 #                                                           ^ source.go
@@ -673,7 +674,7 @@
 #      ^ source.go
 #       ^^^^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
-#               ^^^^^^^^ source.go entity.name.type.go
+#               ^^^^^^^ source.go entity.name.type.go
 >	return a
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
@@ -2367,7 +2368,8 @@
 #     ^ source.go
 #      ^^^^^^^ source.go variable.other.assignment.go
 #             ^ source.go
-#              ^^^^^^^^ source.go entity.name.type.go
+#              ^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go
 #                      ^ source.go keyword.operator.assignment.go
 #                       ^ source.go
 #                        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -2379,7 +2381,8 @@
 #     ^ source.go
 #      ^^^^^^^^^^ source.go variable.other.assignment.go
 #                ^ source.go
-#                 ^^^^^^^^ source.go entity.name.type.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
 #                         ^ source.go keyword.operator.assignment.go
 #                          ^ source.go
 #                           ^ source.go constant.numeric.decimal.go
@@ -2405,9 +2408,10 @@
 #   ^ source.go
 #    ^^^ source.go variable.other.assignment.go
 #       ^ source.go punctuation.other.comma.go
-#        ^^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go variable.other.assignment.go
 #            ^ source.go
-#             ^^^^^^ source.go entity.name.type.go
+#             ^^^^^ source.go entity.name.type.go
 >var foo2 *sync.Mutex
 #^^^ source.go keyword.var.go
 #   ^ source.go
@@ -2416,7 +2420,7 @@
 #         ^ source.go keyword.operator.address.go
 #          ^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
-#               ^^^^^^ source.go entity.name.type.go
+#               ^^^^^ source.go entity.name.type.go
 >var foo3 = "bar"
 #^^^ source.go keyword.var.go
 #   ^ source.go
@@ -2432,15 +2436,16 @@
 #   ^ source.go
 #    ^^^^ source.go variable.other.assignment.go
 #        ^ source.go punctuation.other.comma.go
-#         ^^^^^ source.go variable.other.assignment.go
+#         ^ source.go
+#          ^^^^ source.go variable.other.assignment.go
 #              ^ source.go
-#               ^^^^^ source.go entity.name.type.go
+#               ^^^^ source.go entity.name.type.go
 >var bar2 Command
 #^^^ source.go keyword.var.go
 #   ^ source.go
 #    ^^^^ source.go variable.other.assignment.go
 #        ^ source.go
-#         ^^^^^^^^ source.go entity.name.type.go
+#         ^^^^^^^ source.go entity.name.type.go
 >var bar3 []*Command
 #^^^ source.go keyword.var.go
 #   ^ source.go
@@ -2449,7 +2454,7 @@
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
 #           ^ source.go keyword.operator.address.go
-#            ^^^^^^^^ source.go entity.name.type.go
+#            ^^^^^^^ source.go entity.name.type.go
 >var cancelCtxKey int
 #^^^ source.go keyword.var.go
 #   ^ source.go
@@ -2461,7 +2466,7 @@
 #   ^ source.go
 #    ^^ source.go variable.other.assignment.go
 #      ^ source.go
-#       ^^^^^ source.go entity.name.type.go
+#       ^^^^ source.go entity.name.type.go
 >var BO = 15
 #^^^ source.go keyword.var.go
 #   ^ source.go
@@ -4406,7 +4411,7 @@
 #      ^ source.go
 #       ^^^^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
-#               ^^^^^^^^ source.go entity.name.type.go
+#               ^^^^^^^ source.go entity.name.type.go
 >	defer func(i context.Context) {
 #^ source.go
 # ^^^^^ source.go keyword.control.go
@@ -4526,7 +4531,7 @@
 #      ^ source.go
 #       ^^^^ source.go entity.name.type.go
 #           ^ source.go punctuation.other.period.go
-#            ^^^^^^^^ source.go entity.name.type.go
+#            ^^^^^^^ source.go entity.name.type.go
 >	mw(m)
 #^ source.go
 # ^^ source.go entity.name.function.support.go
@@ -5480,7 +5485,7 @@
 #      ^ source.go
 #       ^^^^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
-#               ^^^^^^^^ source.go entity.name.type.go
+#               ^^^^^^^ source.go entity.name.type.go
 >	return a
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
@@ -7101,7 +7106,7 @@
 #       ^ source.go
 #        ^^^^^^^ source.go entity.name.type.go
 #               ^ source.go punctuation.other.period.go
-#                ^^^^^^^^ source.go entity.name.type.go
+#                ^^^^^^^ source.go entity.name.type.go
 >	var t1 bool
 #^ source.go
 # ^^^ source.go keyword.var.go
@@ -7250,7 +7255,7 @@
 #        ^ source.go
 #         ^^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.other.period.go
-#                 ^^^^^^^^ source.go entity.name.type.go
+#                 ^^^^^^^ source.go entity.name.type.go
 >	return t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
@@ -14338,6 +14343,376 @@
 #      ^ source.go keyword.operator.arithmetic.bitwise.go
 #       ^ source.go
 #        ^^^^^^^ source.go storage.type.numeric.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.2.28
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo103(
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+>	foo []string,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.square.go
+#      ^ source.go punctuation.definition.end.bracket.square.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go punctuation.other.comma.go
+>	bar string,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^^^ source.go storage.type.string.go
+#           ^ source.go punctuation.other.comma.go
+>	foobar []struct {
+#^ source.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Path       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>		LineNumber int
+#^^ source.go
+#  ^^^^^^^^^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^ source.go storage.type.numeric.go
+>		Line       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>	}) {
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo104(struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^^^^ source.go keyword.struct.go
+#                  ^ source.go
+#                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Path       context.Context
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go
+#            ^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.other.period.go
+#                    ^^^^^^^ source.go entity.name.type.go
+>	LineNumber int
+#^ source.go
+# ^^^^^^^^^^ source.go variable.other.property.go
+#           ^ source.go
+#            ^^^ source.go storage.type.numeric.go
+>	Line       string
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go
+#            ^^^^^^ source.go storage.type.string.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo105([]struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^^^ source.go keyword.struct.go
+#                    ^ source.go
+#                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Path       context.Context
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go
+#            ^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.other.period.go
+#                    ^^^^^^^ source.go entity.name.type.go
+>	LineNumber int
+#^ source.go
+# ^^^^^^^^^^ source.go variable.other.property.go
+#           ^ source.go
+#            ^^^ source.go storage.type.numeric.go
+>	Line       string
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go
+#            ^^^^^^ source.go storage.type.string.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo106(foo []string, bar string, foobar []struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^^^ source.go storage.type.string.go
+#                        ^ source.go punctuation.other.comma.go
+#                         ^ source.go
+#                          ^^^ source.go variable.parameter.go
+#                             ^ source.go
+#                              ^^^^^^ source.go storage.type.string.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^^^^^^ source.go variable.parameter.go
+#                                            ^ source.go
+#                                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                               ^^^^^^ source.go keyword.struct.go
+#                                                     ^ source.go
+#                                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Path       string
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go
+#            ^^^^^^ source.go storage.type.string.go
+>	LineNumber int
+#^ source.go
+# ^^^^^^^^^^ source.go variable.other.property.go
+#           ^ source.go
+#            ^^^ source.go storage.type.numeric.go
+>	Line       string
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go
+#            ^^^^^^ source.go storage.type.string.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo107() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	foo := struct {
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^^^^^^ source.go keyword.struct.go
+#              ^ source.go
+#               ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Path       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>		LineNumber int
+#^^ source.go
+#  ^^^^^^^^^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^ source.go storage.type.numeric.go
+>		Line       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>	}{
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Path:       "foo",
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^^^^^^^ source.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^ source.go string.quoted.double.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                   ^ source.go punctuation.other.comma.go
+>		LineNumber: 100,
+#^^ source.go
+#  ^^^^^^^^^^ source.go variable.other.property.go
+#            ^ source.go punctuation.other.colon.go
+#             ^ source.go
+#              ^^^ source.go constant.numeric.decimal.go
+#                 ^ source.go punctuation.other.comma.go
+>		Line:       "bar",
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^^^^^^^ source.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^ source.go string.quoted.double.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                   ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	bar := []struct {
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Path       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>		LineNumber int
+#^^ source.go
+#  ^^^^^^^^^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^ source.go storage.type.numeric.go
+>		Line       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>	}{
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		{
+#^^ source.go
+#  ^ source.go punctuation.definition.begin.bracket.curly.go
+>			Path:       "foo",
+#^^^ source.go
+#   ^^^^ source.go variable.other.property.go
+#       ^ source.go punctuation.other.colon.go
+#        ^^^^^^^ source.go
+#               ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                ^^^ source.go string.quoted.double.go
+#                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                    ^ source.go punctuation.other.comma.go
+>			LineNumber: 100,
+#^^^ source.go
+#   ^^^^^^^^^^ source.go variable.other.property.go
+#             ^ source.go punctuation.other.colon.go
+#              ^ source.go
+#               ^^^ source.go constant.numeric.decimal.go
+#                  ^ source.go punctuation.other.comma.go
+>			Line:       "bar",
+#^^^ source.go
+#   ^^^^ source.go variable.other.property.go
+#       ^ source.go punctuation.other.colon.go
+#        ^^^^^^^ source.go
+#               ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                ^^^ source.go string.quoted.double.go
+#                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                    ^ source.go punctuation.other.comma.go
+>		},
+#^^ source.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
+#   ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	var foobar []struct {
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^^^^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^^^ source.go keyword.struct.go
+#                    ^ source.go
+#                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Path       context.Context
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.other.period.go
+#                     ^^^^^^^ source.go entity.name.type.go
+>		LineNumber int
+#^^ source.go
+#  ^^^^^^^^^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^ source.go storage.type.numeric.go
+>		Line       string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^^ source.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	_, _, _ = foo, bar, foobar
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^ source.go keyword.operator.assignment.go
+#          ^ source.go
+#           ^^^ source.go variable.other.go
+#              ^ source.go punctuation.other.comma.go
+#               ^ source.go
+#                ^^^ source.go variable.other.go
+#                   ^ source.go punctuation.other.comma.go
+#                    ^ source.go
+#                     ^^^^^^ source.go variable.other.go
+>
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >

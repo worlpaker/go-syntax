@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.28]
+
+- Fixes small bugs in variables
+
 ## [0.2.27]
 
 - Fixes small bugs in interface types
