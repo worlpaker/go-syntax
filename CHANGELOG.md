@@ -2,6 +2,16 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.29]
+
+- Fixes minor bugs related to variable types within functions
+
+- Enhances generic support in functions
+
+- Improves type support for the built-in make function
+
+- Introduces new built-in functions: min, max, and clear
+
 ## [0.2.28]
 
 - Fixes small bugs in variables

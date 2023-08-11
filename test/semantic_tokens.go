@@ -3,6 +3,7 @@
 package main
 
 import (
+	"cmp"
 	"context"
 	"encoding/json"
 	"fmt"
@@ -13,6 +14,7 @@ import (
 	"sync"
 	"sync/atomic"
 	"time"
+	"unsafe"
 )
 
 // functions
@@ -1666,3 +1668,159 @@ func Foo107() {
 	_, _, _ = foo, bar, foobar
 
 }
+
+// v0.2.29
+func (in *FooX) Foo108([]newstruct1, func(n ast.Node, push bool)) {}
+
+func (in *FooX) Foo109(types []newstruct1, f func(n ast.Node, push bool)) {}
+
+func (in *FooX) Foo110(types []newstruct1, f func(n ast.Node, push bool) (proceed context.Context)) {}
+
+func (in *FooX) Foo111(types []newstruct2,
+	f func(n ast.Node, push bool) (proceed context.Context)) {
+}
+
+func Foo112() {
+	const P = 3
+	const C = 4
+	type T [P * C]context.Context
+}
+
+func Foo113() {
+	slc := []bool{true, false, true}
+	_ = min(10, 20)
+	_ = max(10, 20)
+	clear(slc)
+}
+
+type newGen[a, b newstruct1, c newstruct2] struct{}
+
+type Pair[T1, T2 any] struct {
+	One T1
+	Two T2
+}
+
+type GenFoo114[a, b newstruct1, c newstruct2] struct{}
+
+func Foo114[T GenFoo114[newstruct1, newstruct1, newstruct2]](foo GenFoo114[newstruct1, newstruct1, newstruct2]) {
+}
+
+func Foo115[T newGen[newstruct1, newstruct1, newstruct2]]() {}
+
+func Foo116() {
+	cnt := 10
+	arr := []string{"1"}
+	_ = make(chan context.Context)
+	_ = make(chan<- context.Context)
+	_ = make(<-chan context.Context)
+	_ = make(chan context.Context, 10)
+	_ = make(map[context.Context]context.Context)
+	_ = make([]context.Context, 0, 10)
+	_ = make([]context.Context, 10)
+	_ = make([]int, 0, 10)
+	_ = make([]string, 0)
+	_ = make(<-chan interface{}, 10)
+	_ = make(map[string]interface{}, 10)
+	_ = make([]context.Context, 0, cnt)
+	_ = make([]context.Context, 0, len(arr))
+}
+
+type Iter[T any] func(yield func(T) bool) bool
+type Iter2[T1, T2 any] func(yield func(T1, T2) bool) bool
+
+func Enum[T any](iter Iter[T]) Pair[int, T] {
+	return Pair[int, T]{}
+}
+
+func Equal[S ~[]E, E comparable](s1, s2 S) bool {
+	return true
+}
+
+func EqualFunc[S1 ~[]E1, S2 ~[]E2, E1, E2 any](s1 S1, s2 S2, eq func(E1, E2) bool) bool {
+	return true
+}
+
+func Compare[S ~[]E, E cmp.Ordered](s1, s2 S) int {
+	return 0
+}
+
+func CompareFunc[S1 ~[]E1, S2 ~[]E2, E1, E2 any](s1 S1, s2 S2, cmp func(E1, E2) int) int {
+	return 0
+}
+
+func Index[S ~[]E, E comparable](s S, v E) int {
+	return -1
+}
+
+func IndexFunc[S ~[]E, E any](s S, f func(E) bool) int {
+	return -1
+}
+
+func Contains[S ~[]E, E comparable](s S, v E) bool {
+	return Index(s, v) >= 0
+}
+
+func ContainsFunc[S ~[]E, E any](s S, f func(E) bool) bool {
+	return IndexFunc(s, f) >= 0
+}
+
+func Insert[S ~[]E, E any](s S, i int, v ...E) S {
+	return s
+}
+
+func Delete[S ~[]E, E any](s S, i, j int) S {
+	return s
+}
+
+func DeleteFunc[S ~[]E, E any](s S, del func(E) bool) S {
+	return s
+}
+
+func Replace[S ~[]E, E any](s S, i, j int, v ...E) S {
+	return s
+}
+
+func Clone[S ~[]E, E any](s S) S {
+	return s
+}
+
+func Compact[S ~[]E, E comparable](s S) S {
+	return s
+}
+
+func CompactFunc[S ~[]E, E any](s S, eq func(E, E) bool) S {
+	return s
+}
+
+func Grow[S ~[]E, E any](s S, n int) S {
+	return s
+}
+
+func Clip[S ~[]E, E any](s S) S {
+	return s[:len(s):len(s)]
+}
+
+func rotateLeft[E any](s []E, r int) {
+
+}
+
+func rotateRight[E any](s []E, r int) {
+}
+
+func swap[E any](x, y []E) {}
+
+func overlaps[E any](a, b []E) bool {
+	if len(a) == 0 || len(b) == 0 {
+		return false
+	}
+	elemSize := unsafe.Sizeof(a[0])
+	if elemSize == 0 {
+		return false
+	}
+	return uintptr(unsafe.Pointer(&a[0])) <= uintptr(unsafe.Pointer(&b[len(b)-1]))+(elemSize-1) &&
+		uintptr(unsafe.Pointer(&b[0])) <= uintptr(unsafe.Pointer(&a[len(a)-1]))+(elemSize-1)
+}
+
+func startIdx[E any](haystack, needle []E) int { return 0 }
+
+func Reverse[S ~[]E, E any](s S) {}
