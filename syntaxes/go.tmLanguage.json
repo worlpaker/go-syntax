@@ -2022,7 +2022,7 @@
 				},
 				{
 					"comment": "new keyword",
-					"match": "(?:(\\bnew\\b)(\\()([^\\)]+)(\\)))",
+					"match": "(?:(\\bnew\\b)(\\()([^\\)]+)?(\\)))",
 					"captures": {
 						"1": {
 							"name": "entity.name.function.support.builtin.go"

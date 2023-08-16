@@ -1824,3 +1824,8 @@ func overlaps[E any](a, b []E) bool {
 func startIdx[E any](haystack, needle []E) int { return 0 }
 
 func Reverse[S ~[]E, E any](s S) {}
+
+// v0.2.30
+func Foo117() {
+	_ = new(func())
+}
