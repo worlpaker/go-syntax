@@ -10,6 +10,7 @@ import (
 	"go/ast"
 	"io"
 	"log"
+	"mime/multipart"
 	"net/http"
 	"sync"
 	"sync/atomic"
@@ -1827,5 +1828,22 @@ func Reverse[S ~[]E, E any](s S) {}
 
 // v0.2.30
 func Foo117() {
-	_ = new(func())
+	_ = new(int)
 }
+
+// v0.2.31
+func (a *FooX) Foo118(foo string, bar map[string]*multipart.File, foobar map[Context]map[Context]*map[Context]*Context) {
+}
+
+func Foo119(
+	foo string,
+	bar map[string]*multipart.File,
+	foobar map[Context]map[Context]*map[Context]*Context) {
+}
+
+func Foo120(map[string]*multipart.File)     {}
+func Foo121(foo map[string]*multipart.File) {}
+func Foo122(
+	bar map[string]*multipart.File) {
+}
+func Foo123[foobar string](ece map[string]*multipart.File) {}
