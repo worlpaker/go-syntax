@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.32]
+
+- Fixes a small bug in make built-in function
+
 ## [0.2.31]
 
 - Fixes small bugs related to types within function declaration

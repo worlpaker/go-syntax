@@ -1846,4 +1846,9 @@ func Foo121(foo map[string]*multipart.File) {}
 func Foo122(
 	bar map[string]*multipart.File) {
 }
-func Foo123[foobar string](ece map[string]*multipart.File) {}
+func Foo123[foobar string](foo map[string]*multipart.File) {}
+
+// v0.2.32
+func Foo124() {
+	_ = make([]Context, 0, 10)
+}

@@ -16766,7 +16766,7 @@
 #                                 ^ source.go punctuation.definition.begin.bracket.curly.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
->func Foo123[foobar string](ece map[string]*multipart.File) {}
+>func Foo123[foobar string](foo map[string]*multipart.File) {}
 #^^^^ source.go keyword.function.go
 #    ^ source.go
 #     ^^^^^^ source.go entity.name.function.go
@@ -16790,4 +16790,36 @@
 #                                                          ^ source.go
 #                                                           ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                                            ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.2.32
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo124() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	_ = make([]Context, 0, 10)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.other.comma.go
+#                    ^ source.go
+#                     ^ source.go constant.numeric.decimal.go
+#                      ^ source.go punctuation.other.comma.go
+#                       ^ source.go
+#                        ^^ source.go constant.numeric.decimal.go
+#                          ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
 >
