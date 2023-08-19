@@ -117,6 +117,46 @@
 				}
 			]
 		},
+		"type-declarations-without-brackets": {
+			"patterns": [
+				{
+					"include": "#language_constants"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#map_other_types"
+				},
+				{
+					"include": "#delimiters"
+				},
+				{
+					"include": "#keywords"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#runes"
+				},
+				{
+					"include": "#storage_types"
+				},
+				{
+					"include": "#raw_strings_literals"
+				},
+				{
+					"include": "#string_literals"
+				},
+				{
+					"include": "#numeric_literals"
+				},
+				{
+					"include": "#terminators"
+				}
+			]
+		},
 		"language_constants": {
 			"comment": "Language constants",
 			"match": "\\b(true|false|nil|iota)\\b",
@@ -1227,40 +1267,7 @@
 									"include": "#functions"
 								},
 								{
-									"include": "#language_constants"
-								},
-								{
-									"include": "#comments"
-								},
-								{
-									"include": "#map_other_types"
-								},
-								{
-									"include": "#delimiters"
-								},
-								{
-									"include": "#keywords"
-								},
-								{
-									"include": "#operators"
-								},
-								{
-									"include": "#runes"
-								},
-								{
-									"include": "#storage_types"
-								},
-								{
-									"include": "#raw_strings_literals"
-								},
-								{
-									"include": "#string_literals"
-								},
-								{
-									"include": "#numeric_literals"
-								},
-								{
-									"include": "#terminators"
+									"include": "#type-declarations-without-brackets"
 								},
 								{
 									"include": "#generic_types"
@@ -1282,10 +1289,6 @@
 									"name": "punctuation.definition.end.bracket.curly.go"
 								},
 								{
-									"match": "(?:\\w+)",
-									"name": "entity.name.type.go"
-								},
-								{
 									"begin": "\\(",
 									"beginCaptures": {
 										"0": {
@@ -1303,6 +1306,10 @@
 											"include": "#function_param_types"
 										}
 									]
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
 								}
 							]
 						}
@@ -1336,40 +1343,7 @@
 						"2": {
 							"patterns": [
 								{
-									"include": "#language_constants"
-								},
-								{
-									"include": "#comments"
-								},
-								{
-									"include": "#map_other_types"
-								},
-								{
-									"include": "#delimiters"
-								},
-								{
-									"include": "#keywords"
-								},
-								{
-									"include": "#operators"
-								},
-								{
-									"include": "#runes"
-								},
-								{
-									"include": "#storage_types"
-								},
-								{
-									"include": "#raw_strings_literals"
-								},
-								{
-									"include": "#string_literals"
-								},
-								{
-									"include": "#numeric_literals"
-								},
-								{
-									"include": "#terminators"
+									"include": "#type-declarations-without-brackets"
 								},
 								{
 									"match": "(?:\\w+)",
@@ -2382,16 +2356,7 @@
 				"2": {
 					"patterns": [
 						{
-							"include": "#storage_types"
-						},
-						{
-							"include": "#keywords"
-						},
-						{
-							"include": "#operators"
-						},
-						{
-							"include": "#delimiters"
+							"include": "#type-declarations-without-brackets"
 						},
 						{
 							"match": "\\w+",
