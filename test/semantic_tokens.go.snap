@@ -16823,3 +16823,68 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.33
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo125(chan context.Context) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^^ source.go keyword.channel.go
+#                ^ source.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.other.period.go
+#                         ^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>func Foo126(
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+>	chan context.Context) {
+#^ source.go
+# ^^^^ source.go keyword.channel.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.other.period.go
+#              ^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+#                      ^ source.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>func Foo127(<-chan context.Context) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^ source.go keyword.operator.channel.go
+#              ^^^^ source.go keyword.channel.go
+#                  ^ source.go
+#                   ^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.other.period.go
+#                           ^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                     ^ source.go punctuation.definition.end.bracket.curly.go
+>func Foo128(chan<- context.Context) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^^ source.go keyword.channel.go
+#                ^^ source.go keyword.operator.channel.go
+#                  ^ source.go
+#                   ^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.other.period.go
+#                           ^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                     ^ source.go punctuation.definition.end.bracket.curly.go
+>

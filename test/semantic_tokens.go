@@ -1852,3 +1852,11 @@ func Foo123[foobar string](foo map[string]*multipart.File) {}
 func Foo124() {
 	_ = make([]Context, 0, 10)
 }
+
+// v0.2.33
+func Foo125(chan context.Context) {}
+func Foo126(
+	chan context.Context) {
+}
+func Foo127(<-chan context.Context) {}
+func Foo128(chan<- context.Context) {}
