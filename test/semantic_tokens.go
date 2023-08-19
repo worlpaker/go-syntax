@@ -1896,3 +1896,47 @@ func Foo143(
 func Foo144(
 	func(i, j context.Context) <-chan context.Context) {
 }
+func Foo145(foo func() context.Context) {}
+func Foo146(
+	foo func() context.Context) {
+}
+func Foo147(foo func(i, j context.Context) context.Context) {}
+
+func Foo148(
+	foo func(i, j context.Context) context.Context) {
+}
+
+func Foo149(foo chan func(i, j context.Context) context.Context)   {}
+func Foo150(foo <-chan func(i, j context.Context) context.Context) {}
+func Foo151(foo chan<- func(i, j context.Context) context.Context) {}
+func Foo152(
+	foo chan func(i, j context.Context) context.Context) {
+}
+func Foo153(
+	foo <-chan func(i, j context.Context) context.Context) {
+}
+func Foo154(
+	foo chan<- func(i, j context.Context) context.Context) {
+}
+func Foo155(foo func(i, j context.Context) chan context.Context, bar func(i, j context.Context) chan<- context.Context) {
+}
+func Foo156(
+	foo func(i, j context.Context) <-chan context.Context, bar func(i, j context.Context) chan context.Context) {
+}
+
+func Foo157(
+	foo func(i, j context.Context) chan context.Context,
+	bar func(i, j context.Context) chan context.Context) {
+}
+
+func Foo158(foo func(i, j context.Context) chan<- context.Context) {}
+func Foo159(foo func(i, j context.Context) <-chan context.Context) {}
+func Foo160(
+	foo func(i, j context.Context) chan context.Context) {
+}
+func Foo161(
+	foo func(i, j string) chan<- context.Context) {
+}
+func Foo162(
+	foo func(i, j context.Context) <-chan context.Context) {
+}
