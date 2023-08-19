@@ -2,6 +2,12 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.34]
+
+- Fixes minor bugs in function declarations
+- Enhances code readability
+- Removes unnecessary sections
+
 ## [0.2.33]
 
 - Fixes a small bug in function declaration
