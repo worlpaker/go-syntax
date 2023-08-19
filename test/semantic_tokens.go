@@ -1860,3 +1860,39 @@ func Foo126(
 }
 func Foo127(<-chan context.Context) {}
 func Foo128(chan<- context.Context) {}
+
+// v0.2.34
+func Foo129(func() context.Context) {}
+func Foo130(
+	func() context.Context) {
+}
+func Foo131(func(i, j context.Context) context.Context) {}
+
+func Foo132(
+	func(i, j context.Context) context.Context) {
+}
+
+func Foo133(chan func(i, j context.Context) context.Context)   {}
+func Foo134(<-chan func(i, j context.Context) context.Context) {}
+func Foo135(chan<- func(i, j context.Context) context.Context) {}
+func Foo136(
+	chan func(i, j context.Context) context.Context) {
+}
+func Foo137(
+	<-chan func(i, j context.Context) context.Context) {
+}
+func Foo138(
+	chan<- func(i, j context.Context) context.Context) {
+}
+func Foo139(func(i, j context.Context) chan context.Context)   {}
+func Foo140(func(i, j context.Context) chan<- context.Context) {}
+func Foo141(func(i, j context.Context) <-chan context.Context) {}
+func Foo142(
+	func(i, j context.Context) chan context.Context) {
+}
+func Foo143(
+	func(i, j string) chan<- string) {
+}
+func Foo144(
+	func(i, j context.Context) <-chan context.Context) {
+}
