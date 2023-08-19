@@ -3,7 +3,7 @@
   "displayName": "Go Syntax",
   "description": "Rich Syntax Highlighting for Go language",
   "version": "0.2.32",
-  "author": "Furkan Ozalp <furkanozalp@gmail.com>",
+  "author": "Furkan Ozalp",
   "publisher": "furkanozalp",
   "license": "MIT",
   "icon": "icon/icon.png",
