@@ -1404,7 +1404,7 @@
 		},
 		"functions_inline": {
 			"comment": "functions in-line return type(s)",
-			"match": "(?:(\\bfunc\\b)(\\((?:[^\\)]+)?\\))\\s+(?:((?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)?[\\w\\.\\*\\[\\]]+)|(\\((?:[^\\)]+)?\\)))\\s*(?=\\{))",
+			"match": "(?:(\\bfunc\\b)(\\((?:[^\\)]+)?\\))\\s*((?:[\\s\\S]+))?\\s*(?=\\{))",
 			"captures": {
 				"1": {
 					"name": "keyword.function.go"
@@ -1441,13 +1441,12 @@
 							"include": "#type-declarations"
 						},
 						{
+							"include": "#generic_types"
+						},
+						{
 							"match": "(?:\\w+)",
 							"name": "entity.name.type.go"
-						}
-					]
-				},
-				"4": {
-					"patterns": [
+						},
 						{
 							"begin": "\\(",
 							"beginCaptures": {

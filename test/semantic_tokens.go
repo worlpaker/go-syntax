@@ -1940,3 +1940,10 @@ func Foo161(
 func Foo162(
 	foo func(i, j context.Context) <-chan context.Context) {
 }
+
+// v0.2.35
+func Foo163() {
+	_ = func() *GenFoo114[newstruct1, newstruct1, newstruct2] {
+		return nil
+	}
+}
