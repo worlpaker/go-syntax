@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.36]
+
+- Fixes bug related to returning multiple params in functions in-line
+
 ## [0.2.35]
 
 - Fixes a small bug related to generics in functions in-line
