@@ -1947,3 +1947,16 @@ func Foo163() {
 		return nil
 	}
 }
+
+// v0.2.36
+func Foo164() {
+	_ = func() (foo context.Context, bar context.Context) {
+		return
+	}
+	_ = func() (context.Context, context.Context) {
+		return nil, nil
+	}
+	_ = func() (foo, bar, foobar chan<- context.Context) {
+		return nil, nil, nil
+	}
+}
