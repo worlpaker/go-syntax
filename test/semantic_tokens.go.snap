@@ -2288,7 +2288,8 @@
 #^ source.go
 # ^^^^^^ source.go variable.other.assignment.go
 #       ^ source.go
-#        ^^^^^^^^ source.go entity.name.type.go
+#        ^^^^^^^ source.go entity.name.type.go
+#               ^ source.go
 #                ^ source.go keyword.operator.assignment.go
 #                 ^ source.go
 #                  ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -2313,7 +2314,8 @@
 #^ source.go
 # ^^^^^^^ source.go variable.other.assignment.go
 #        ^ source.go
-#         ^^^^^^^^ source.go entity.name.type.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
 #                 ^ source.go keyword.operator.assignment.go
 #                  ^ source.go
 #                   ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -18067,6 +18069,232 @@
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.2.37
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo165() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	var foo func(con context.Context)
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^^ source.go keyword.function.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.round.go
+>	var bar func(con <-chan context.Context)
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^^ source.go keyword.function.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^ source.go keyword.operator.channel.go
+#                    ^^^^ source.go keyword.channel.go
+#                        ^ source.go
+#                         ^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.period.go
+#                                 ^^^^^^^ source.go entity.name.type.go
+#                                        ^ source.go punctuation.definition.end.bracket.round.go
+>	var foobar func(con <-chan context.Context, a, b, c context.Context)
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^^^^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^^^^ source.go keyword.function.go
+#                ^ source.go punctuation.definition.begin.bracket.round.go
+#                 ^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^ source.go keyword.operator.channel.go
+#                       ^^^^ source.go keyword.channel.go
+#                           ^ source.go
+#                            ^^^^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.other.period.go
+#                                    ^^^^^^^ source.go entity.name.type.go
+#                                           ^ source.go punctuation.other.comma.go
+#                                            ^ source.go
+#                                             ^ source.go variable.parameter.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^ source.go variable.parameter.go
+#                                                 ^ source.go punctuation.other.comma.go
+#                                                  ^ source.go
+#                                                   ^ source.go variable.parameter.go
+#                                                    ^ source.go
+#                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                            ^ source.go punctuation.other.period.go
+#                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                    ^ source.go punctuation.definition.end.bracket.round.go
+>	var fooxbar func(a context.Context, b context.Context)
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^^^^^ source.go variable.other.assignment.go
+#            ^ source.go
+#             ^^^^ source.go keyword.function.go
+#                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                  ^ source.go variable.parameter.go
+#                   ^ source.go
+#                    ^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.period.go
+#                            ^^^^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^ source.go variable.parameter.go
+#                                      ^ source.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.period.go
+#                                               ^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	var (
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^^ source.go punctuation.definition.begin.bracket.round.go
+>		foox     func(con context.Context)
+#^^ source.go
+#  ^^^^ source.go variable.other.assignment.go
+#      ^^^^^ source.go
+#           ^^^^ source.go keyword.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^^^ source.go variable.parameter.go
+#                   ^ source.go
+#                    ^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.period.go
+#                            ^^^^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.definition.end.bracket.round.go
+>		barx     func(con context.Context)
+#^^ source.go
+#  ^^^^ source.go variable.other.assignment.go
+#      ^^^^^ source.go
+#           ^^^^ source.go keyword.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^^^ source.go variable.parameter.go
+#                   ^ source.go
+#                    ^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.period.go
+#                            ^^^^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.definition.end.bracket.round.go
+>		foobarx  func(con <-chan context.Context, a, b, c context.Context)
+#^^ source.go
+#  ^^^^^^^ source.go variable.other.assignment.go
+#         ^^ source.go
+#           ^^^^ source.go keyword.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^^^ source.go variable.parameter.go
+#                   ^ source.go
+#                    ^^ source.go keyword.operator.channel.go
+#                      ^^^^ source.go keyword.channel.go
+#                          ^ source.go
+#                           ^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.other.period.go
+#                                   ^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^ source.go variable.parameter.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^ source.go variable.parameter.go
+#                                                ^ source.go punctuation.other.comma.go
+#                                                 ^ source.go
+#                                                  ^ source.go variable.parameter.go
+#                                                   ^ source.go
+#                                                    ^^^^^^^ source.go entity.name.type.go
+#                                                           ^ source.go punctuation.other.period.go
+#                                                            ^^^^^^^ source.go entity.name.type.go
+#                                                                   ^ source.go punctuation.definition.end.bracket.round.go
+>		fooxbarx func(a context.Context, b context.Context)
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.assignment.go
+#          ^ source.go
+#           ^^^^ source.go keyword.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^ source.go variable.parameter.go
+#                                    ^ source.go
+#                                     ^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.period.go
+#                                             ^^^^^^^ source.go entity.name.type.go
+#                                                    ^ source.go punctuation.definition.end.bracket.round.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	_, _, _, _ = foo, bar, foobar, fooxbar
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^^ source.go variable.other.go
+#                 ^ source.go punctuation.other.comma.go
+#                  ^ source.go
+#                   ^^^ source.go variable.other.go
+#                      ^ source.go punctuation.other.comma.go
+#                       ^ source.go
+#                        ^^^^^^ source.go variable.other.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^ source.go variable.other.go
+>	_, _, _, _ = foox, barx, foobarx, fooxbarx
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^^^ source.go variable.other.go
+#                  ^ source.go punctuation.other.comma.go
+#                   ^ source.go
+#                    ^^^^ source.go variable.other.go
+#                        ^ source.go punctuation.other.comma.go
+#                         ^ source.go
+#                          ^^^^^^^ source.go variable.other.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^^^^^^ source.go variable.other.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >

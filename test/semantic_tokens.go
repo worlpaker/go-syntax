@@ -1960,3 +1960,21 @@ func Foo164() {
 		return nil, nil, nil
 	}
 }
+
+// v0.2.37
+func Foo165() {
+	var foo func(con context.Context)
+	var bar func(con <-chan context.Context)
+	var foobar func(con <-chan context.Context, a, b, c context.Context)
+	var fooxbar func(a context.Context, b context.Context)
+
+	var (
+		foox     func(con context.Context)
+		barx     func(con context.Context)
+		foobarx  func(con <-chan context.Context, a, b, c context.Context)
+		fooxbarx func(a context.Context, b context.Context)
+	)
+
+	_, _, _, _ = foo, bar, foobar, fooxbar
+	_, _, _, _ = foox, barx, foobarx, fooxbarx
+}
