@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.38]
+
+- Improves generic type support for the built-in make function
+
 ## [0.2.37]
 
 - Fixes a bug related to function types with var keyword
