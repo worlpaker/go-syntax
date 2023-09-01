@@ -1989,3 +1989,14 @@ func Foo166() {
 	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], 0, len(arr))
 	_ = make([]newstructG[newstruct1], 0, len(arr))
 }
+
+// v0.2.39
+func Foo167() {
+	arr := []int{}
+	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]int, 10)
+	_ = make(map[newstructG[newstruct1]]context.Context, 10)
+	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context, len(arr))
+	_ = make(map[newstructG[newstruct1]]context.Context, len(arr))
+	_ = make([]map[GenFoo114[newstruct1, newstruct1, newstruct2]]string, 0, len(arr))
+	_ = make([]map[newstructG[newstruct1]]int, 0, len(arr))
+}
