@@ -18298,3 +18298,172 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.38
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo166() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	arr := []int{}
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^ source.go storage.type.numeric.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+#              ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], 10)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^^ source.go constant.numeric.decimal.go
+#                                                             ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make([]newstructG[newstruct1], 10)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.other.comma.go
+#                                   ^ source.go
+#                                    ^^ source.go constant.numeric.decimal.go
+#                                      ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], len(arr))
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^^^ source.go entity.name.function.support.builtin.go
+#                                                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                               ^^^ source.go variable.other.go
+#                                                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                   ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make([]newstructG[newstruct1], len(arr))
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.other.comma.go
+#                                   ^ source.go
+#                                    ^^^ source.go entity.name.function.support.builtin.go
+#                                       ^ source.go punctuation.definition.begin.bracket.round.go
+#                                        ^^^ source.go variable.other.go
+#                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                            ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], 0, len(arr))
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^ source.go constant.numeric.decimal.go
+#                                                            ^ source.go punctuation.other.comma.go
+#                                                             ^ source.go
+#                                                              ^^^ source.go entity.name.function.support.builtin.go
+#                                                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                  ^^^ source.go variable.other.go
+#                                                                     ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                      ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = make([]newstructG[newstruct1], 0, len(arr))
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.builtin.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.other.comma.go
+#                                   ^ source.go
+#                                    ^ source.go constant.numeric.decimal.go
+#                                     ^ source.go punctuation.other.comma.go
+#                                      ^ source.go
+#                                       ^^^ source.go entity.name.function.support.builtin.go
+#                                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                                           ^^^ source.go variable.other.go
+#                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                               ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

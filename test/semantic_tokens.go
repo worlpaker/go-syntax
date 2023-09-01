@@ -1978,3 +1978,14 @@ func Foo165() {
 	_, _, _, _ = foo, bar, foobar, fooxbar
 	_, _, _, _ = foox, barx, foobarx, fooxbarx
 }
+
+// v0.2.38
+func Foo166() {
+	arr := []int{}
+	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], 10)
+	_ = make([]newstructG[newstruct1], 10)
+	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], len(arr))
+	_ = make([]newstructG[newstruct1], len(arr))
+	_ = make([]GenFoo114[newstruct1, newstruct1, newstruct2], 0, len(arr))
+	_ = make([]newstructG[newstruct1], 0, len(arr))
+}
