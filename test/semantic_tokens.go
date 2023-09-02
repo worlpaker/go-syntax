@@ -1999,4 +1999,11 @@ func Foo167() {
 	_ = make(map[newstructG[newstruct1]]context.Context, len(arr))
 	_ = make([]map[GenFoo114[newstruct1, newstruct1, newstruct2]]string, 0, len(arr))
 	_ = make([]map[newstructG[newstruct1]]int, 0, len(arr))
+	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]interface{})
+	_ = make([]map[string]context.Context, 0, len(arr))
+	_ = make(map[newstructG[newstruct1]]map[newstructG[newstruct1]]context.Context, len(arr))
+	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context)
+	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context)
+	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context, len(arr))
+	_ = make([]map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context, 0, len(arr))
 }

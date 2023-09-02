@@ -195,7 +195,7 @@
 			"patterns": [
 				{
 					"comment": "Other map type names (struct/interface)",
-					"match": "(?:(\\bmap\\b)(\\[[\\w\\.\\*\\-\\[\\]]+\\])?([\\w\\.\\*\\-]+)?)",
+					"match": "(?:(\\bmap\\b)(\\[(?:[\\w\\[\\]\\*\\.]+(?:\\,\\s*)?)+\\])?([\\w\\.\\*]+)?)",
 					"captures": {
 						"1": {
 							"name": "keyword.map.go"
@@ -203,19 +203,7 @@
 						"2": {
 							"patterns": [
 								{
-									"include": "#storage_types"
-								},
-								{
-									"include": "#operators"
-								},
-								{
-									"include": "#delimiters"
-								},
-								{
-									"include": "#keywords"
-								},
-								{
-									"include": "#generic_types"
+									"include": "#type-declarations-without-brackets"
 								},
 								{
 									"match": "\\[",
