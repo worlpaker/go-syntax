@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.0]
+
+- Updates README.md
+
 ## [0.2.40]
 
 - Improves generic type support with map when declaring variables using the var keyword
