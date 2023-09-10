@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.1]
+
+- Enhances generic type support for map types
+
 ## [0.3.0]
 
 - Updates `README.md`
