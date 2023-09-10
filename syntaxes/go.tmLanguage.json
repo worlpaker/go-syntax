@@ -206,6 +206,9 @@
 									"include": "#type-declarations-without-brackets"
 								},
 								{
+									"include": "#generic_types"
+								},
+								{
 									"match": "\\[",
 									"name": "punctuation.definition.begin.bracket.square.go"
 								},

@@ -2048,3 +2048,10 @@ func Foo168() {
 	_, _, _, _, _, _, _, _, _, _, _, _, _, _, _ = b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15
 
 }
+
+// v0.3.1
+func Foo169() {
+	_ = func(a *[]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context) *[]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context {
+		return a
+	}
+}
