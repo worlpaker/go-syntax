@@ -2,6 +2,11 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.2.40]
+
+- Improves generic type support with map when declaring variables using the var keyword
+- Adds new snap commands for test
+
 ## [0.2.39]
 
 - Enhances generic type support with map for the built-in make function
