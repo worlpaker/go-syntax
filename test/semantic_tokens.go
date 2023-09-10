@@ -2007,3 +2007,44 @@ func Foo167() {
 	_ = make(map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context, len(arr))
 	_ = make([]map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context, 0, len(arr))
 }
+
+// v0.2.40
+func Foo168() {
+	var a1 map[GenFoo114[newstruct1, newstruct1, newstruct2]]newstruct1
+	var a2 map[newstructG[newstruct1]]context.Context
+	var a3 map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+	var a4 map[newstructG[newstruct1]]context.Context
+	var a5 map[newstructG[newstruct1]]context.Context
+	var a6 []map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+	var a7 []map[newstructG[newstruct1]]int
+	var a8 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]interface{}
+	var a9 []map[string]context.Context
+	var a10 map[newstructG[newstruct1]]map[newstructG[newstruct1]]context.Context
+	var a11 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+	var a12 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+	var a13 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+	var a14 []map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+	var a15 *[]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+
+	var (
+		b1  map[GenFoo114[newstruct1, newstruct1, newstruct2]]newstruct1
+		b2  map[newstructG[newstruct1]]context.Context
+		b3  map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+		b4  map[newstructG[newstruct1]]context.Context
+		b5  map[newstructG[newstruct1]]context.Context
+		b6  []map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+		b7  []map[newstructG[newstruct1]]int
+		b8  map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]interface{}
+		b9  []map[string]context.Context
+		b10 map[newstructG[newstruct1]]map[newstructG[newstruct1]]context.Context
+		b11 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+		b12 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+		b13 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+		b14 []map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+		b15 *[]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+	)
+
+	_, _, _, _, _, _, _, _, _, _, _, _, _, _, _ = a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15
+	_, _, _, _, _, _, _, _, _, _, _, _, _, _, _ = b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15
+
+}

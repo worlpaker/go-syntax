@@ -18952,3 +18952,997 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.2.40
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^ source.go comment.line.double-slash.go
+>func Foo168() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	var a1 map[GenFoo114[newstruct1, newstruct1, newstruct2]]newstruct1
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^^^^^^^^^^ source.go entity.name.type.go
+>	var a2 map[newstructG[newstruct1]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.period.go
+#                                           ^^^^^^^ source.go entity.name.type.go
+>	var a3 map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                 ^ source.go punctuation.other.period.go
+#                                                                  ^^^^^^^ source.go entity.name.type.go
+>	var a4 map[newstructG[newstruct1]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.period.go
+#                                           ^^^^^^^ source.go entity.name.type.go
+>	var a5 map[newstructG[newstruct1]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.period.go
+#                                           ^^^^^^^ source.go entity.name.type.go
+>	var a6 []map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.other.comma.go
+#                                   ^ source.go
+#                                    ^^^^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                            ^^^^^^ source.go storage.type.string.go
+>	var a7 []map[newstructG[newstruct1]]int
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^^^ source.go storage.type.numeric.go
+>	var a8 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]interface{}
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^^^ source.go keyword.map.go
+#                                                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                              ^^^^^^^^^ source.go entity.name.type.go
+#                                                                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                  ^ source.go punctuation.other.comma.go
+#                                                                                   ^ source.go
+#                                                                                    ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                              ^ source.go punctuation.other.comma.go
+#                                                                                               ^ source.go
+#                                                                                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^ source.go keyword.operator.address.go
+#                                                                                                             ^^^ source.go keyword.map.go
+#                                                                                                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                 ^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                           ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                     ^ source.go punctuation.other.comma.go
+#                                                                                                                                      ^ source.go
+#                                                                                                                                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                 ^ source.go punctuation.other.comma.go
+#                                                                                                                                                  ^ source.go
+#                                                                                                                                                   ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                               ^^^^^^^^^ source.go keyword.interface.go
+#                                                                                                                                                                        ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                                                                                                                         ^ source.go punctuation.definition.end.bracket.curly.go
+>	var a9 []map[string]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.period.go
+#                             ^^^^^^^ source.go entity.name.type.go
+>	var a10 map[newstructG[newstruct1]]map[newstructG[newstruct1]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^^^ source.go keyword.map.go
+#                                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                   ^^^^^^^^^^ source.go entity.name.type.go
+#                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                               ^^^^^^^ source.go entity.name.type.go
+#                                                                      ^ source.go punctuation.other.period.go
+#                                                                       ^^^^^^^ source.go entity.name.type.go
+>	var a11 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^^^^^^^^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^^^^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                           ^^^ source.go keyword.map.go
+#                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                               ^^^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                    ^ source.go
+#                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                                ^ source.go
+#                                                                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                             ^ source.go keyword.operator.address.go
+#                                                                                                              ^^^ source.go keyword.map.go
+#                                                                                                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                  ^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                      ^ source.go punctuation.other.comma.go
+#                                                                                                                                       ^ source.go
+#                                                                                                                                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                  ^ source.go punctuation.other.comma.go
+#                                                                                                                                                   ^ source.go
+#                                                                                                                                                    ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                       ^ source.go punctuation.other.period.go
+#                                                                                                                                                                        ^^^^^^^ source.go entity.name.type.go
+>	var a12 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^^^^^^^^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^^^^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                           ^^^ source.go keyword.map.go
+#                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                               ^^^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                    ^ source.go
+#                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                                ^ source.go
+#                                                                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                    ^ source.go punctuation.other.period.go
+#                                                                                                                     ^^^^^^^ source.go entity.name.type.go
+>	var a13 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^^^^^^^^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^^^^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                           ^^^ source.go keyword.map.go
+#                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                               ^^^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                    ^ source.go
+#                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                                ^ source.go
+#                                                                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                             ^^^^^^ source.go storage.type.string.go
+>	var a14 []map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go punctuation.definition.end.bracket.square.go
+#           ^^^ source.go keyword.map.go
+#              ^ source.go punctuation.definition.begin.bracket.square.go
+#               ^^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.other.comma.go
+#                                                ^ source.go
+#                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                             ^ source.go keyword.operator.address.go
+#                                                              ^^^ source.go keyword.map.go
+#                                                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                  ^^^^^^^^^ source.go entity.name.type.go
+#                                                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                      ^ source.go punctuation.other.comma.go
+#                                                                                       ^ source.go
+#                                                                                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                  ^ source.go punctuation.other.comma.go
+#                                                                                                   ^ source.go
+#                                                                                                    ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                       ^ source.go punctuation.other.period.go
+#                                                                                                                        ^^^^^^^ source.go entity.name.type.go
+>	var a15 *[]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^ source.go keyword.operator.arithmetic.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go punctuation.definition.end.bracket.square.go
+#            ^^^ source.go keyword.map.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^^^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                          ^^^^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.other.comma.go
+#                                                 ^ source.go
+#                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                              ^ source.go keyword.operator.address.go
+#                                                               ^^^ source.go keyword.map.go
+#                                                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                   ^^^^^^^^^ source.go entity.name.type.go
+#                                                                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                             ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                       ^ source.go punctuation.other.comma.go
+#                                                                                        ^ source.go
+#                                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                                    ^ source.go
+#                                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                        ^ source.go punctuation.other.period.go
+#                                                                                                                         ^^^^^^^ source.go entity.name.type.go
+>
+>	var (
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^^ source.go punctuation.definition.begin.bracket.round.go
+>		b1  map[GenFoo114[newstruct1, newstruct1, newstruct2]]newstruct1
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                    ^^^^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                                        ^^^^^^^^^^ source.go entity.name.type.go
+>		b2  map[newstructG[newstruct1]]context.Context
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^^^^^^^ source.go entity.name.type.go
+#                                        ^ source.go punctuation.other.period.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+>		b3  map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                    ^^^^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                                        ^^^^^^^ source.go entity.name.type.go
+#                                                               ^ source.go punctuation.other.period.go
+#                                                                ^^^^^^^ source.go entity.name.type.go
+>		b4  map[newstructG[newstruct1]]context.Context
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^^^^^^^ source.go entity.name.type.go
+#                                        ^ source.go punctuation.other.period.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+>		b5  map[newstructG[newstruct1]]context.Context
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^^^^^^^ source.go entity.name.type.go
+#                                        ^ source.go punctuation.other.period.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+>		b6  []map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^ source.go punctuation.definition.end.bracket.square.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^^^^^^ source.go storage.type.string.go
+>		b7  []map[newstructG[newstruct1]]int
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^ source.go punctuation.definition.end.bracket.square.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                   ^^^ source.go storage.type.numeric.go
+>		b8  map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]interface{}
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                    ^^^^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                                        ^^^ source.go keyword.map.go
+#                                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                            ^^^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                 ^ source.go
+#                                                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                            ^ source.go punctuation.other.comma.go
+#                                                                                             ^ source.go
+#                                                                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                          ^ source.go keyword.operator.address.go
+#                                                                                                           ^^^ source.go keyword.map.go
+#                                                                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                               ^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                                                                    ^ source.go
+#                                                                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                                                                                ^ source.go
+#                                                                                                                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                             ^^^^^^^^^ source.go keyword.interface.go
+#                                                                                                                                                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                                                                                                                       ^ source.go punctuation.definition.end.bracket.curly.go
+>		b9  []map[string]context.Context
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^ source.go punctuation.definition.end.bracket.square.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^ source.go storage.type.string.go
+#                  ^ source.go punctuation.definition.end.bracket.square.go
+#                   ^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.other.period.go
+#                           ^^^^^^^ source.go entity.name.type.go
+>		b10 map[newstructG[newstruct1]]map[newstructG[newstruct1]]context.Context
+#^^ source.go
+#  ^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^^^ source.go keyword.map.go
+#                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                            ^^^^^^^ source.go entity.name.type.go
+#                                                                   ^ source.go punctuation.other.period.go
+#                                                                    ^^^^^^^ source.go entity.name.type.go
+>		b11 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^^ source.go
+#  ^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                    ^^^^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                                        ^^^ source.go keyword.map.go
+#                                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                            ^^^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                 ^ source.go
+#                                                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                            ^ source.go punctuation.other.comma.go
+#                                                                                             ^ source.go
+#                                                                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                          ^ source.go keyword.operator.address.go
+#                                                                                                           ^^^ source.go keyword.map.go
+#                                                                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                               ^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                                                                    ^ source.go
+#                                                                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                                                                                ^ source.go
+#                                                                                                                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                    ^ source.go punctuation.other.period.go
+#                                                                                                                                                                     ^^^^^^^ source.go entity.name.type.go
+>		b12 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^^ source.go
+#  ^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                    ^^^^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                                        ^^^ source.go keyword.map.go
+#                                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                            ^^^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                 ^ source.go
+#                                                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                            ^ source.go punctuation.other.comma.go
+#                                                                                             ^ source.go
+#                                                                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                                                  ^^^^^^^ source.go entity.name.type.go
+>		b13 map[GenFoo114[newstruct1, newstruct1, newstruct2]]map[GenFoo114[newstruct1, newstruct1, newstruct2]]string
+#^^ source.go
+#  ^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.begin.bracket.square.go
+#                    ^^^^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.definition.end.bracket.square.go
+#                                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                                        ^^^ source.go keyword.map.go
+#                                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                            ^^^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                 ^ source.go
+#                                                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                            ^ source.go punctuation.other.comma.go
+#                                                                                             ^ source.go
+#                                                                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                          ^^^^^^ source.go storage.type.string.go
+>		b14 []map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^^ source.go
+#  ^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^ source.go punctuation.definition.end.bracket.square.go
+#        ^^^ source.go keyword.map.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^^^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.other.comma.go
+#                                             ^ source.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^ source.go keyword.operator.address.go
+#                                                           ^^^ source.go keyword.map.go
+#                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                               ^^^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                         ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                   ^ source.go punctuation.other.comma.go
+#                                                                                    ^ source.go
+#                                                                                     ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                                ^ source.go
+#                                                                                                 ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                    ^ source.go punctuation.other.period.go
+#                                                                                                                     ^^^^^^^ source.go entity.name.type.go
+>		b15 *[]map[GenFoo114[newstruct1, newstruct1, newstruct2]]*map[GenFoo114[newstruct1, newstruct1, newstruct2]]context.Context
+#^^ source.go
+#  ^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^ source.go keyword.operator.arithmetic.go
+#       ^ source.go punctuation.definition.begin.bracket.square.go
+#        ^ source.go punctuation.definition.end.bracket.square.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^^^^^^^^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^^^^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                           ^ source.go keyword.operator.address.go
+#                                                            ^^^ source.go keyword.map.go
+#                                                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                ^^^^^^^^^ source.go entity.name.type.go
+#                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                          ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                    ^ source.go punctuation.other.comma.go
+#                                                                                     ^ source.go
+#                                                                                      ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^^^^^^^^^^ source.go entity.name.type.go
+#                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                              ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                     ^ source.go punctuation.other.period.go
+#                                                                                                                      ^^^^^^^ source.go entity.name.type.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	_, _, _, _, _, _, _, _, _, _, _, _, _, _, _ = a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^ source.go variable.other.assignment.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.other.assignment.go
+#              ^ source.go punctuation.other.comma.go
+#               ^ source.go
+#                ^ source.go variable.other.assignment.go
+#                 ^ source.go punctuation.other.comma.go
+#                  ^ source.go
+#                   ^ source.go variable.other.assignment.go
+#                    ^ source.go punctuation.other.comma.go
+#                     ^ source.go
+#                      ^ source.go variable.other.assignment.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^ source.go variable.other.assignment.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go variable.other.assignment.go
+#                             ^ source.go punctuation.other.comma.go
+#                              ^ source.go
+#                               ^ source.go variable.other.assignment.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^ source.go variable.other.assignment.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^ source.go variable.other.assignment.go
+#                                      ^ source.go punctuation.other.comma.go
+#                                       ^ source.go
+#                                        ^ source.go variable.other.assignment.go
+#                                         ^ source.go punctuation.other.comma.go
+#                                          ^ source.go
+#                                           ^ source.go variable.other.assignment.go
+#                                            ^ source.go
+#                                             ^ source.go keyword.operator.assignment.go
+#                                              ^ source.go
+#                                               ^^ source.go variable.other.go
+#                                                 ^ source.go punctuation.other.comma.go
+#                                                  ^ source.go
+#                                                   ^^ source.go variable.other.go
+#                                                     ^ source.go punctuation.other.comma.go
+#                                                      ^ source.go
+#                                                       ^^ source.go variable.other.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^^ source.go variable.other.go
+#                                                             ^ source.go punctuation.other.comma.go
+#                                                              ^ source.go
+#                                                               ^^ source.go variable.other.go
+#                                                                 ^ source.go punctuation.other.comma.go
+#                                                                  ^ source.go
+#                                                                   ^^ source.go variable.other.go
+#                                                                     ^ source.go punctuation.other.comma.go
+#                                                                      ^ source.go
+#                                                                       ^^ source.go variable.other.go
+#                                                                         ^ source.go punctuation.other.comma.go
+#                                                                          ^ source.go
+#                                                                           ^^ source.go variable.other.go
+#                                                                             ^ source.go punctuation.other.comma.go
+#                                                                              ^ source.go
+#                                                                               ^^ source.go variable.other.go
+#                                                                                 ^ source.go punctuation.other.comma.go
+#                                                                                  ^ source.go
+#                                                                                   ^^^ source.go variable.other.go
+#                                                                                      ^ source.go punctuation.other.comma.go
+#                                                                                       ^ source.go
+#                                                                                        ^^^ source.go variable.other.go
+#                                                                                           ^ source.go punctuation.other.comma.go
+#                                                                                            ^ source.go
+#                                                                                             ^^^ source.go variable.other.go
+#                                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^^^ source.go variable.other.go
+#                                                                                                     ^ source.go punctuation.other.comma.go
+#                                                                                                      ^ source.go
+#                                                                                                       ^^^ source.go variable.other.go
+#                                                                                                          ^ source.go punctuation.other.comma.go
+#                                                                                                           ^ source.go
+#                                                                                                            ^^^ source.go variable.other.go
+>	_, _, _, _, _, _, _, _, _, _, _, _, _, _, _ = b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^ source.go variable.other.assignment.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.other.assignment.go
+#              ^ source.go punctuation.other.comma.go
+#               ^ source.go
+#                ^ source.go variable.other.assignment.go
+#                 ^ source.go punctuation.other.comma.go
+#                  ^ source.go
+#                   ^ source.go variable.other.assignment.go
+#                    ^ source.go punctuation.other.comma.go
+#                     ^ source.go
+#                      ^ source.go variable.other.assignment.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^ source.go variable.other.assignment.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go variable.other.assignment.go
+#                             ^ source.go punctuation.other.comma.go
+#                              ^ source.go
+#                               ^ source.go variable.other.assignment.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^ source.go variable.other.assignment.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^ source.go variable.other.assignment.go
+#                                      ^ source.go punctuation.other.comma.go
+#                                       ^ source.go
+#                                        ^ source.go variable.other.assignment.go
+#                                         ^ source.go punctuation.other.comma.go
+#                                          ^ source.go
+#                                           ^ source.go variable.other.assignment.go
+#                                            ^ source.go
+#                                             ^ source.go keyword.operator.assignment.go
+#                                              ^ source.go
+#                                               ^^ source.go variable.other.go
+#                                                 ^ source.go punctuation.other.comma.go
+#                                                  ^ source.go
+#                                                   ^^ source.go variable.other.go
+#                                                     ^ source.go punctuation.other.comma.go
+#                                                      ^ source.go
+#                                                       ^^ source.go variable.other.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^^ source.go variable.other.go
+#                                                             ^ source.go punctuation.other.comma.go
+#                                                              ^ source.go
+#                                                               ^^ source.go variable.other.go
+#                                                                 ^ source.go punctuation.other.comma.go
+#                                                                  ^ source.go
+#                                                                   ^^ source.go variable.other.go
+#                                                                     ^ source.go punctuation.other.comma.go
+#                                                                      ^ source.go
+#                                                                       ^^ source.go variable.other.go
+#                                                                         ^ source.go punctuation.other.comma.go
+#                                                                          ^ source.go
+#                                                                           ^^ source.go variable.other.go
+#                                                                             ^ source.go punctuation.other.comma.go
+#                                                                              ^ source.go
+#                                                                               ^^ source.go variable.other.go
+#                                                                                 ^ source.go punctuation.other.comma.go
+#                                                                                  ^ source.go
+#                                                                                   ^^^ source.go variable.other.go
+#                                                                                      ^ source.go punctuation.other.comma.go
+#                                                                                       ^ source.go
+#                                                                                        ^^^ source.go variable.other.go
+#                                                                                           ^ source.go punctuation.other.comma.go
+#                                                                                            ^ source.go
+#                                                                                             ^^^ source.go variable.other.go
+#                                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^^^ source.go variable.other.go
+#                                                                                                     ^ source.go punctuation.other.comma.go
+#                                                                                                      ^ source.go
+#                                                                                                       ^^^ source.go variable.other.go
+#                                                                                                          ^ source.go punctuation.other.comma.go
+#                                                                                                           ^ source.go
+#                                                                                                            ^^^ source.go variable.other.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
