@@ -3,4 +3,6 @@
 tests:
 	vscode-tmgrammar-test ./test/semantic_tokens.go
 snap:
+	vscode-tmgrammar-snap ./test/semantic_tokens.go -u
+new-snap:
 	vscode-tmgrammar-snap ./test/semantic_tokens.go
