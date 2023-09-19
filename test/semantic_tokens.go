@@ -2055,3 +2055,15 @@ func Foo169() {
 		return a
 	}
 }
+
+// v0.3.2
+func Foo170() {
+	type LongFooooooooooooooooooooooo context.Context
+	var foo []LongFooooooooooooooooooooooo
+	var bar []*LongFooooooooooooooooooooooo
+	var (
+		foox []LongFooooooooooooooooooooooo
+		barx []*LongFooooooooooooooooooooooo
+	)
+	_, _, _, _ = foo, bar, foox, barx
+}
