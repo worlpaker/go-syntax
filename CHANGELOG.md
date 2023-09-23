@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.3]
+
+Fixes the preview of variables when hovering with the cursor for the tooltip
+
 ## [0.3.2]
 
 - Fixes bugs related to types when declaring variables using the var keyword
