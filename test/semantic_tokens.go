@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"go/ast"
+	"go/build"
 	"io"
 	"log"
 	"mime/multipart"
@@ -2066,4 +2067,14 @@ func Foo170() {
 		barx []*LongFooooooooooooooooooooooo
 	)
 	_, _, _, _ = foo, bar, foox, barx
+}
+
+// v0.3.3
+func Foo171() {
+	// fix preview (cursor)
+	_ = &build.Default
+	var (
+		_ = &build.Default
+		_ = build.Default
+	)
 }
