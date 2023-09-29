@@ -2095,3 +2095,13 @@ func Foo172() {
 	} else if <-c {
 	}
 }
+
+// v0.3.5
+func Foo173() {
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+	a := "foo"
+	b := []*string{&a}
+	for i, r := range *b[0] {
+		_, _ = i, r
+	}
+}

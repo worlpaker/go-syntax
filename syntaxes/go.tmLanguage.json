@@ -1943,7 +1943,7 @@
 			"patterns": [
 				{
 					"comment": "After control variables, to not highlight as a struct/interface",
-					"match": "(?:(?<=(?:\\brange\\b)|(?:\\bswitch\\b)|(?:\\;)|(?:\\bif\\b|\\bfor\\b))\\s*(?:[[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=]+)(?:\\s)?(?=\\{))",
+					"match": "(?:(?<=(?:\\brange\\b)|(?:\\bswitch\\b)|(?:\\;)|(?:\\bif\\b|\\bfor\\b))\\s*(?:[[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*]+)(?:\\s)?(?=\\{))",
 					"captures": {
 						"0": {
 							"patterns": [
