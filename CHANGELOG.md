@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.5]
+
+Enhances pre-highlighting of variables after control keywords before formatting with gofmt
+
 ## [0.3.4]
 
 Fixes pre-highlighting of variables after control keywords before formatting with gofmt
