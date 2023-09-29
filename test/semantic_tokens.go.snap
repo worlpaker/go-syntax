@@ -2210,9 +2210,10 @@
 >	if !ok {
 #^ source.go
 # ^^ source.go keyword.control.go
-#   ^ source.go variable.other.go
+#   ^ source.go
 #    ^ source.go keyword.operator.logical.go
-#     ^^^ source.go variable.other.go
+#     ^^ source.go variable.other.go
+#       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.curly.go
 >		return nil, false
 #^^ source.go
@@ -4382,7 +4383,9 @@
 #          ^^ source.go keyword.operator.assignment.go
 #            ^ source.go
 #             ^^^^^ source.go keyword.control.go
-#                  ^^^^^^ source.go variable.other.go
+#                  ^ source.go
+#                   ^^^^ source.go variable.other.go
+#                       ^ source.go
 #                        ^ source.go punctuation.definition.begin.bracket.curly.go
 >		log.Printf("your data is %s", i)
 #^^ source.go
@@ -4673,7 +4676,7 @@
 >			switch {
 #^^^ source.go
 #   ^^^^^^ source.go keyword.control.go
-#         ^ source.go variable.other.go
+#         ^ source.go
 #          ^ source.go punctuation.definition.begin.bracket.curly.go
 >			}
 #^^^ source.go
@@ -5655,9 +5658,10 @@
 #                ^ source.go
 #                 ^^ source.go constant.numeric.decimal.go
 #                   ^ source.go punctuation.terminator.go
-#                    ^^ source.go variable.other.go
+#                    ^ source.go
+#                     ^ source.go variable.other.go
 #                      ^^ source.go keyword.operator.decrement.go
-#                        ^ source.go variable.other.go
+#                        ^ source.go
 #                         ^ source.go punctuation.definition.begin.bracket.curly.go
 >	}
 #^ source.go
@@ -13301,7 +13305,9 @@
 >	switch variable {
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
-#       ^^^^^^^^^^ source.go variable.other.go
+#       ^ source.go
+#        ^^^^^^^^ source.go variable.other.go
+#                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 >	case value1, value2:
 #^ source.go
@@ -13332,7 +13338,7 @@
 >	switch {
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
-#       ^ source.go variable.other.go
+#       ^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.curly.go
 >	case variable == value1:
 #^ source.go
@@ -13368,7 +13374,9 @@
 >	switch variable {
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
-#       ^^^^^^^^^^ source.go variable.other.go
+#       ^ source.go
+#        ^^^^^^^^ source.go variable.other.go
+#                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 >	case value1:
 #^ source.go
@@ -14258,7 +14266,11 @@
 #             ^^ source.go keyword.operator.assignment.go
 #               ^ source.go
 #                ^^^^^ source.go keyword.control.go
-#                     ^^^^^^^^ source.go variable.other.go
+#                     ^ source.go
+#                      ^ source.go variable.other.go
+#                       ^ source.go punctuation.other.period.go
+#                        ^^^^ source.go variable.other.go
+#                            ^ source.go
 #                             ^ source.go punctuation.definition.begin.bracket.curly.go
 >				_ = el.(*ast.KeyValueExpr)
 #^^^^ source.go
@@ -20165,6 +20177,123 @@
 >	)
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.3.4
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Foo172() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// better pre-highlighting variables after control keywords -before formatting with gofmt
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
+>	a := []string{"a"}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^ source.go punctuation.definition.end.bracket.square.go
+#        ^^^^^^ source.go storage.type.string.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+#               ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                ^ source.go string.quoted.double.go
+#                 ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                  ^ source.go punctuation.definition.end.bracket.curly.go
+>	b := make(chan bool)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.function.support.builtin.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^^^^ source.go keyword.channel.go
+#               ^ source.go
+#                ^^^^ source.go storage.type.boolean.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+>	c := make(chan bool)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.function.support.builtin.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^^^^ source.go keyword.channel.go
+#               ^ source.go
+#                ^^^^ source.go storage.type.boolean.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	for i, r := range a[0] {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go punctuation.other.comma.go
+#       ^ source.go
+#        ^ source.go variable.other.assignment.go
+#         ^ source.go
+#          ^^ source.go keyword.operator.assignment.go
+#            ^ source.go
+#             ^^^^^ source.go keyword.control.go
+#                  ^ source.go
+#                   ^ source.go variable.other.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go constant.numeric.decimal.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>		_, _ = i, r
+#^^ source.go
+#  ^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^ source.go keyword.operator.assignment.go
+#        ^ source.go
+#         ^ source.go variable.other.go
+#          ^ source.go punctuation.other.comma.go
+#           ^ source.go
+#            ^ source.go variable.other.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	if <-b {
+#^ source.go
+# ^^ source.go keyword.control.go
+#   ^ source.go
+#    ^^ source.go keyword.operator.channel.go
+#      ^ source.go variable.other.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>	} else if <-c {
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go
+#   ^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^ source.go keyword.control.go
+#          ^ source.go
+#           ^^ source.go keyword.operator.channel.go
+#             ^ source.go variable.other.go
+#              ^ source.go
+#               ^ source.go punctuation.definition.begin.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >

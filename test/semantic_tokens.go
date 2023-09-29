@@ -2078,3 +2078,20 @@ func Foo171() {
 		_ = build.Default
 	)
 }
+
+// v0.3.4
+func Foo172() {
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+
+	a := []string{"a"}
+	b := make(chan bool)
+	c := make(chan bool)
+
+	for i, r := range a[0] {
+		_, _ = i, r
+	}
+	if <-b {
+
+	} else if <-c {
+	}
+}

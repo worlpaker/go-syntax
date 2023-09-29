@@ -1597,7 +1597,7 @@
 				},
 				{
 					"comment": "struct expression before curly bracket",
-					"match": "((?:(?:\\w+\\.)+)?\\w+)(\\[[^\\]]+\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
+					"match": "((?:(?:\\w+\\.)+)?\\w+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1942,16 +1942,24 @@
 		"after_control_type_variable": {
 			"patterns": [
 				{
-					"comment": "After control variables do not show as a struct/interface",
-					"match": "(?:(?<=(?:\\brange\\b)|(?:\\bswitch\\b)|(?:\\;)|(?:\\bif\\b))\\s*(?:[[:alnum:]\\-\\_\\!\\.]*)(?:\\s)?(?=\\{))",
+					"comment": "After control variables, to not highlight as a struct/interface",
+					"match": "(?:(?<=(?:\\brange\\b)|(?:\\bswitch\\b)|(?:\\;)|(?:\\bif\\b|\\bfor\\b))\\s*(?:[[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=]+)(?:\\s)?(?=\\{))",
 					"captures": {
 						"0": {
 							"patterns": [
 								{
-									"include": "#operators"
+									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"match": "(?:[^\\!\\-]+)",
+									"match": "\\[",
+									"name": "punctuation.definition.begin.bracket.square.go"
+								},
+								{
+									"match": "\\]",
+									"name": "punctuation.definition.end.bracket.square.go"
+								},
+								{
+									"match": "(?:\\w+)",
 									"name": "variable.other.go"
 								}
 							]
