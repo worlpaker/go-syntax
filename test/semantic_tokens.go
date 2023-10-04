@@ -2131,9 +2131,29 @@ func Foo174() {
 	type foobar11[a, b bar[context.Context, string], d, e bar[int, context.Context]] *context.Context
 	type foobar12[a, b bar[context.Context, string], d, e bar[int, context.Context]] chan *context.Context
 	type foobar13[a bar[context.Context, string], d bar[int, context.Context]] chan *context.Context
+	type foobar14[a bar[context.Context, foo[context.Context, context.Context]], b bar[string, foo[context.Context, context.Context]]] chan *context.Context
 
 	type foo1[a, b bar[context.Context, string], d, e bar[int, context.Context]] struct{}
 	type foo2[a, b bar[context.Context, string], d, e bar[int, context.Context]] interface{}
+
+	type foo3[a, b bar[context.Context, context.Context], c context.Context] struct {
+	}
+
+	type foo4[a, b bar[context.Context, context.Context], c, d context.Context] struct {
+	}
+
+	type foo5[a, b bar[context.Context, context.Context], c context.Context] interface {
+	}
+
+	type foo6[a, b bar[context.Context, context.Context], c, d context.Context] interface {
+	}
+
+	type foo7[a bar[context.Context, foo[context.Context, context.Context]], b bar[string, foo[context.Context, context.Context]]] struct{}
+	type foo8[a bar[context.Context, foo[context.Context, context.Context]], b bar[string, foo[context.Context, context.Context]]] interface{}
+	type foo9[a []bar[context.Context, []foo[context.Context, context.Context]], b *[]bar[string, []foo[context.Context, context.Context]]] struct{}
+	type foo10[a *[]bar[context.Context, *[]foo[context.Context, context.Context]], b *[]bar[string, *[]foo[context.Context, context.Context]]] interface{}
+	type foo11[a []*bar[context.Context, []*foo[context.Context, context.Context]], b []*bar[string, []*foo[context.Context, context.Context]]] interface{}
+
 }
 
 type Bar72[E, V any] []E
