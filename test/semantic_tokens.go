@@ -2131,4 +2131,7 @@ func Foo174() {
 	type foobar11[a, b bar[context.Context, string], d, e bar[int, context.Context]] *context.Context
 	type foobar12[a, b bar[context.Context, string], d, e bar[int, context.Context]] chan *context.Context
 	type foobar13[a bar[context.Context, string], d bar[int, context.Context]] chan *context.Context
+
+	type foo1[a, b bar[context.Context, string], d, e bar[int, context.Context]] struct{}
+	type foo2[a, b bar[context.Context, string], d, e bar[int, context.Context]] interface{}
 }

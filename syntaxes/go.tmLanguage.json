@@ -2124,7 +2124,7 @@
 		},
 		"struct_interface_declaration": {
 			"comment": "struct, interface type declarations",
-			"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s+)([\\w\\.]+)(\\[[^\\]]+\\])?)",
+			"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s+)([\\w\\.]+)(\\[(?:.*)\\])?)",
 			"captures": {
 				"1": {
 					"name": "keyword.type.go"
