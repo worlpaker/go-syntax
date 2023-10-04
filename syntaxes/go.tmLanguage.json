@@ -40,7 +40,7 @@
 					"include": "#interface_variables_types"
 				},
 				{
-					"include": "#other_type_name_declaration"
+					"include": "#other_type_declaration"
 				},
 				{
 					"include": "#struct_interface_declaration"
@@ -1892,10 +1892,10 @@
 				}
 			]
 		},
-		"other_type_name_declaration": {
+		"other_type_declaration": {
 			"patterns": [
 				{
-					"comment": "Other type names declaration",
+					"comment": "Other type declaration",
 					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(\\[(?:.*)\\])?(?:\\s+)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
 					"captures": {
 						"1": {
