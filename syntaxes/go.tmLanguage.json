@@ -1896,7 +1896,7 @@
 			"patterns": [
 				{
 					"comment": "Other type names declaration",
-					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([[:alnum:]\\<\\>\\.\\*\\-\\_]+)(?:\\s)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
+					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(\\[(?:.*)\\])?(?:\\s+)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
 					"captures": {
 						"1": {
 							"name": "keyword.type.go"
@@ -1907,15 +1907,38 @@
 									"include": "#type-declarations"
 								},
 								{
-									"include": "#generic_types"
-								},
-								{
-									"match": "(?:[^\\.]+)",
+									"match": "(?:\\w+)",
 									"name": "entity.name.type.go"
 								}
 							]
 						},
 						"3": {
+							"patterns": [
+								{
+									"begin": "\\[",
+									"beginCaptures": {
+										"0": {
+											"name": "punctuation.definition.begin.bracket.square.go"
+										}
+									},
+									"end": "\\]",
+									"endCaptures": {
+										"0": {
+											"name": "punctuation.definition.end.bracket.square.go"
+										}
+									},
+									"patterns": [
+										{
+											"include": "#generic_param_types"
+										},
+										{
+											"include": "$self"
+										}
+									]
+								}
+							]
+						},
+						"4": {
 							"patterns": [
 								{
 									"include": "#functions"
