@@ -20950,3 +20950,49 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>type Bar72[E, V any] []E
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go punctuation.other.comma.go
+#             ^ source.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^^ source.go entity.name.type.any.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^ source.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go entity.name.type.go
+>
+>func (s *Bar72[E, V]) Foo175(func(E) V) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^^ source.go variable.parameter.go
+#        ^ source.go keyword.operator.address.go
+#         ^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.definition.begin.bracket.square.go
+#               ^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.comma.go
+#                 ^ source.go
+#                  ^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+#                     ^ source.go
+#                      ^^^^^^ source.go entity.name.function.go
+#                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                             ^^^^ source.go keyword.function.go
+#                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                  ^ source.go entity.name.type.go
+#                                   ^ source.go punctuation.definition.end.bracket.round.go
+#                                    ^ source.go
+#                                     ^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.definition.end.bracket.round.go
+#                                       ^ source.go
+#                                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

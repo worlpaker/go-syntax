@@ -2135,3 +2135,8 @@ func Foo174() {
 	type foo1[a, b bar[context.Context, string], d, e bar[int, context.Context]] struct{}
 	type foo2[a, b bar[context.Context, string], d, e bar[int, context.Context]] interface{}
 }
+
+type Bar72[E, V any] []E
+
+func (s *Bar72[E, V]) Foo175(func(E) V) {
+}
