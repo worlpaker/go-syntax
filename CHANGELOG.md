@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.6]
+
+Enhances generic support for types and functions
+
 ## [0.3.5]
 
 Enhances pre-highlighting of variables after control keywords before formatting with gofmt
