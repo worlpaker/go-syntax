@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.7]
+
+Fixes pre-highlighting of the single type field in struct before formatting with gofmt
+
 ## [0.3.6]
 
 Enhances generic support for types and functions
