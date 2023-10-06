@@ -2160,3 +2160,8 @@ type Bar72[E, V any] []E
 
 func (s *Bar72[E, V]) Foo175(func(E) V) {
 }
+
+// v0.3.7
+func Foo176() {
+	type foo struct{ context.Context }
+}
