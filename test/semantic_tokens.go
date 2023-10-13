@@ -2172,3 +2172,19 @@ func Foo177() {
 	type bar func(index string, o ...func(*FooX)) (a *FooX, b Context)
 	type foobar func(index context.Context, o ...func(*FooX)) (a *FooX, b []*context.Context)
 }
+
+func Foo178() FooX // bar
+
+func Foo179() FooX /* bar */
+
+func Foo180(a, b, c context.Context) // bar
+
+func Foo181(a, b, c context.Context) FooX // bar
+
+func Foo182(a, b, c context.Context) <-chan FooX /* bar */
+
+func Foo183(a, b, c context.Context) <-chan func(FooX) FooX /* bar */
+
+func Foo184(string) FooX //bar
+
+func Foo185(string) *FooX /* bar */
