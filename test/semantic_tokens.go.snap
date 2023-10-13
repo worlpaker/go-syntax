@@ -16765,8 +16765,7 @@
 #                                 ^ source.go punctuation.other.period.go
 #                                  ^^^^ source.go entity.name.type.go
 #                                      ^ source.go punctuation.definition.end.bracket.round.go
-#                                       ^^^^ source.go
-#                                           ^ source.go
+#                                       ^^^^^ source.go
 #                                            ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                             ^ source.go punctuation.definition.end.bracket.curly.go
 >func Foo121(foo map[string]*multipart.File) {}
@@ -17046,8 +17045,7 @@
 #                                                   ^ source.go punctuation.other.period.go
 #                                                    ^^^^^^^ source.go entity.name.type.go
 #                                                           ^ source.go punctuation.definition.end.bracket.round.go
-#                                                            ^^ source.go
-#                                                              ^ source.go
+#                                                            ^^^ source.go
 #                                                               ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                                                ^ source.go punctuation.definition.end.bracket.curly.go
 >func Foo134(<-chan func(i, j context.Context) context.Context) {}
@@ -17216,8 +17214,7 @@
 #                                                   ^ source.go punctuation.other.period.go
 #                                                    ^^^^^^^ source.go entity.name.type.go
 #                                                           ^ source.go punctuation.definition.end.bracket.round.go
-#                                                            ^^ source.go
-#                                                              ^ source.go
+#                                                            ^^^ source.go
 #                                                               ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                                                ^ source.go punctuation.definition.end.bracket.curly.go
 >func Foo140(func(i, j context.Context) chan<- context.Context) {}
@@ -17480,8 +17477,7 @@
 #                                                       ^ source.go punctuation.other.period.go
 #                                                        ^^^^^^^ source.go entity.name.type.go
 #                                                               ^ source.go punctuation.definition.end.bracket.round.go
-#                                                                ^^ source.go
-#                                                                  ^ source.go
+#                                                                ^^^ source.go
 #                                                                   ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                                                    ^ source.go punctuation.definition.end.bracket.curly.go
 >func Foo150(foo <-chan func(i, j context.Context) context.Context) {}
