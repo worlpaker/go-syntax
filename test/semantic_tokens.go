@@ -2165,3 +2165,10 @@ func (s *Bar72[E, V]) Foo175(func(E) V) {
 func Foo176() {
 	type foo struct{ context.Context }
 }
+
+// v0.3.8
+func Foo177() {
+	type foo func(index string, o ...func(*FooX)) (*FooX, error)
+	type bar func(index string, o ...func(*FooX)) (a *FooX, b Context)
+	type foobar func(index context.Context, o ...func(*FooX)) (a *FooX, b []*context.Context)
+}
