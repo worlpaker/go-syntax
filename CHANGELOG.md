@@ -4,23 +4,23 @@ All notable changes to the "go-syntax" extension will be documented in this file
 
 ## [0.3.7]
 
-Fixes pre-highlighting of the single type field in struct before formatting with gofmt
+- Fixes pre-highlighting of the single type field in struct before formatting with gofmt
 
 ## [0.3.6]
 
-Enhances generic support for types and functions
+- Enhances generic support for types and functions
 
 ## [0.3.5]
 
-Enhances pre-highlighting of variables after control keywords before formatting with gofmt
+- Enhances pre-highlighting of variables after control keywords before formatting with gofmt
 
 ## [0.3.4]
 
-Fixes pre-highlighting of variables after control keywords before formatting with gofmt
+- Fixes pre-highlighting of variables after control keywords before formatting with gofmt
 
 ## [0.3.3]
 
-Fixes the preview of variables when hovering with the cursor for the tooltip
+- Fixes the preview of variables when hovering with the cursor for the tooltip
 
 ## [0.3.2]
 
