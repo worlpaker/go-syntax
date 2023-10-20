@@ -21834,3 +21834,111 @@
 #                            ^^^^^ source.go comment.block.go
 #                                 ^^ source.go comment.block.go punctuation.definition.comment.go
 >
+>// v0.3.9
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>type VariantA struct{}
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^ source.go entity.name.type.go
+#             ^ source.go
+#              ^^^^^^ source.go keyword.struct.go
+#                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                     ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (*VariantA) sealed() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^ source.go keyword.operator.address.go
+#       ^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.round.go
+#                ^ source.go
+#                 ^^^^^^ source.go entity.name.function.go
+#                       ^ source.go punctuation.definition.begin.bracket.round.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^ source.go punctuation.definition.begin.bracket.curly.go
+#                           ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type VariantB struct{}
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^ source.go entity.name.type.go
+#             ^ source.go
+#              ^^^^^^ source.go keyword.struct.go
+#                    ^ source.go punctuation.definition.begin.bracket.curly.go
+#                     ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func (*VariantB) sealed() {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+#      ^ source.go keyword.operator.address.go
+#       ^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.round.go
+#                ^ source.go
+#                 ^^^^^^ source.go entity.name.function.go
+#                       ^ source.go punctuation.definition.begin.bracket.round.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go
+#                          ^ source.go punctuation.definition.begin.bracket.curly.go
+#                           ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type MySumType interface {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go
+#               ^^^^^^^^^ source.go keyword.interface.go
+#                        ^ source.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+>	sealed()
+#^ source.go
+# ^^^^^^ source.go entity.name.function.support.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo186() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	switch MySumType(nil).(type) { //foo
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^^^^^^^ source.go entity.name.function.support.go
+#                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                  ^^^ source.go constant.language.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+#                      ^ source.go punctuation.other.period.go
+#                       ^ source.go punctuation.definition.begin.bracket.round.go
+#                        ^^^^ source.go keyword.type.go
+#                            ^ source.go punctuation.definition.end.bracket.round.go
+#                             ^ source.go
+#                              ^ source.go punctuation.definition.begin.bracket.curly.go
+#                               ^ source.go
+#                                ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                  ^^^ source.go comment.line.double-slash.go
+>	case *VariantA: //bar
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^ source.go keyword.operator.address.go
+#       ^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.other.colon.go
+#                ^ source.go
+#                 ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                   ^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

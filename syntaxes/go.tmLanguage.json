@@ -2227,7 +2227,7 @@
 			}
 		},
 		"switch_types": {
-			"begin": "(?<=\\bswitch\\b\\s)(?:(\\w+\\s*\\:\\=)?\\s*([\\w\\.\\*\\(\\)\\[\\]]+))(\\.\\(\\btype\\b\\)\\s*)(\\{)",
+			"begin": "(?<=\\bswitch\\b)(?:\\s*)(?:(\\w+\\s*\\:\\=)?\\s*([\\w\\.\\*\\(\\)\\[\\]]+))(\\.\\(\\btype\\b\\)\\s*)(\\{)",
 			"beginCaptures": {
 				"1": {
 					"patterns": [
@@ -2242,6 +2242,9 @@
 				},
 				"2": {
 					"patterns": [
+						{
+							"include": "#support_functions"
+						},
 						{
 							"include": "#type-declarations"
 						},
@@ -2269,7 +2272,7 @@
 					"name": "punctuation.definition.begin.bracket.curly.go"
 				}
 			},
-			"end": "\\}",
+			"end": "(?:\\})",
 			"endCaptures": {
 				"0": {
 					"name": "punctuation.definition.end.bracket.curly.go"

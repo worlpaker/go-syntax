@@ -2188,3 +2188,22 @@ func Foo183(a, b, c context.Context) <-chan func(FooX) FooX /* bar */
 func Foo184(string) FooX //bar
 
 func Foo185(string) *FooX /* bar */
+
+// v0.3.9
+type VariantA struct{}
+
+func (*VariantA) sealed() {}
+
+type VariantB struct{}
+
+func (*VariantB) sealed() {}
+
+type MySumType interface {
+	sealed()
+}
+
+func Foo186() {
+	switch MySumType(nil).(type) { //foo
+	case *VariantA: //bar
+	}
+}
