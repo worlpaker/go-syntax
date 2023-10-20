@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.3.9]
+
+- Fixes type assertion in switch statements when using support functions
+
 ## [0.3.8]
 
 - Fixes minor bugs in type and function declaration
