@@ -1395,7 +1395,7 @@
 		},
 		"functions_inline": {
 			"comment": "functions in-line return type(s)",
-			"match": "(?:(\\bfunc\\b)(\\((?:.*)?\\))\\s*((?:[\\s\\S]+))?\\s*(?=\\{))",
+			"match": "(?:(\\bfunc\\b)((?:\\((?:[^\\)]+)?\\)))(?:\\s+)(?:(?:(?:(\\((?:[^\\)]+)?\\))|((?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)?(?:[\\w\\.\\*]+)?(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?))))?)",
 			"captures": {
 				"1": {
 					"name": "keyword.function.go"
@@ -1429,32 +1429,6 @@
 				"3": {
 					"patterns": [
 						{
-							"include": "#type-declarations-without-brackets"
-						},
-						{
-							"include": "#generic_types"
-						},
-						{
-							"match": "(?:\\w+)",
-							"name": "entity.name.type.go"
-						},
-						{
-							"match": "\\[",
-							"name": "punctuation.definition.begin.bracket.square.go"
-						},
-						{
-							"match": "\\]",
-							"name": "punctuation.definition.end.bracket.square.go"
-						},
-						{
-							"match": "\\{",
-							"name": "punctuation.definition.begin.bracket.curly.go"
-						},
-						{
-							"match": "\\}",
-							"name": "punctuation.definition.end.bracket.curly.go"
-						},
-						{
 							"begin": "\\(",
 							"beginCaptures": {
 								"0": {
@@ -1475,6 +1449,23 @@
 									"include": "$self"
 								}
 							]
+						}
+					]
+				},
+				"4": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"include": "#generic_types"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
+						},
+						{
+							"include": "$self"
 						}
 					]
 				}

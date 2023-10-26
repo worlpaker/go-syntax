@@ -2207,3 +2207,9 @@ func Foo186() {
 	case *VariantA: //bar
 	}
 }
+
+// v0.4.0
+func Foo187() {
+	type foo map[string]func(args ...interface{}) context.Context
+	_ = make(map[string]func(args context.Context) context.Context)
+}
