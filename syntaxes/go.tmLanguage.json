@@ -195,7 +195,7 @@
 			"patterns": [
 				{
 					"comment": "Other map type names (struct/interface)",
-					"match": "(?:(\\bmap\\b)(\\[(?:[\\w\\[\\]\\*\\.]+(?:\\,\\s*)?)+\\])?([\\w\\.\\*]+)?)",
+					"match": "(?:(\\bmap\\b)(\\[(?:[\\w\\[\\]\\*\\.]+(?:\\,\\s*)?)+\\])?((?!\\bfunc\\b)[\\w\\.\\*]+)?)",
 					"captures": {
 						"1": {
 							"name": "keyword.map.go"
