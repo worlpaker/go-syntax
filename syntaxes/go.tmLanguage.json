@@ -2076,7 +2076,7 @@
 				},
 				{
 					"comment": "new keyword",
-					"match": "(?:(\\bnew\\b)(\\()([^\\)]+)?(\\)))",
+					"match": "(?:(\\bnew\\b)(\\()(.*)(\\)))",
 					"captures": {
 						"1": {
 							"name": "entity.name.function.support.builtin.go"
@@ -2086,6 +2086,9 @@
 						},
 						"3": {
 							"patterns": [
+								{
+									"include": "#functions_inline"
+								},
 								{
 									"include": "#type-declarations"
 								},
