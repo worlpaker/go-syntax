@@ -1548,7 +1548,7 @@
 				"3": {
 					"patterns": [
 						{
-							"include": "#map_other_types"
+							"include": "#type-declarations-without-brackets"
 						},
 						{
 							"match": "\\[",
@@ -1557,18 +1557,6 @@
 						{
 							"match": "\\]",
 							"name": "punctuation.definition.end.bracket.square.go"
-						},
-						{
-							"include": "#storage_types"
-						},
-						{
-							"include": "#operators"
-						},
-						{
-							"include": "#delimiters"
-						},
-						{
-							"include": "#keywords"
 						},
 						{
 							"match": "(?:\\w+)",
