@@ -13,6 +13,7 @@ import (
 	"log"
 	"mime/multipart"
 	"net/http"
+	"strconv"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -2212,4 +2213,99 @@ func Foo186() {
 func Foo187() {
 	type foo map[string]func(args ...interface{}) context.Context
 	_ = make(map[string]func(args context.Context) context.Context)
+}
+
+func f1(a int) string {
+	return "I have " + strconv.Itoa(a) + " apples"
+}
+
+func f2(b string) string {
+	return "there are " + b + " bananas"
+}
+
+type t1 struct {
+	s1 map[string]func(args ...interface{}) context.Context
+}
+
+func Foo188() {
+	type foo map[string]func(args ...interface{}) context.Context
+
+	t := t1{
+		s1: make(map[string]func(args ...interface{}) context.Context),
+	}
+
+	t.s1["test"] = func(args ...interface{}) context.Context {
+		result1 := f1(5)
+		result2 := f2("20")
+		fmt.Println(result1)
+		fmt.Println(result2)
+		return context.TODO()
+	}
+
+	t.s1["test"]("test")
+}
+
+func Foo189() {
+	_ = make(map[string]func(args context.Context) context.Context)
+	_ = new(map[string]func(args context.Context) context.Context)
+	type foo1 struct{ context.Context }             //foo
+	type foo2 struct{ a, b <-chan context.Context } //foo
+	type foo3 struct {
+		context.Context //foo
+	}
+
+	type foo4 struct {
+		a, b context.Context
+	}
+}
+
+func Bar73() {
+	// one line with semicolon without formatting gofmt
+
+	// type foo1 struct { a  string; b  context.Context; c int;}
+	type foo1 struct {
+		a string
+		b context.Context
+		c int
+	}
+
+	// type foo2 struct { context.Context; a context.Context; b int;}
+	type foo2 struct {
+		context.Context
+		a context.Context
+		b int
+	}
+
+	// type foo3 struct { context.Context; a context.Context; b int}
+	type foo3 struct {
+		context.Context
+		a context.Context
+		b int
+	}
+
+	// type foo4 struct { string; context.Context; int}
+	type foo4 struct {
+		string
+		context.Context
+		int
+	}
+}
+
+func Bar74(map[string]func(args context.Context) context.Context) {}
+
+func Bar75(a, b, c map[string]func(args context.Context) context.Context) {}
+func Bar76(a map[string]func(args context.Context) context.Context, b map[string]func(args context.Context) (context.Context, string)) {
+}
+
+func Bar77(
+	a map[string]func(args context.Context) context.Context,
+	b map[string]func(args context.Context) (context.Context, string)) {
+}
+
+func Bar78(a map[string]func(args context.Context) context.Context, b map[string]func(args context.Context) (context.Context, string),
+	c map[string]func(args context.Context) (context.Context, string)) {
+}
+
+func Bar79(a <-chan map[string]func(args context.Context) context.Context, b chan map[string]func(args context.Context) (context.Context, string),
+	c chan<- map[string]func(args context.Context) (context.Context, string)) {
 }

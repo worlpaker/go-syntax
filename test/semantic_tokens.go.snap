@@ -61,6 +61,11 @@
 # ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
 #  ^^^^^^^^ source.go string.quoted.double.go entity.name.import.go
 #          ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	"strconv"
+#^ source.go
+# ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#  ^^^^^^^ source.go string.quoted.double.go entity.name.import.go
+#         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
 >	"sync"
 #^ source.go
 # ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -3156,8 +3161,7 @@
 >	age  int
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^ source.go
-#     ^ source.go
+#    ^^ source.go
 #      ^^^ source.go storage.type.numeric.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -3189,8 +3193,7 @@
 >	Foo       Foo16
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^ source.go
-#          ^ source.go
+#    ^^^^^^^ source.go
 #           ^^^^^ source.go entity.name.type.go
 >	FFoo, Bar string
 #^ source.go
@@ -3303,8 +3306,7 @@
 >	age  int
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^ source.go
-#     ^ source.go
+#    ^^ source.go
 #      ^^^ source.go storage.type.numeric.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -3334,8 +3336,7 @@
 >	Foo    func() (context.Context, func(), io.ReadCloser, error, map[Foo17]interface{})
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^ source.go
-#       ^ source.go
+#    ^^^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -3370,8 +3371,7 @@
 >	Bar    func() (foo context.Context, bar io.ReadCloser, err error)
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^ source.go
-#       ^ source.go
+#    ^^^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -3398,20 +3398,17 @@
 >	Fooo   Foo17
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^^ source.go entity.name.type.go
 >	Barr   string
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^^^ source.go storage.type.string.go
 >	Foo2   map[Foo17]interface{}
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^ source.go keyword.map.go
 #           ^ source.go punctuation.definition.begin.bracket.square.go
 #            ^^^^^ source.go entity.name.type.go
@@ -3422,8 +3419,7 @@
 >	Bar2   func(foo FooX) (foox, barx, foobar io.Writer)
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^^^ source.go variable.parameter.go
@@ -3453,8 +3449,7 @@
 >	Foo3   func() (foo context.Context, bar io.ReadCloser, foobar *map[Foo17]interface{})
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -3488,8 +3483,7 @@
 >	Bar3   func() map[Foo17]interface{}
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -3504,8 +3498,7 @@
 >	Foo4   chan<- Foo17
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^ source.go keyword.channel.go
 #            ^^ source.go keyword.operator.channel.go
 #              ^ source.go
@@ -3513,8 +3506,7 @@
 >	Bar4   <-chan Foo17
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^ source.go keyword.operator.channel.go
 #          ^^^^ source.go keyword.channel.go
 #              ^ source.go
@@ -3537,8 +3529,7 @@
 >	Foo6   []func(http.Handler) http.Handler
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
 #         ^ source.go punctuation.definition.end.bracket.square.go
 #          ^^^^ source.go keyword.function.go
@@ -3554,8 +3545,7 @@
 >	Bar6   func() context.Context
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -3566,8 +3556,7 @@
 >	Foo7   []func(http.Handler) <-chan http.Handler
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
 #         ^ source.go punctuation.definition.end.bracket.square.go
 #          ^^^^ source.go keyword.function.go
@@ -3586,16 +3575,14 @@
 >	Bar7   []nodeTyp
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
 #         ^ source.go punctuation.definition.end.bracket.square.go
 #          ^^^^^^^ source.go entity.name.type.go
 >	Foo8   [ntCatchAll + 1]nodeTyp
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
 #         ^^^^^^^^^^ source.go variable.other.go
 #                   ^ source.go
@@ -3607,8 +3594,7 @@
 >	Bar8   []*nodeTyp
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^ source.go
-#       ^ source.go
+#     ^^^ source.go
 #        ^ source.go punctuation.definition.begin.bracket.square.go
 #         ^ source.go punctuation.definition.end.bracket.square.go
 #          ^ source.go keyword.operator.address.go
@@ -3665,8 +3651,7 @@
 >	Email      context.Context `json:"Email"`
 #^ source.go
 # ^^^^^ source.go variable.other.property.go
-#      ^^^^^ source.go
-#           ^ source.go
+#      ^^^^^^ source.go
 #            ^^^^^^^ source.go entity.name.type.go
 #                   ^ source.go punctuation.other.period.go
 #                    ^^^^^^^ source.go entity.name.type.go
@@ -3677,8 +3662,7 @@
 >	Password   string          `json:"Password"`
 #^ source.go
 # ^^^^^^^^ source.go variable.other.property.go
-#         ^^ source.go
-#           ^ source.go
+#         ^^^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 #                  ^^^^^^^^^^ source.go
 #                            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -3696,8 +3680,7 @@
 >	Last_name  string          `json:"Last_name"`
 #^ source.go
 # ^^^^^^^^^ source.go variable.other.property.go
-#          ^ source.go
-#           ^ source.go
+#          ^^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 #                  ^^^^^^^^^^ source.go
 #                            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -3716,8 +3699,7 @@
 >	Gender     *string         `json:"Gender"`
 #^ source.go
 # ^^^^^^ source.go variable.other.property.go
-#       ^^^^ source.go
-#           ^ source.go
+#       ^^^^^ source.go
 #            ^ source.go keyword.operator.address.go
 #             ^^^^^^ source.go storage.type.string.go
 #                   ^^^^^^^^^ source.go
@@ -3934,8 +3916,7 @@
 >	mu       sync.Mutex        // protects following fields
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^ source.go
-#         ^ source.go
+#   ^^^^^^^ source.go
 #          ^^^^ source.go entity.name.type.go
 #              ^ source.go punctuation.other.period.go
 #               ^^^^^ source.go entity.name.type.go
@@ -3945,8 +3926,7 @@
 >	done     atomic.Value      // of chan struct{}, created lazily, closed by first cancel call
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^ source.go
-#         ^ source.go
+#     ^^^^^ source.go
 #          ^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.other.period.go
 #                 ^^^^^ source.go entity.name.type.go
@@ -3970,8 +3950,7 @@
 >	err      error             // set to non-nil by the first cancel call
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^ source.go
-#         ^ source.go
+#    ^^^^^^ source.go
 #          ^^^^^ source.go storage.type.error.go
 #               ^^^^^^^^^^^^^ source.go
 #                            ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
@@ -4903,14 +4882,12 @@
 >		foo    int
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^ source.go
-#        ^ source.go
+#     ^^^^ source.go
 #         ^^^ source.go storage.type.numeric.go
 >		bar    *Pointer[*response]
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^ source.go
-#        ^ source.go
+#     ^^^^ source.go
 #         ^ source.go keyword.operator.address.go
 #          ^^^^^^^ source.go entity.name.type.go
 #                 ^ source.go punctuation.definition.begin.bracket.square.go
@@ -4928,8 +4905,7 @@
 >		foo1   Pointer[int]
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^^^^ source.go entity.name.type.go
 #                ^ source.go punctuation.definition.begin.bracket.square.go
 #                 ^^^ source.go storage.type.numeric.go
@@ -4937,8 +4913,7 @@
 >		bar1   map[response]interface{}
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^ source.go keyword.map.go
 #            ^ source.go punctuation.definition.begin.bracket.square.go
 #             ^^^^^^^^ source.go entity.name.type.go
@@ -8103,8 +8078,7 @@
 >	matrixCells        [][]cell
 #^ source.go
 # ^^^^^^^^^^^ source.go variable.other.property.go
-#            ^^^^^^^ source.go
-#                   ^ source.go
+#            ^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8123,16 +8097,14 @@
 >	rowCells           []cell
 #^ source.go
 # ^^^^^^^^ source.go variable.other.property.go
-#         ^^^^^^^^^^ source.go
-#                   ^ source.go
+#         ^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^^^^ source.go entity.name.type.go
 >	rowCellsPointer    *[]cell
 #^ source.go
 # ^^^^^^^^^^^^^^^ source.go variable.other.property.go
-#                ^^^ source.go
-#                   ^ source.go
+#                ^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8140,8 +8112,7 @@
 >	matrixInts         [][]int
 #^ source.go
 # ^^^^^^^^^^ source.go variable.other.property.go
-#           ^^^^^^^^ source.go
-#                   ^ source.go
+#           ^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8150,8 +8121,7 @@
 >	matrixIntsPointer  *[][]int
 #^ source.go
 # ^^^^^^^^^^^^^^^^^ source.go variable.other.property.go
-#                  ^ source.go
-#                   ^ source.go
+#                  ^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8161,8 +8131,7 @@
 >	m0                 map[cell]interface{}
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^^^ source.go keyword.map.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
 #                        ^^^^ source.go entity.name.type.go
@@ -8173,8 +8142,7 @@
 >	m1                 []<-chan cell
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^^ source.go keyword.operator.channel.go
@@ -8184,8 +8152,7 @@
 >	m2                 *[]chan<- cell
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8196,8 +8163,7 @@
 >	m3                 [][]map[cell]interface{}
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8212,8 +8178,7 @@
 >	m4                 *[][]map[cell]interface{}
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8229,8 +8194,7 @@
 >	m5                 [][]<-chan func()
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8244,8 +8208,7 @@
 >	m6                 *[][]chan<- func()
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8260,8 +8223,7 @@
 >	m7                 [][]context.Context
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8272,8 +8234,7 @@
 >	m8                 *[][]context.Context
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8285,8 +8246,7 @@
 >	m9                 [][][][][][][][][]context.Context
 #^ source.go
 # ^^ source.go variable.other.property.go
-#   ^^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#   ^^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8311,8 +8271,7 @@
 >	m10                *[][][][][][][][][]context.Context
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8338,8 +8297,7 @@
 >	m11                [][][][][][][][][]cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8362,8 +8320,7 @@
 >	m12                *[][][][][][][][][]cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8387,8 +8344,7 @@
 >	m13                [][][][][][][][][]cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8411,8 +8367,7 @@
 >	m14                *[][][][][][][][][]cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8436,8 +8391,7 @@
 >	m15                [][][][][][][][][]<-chan cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8463,8 +8417,7 @@
 >	m16                *[][][][][][][][][]chan<- cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8491,8 +8444,7 @@
 >	m17                [][][][][][][][][]<-chan map[cell]interface{}
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8524,8 +8476,7 @@
 >	m18                *[][][][][][][][][]chan<- map[cell]interface{}
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8558,8 +8509,7 @@
 >	m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8594,8 +8544,7 @@
 >	m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8638,8 +8587,7 @@
 >	m21                [][][][][][][][][]func() <-chan cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8669,8 +8617,7 @@
 >	m22                *[][][][][][][][][]func() chan<- cell
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^ source.go
-#                   ^ source.go
+#    ^^^^^^^^^^^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8707,8 +8654,7 @@
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
 #           ^^^ source.go variable.other.property.go
-#              ^^^^^ source.go
-#                   ^ source.go
+#              ^^^^^^ source.go
 #                    ^ source.go punctuation.definition.begin.bracket.square.go
 #                     ^ source.go punctuation.definition.end.bracket.square.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
@@ -8737,8 +8683,7 @@
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
 #           ^^^ source.go variable.other.property.go
-#              ^^^^^ source.go
-#                   ^ source.go
+#              ^^^^^^ source.go
 #                    ^ source.go keyword.operator.arithmetic.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
@@ -8898,8 +8843,7 @@
 >	foo0     func()
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^ source.go
-#         ^ source.go
+#     ^^^^^ source.go
 #          ^^^^ source.go keyword.function.go
 #              ^ source.go punctuation.definition.begin.bracket.round.go
 #               ^ source.go punctuation.definition.end.bracket.round.go
@@ -8927,8 +8871,7 @@
 >			foo  func()
 #^^^ source.go
 #   ^^^ source.go variable.other.property.go
-#      ^ source.go
-#       ^ source.go
+#      ^^ source.go
 #        ^^^^ source.go keyword.function.go
 #            ^ source.go punctuation.definition.begin.bracket.round.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
@@ -8999,8 +8942,7 @@
 >		matrixCells        [][]cell
 #^^ source.go
 #  ^^^^^^^^^^^ source.go variable.other.property.go
-#             ^^^^^^^ source.go
-#                    ^ source.go
+#             ^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9019,16 +8961,14 @@
 >		rowCells           []cell
 #^^ source.go
 #  ^^^^^^^^ source.go variable.other.property.go
-#          ^^^^^^^^^^ source.go
-#                    ^ source.go
+#          ^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^^^^ source.go entity.name.type.go
 >		rowCellsPointer    *[]cell
 #^^ source.go
 #  ^^^^^^^^^^^^^^^ source.go variable.other.property.go
-#                 ^^^ source.go
-#                    ^ source.go
+#                 ^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9036,8 +8976,7 @@
 >		matrixInts         [][]int
 #^^ source.go
 #  ^^^^^^^^^^ source.go variable.other.property.go
-#            ^^^^^^^^ source.go
-#                    ^ source.go
+#            ^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9046,8 +8985,7 @@
 >		matrixIntsPointer  *[][]int
 #^^ source.go
 #  ^^^^^^^^^^^^^^^^^ source.go variable.other.property.go
-#                   ^ source.go
-#                    ^ source.go
+#                   ^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9057,8 +8995,7 @@
 >		m0                 map[cell]interface{}
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^^^ source.go keyword.map.go
 #                        ^ source.go punctuation.definition.begin.bracket.square.go
 #                         ^^^^ source.go entity.name.type.go
@@ -9069,8 +9006,7 @@
 >		m1                 []<-chan cell
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^^ source.go keyword.operator.channel.go
@@ -9080,8 +9016,7 @@
 >		m2                 *[]chan<- cell
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9092,8 +9027,7 @@
 >		m3                 [][]map[cell]interface{}
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9108,8 +9042,7 @@
 >		m4                 *[][]map[cell]interface{}
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9125,8 +9058,7 @@
 >		m5                 [][]<-chan func()
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9140,8 +9072,7 @@
 >		m6                 *[][]chan<- func()
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9156,8 +9087,7 @@
 >		m7                 [][]context.Context
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9168,8 +9098,7 @@
 >		m8                 *[][]context.Context
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9181,8 +9110,7 @@
 >		m9                 [][][][][][][][][]context.Context
 #^^ source.go
 #  ^^ source.go variable.other.property.go
-#    ^^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#    ^^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9207,8 +9135,7 @@
 >		m10                *[][][][][][][][][]context.Context
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9234,8 +9161,7 @@
 >		m11                [][][][][][][][][]cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9258,8 +9184,7 @@
 >		m12                *[][][][][][][][][]cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9283,8 +9208,7 @@
 >		m13                [][][][][][][][][]cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9307,8 +9231,7 @@
 >		m14                *[][][][][][][][][]cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9332,8 +9255,7 @@
 >		m15                [][][][][][][][][]<-chan cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9359,8 +9281,7 @@
 >		m16                *[][][][][][][][][]chan<- cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9387,8 +9308,7 @@
 >		m17                [][][][][][][][][]<-chan map[cell]interface{}
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9420,8 +9340,7 @@
 >		m18                *[][][][][][][][][]chan<- map[cell]interface{}
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9454,8 +9373,7 @@
 >		m19                [][][][][][][][][]func(http.Handler) <-chan http.Handler
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9490,8 +9408,7 @@
 >		m20                *[][][][][][][][][]func(foo cell) (foox, barx, foobar io.Writer)
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9534,8 +9451,7 @@
 >		m21                [][][][][][][][][]func() <-chan cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9565,8 +9481,7 @@
 >		m22                *[][][][][][][][][]func() chan<- cell
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^^^^^^^^^^^^^ source.go
-#                    ^ source.go
+#     ^^^^^^^^^^^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9603,8 +9518,7 @@
 #          ^ source.go punctuation.other.comma.go
 #           ^ source.go
 #            ^^^ source.go variable.other.property.go
-#               ^^^^^ source.go
-#                    ^ source.go
+#               ^^^^^^ source.go
 #                     ^ source.go punctuation.definition.begin.bracket.square.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go punctuation.definition.begin.bracket.square.go
@@ -9633,8 +9547,7 @@
 #          ^ source.go punctuation.other.comma.go
 #           ^ source.go
 #            ^^^ source.go variable.other.property.go
-#               ^^^^^ source.go
-#                    ^ source.go
+#               ^^^^^^ source.go
 #                     ^ source.go keyword.operator.arithmetic.go
 #                      ^ source.go punctuation.definition.begin.bracket.square.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
@@ -9666,8 +9579,7 @@
 #                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
 >		cancelCtx
-#^ source.go
-# ^ source.go
+#^^ source.go
 #  ^^^^^^^^^ source.go entity.name.type.go
 >		timer *time.Timer // Under cancelCtx.mu.
 #^^ source.go
@@ -9699,19 +9611,16 @@
 #             ^ source.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
 >		Foo15
-#^ source.go
-# ^ source.go
+#^^ source.go
 #  ^^^^^ source.go entity.name.type.go
 >		*Foo17
-#^ source.go
-# ^ source.go
+#^^ source.go
 #  ^ source.go keyword.operator.address.go
 #   ^^^^^ source.go entity.name.type.go
 >		Foo    func() (context.Context, func(), io.ReadCloser, error, map[Foo17]interface{})
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^ source.go
-#        ^ source.go
+#     ^^^^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
 #              ^ source.go punctuation.definition.end.bracket.round.go
@@ -9746,8 +9655,7 @@
 >		Bar    func() (foo context.Context, bar io.ReadCloser, err error)
 #^^ source.go
 #  ^^^ source.go variable.other.property.go
-#     ^^^ source.go
-#        ^ source.go
+#     ^^^^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
 #              ^ source.go punctuation.definition.end.bracket.round.go
@@ -9774,20 +9682,17 @@
 >		Fooo   Foo17
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^^ source.go entity.name.type.go
 >		Barr   string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^^^ source.go storage.type.string.go
 >		Foo2   map[Foo17]interface{}
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^ source.go keyword.map.go
 #            ^ source.go punctuation.definition.begin.bracket.square.go
 #             ^^^^^ source.go entity.name.type.go
@@ -9798,8 +9703,7 @@
 >		Bar2   func(foo FooX) (foox, barx, foobar io.Writer)
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
 #              ^^^ source.go variable.parameter.go
@@ -9829,8 +9733,7 @@
 >		Foo3   func() (foo context.Context, bar io.ReadCloser, foobar *map[Foo17]interface{})
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
 #              ^ source.go punctuation.definition.end.bracket.round.go
@@ -9864,8 +9767,7 @@
 >		Bar3   func() map[Foo17]interface{}
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
 #              ^ source.go punctuation.definition.end.bracket.round.go
@@ -9880,8 +9782,7 @@
 >		Foo4   chan<- Foo17
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^ source.go keyword.channel.go
 #             ^^ source.go keyword.operator.channel.go
 #               ^ source.go
@@ -9889,8 +9790,7 @@
 >		Bar4   <-chan Foo17
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^ source.go keyword.operator.channel.go
 #           ^^^^ source.go keyword.channel.go
 #               ^ source.go
@@ -9913,8 +9813,7 @@
 >		Foo6   []func(http.Handler) http.Handler
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
 #           ^^^^ source.go keyword.function.go
@@ -9930,8 +9829,7 @@
 >		Bar6   func() context.Context
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^^^^ source.go keyword.function.go
 #             ^ source.go punctuation.definition.begin.bracket.round.go
 #              ^ source.go punctuation.definition.end.bracket.round.go
@@ -9942,8 +9840,7 @@
 >		Foo7   []func(http.Handler) <-chan http.Handler
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
 #           ^^^^ source.go keyword.function.go
@@ -9962,16 +9859,14 @@
 >		Bar7   []nodeTyp
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
 #           ^^^^^^^ source.go entity.name.type.go
 >		Foo8   [ntCatchAll + 1]nodeTyp
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^^^^^^^^^^ source.go variable.other.go
 #                    ^ source.go
@@ -9983,8 +9878,7 @@
 >		Bar8   []*nodeTyp
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^ source.go
-#        ^ source.go
+#      ^^^ source.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go punctuation.definition.end.bracket.square.go
 #           ^ source.go keyword.operator.address.go
@@ -10019,8 +9913,7 @@
 >	NextPage  bool   `json:"has_next_page"`
 #^ source.go
 # ^^^^^^^^ source.go variable.other.property.go
-#         ^ source.go
-#          ^ source.go
+#         ^^ source.go
 #           ^^^^ source.go storage.type.boolean.go
 #               ^^^ source.go
 #                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10039,8 +9932,7 @@
 >	Rhxgis    string
 #^ source.go
 # ^^^^^^ source.go variable.other.property.go
-#       ^^^ source.go
-#          ^ source.go
+#       ^^^^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 >	EntryData struct {
 #^ source.go
@@ -10073,8 +9965,7 @@
 >					Id    string
 #^^^^^ source.go
 #     ^^ source.go variable.other.property.go
-#       ^^^ source.go
-#          ^ source.go
+#       ^^^^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 >					Media struct {
 #^^^^^ source.go
@@ -10117,8 +10008,7 @@
 >	Rhxgis    string `json:"rhx_gis"`
 #^ source.go
 # ^^^^^^ source.go variable.other.property.go
-#       ^^^ source.go
-#          ^ source.go
+#       ^^^^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 #                 ^ source.go
 #                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10155,8 +10045,7 @@
 >					Id    string `json:"id"`
 #^^^^^ source.go
 #     ^^ source.go variable.other.property.go
-#       ^^^ source.go
-#          ^ source.go
+#       ^^^^ source.go
 #           ^^^^^^ source.go storage.type.string.go
 #                 ^ source.go
 #                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10186,8 +10075,7 @@
 >								ImageURL     string `json:"display_url"`
 #^^^^^^^^ source.go
 #        ^^^^^^^^ source.go variable.other.property.go
-#                ^^^^ source.go
-#                    ^ source.go
+#                ^^^^^ source.go
 #                     ^^^^^^ source.go storage.type.string.go
 #                           ^ source.go
 #                            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10205,8 +10093,7 @@
 >								IsVideo      bool   `json:"is_video"`
 #^^^^^^^^ source.go
 #        ^^^^^^^ source.go variable.other.property.go
-#               ^^^^^ source.go
-#                    ^ source.go
+#               ^^^^^^ source.go
 #                     ^^^^ source.go storage.type.boolean.go
 #                         ^^^ source.go
 #                            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10215,8 +10102,7 @@
 >								Date         int    `json:"date"`
 #^^^^^^^^ source.go
 #        ^^^^ source.go variable.other.property.go
-#            ^^^^^^^^ source.go
-#                    ^ source.go
+#            ^^^^^^^^^ source.go
 #                     ^^^ source.go storage.type.numeric.go
 #                        ^^^^ source.go
 #                            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10232,8 +10118,7 @@
 >									Width  int `json:"width"`
 #^^^^^^^^^ source.go
 #         ^^^^^ source.go variable.other.property.go
-#              ^ source.go
-#               ^ source.go
+#              ^^ source.go
 #                ^^^ source.go storage.type.numeric.go
 #                   ^ source.go
 #                    ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10367,8 +10252,7 @@
 >						ImageURL     string `json:"display_url"`
 #^^^^^^ source.go
 #      ^^^^^^^^ source.go variable.other.property.go
-#              ^^^^ source.go
-#                  ^ source.go
+#              ^^^^^ source.go
 #                   ^^^^^^ source.go storage.type.string.go
 #                         ^ source.go
 #                          ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10386,8 +10270,7 @@
 >						IsVideo      bool   `json:"is_video"`
 #^^^^^^ source.go
 #      ^^^^^^^ source.go variable.other.property.go
-#             ^^^^^ source.go
-#                  ^ source.go
+#             ^^^^^^ source.go
 #                   ^^^^ source.go storage.type.boolean.go
 #                       ^^^ source.go
 #                          ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10396,8 +10279,7 @@
 >						Date         int    `json:"taken_at_timestamp"`
 #^^^^^^ source.go
 #      ^^^^ source.go variable.other.property.go
-#          ^^^^^^^^ source.go
-#                  ^ source.go
+#          ^^^^^^^^^ source.go
 #                   ^^^ source.go storage.type.numeric.go
 #                      ^^^^ source.go
 #                          ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -10413,8 +10295,7 @@
 >							Width  int `json:"width"`
 #^^^^^^^ source.go
 #       ^^^^^ source.go variable.other.property.go
-#            ^ source.go
-#             ^ source.go
+#            ^^ source.go
 #              ^^^ source.go storage.type.numeric.go
 #                 ^ source.go
 #                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
@@ -11188,20 +11069,17 @@
 >	b    Foo11
 #^ source.go
 # ^ source.go variable.other.property.go
-#  ^^^ source.go
-#     ^ source.go
+#  ^^^^ source.go
 #      ^^^^^ source.go entity.name.type.go
 >	c    FooX
 #^ source.go
 # ^ source.go variable.other.property.go
-#  ^^^ source.go
-#     ^ source.go
+#  ^^^^ source.go
 #      ^^^^ source.go entity.name.type.go
 >	d    map[FooX]chan<- func(f FooX)
 #^ source.go
 # ^ source.go variable.other.property.go
-#  ^^^ source.go
-#     ^ source.go
+#  ^^^^ source.go
 #      ^^^ source.go keyword.map.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^^^^ source.go entity.name.type.go
@@ -11242,20 +11120,17 @@
 >		b    Foo11
 #^^ source.go
 #  ^ source.go variable.other.property.go
-#   ^^^ source.go
-#      ^ source.go
+#   ^^^^ source.go
 #       ^^^^^ source.go entity.name.type.go
 >		c    FooX
 #^^ source.go
 #  ^ source.go variable.other.property.go
-#   ^^^ source.go
-#      ^ source.go
+#   ^^^^ source.go
 #       ^^^^ source.go entity.name.type.go
 >		d    map[FooX]chan<- func(f FooX)
 #^^ source.go
 #  ^ source.go variable.other.property.go
-#   ^^^ source.go
-#      ^ source.go
+#   ^^^^ source.go
 #       ^^^ source.go keyword.map.go
 #          ^ source.go punctuation.definition.begin.bracket.square.go
 #           ^^^^ source.go entity.name.type.go
@@ -11351,8 +11226,7 @@
 >	age  T
 #^ source.go
 # ^^^ source.go variable.other.property.go
-#    ^ source.go
-#     ^ source.go
+#    ^^ source.go
 #      ^ source.go entity.name.type.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -13132,20 +13006,17 @@
 >	b    Foo11
 #^ source.go
 # ^ source.go variable.other.property.go
-#  ^^^ source.go
-#     ^ source.go
+#  ^^^^ source.go
 #      ^^^^^ source.go entity.name.type.go
 >	c    FooX
 #^ source.go
 # ^ source.go variable.other.property.go
-#  ^^^ source.go
-#     ^ source.go
+#  ^^^^ source.go
 #      ^^^^ source.go entity.name.type.go
 >	d    map[FooX]chan<- func(f FooX)
 #^ source.go
 # ^ source.go variable.other.property.go
-#  ^^^ source.go
-#     ^ source.go
+#  ^^^^ source.go
 #      ^^^ source.go keyword.map.go
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^^^^ source.go entity.name.type.go
@@ -14440,8 +14311,7 @@
 >		Path       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >		LineNumber int
 #^^ source.go
@@ -14451,8 +14321,7 @@
 >		Line       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >	}) {
 #^ source.go
@@ -14474,8 +14343,7 @@
 >	Path       context.Context
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^^^ source.go
-#           ^ source.go
+#     ^^^^^^^ source.go
 #            ^^^^^^^ source.go entity.name.type.go
 #                   ^ source.go punctuation.other.period.go
 #                    ^^^^^^^ source.go entity.name.type.go
@@ -14487,8 +14355,7 @@
 >	Line       string
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^^^ source.go
-#           ^ source.go
+#     ^^^^^^^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 >}) {
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -14511,8 +14378,7 @@
 >	Path       context.Context
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^^^ source.go
-#           ^ source.go
+#     ^^^^^^^ source.go
 #            ^^^^^^^ source.go entity.name.type.go
 #                   ^ source.go punctuation.other.period.go
 #                    ^^^^^^^ source.go entity.name.type.go
@@ -14524,8 +14390,7 @@
 >	Line       string
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^^^ source.go
-#           ^ source.go
+#     ^^^^^^^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 >}) {
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -14562,8 +14427,7 @@
 >	Path       string
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^^^ source.go
-#           ^ source.go
+#     ^^^^^^^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 >	LineNumber int
 #^ source.go
@@ -14573,8 +14437,7 @@
 >	Line       string
 #^ source.go
 # ^^^^ source.go variable.other.property.go
-#     ^^^^^^ source.go
-#           ^ source.go
+#     ^^^^^^^ source.go
 #            ^^^^^^ source.go storage.type.string.go
 >}) {
 #^ source.go punctuation.definition.end.bracket.curly.go
@@ -14604,8 +14467,7 @@
 >		Path       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >		LineNumber int
 #^^ source.go
@@ -14615,8 +14477,7 @@
 >		Line       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >	}{
 #^ source.go
@@ -14665,8 +14526,7 @@
 >		Path       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >		LineNumber int
 #^^ source.go
@@ -14676,8 +14536,7 @@
 >		Line       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >	}{
 #^ source.go
@@ -14733,8 +14592,7 @@
 >		Path       context.Context
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^^ source.go entity.name.type.go
 #                    ^ source.go punctuation.other.period.go
 #                     ^^^^^^^ source.go entity.name.type.go
@@ -14746,8 +14604,7 @@
 >		Line       string
 #^^ source.go
 #  ^^^^ source.go variable.other.property.go
-#      ^^^^^^ source.go
-#            ^ source.go
+#      ^^^^^^^ source.go
 #             ^^^^^^ source.go storage.type.string.go
 >	}
 #^ source.go
@@ -22001,6 +21858,905 @@
 #                                                       ^ source.go punctuation.other.period.go
 #                                                        ^^^^^^^ source.go entity.name.type.go
 #                                                               ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func f1(a int) string {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^ source.go entity.name.function.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go variable.parameter.go
+#         ^ source.go
+#          ^^^ source.go storage.type.numeric.go
+#             ^ source.go punctuation.definition.end.bracket.round.go
+#              ^ source.go
+#               ^^^^^^ source.go storage.type.string.go
+#                     ^ source.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+>	return "I have " + strconv.Itoa(a) + " apples"
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^^^^^^^ source.go string.quoted.double.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                 ^ source.go
+#                  ^ source.go keyword.operator.arithmetic.go
+#                   ^ source.go
+#                    ^^^^^^^ source.go variable.other.go
+#                           ^ source.go punctuation.other.period.go
+#                            ^^^^ source.go entity.name.function.support.go
+#                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                 ^ source.go variable.other.go
+#                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                   ^ source.go
+#                                    ^ source.go keyword.operator.arithmetic.go
+#                                     ^ source.go
+#                                      ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                       ^^^^^^^ source.go string.quoted.double.go
+#                                              ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func f2(b string) string {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^ source.go entity.name.function.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+#        ^ source.go variable.parameter.go
+#         ^ source.go
+#          ^^^^^^ source.go storage.type.string.go
+#                ^ source.go punctuation.definition.end.bracket.round.go
+#                 ^ source.go
+#                  ^^^^^^ source.go storage.type.string.go
+#                        ^ source.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+>	return "there are " + b + " bananas"
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^^^^^^^^^^ source.go string.quoted.double.go
+#                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                    ^ source.go
+#                     ^ source.go keyword.operator.arithmetic.go
+#                      ^ source.go
+#                       ^ source.go variable.other.go
+#                        ^ source.go
+#                         ^ source.go keyword.operator.arithmetic.go
+#                          ^ source.go
+#                           ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                            ^^^^^^^^ source.go string.quoted.double.go
+#                                    ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type t1 struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^ source.go entity.name.type.go
+#       ^ source.go
+#        ^^^^^^ source.go keyword.struct.go
+#              ^ source.go
+#               ^ source.go punctuation.definition.begin.bracket.curly.go
+>	s1 map[string]func(args ...interface{}) context.Context
+#^ source.go
+# ^^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^ source.go keyword.map.go
+#       ^ source.go punctuation.definition.begin.bracket.square.go
+#        ^^^^^^ source.go storage.type.string.go
+#              ^ source.go punctuation.definition.end.bracket.square.go
+#               ^^^^ source.go keyword.function.go
+#                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                    ^^^^ source.go variable.parameter.go
+#                        ^ source.go
+#                         ^^^ source.go keyword.operator.ellipsis.go
+#                            ^^^^^^^^^ source.go keyword.interface.go
+#                                     ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                      ^ source.go punctuation.definition.end.bracket.curly.go
+#                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                        ^ source.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.other.period.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo188() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type foo map[string]func(args ...interface{}) context.Context
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^^^^ source.go keyword.function.go
+#                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                          ^^^^ source.go variable.parameter.go
+#                              ^ source.go
+#                               ^^^ source.go keyword.operator.ellipsis.go
+#                                  ^^^^^^^^^ source.go keyword.interface.go
+#                                           ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                            ^ source.go punctuation.definition.end.bracket.curly.go
+#                                             ^ source.go punctuation.definition.end.bracket.round.go
+#                                              ^ source.go
+#                                               ^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.other.period.go
+#                                                       ^^^^^^^ source.go entity.name.type.go
+>
+>	t := t1{
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^ source.go entity.name.type.go
+#        ^ source.go punctuation.definition.begin.bracket.curly.go
+>		s1: make(map[string]func(args ...interface{}) context.Context),
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^^^ source.go keyword.map.go
+#              ^ source.go punctuation.definition.begin.bracket.square.go
+#               ^^^^^^ source.go storage.type.string.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^^ source.go keyword.function.go
+#                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                           ^^^^ source.go variable.parameter.go
+#                               ^ source.go
+#                                ^^^ source.go keyword.operator.ellipsis.go
+#                                   ^^^^^^^^^ source.go keyword.interface.go
+#                                            ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                             ^ source.go punctuation.definition.end.bracket.curly.go
+#                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                               ^ source.go
+#                                                ^^^^^^^ source.go entity.name.type.go
+#                                                       ^ source.go punctuation.other.period.go
+#                                                        ^^^^^^^ source.go entity.name.type.go
+#                                                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	t.s1["test"] = func(args ...interface{}) context.Context {
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^ source.go variable.other.go
+#     ^ source.go punctuation.definition.begin.bracket.square.go
+#      ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#       ^^^^ source.go string.quoted.double.go
+#           ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#            ^ source.go punctuation.definition.end.bracket.square.go
+#             ^ source.go
+#              ^ source.go keyword.operator.assignment.go
+#               ^ source.go
+#                ^^^^ source.go keyword.function.go
+#                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                     ^^^^ source.go variable.parameter.go
+#                         ^ source.go
+#                          ^^^ source.go keyword.operator.ellipsis.go
+#                             ^^^^^^^^^ source.go keyword.interface.go
+#                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                       ^ source.go punctuation.definition.end.bracket.curly.go
+#                                        ^ source.go punctuation.definition.end.bracket.round.go
+#                                         ^ source.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.other.period.go
+#                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go
+#                                                          ^ source.go punctuation.definition.begin.bracket.curly.go
+>		result1 := f1(5)
+#^^ source.go
+#  ^^^^^^^ source.go variable.other.assignment.go
+#         ^ source.go
+#          ^^ source.go keyword.operator.assignment.go
+#            ^ source.go
+#             ^^ source.go entity.name.function.support.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go constant.numeric.decimal.go
+#                 ^ source.go punctuation.definition.end.bracket.round.go
+>		result2 := f2("20")
+#^^ source.go
+#  ^^^^^^^ source.go variable.other.assignment.go
+#         ^ source.go
+#          ^^ source.go keyword.operator.assignment.go
+#            ^ source.go
+#             ^^ source.go entity.name.function.support.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                 ^^ source.go string.quoted.double.go
+#                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+>		fmt.Println(result1)
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^^^^^ source.go variable.other.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+>		fmt.Println(result2)
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^^^^^ source.go variable.other.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+>		return context.TODO()
+#^^ source.go
+#  ^^^^^^ source.go keyword.control.go
+#        ^ source.go
+#         ^^^^^^^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^ source.go entity.name.function.support.go
+#                     ^ source.go punctuation.definition.begin.bracket.round.go
+#                      ^ source.go punctuation.definition.end.bracket.round.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	t.s1["test"]("test")
+#^ source.go
+# ^ source.go variable.other.go
+#  ^ source.go punctuation.other.period.go
+#   ^^ source.go entity.name.function.support.go
+#     ^ source.go punctuation.definition.begin.bracket.square.go
+#      ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#       ^^^^ source.go string.quoted.double.go
+#           ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#            ^ source.go punctuation.definition.end.bracket.square.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^^ source.go string.quoted.double.go
+#                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Foo189() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	_ = make(map[string]func(args context.Context) context.Context)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.function.support.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^^^^ source.go keyword.function.go
+#                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                          ^^^^ source.go variable.parameter.go
+#                              ^ source.go
+#                               ^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                               ^ source.go
+#                                                ^^^^^^^ source.go entity.name.type.go
+#                                                       ^ source.go punctuation.other.period.go
+#                                                        ^^^^^^^ source.go entity.name.type.go
+#                                                               ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = new(map[string]func(args context.Context) context.Context)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^^^^ source.go storage.type.string.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^^^^ source.go keyword.function.go
+#                        ^ source.go punctuation.definition.begin.bracket.round.go
+#                         ^^^^ source.go variable.parameter.go
+#                             ^ source.go
+#                              ^^^^^^^ source.go entity.name.type.go
+#                                     ^ source.go punctuation.other.period.go
+#                                      ^^^^^^^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.definition.end.bracket.round.go
+#                                              ^ source.go
+#                                               ^^^^^^^ source.go entity.name.type.go
+#                                                      ^ source.go punctuation.other.period.go
+#                                                       ^^^^^^^ source.go entity.name.type.go
+#                                                              ^ source.go punctuation.definition.end.bracket.round.go
+>	type foo1 struct{ context.Context }             //foo
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                  ^ source.go
+#                   ^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.other.period.go
+#                           ^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go
+#                                   ^ source.go punctuation.definition.end.bracket.curly.go
+#                                    ^^^^^^^^^^^^^ source.go
+#                                                 ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                   ^^^ source.go comment.line.double-slash.go
+>	type foo2 struct{ a, b <-chan context.Context } //foo
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+#                  ^ source.go
+#                   ^ source.go variable.other.property.go
+#                    ^ source.go punctuation.other.comma.go
+#                     ^ source.go
+#                      ^ source.go variable.other.property.go
+#                       ^ source.go
+#                        ^^ source.go keyword.operator.channel.go
+#                          ^^^^ source.go keyword.channel.go
+#                              ^ source.go
+#                               ^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go
+#                                               ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                ^ source.go
+#                                                 ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                   ^^^ source.go comment.line.double-slash.go
+>	type foo3 struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		context.Context //foo
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.other.period.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go
+#                  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                    ^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type foo4 struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a, b context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.period.go
+#               ^^^^^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar73() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+#            ^ source.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// one line with semicolon without formatting gofmt
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
+>	// type foo1 struct { a  string; b  context.Context; c int;}
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type foo1 struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a string
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^^^^ source.go storage.type.string.go
+>		b context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.period.go
+#            ^^^^^^^ source.go entity.name.type.go
+>		c int
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	// type foo2 struct { context.Context; a context.Context; b int;}
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type foo2 struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		context.Context
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.other.period.go
+#          ^^^^^^^ source.go entity.name.type.go
+>		a context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.period.go
+#            ^^^^^^^ source.go entity.name.type.go
+>		b int
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	// type foo3 struct { context.Context; a context.Context; b int}
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type foo3 struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		context.Context
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.other.period.go
+#          ^^^^^^^ source.go entity.name.type.go
+>		a context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.period.go
+#            ^^^^^^^ source.go entity.name.type.go
+>		b int
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	// type foo4 struct { string; context.Context; int}
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type foo4 struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go keyword.struct.go
+#                 ^ source.go
+#                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>		string
+#^^ source.go
+#  ^^^^^^ source.go storage.type.string.go
+>		context.Context
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.other.period.go
+#          ^^^^^^^ source.go entity.name.type.go
+>		int
+#^^ source.go
+#  ^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar74(map[string]func(args context.Context) context.Context) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^^^ source.go keyword.map.go
+#              ^ source.go punctuation.definition.begin.bracket.square.go
+#               ^^^^^^ source.go storage.type.string.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^^^^ source.go keyword.function.go
+#                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                           ^^^^ source.go variable.parameter.go
+#                               ^ source.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.other.period.go
+#                                        ^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                                ^ source.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.other.period.go
+#                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                 ^ source.go
+#                                                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar75(a, b, c map[string]func(args context.Context) context.Context) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go punctuation.other.comma.go
+#             ^ source.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^ source.go variable.parameter.go
+#                  ^ source.go
+#                   ^^^ source.go keyword.map.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^^^^^^ source.go storage.type.string.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^^^^ source.go keyword.function.go
+#                                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                                   ^^^^ source.go variable.parameter.go
+#                                       ^ source.go
+#                                        ^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.other.period.go
+#                                                ^^^^^^^ source.go entity.name.type.go
+#                                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                                        ^ source.go
+#                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                ^ source.go punctuation.other.period.go
+#                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                         ^ source.go
+#                                                                          ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                           ^ source.go punctuation.definition.end.bracket.curly.go
+>func Bar76(a map[string]func(args context.Context) context.Context, b map[string]func(args context.Context) (context.Context, string)) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go
+#             ^^^ source.go keyword.map.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^^^^^^ source.go storage.type.string.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^^ source.go keyword.function.go
+#                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                             ^^^^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.period.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                  ^ source.go
+#                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.other.period.go
+#                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                  ^ source.go punctuation.other.comma.go
+#                                                                   ^ source.go
+#                                                                    ^ source.go variable.parameter.go
+#                                                                     ^ source.go
+#                                                                      ^^^ source.go keyword.map.go
+#                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                          ^^^^^^ source.go storage.type.string.go
+#                                                                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                 ^^^^ source.go keyword.function.go
+#                                                                                     ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                      ^^^^ source.go variable.parameter.go
+#                                                                                          ^ source.go
+#                                                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                                                  ^ source.go punctuation.other.period.go
+#                                                                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                                                                          ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                           ^ source.go
+#                                                                                                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                    ^ source.go punctuation.other.period.go
+#                                                                                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                            ^ source.go punctuation.other.comma.go
+#                                                                                                                             ^ source.go
+#                                                                                                                              ^^^^^^ source.go storage.type.string.go
+#                                                                                                                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                                     ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                                      ^ source.go
+#                                                                                                                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar77(
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+>	a map[string]func(args context.Context) context.Context,
+#^ source.go
+# ^ source.go variable.parameter.go
+#  ^ source.go
+#   ^^^ source.go keyword.map.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^ source.go keyword.function.go
+#                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                   ^^^^ source.go variable.parameter.go
+#                       ^ source.go
+#                        ^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.period.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                        ^ source.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.other.period.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.other.comma.go
+>	b map[string]func(args context.Context) (context.Context, string)) {
+#^ source.go
+# ^ source.go variable.parameter.go
+#  ^ source.go
+#   ^^^ source.go keyword.map.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^ source.go keyword.function.go
+#                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                   ^^^^ source.go variable.parameter.go
+#                       ^ source.go
+#                        ^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.period.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                        ^ source.go
+#                                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.other.period.go
+#                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^^^^^^ source.go storage.type.string.go
+#                                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                   ^ source.go
+#                                                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar78(a map[string]func(args context.Context) context.Context, b map[string]func(args context.Context) (context.Context, string),
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go
+#             ^^^ source.go keyword.map.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^^^^^^ source.go storage.type.string.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^^ source.go keyword.function.go
+#                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                             ^^^^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.period.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                  ^ source.go
+#                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.other.period.go
+#                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                  ^ source.go punctuation.other.comma.go
+#                                                                   ^ source.go
+#                                                                    ^ source.go variable.parameter.go
+#                                                                     ^ source.go
+#                                                                      ^^^ source.go keyword.map.go
+#                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                          ^^^^^^ source.go storage.type.string.go
+#                                                                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                 ^^^^ source.go keyword.function.go
+#                                                                                     ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                      ^^^^ source.go variable.parameter.go
+#                                                                                          ^ source.go
+#                                                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                                                  ^ source.go punctuation.other.period.go
+#                                                                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                                                                          ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                           ^ source.go
+#                                                                                                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                    ^ source.go punctuation.other.period.go
+#                                                                                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                            ^ source.go punctuation.other.comma.go
+#                                                                                                                             ^ source.go
+#                                                                                                                              ^^^^^^ source.go storage.type.string.go
+#                                                                                                                                    ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                                     ^ source.go punctuation.other.comma.go
+>	c map[string]func(args context.Context) (context.Context, string)) {
+#^ source.go
+# ^ source.go variable.parameter.go
+#  ^ source.go
+#   ^^^ source.go keyword.map.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^^^^ source.go keyword.function.go
+#                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                   ^^^^ source.go variable.parameter.go
+#                       ^ source.go
+#                        ^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.period.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                        ^ source.go
+#                                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.other.period.go
+#                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^^^^^^ source.go storage.type.string.go
+#                                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                  ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                   ^ source.go
+#                                                                    ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar79(a <-chan map[string]func(args context.Context) context.Context, b chan map[string]func(args context.Context) (context.Context, string),
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go
+#             ^^ source.go keyword.operator.channel.go
+#               ^^^^ source.go keyword.channel.go
+#                   ^ source.go
+#                    ^^^ source.go keyword.map.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^^^^^^ source.go storage.type.string.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^^^^ source.go keyword.function.go
+#                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                    ^^^^ source.go variable.parameter.go
+#                                        ^ source.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.other.period.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.definition.end.bracket.round.go
+#                                                         ^ source.go
+#                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                 ^ source.go punctuation.other.period.go
+#                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                         ^ source.go punctuation.other.comma.go
+#                                                                          ^ source.go
+#                                                                           ^ source.go variable.parameter.go
+#                                                                            ^ source.go
+#                                                                             ^^^^ source.go keyword.channel.go
+#                                                                                 ^ source.go
+#                                                                                  ^^^ source.go keyword.map.go
+#                                                                                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                      ^^^^^^ source.go storage.type.string.go
+#                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                             ^^^^ source.go keyword.function.go
+#                                                                                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                                  ^^^^ source.go variable.parameter.go
+#                                                                                                      ^ source.go
+#                                                                                                       ^^^^^^^ source.go entity.name.type.go
+#                                                                                                              ^ source.go punctuation.other.period.go
+#                                                                                                               ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                      ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                       ^ source.go
+#                                                                                                                        ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                ^ source.go punctuation.other.period.go
+#                                                                                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                        ^ source.go punctuation.other.comma.go
+#                                                                                                                                         ^ source.go
+#                                                                                                                                          ^^^^^^ source.go storage.type.string.go
+#                                                                                                                                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                                                 ^ source.go punctuation.other.comma.go
+>	c chan<- map[string]func(args context.Context) (context.Context, string)) {
+#^ source.go
+# ^ source.go variable.parameter.go
+#  ^ source.go
+#   ^^^^ source.go keyword.channel.go
+#       ^^ source.go keyword.operator.channel.go
+#         ^ source.go
+#          ^^^ source.go keyword.map.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^ source.go storage.type.string.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^^^^ source.go keyword.function.go
+#                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                          ^^^^ source.go variable.parameter.go
+#                              ^ source.go
+#                               ^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                               ^ source.go
+#                                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.other.period.go
+#                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                ^ source.go punctuation.other.comma.go
+#                                                                 ^ source.go
+#                                                                  ^^^^^^ source.go storage.type.string.go
+#                                                                        ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                         ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                          ^ source.go
+#                                                                           ^ source.go punctuation.definition.begin.bracket.curly.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
