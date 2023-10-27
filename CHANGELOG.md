@@ -2,6 +2,14 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.4.0]
+
+- Fixes struct type
+- Corrects map type with functions
+- Updates make and new built-in functions
+- Improves function declarations and function inline
+- Enhances support for generics in support functions
+
 ## [0.3.9]
 
 - Fixes type assertion in switch statements when using support functions
