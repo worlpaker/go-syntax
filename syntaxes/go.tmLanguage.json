@@ -1317,11 +1317,14 @@
 		"generic_param_types": {
 			"patterns": [
 				{
+					"include": "#functions_inline"
+				},
+				{
 					"include": "#generic_types"
 				},
 				{
 					"comment": "multiple params and types | multiple types one param",
-					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)((?:[\\[\\]\\~\\*]+)?[\\w\\.\\*]+(?:\\[(?:(?:\\[\\])?(?:[\\w\\.\\*]+)(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?(?:\\,\\s+)?)+\\])?))",
+					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)((?:[\\[\\]\\~\\*]+)?[\\w\\.\\*]+(?:\\[(?:(?:\\[\\])?(?:[\\w\\.\\*]+)(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?(?:\\,\\s+)?)+\\])?)((?:(?!\\bfunc\\b)[\\w\\.\\*]+)?))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1366,6 +1369,17 @@
 								{
 									"match": "\\}",
 									"name": "punctuation.definition.end.bracket.curly.go"
+								}
+							]
+						},
+						"3": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
 								}
 							]
 						}

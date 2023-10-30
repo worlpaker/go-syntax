@@ -2309,3 +2309,15 @@ func Bar78(a map[string]func(args context.Context) context.Context, b map[string
 func Bar79(a <-chan map[string]func(args context.Context) context.Context, b chan map[string]func(args context.Context) (context.Context, string),
 	c chan<- map[string]func(args context.Context) (context.Context, string)) {
 }
+
+// v0.4.1
+func Bar80[M ~map[K]V, K comparable, V any, C any](m M, del func(K, V) bool) {
+	for k, v := range m {
+		if del(k, v) {
+			delete(m, k)
+		}
+	}
+}
+
+func Bar81[M ~map[K]func() context.Context, K comparable, V any, C any](m M, del func(K, V) bool) {
+}
