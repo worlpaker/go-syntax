@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.4.3]
+
+- Fixes minor bugs in struct type
+
 ## [0.4.2]
 
 - Fixes multi type declaration
