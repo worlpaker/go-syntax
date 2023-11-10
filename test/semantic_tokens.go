@@ -2356,3 +2356,12 @@ func Bar83() {
 		}
 	)
 }
+
+// v0.4.3
+func Bar84() {
+	// works with no space -before formatting with gofmt
+	type Foo struct {
+		context.Context
+		foo, bar context.Context
+	}
+}
