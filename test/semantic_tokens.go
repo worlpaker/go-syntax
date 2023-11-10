@@ -2321,3 +2321,38 @@ func Bar80[M ~map[K]V, K comparable, V any, C any](m M, del func(K, V) bool) {
 
 func Bar81[M ~map[K]func() context.Context, K comparable, V any, C any](m M, del func(K, V) bool) {
 }
+
+// v0.4.2
+func Bar82() {
+	type (
+		foo      int
+		bar      context.Context
+		foox     *context.Context
+		barx     *[]context.Context
+		foobar   chan<- context.Context
+		foobarx  func() chan context.Context
+		fooxbarx func(a context.Context, b string) context.Context
+		xfoox    struct {
+			context.Context
+			a, b, c context.Context
+			d       func() chan context.Context
+		}
+	)
+}
+
+func Bar83() {
+	type (
+		foo      = int
+		bar      = context.Context
+		foox     = *context.Context
+		barx     = *[]context.Context
+		foobar   = chan<- context.Context
+		foobarx  = func() chan context.Context
+		fooxbarx = func(a context.Context, b string) context.Context
+		xfoox    = struct {
+			context.Context
+			a, b, c context.Context
+			d       func() chan context.Context
+		}
+	)
+}

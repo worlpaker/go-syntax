@@ -40,7 +40,10 @@
 					"include": "#interface_variables_types"
 				},
 				{
-					"include": "#other_type_declaration"
+					"include": "#single_type_declaration"
+				},
+				{
+					"include": "#multi_type_declaration"
 				},
 				{
 					"include": "#struct_interface_declaration"
@@ -1994,10 +1997,10 @@
 				}
 			]
 		},
-		"other_type_declaration": {
+		"single_type_declaration": {
 			"patterns": [
 				{
-					"comment": "Other type declaration",
+					"comment": "single type declaration",
 					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(\\[(?:.*)\\])?(?:\\s+)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
 					"captures": {
 						"1": {
@@ -2062,6 +2065,43 @@
 									"include": "$self"
 								}
 							]
+						}
+					}
+				}
+			]
+		},
+		"multi_type_declaration": {
+			"patterns": [
+				{
+					"comment": "single type declaration",
+					"begin": "(\\btype\\b)\\s*(\\()",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.type.go"
+						},
+						"2": {
+							"name": "punctuation.definition.begin.bracket.round.go"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#struct_variables_types"
+						},
+						{
+							"include": "#functions_inline"
+						},
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
+						}
+					],
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.round.go"
 						}
 					}
 				}
