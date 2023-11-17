@@ -2382,3 +2382,14 @@ func Bar88(a, b, c <-chan <-chan context.Context) {}
 func Bar89(<-chan <-chan context.Context) {}
 
 func Bar90(func() func() context.Context) {}
+
+func Bar91(ctx context.Context, inputsStream func() func() context.Context) {}
+
+func Bar92(
+	ctx context.Context,
+	inputsStream func() func() context.Context,
+	a string) {
+}
+
+func Bar93(inputsStream func(a context.Context) <-chan func(b chan chan context.Context) context.Context) {
+}
