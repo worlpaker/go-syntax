@@ -2399,3 +2399,12 @@ func Bar94[Input, Output func() func() context.Context](ctx context.Context, inp
 
 func Bar95[Input, Output <-chan <-chan context.Context](ctx context.Context, input <-chan Input, f func(ctx context.Context, input Input) Output) {
 }
+
+func Bar96[Input, Output func(a chan<- context.Context) func(b chan<- context.Context) context.Context](ctx context.Context, input <-chan Input, f func(ctx context.Context, input Input) Output) {
+
+}
+
+func Bar97[Input string,
+	Output func(a chan<- context.Context) func(b chan<- context.Context) context.Context](ctx context.Context, input <-chan Input, f func(ctx context.Context, input Input) Output) {
+
+}

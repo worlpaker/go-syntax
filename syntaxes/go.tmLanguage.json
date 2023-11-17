@@ -1327,7 +1327,7 @@
 				},
 				{
 					"comment": "multiple params and types | multiple types one param",
-					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)((?:(?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\~\\*]+)?[\\w\\.\\*]+(?:\\[(?:(?:\\[\\])?(?:[\\w\\.\\*]+)(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?(?:\\,\\s+)?)+\\])?)((?:(?!\\bfunc\\b)[\\w\\.\\*]+)?))",
+					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)((?:(?:[\\w\\[\\]\\.\\*]+)?(?:(?:\\bfunc\\b\\((?:[^\\)]+)?\\))(?:(?:\\s*(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:\\s*))+(?:(?:(?:[\\w\\*\\.]+)))?)|(?:(?:(?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\~\\*]+)?[\\w\\.\\*]+(?:\\[(?:(?:\\[\\])?(?:[\\w\\.\\*]+)(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?(?:\\,\\s+)?)+\\])?))((?:(?!\\bfunc\\b)[\\w\\.\\*]+)?))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1343,11 +1343,16 @@
 						"2": {
 							"patterns": [
 								{
+									"include": "#functions"
+								},
+								{
+									"include": "#functions_inline"
+								},
+								{
 									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"match": "(?:\\w+)",
-									"name": "entity.name.type.go"
+									"include": "#generic_types"
 								},
 								{
 									"match": "\\[",
@@ -1358,20 +1363,35 @@
 									"name": "punctuation.definition.end.bracket.square.go"
 								},
 								{
-									"match": "\\(",
-									"name": "punctuation.definition.begin.bracket.round.go"
-								},
-								{
-									"match": "\\)",
-									"name": "punctuation.definition.end.bracket.round.go"
-								},
-								{
 									"match": "\\{",
 									"name": "punctuation.definition.begin.bracket.curly.go"
 								},
 								{
 									"match": "\\}",
 									"name": "punctuation.definition.end.bracket.curly.go"
+								},
+								{
+									"begin": "\\(",
+									"beginCaptures": {
+										"0": {
+											"name": "punctuation.definition.begin.bracket.round.go"
+										}
+									},
+									"end": "\\)",
+									"endCaptures": {
+										"0": {
+											"name": "punctuation.definition.end.bracket.round.go"
+										}
+									},
+									"patterns": [
+										{
+											"include": "#function_param_types"
+										}
+									]
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
 								}
 							]
 						},
