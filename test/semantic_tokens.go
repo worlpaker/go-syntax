@@ -2365,3 +2365,16 @@ func Bar84() {
 		foo, bar context.Context
 	}
 }
+
+// v0.4.4
+func Bar85(ctx context.Context, inputsStream <-chan <-chan context.Context) {}
+
+func Bar86(
+	ctx context.Context,
+	inputsStream <-chan <-chan context.Context,
+	a string) {
+}
+
+func Bar87(inputsStream <-chan <-chan context.Context) {}
+
+func Bar88(a, b, c <-chan <-chan context.Context) {}
