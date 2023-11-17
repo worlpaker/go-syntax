@@ -2408,3 +2408,5 @@ func Bar97[Input string,
 	Output func(a chan<- context.Context) func(b chan<- context.Context) context.Context](ctx context.Context, input <-chan Input, f func(ctx context.Context, input Input) Output) {
 
 }
+
+func Bar98(foo func(a context.Context) func(b <-chan <-chan string) context.Context) {}
