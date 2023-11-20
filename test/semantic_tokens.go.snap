@@ -23889,3 +23889,36 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar100() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type LongFooooooooooooooooooooooo struct{}
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go
+#                                   ^^^^^^ source.go keyword.struct.go
+#                                         ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                          ^ source.go punctuation.definition.end.bracket.curly.go
+>	_ = map[LongFooooooooooooooooooooooo]LongFooooooooooooooooooooooo{}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go keyword.map.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go entity.name.type.go
+#                                                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                   ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
