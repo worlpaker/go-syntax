@@ -2410,3 +2410,15 @@ func Bar97[Input string,
 }
 
 func Bar98(foo func(a context.Context) func(b <-chan <-chan string) context.Context) {}
+
+func Bar99() {
+	// fixes 3rd party propert variables
+	// _ = &thirdparty.Config{
+	// 	Queues: map[string]thirdparty.QueueConfig{
+	// 		thirdparty.DefaultQueue: {MaxWorkers: 100},
+	// 	},
+	// }
+	_ = &sync.Cond{
+		L: nil,
+	}
+}

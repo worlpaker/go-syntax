@@ -2639,21 +2639,18 @@
 		},
 		"property_variables": {
 			"comment": "Property variables in struct",
-			"match": "(?:(\\w+)(\\:)(?!\\=))",
+			"match": "(?:((?:[\\w\\.]+)(?:\\:))(?!\\=))",
 			"captures": {
 				"1": {
 					"patterns": [
 						{
-							"include": "#keywords"
+							"include": "#type-declarations"
 						},
 						{
 							"match": "\\w+",
 							"name": "variable.other.property.go"
 						}
 					]
-				},
-				"2": {
-					"name": "punctuation.other.colon.go"
 				}
 			}
 		},

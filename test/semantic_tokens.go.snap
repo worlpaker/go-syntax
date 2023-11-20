@@ -23833,3 +23833,59 @@
 #                                                                                     ^ source.go punctuation.definition.begin.bracket.curly.go
 #                                                                                      ^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar99() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+#            ^ source.go
+#             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// fixes 3rd party propert variables
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// _ = &thirdparty.Config{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// 	Queues: map[string]thirdparty.QueueConfig{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// 		thirdparty.DefaultQueue: {MaxWorkers: 100},
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// 	},
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	_ = &sync.Cond{
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^ source.go keyword.operator.address.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.other.period.go
+#           ^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.begin.bracket.curly.go
+>		L: nil,
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go punctuation.other.colon.go
+#    ^ source.go
+#     ^^^ source.go constant.language.go
+#        ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
