@@ -2,6 +2,12 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.4.5]
+
+- Fixes bugs related to property variables from third party imports
+
+- Fixes minor bugs in map type
+
 ## [0.4.4]
 
 - Fixes minor bugs in function declaration
