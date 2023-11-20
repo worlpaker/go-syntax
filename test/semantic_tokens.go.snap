@@ -23841,10 +23841,10 @@
 #           ^ source.go punctuation.definition.end.bracket.round.go
 #            ^ source.go
 #             ^ source.go punctuation.definition.begin.bracket.curly.go
->	// fixes 3rd party propert variables
+>	// fixes 3rd party property variables
 #^ source.go
 # ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
-#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >	// _ = &thirdparty.Config{
 #^ source.go
 # ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
