@@ -2423,6 +2423,7 @@ func Bar99() {
 	}
 }
 
+// v0.4.5
 func Bar100() {
 	type LongFooooooooooooooooooooooo struct{}
 	_ = map[LongFooooooooooooooooooooooo]LongFooooooooooooooooooooooo{}
