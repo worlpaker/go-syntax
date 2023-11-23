@@ -23925,3 +23925,94 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.4.6
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar101() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type opt struct{}
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                 ^ source.go punctuation.definition.end.bracket.curly.go
+>	foo := func(a *opt, s string) {}
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^^^^ source.go keyword.function.go
+#            ^ source.go punctuation.definition.begin.bracket.round.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^ source.go keyword.operator.address.go
+#                ^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.other.comma.go
+#                    ^ source.go
+#                     ^ source.go variable.parameter.go
+#                      ^ source.go
+#                       ^^^^^^ source.go storage.type.string.go
+#                             ^ source.go punctuation.definition.end.bracket.round.go
+#                              ^ source.go
+#                               ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                ^ source.go punctuation.definition.end.bracket.curly.go
+>	bar := ""
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	foo(new(opt), bar)
+#^ source.go
+# ^^^ source.go entity.name.function.support.go
+#    ^ source.go punctuation.definition.begin.bracket.round.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^^^ source.go entity.name.type.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go punctuation.other.comma.go
+#              ^ source.go
+#               ^^^ source.go variable.other.go
+#                  ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = new(struct {
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^^^^^^ source.go keyword.struct.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.period.go
+#            ^^^^^^^ source.go entity.name.type.go
+>		b string
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go
+#    ^^^^^^ source.go storage.type.string.go
+>	})
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

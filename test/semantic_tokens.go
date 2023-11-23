@@ -2428,3 +2428,15 @@ func Bar100() {
 	type LongFooooooooooooooooooooooo struct{}
 	_ = map[LongFooooooooooooooooooooooo]LongFooooooooooooooooooooooo{}
 }
+
+// v0.4.6
+func Bar101() {
+	type opt struct{}
+	foo := func(a *opt, s string) {}
+	bar := ""
+	foo(new(opt), bar)
+	_ = new(struct {
+		a context.Context
+		b string
+	})
+}

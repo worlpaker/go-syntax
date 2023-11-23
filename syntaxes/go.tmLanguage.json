@@ -2217,32 +2217,39 @@
 				},
 				{
 					"comment": "new keyword",
-					"match": "(?:(\\bnew\\b)(\\()(.*)(\\)))",
-					"captures": {
+					"begin": "(?:(\\bnew\\b)(\\())",
+					"beginCaptures": {
 						"1": {
 							"name": "entity.name.function.support.builtin.go"
 						},
 						"2": {
 							"name": "punctuation.definition.begin.bracket.round.go"
-						},
-						"3": {
-							"patterns": [
-								{
-									"include": "#functions_inline"
-								},
-								{
-									"include": "#type-declarations"
-								},
-								{
-									"match": "\\w+",
-									"name": "entity.name.type.go"
-								}
-							]
-						},
-						"4": {
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
 							"name": "punctuation.definition.end.bracket.round.go"
 						}
-					}
+					},
+					"patterns": [
+						{
+							"include": "#struct_variables_types"
+						},
+						{
+							"include": "#functions_inline"
+						},
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
+						},
+						{
+							"include": "$self"
+						}
+					]
 				},
 				{
 					"comment": "make keyword",
