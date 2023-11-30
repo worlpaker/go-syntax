@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.4.7]
+
+- Fixes early highlighting of variables after control keywords (before formatting with gofmt)
+
 ## [0.4.6]
 
 - Fixes minor bugs in new built-in function
