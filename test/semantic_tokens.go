@@ -2440,3 +2440,38 @@ func Bar101() {
 		b string
 	})
 }
+
+// v0.4.7
+func Bar102() {
+	a := 10
+	b := 5
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+	// if a <b{
+	// }
+	// if a >b{
+	// }
+	// if a <=b{
+	// }
+	// if a >=b{
+	// }
+	// if a ==b{
+	// }
+	// if a !=b{
+	// }
+	// if a < b{
+	// }
+	// if a > b{
+	// }
+	// if a <= b{
+	// }
+	// if a >= b{
+	// }
+	// if a == b{
+	// }
+	// if a != b{
+	// }
+
+	if a > b {
+		// implement
+	}
+}

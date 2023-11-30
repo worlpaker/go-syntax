@@ -52,7 +52,7 @@
 					"include": "#type-declarations"
 				},
 				{
-					"include": "#after_control_type_variable"
+					"include": "#after_control_variables"
 				},
 				{
 					"include": "#syntax_errors"
@@ -1689,6 +1689,9 @@
 					"include": "#switch_normal_case_variables"
 				},
 				{
+					"include":"#after_control_variables"
+				},
+				{
 					"comment": "struct expression before curly bracket",
 					"match": "((?:(?:\\w+\\.)+)?\\w+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
@@ -2143,13 +2146,13 @@
 				}
 			]
 		},
-		"after_control_type_variable": {
+		"after_control_variables": {
 			"patterns": [
 				{
 					"comment": "After control variables, to not highlight as a struct/interface",
-					"match": "(?:(?<=(?:\\brange\\b)|(?:\\bswitch\\b)|(?:\\;)|(?:\\bif\\b|\\bfor\\b))\\s*(?:[[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*]+)(?:\\s)?(?=\\{))",
+					"match": "(?:(?<=\\brange\\b|\\bswitch\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=)(?:\\s*)([[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*]+)(?:\\s*)(?=\\{))",
 					"captures": {
-						"0": {
+						"1": {
 							"patterns": [
 								{
 									"include": "#type-declarations-without-brackets"
