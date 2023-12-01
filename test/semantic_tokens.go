@@ -2556,3 +2556,65 @@ func Bar106() {
 
 	_, _, _, _ = foo, bar, foo1, bar1
 }
+
+func Bar107() {
+	var foo []chan context.Context
+	var bar *[]*<-chan context.Context
+
+	var (
+		foo1 []chan context.Context
+		bar1 *[]*<-chan context.Context
+	)
+
+	_, _, _, _ = foo, bar, foo1, bar1
+
+	type foox struct{ a *[]chan context.Context }
+	type fooy struct {
+		e *[]chan context.Context
+		b []<-chan chan context.Context
+	}
+
+	_ = new([]chan context.Context)
+	_ = new(*[]chan context.Context)
+	_ = new(*[]<-chan context.Context)
+	_ = new(*[]<-chan <-chan context.Context)
+
+	_ = make([]chan context.Context, 1)
+	_ = make([]<-chan context.Context, 1)
+	_ = make([]chan<- context.Context, 1)
+	_ = make([]chan chan context.Context, 1)
+	_ = make([]<-chan *[]chan context.Context, 1)
+	_ = make([]chan<- []chan<- context.Context, 1)
+
+	a := []int{1, 2, 3}
+	no := 10
+	_ = make([]chan context.Context, 3, 5)
+	_ = make([]<-chan context.Context, len(a))
+	_ = make([]chan<- context.Context, len(a), 5)
+	_ = make([]chan chan context.Context, no)
+	_ = make([]<-chan *[]chan context.Context, len(a), no)
+	_ = make([]chan<- []chan<- context.Context, 0, len(a))
+
+}
+
+func Bar108(*[]chan<- context.Context)
+
+func Bar109(a *[]chan context.Context, b *[]<-chan context.Context)
+
+func Bar110(a *[]chan context.Context, b *[]<-chan context.Context) {}
+
+func Bar111(
+	a []chan context.Context,
+	b *[]<-chan context.Context,
+	c *[]chan<- context.Context,
+	d []chan<- chan context.Context,
+) {
+}
+
+func Bar112(
+	[]chan context.Context,
+	*[]chan context.Context,
+	*[]<-chan chan context.Context,
+) {
+
+}
