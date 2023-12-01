@@ -22,6 +22,9 @@
 					"include": "#functions_inline"
 				},
 				{
+					"include": "#functions_inline_multi_return"
+				},
+				{
 					"include": "#functions"
 				},
 				{
@@ -1450,8 +1453,8 @@
 			]
 		},
 		"functions_inline": {
-			"comment": "functions in-line return type(s)",
-			"match": "(?:(\\bfunc\\b)((?:\\((?:[^\\)]+)?\\)))(?:\\s+)(?:(?:(?:(\\((?:.*)\\))|((?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)?(?:[\\w\\.\\*]+)?(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?))))?)",
+			"comment": "functions in-line with return single type",
+			"match": "(?:(\\bfunc\\b)((?:\\((?:[^\\)]+)?\\)))(?:\\s+)(?:(?:(?:(\\((?:.*)\\))|((?:(?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\w\\.\\*]+)?(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?))))?)",
 			"captures": {
 				"1": {
 					"name": "keyword.function.go"
@@ -1527,6 +1530,67 @@
 				}
 			}
 		},
+		"functions_inline_multi_return": {
+			"comment": "functions in-line with multi return types",
+			"match": "(?:(\\bfunc\\b)(\\((?:.*)\\))(?:\\s+)(\\((?:.*)\\))(\\s+)(?=\\{))",
+			"captures": {
+				"1": {
+					"name": "keyword.function.go"
+				},
+				"2": {
+					"patterns": [
+						{
+							"begin": "\\(",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.begin.bracket.round.go"
+								}
+							},
+							"end": "\\)",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.round.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#function_param_types"
+								},
+								{
+									"include": "$self"
+								}
+							]
+						}
+					]
+				},
+				"3": {
+					"patterns": [
+						{
+							"begin": "\\(",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.begin.bracket.round.go"
+								}
+							},
+							"end": "\\)",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.round.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#function_param_types"
+								},
+								{
+									"include": "$self"
+								}
+							]
+						}
+					]
+				}
+			}
+		},
 		"functions": {
 			"comment": "Functions",
 			"begin": "(?:(\\bfunc\\b)(?=\\())",
@@ -1535,12 +1599,16 @@
 					"name": "keyword.function.go"
 				}
 			},
-			"end": "(?<=\\))",
+			"end": "(?:(?<=\\))(?:(?:\\s+)((?:(?:(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?[\\w\\.\\-\\_\\*\\[\\]]+)(?:\\s+)(?=\\{))?)",
 			"endCaptures": {
-				"0": {
+				"1": {
 					"patterns": [
 						{
 							"include": "#type-declarations"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
 						}
 					]
 				}

@@ -2480,3 +2480,67 @@ func Bar102() {
 func Bar103() {
 	_ = make(chan chan context.Context)
 }
+
+func Bar104() {
+	_ = func() chan chan context.Context {
+		return make(chan chan context.Context)
+	}
+}
+
+func Bar105() {
+	_ = func(func(context.Context)) context.Context {
+		return context.TODO()
+	}
+
+	_ = func(func(context.Context), context.Context) (context.Context, context.Context) {
+		return context.TODO(), context.Background()
+	}
+
+	_ = func(a func(context.Context), b context.Context) (foo context.Context, bar context.Context) {
+		return context.TODO(), context.Background()
+	}
+
+	_ = func(func(context.Context)) func(context.Context, func(string, context.Context), io.Writer) {
+		a := func(context.Context, func(string, context.Context), io.Writer) {}
+		return a
+	}
+
+	_ = func(context.Context, func(string, context.Context), io.Writer) chan chan context.Context {
+		return make(chan chan context.Context)
+	}
+
+	_ = func(context.Context, func(string, context.Context), io.Writer) func(foo context.Context, bar context.Context) {
+		a := func(context.Context, context.Context) {}
+		return a
+	}
+
+	_ = func(a context.Context, b func(string, context.Context), c io.Writer) func(foo context.Context, bar context.Context) {
+		d := func(context.Context, context.Context) {}
+		return d
+	}
+
+	_ = func(context.Context, func(string, context.Context), io.Writer) func(context.Context, context.Context) chan chan context.Context {
+		a := func(context.Context, context.Context) chan chan context.Context {
+			return make(chan chan context.Context)
+		}
+		return a
+	}
+
+	_ = func(a context.Context, b func(string, context.Context), c io.Writer) func(c context.Context, d context.Context) chan chan context.Context {
+		e := func(f context.Context, g context.Context) chan chan context.Context {
+			return make(chan chan context.Context)
+		}
+		return e
+	}
+	_ = func(foo func(context.Context), bar []struct{ context.Context }, foobar context.Context) context.Context {
+		return context.TODO()
+	}
+	_ = func(foo func(context.Context),
+		bar []struct {
+			a chan context.Context
+			b context.Context
+			c <-chan func() context.Context
+		}) context.Context {
+		return context.TODO()
+	}
+}
