@@ -2475,3 +2475,8 @@ func Bar102() {
 		// implement
 	}
 }
+
+// v0.4.8
+func Bar103() {
+	_ = make(chan chan context.Context)
+}
