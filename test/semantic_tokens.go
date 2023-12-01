@@ -2618,3 +2618,7 @@ func Bar112(
 ) {
 
 }
+
+func Bar113() {
+	_ = new(newGen[newstruct1, newstruct1, newstruct2])
+}

@@ -25885,3 +25885,33 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar113() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	_ = new(newGen[newstruct1, newstruct1, newstruct2])
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^^^^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^^^^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.comma.go
+#                                       ^ source.go
+#                                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                                   ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
