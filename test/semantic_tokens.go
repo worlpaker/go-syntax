@@ -2544,3 +2544,15 @@ func Bar105() {
 		return context.TODO()
 	}
 }
+
+func Bar106() {
+	var foo chan chan context.Context
+	var bar chan<- chan<- *[]context.Context
+
+	var (
+		foo1 chan chan context.Context
+		bar1 chan<- chan<- *[]context.Context
+	)
+
+	_, _, _, _ = foo, bar, foo1, bar1
+}
