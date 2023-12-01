@@ -2622,3 +2622,50 @@ func Bar112(
 func Bar113() {
 	_ = new(newGen[newstruct1, newstruct1, newstruct2])
 }
+
+func Bar114() newstructG[newstruct1]
+
+func Bar115() newstructG[newstruct1] {
+	return newstructG[newstruct1]{}
+}
+
+func Bar116() map[newstructG[newstruct1]]context.Context {
+	return make(map[newstructG[newstruct1]]context.Context)
+}
+
+func Bar117() chan chan context.Context
+
+func Bar118() []chan context.Context
+
+func Bar119() func(context.Context, func(string, context.Context), io.Writer) chan chan context.Context
+
+func Bar120(chan chan context.Context) chan chan context.Context {
+	return make(chan chan context.Context)
+}
+
+func Bar121(chan<- chan *context.Context) chan<- chan *context.Context {
+	return make(chan<- chan *context.Context)
+}
+
+func Bar122(<-chan <-chan *[]context.Context) <-chan <-chan *[]context.Context {
+	return make(<-chan <-chan *[]context.Context)
+}
+
+func Bar123(foo func() chan chan context.Context) func() chan chan context.Context {
+	a := func() chan chan context.Context {
+		return make(chan chan context.Context)
+	}
+	return a
+}
+
+func Bar124(a *[]chan context.Context) *[]chan context.Context
+
+func Bar125(a *[]chan context.Context) *[]chan context.Context {
+	return &[]chan context.Context{}
+}
+
+func Bar126(a *[]chan context.Context) (*[]chan context.Context, []<-chan context.Context)
+
+func Bar127(a *[]chan context.Context) (foo *[]chan context.Context, bar *[]<-chan context.Context) {
+	return &[]chan context.Context{}, nil
+}
