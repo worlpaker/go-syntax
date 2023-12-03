@@ -26488,3 +26488,92 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar129() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type foo0123456789 context.Context
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go
+#                    ^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.period.go
+#                            ^^^^^^^ source.go entity.name.type.go
+>	var foo **context.Context // all operators should be keyword.operator.address.go
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^ source.go keyword.operator.address.go
+#           ^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^ source.go entity.name.type.go
+#                          ^ source.go
+#                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	var bar **foo0123456789   // all operators should be keyword.operator.address.go
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^ source.go keyword.operator.address.go
+#           ^^^^^^^^^^^^^ source.go entity.name.type.go
+#                        ^^^ source.go
+#                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	fmt.Print(1*2 + 3)        // should be keyword.operator.arithmetic.go
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^ source.go punctuation.other.period.go
+#     ^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go constant.numeric.decimal.go
+#            ^ source.go keyword.operator.arithmetic.go
+#             ^ source.go constant.numeric.decimal.go
+#              ^ source.go
+#               ^ source.go keyword.operator.arithmetic.go
+#                ^ source.go
+#                 ^ source.go constant.numeric.decimal.go
+#                  ^ source.go punctuation.definition.end.bracket.round.go
+#                   ^^^^^^^^ source.go
+#                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	fmt.Print(4 * 5)          // should be keyword.operator.arithmetic.go
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^ source.go punctuation.other.period.go
+#     ^^^^^ source.go entity.name.function.support.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go constant.numeric.decimal.go
+#            ^ source.go
+#             ^ source.go keyword.operator.arithmetic.go
+#              ^ source.go
+#               ^ source.go constant.numeric.decimal.go
+#                ^ source.go punctuation.definition.end.bracket.round.go
+#                 ^^^^^^^^^^ source.go
+#                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	_, _ = foo, bar
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^^^ source.go variable.other.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

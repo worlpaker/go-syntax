@@ -2674,3 +2674,12 @@ func Bar127(a *[]chan context.Context) (foo *[]chan context.Context, bar *[]<-ch
 func Bar128() {
 	var _ <-chan <-chan chan<- <-chan <-chan context.Context
 }
+
+func Bar129() {
+	type foo0123456789 context.Context
+	var foo **context.Context // all operators should be keyword.operator.address.go
+	var bar **foo0123456789   // all operators should be keyword.operator.address.go
+	fmt.Print(1*2 + 3)        // should be keyword.operator.arithmetic.go
+	fmt.Print(4 * 5)          // should be keyword.operator.arithmetic.go
+	_, _ = foo, bar
+}
