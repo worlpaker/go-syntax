@@ -2,6 +2,14 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.4.8]
+
+- Fixes function declaration
+- Fixes generic types in the new built-in function
+- Fixes chan in make built-in function, struct type fields, variables, and function parameter types
+- Enhances function in-line with support for multi return types
+- Improves chan with slices for types
+
 ## [0.4.7]
 
 - Fixes early highlighting of variables after control keywords (before formatting with gofmt)
