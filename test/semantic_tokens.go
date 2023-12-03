@@ -2683,3 +2683,25 @@ func Bar129() {
 	fmt.Print(4 * 5)          // should be keyword.operator.arithmetic.go
 	_, _ = foo, bar
 }
+
+// # This is a heading
+//
+//   - A bullet.
+//
+//     Another paragraph of that first bullet.
+//
+//   - A second bullet.
+//
+// Package json implements encoding and decoding of JSON as defined in
+// [RFC 7159]. The mapping between JSON and Go values is described
+// in the documentation for the Marshal and Unmarshal functions.
+//
+// For an introduction to this package, see the article
+// “[JSON and Go].”
+//
+// [RFC 7159]: https://tools.ietf.org/html/rfc7159
+// [JSON and Go]: https://golang.org/doc/articles/json_and_go.html
+func Bar130() {
+	// example for go/doc: headings, lists, and links in Go doc comments
+	// https://github.com/golang/proposal/blob/master/design/51082-godocfmt.md
+}

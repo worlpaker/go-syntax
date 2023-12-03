@@ -26577,3 +26577,67 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// # This is a heading
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>//
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+>//   - A bullet.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>//
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+>//     Another paragraph of that first bullet.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>//
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+>//   - A second bullet.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>//
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+>// Package json implements encoding and decoding of JSON as defined in
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// [RFC 7159]. The mapping between JSON and Go values is described
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// in the documentation for the Marshal and Unmarshal functions.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>//
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+>// For an introduction to this package, see the article
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// “[JSON and Go].”
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>//
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+>// [RFC 7159]: https://tools.ietf.org/html/rfc7159
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// [JSON and Go]: https://golang.org/doc/articles/json_and_go.html
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>func Bar130() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// example for go/doc: headings, lists, and links in Go doc comments
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// https://github.com/golang/proposal/blob/master/design/51082-godocfmt.md
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
