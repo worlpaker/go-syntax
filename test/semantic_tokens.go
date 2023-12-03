@@ -2705,3 +2705,13 @@ func Bar130() {
 	// example for go/doc: headings, lists, and links in Go doc comments
 	// https://github.com/golang/proposal/blob/master/design/51082-godocfmt.md
 }
+
+func Bar131() {
+	// all values should be variable.other.assignment.go
+	const (
+		val1 = iota
+		val2
+		val3
+		val4
+	)
+}
