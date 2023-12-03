@@ -21,7 +21,6 @@ All notable changes to the "go-syntax" extension will be documented in this file
 ## [0.4.5]
 
 - Fixes bugs related to property variables from third party imports
-
 - Fixes minor bugs in map type
 
 ## [0.4.4]
@@ -138,11 +137,8 @@ All notable changes to the "go-syntax" extension will be documented in this file
 ## [0.2.29]
 
 - Fixes minor bugs related to variable types within functions
-
 - Enhances generic support in functions
-
 - Improves type support for the built-in make function
-
 - Introduces new built-in functions: min, max, and clear
 
 ## [0.2.28]
@@ -184,11 +180,8 @@ Starting from now, the extension will provide significantly enhanced support for
 Details:
 
 - Variable parameters in functions and generics will be scoped as "variable.parameter.go"
-
 - Variable names in structs and struct initialization will be scoped as "variable.other.property.go"
-
 - Variable names in imports will be scoped as "variable.other.import.go"
-
 - Loop label names will be scoped as "variable.other.label.go"
 
 ## [0.2.19]
@@ -196,13 +189,9 @@ Details:
 Add support for:
 
 - Variable parameters in functions
-
 - Variable parameters in generics
-
 - Variable names in struct
-
 - Variable names in struct initialization
-
 - Label loop names
 
 ## [0.2.18]
@@ -232,7 +221,6 @@ Add support for:
 ## [0.2.12]
 
 - Adds generic support to support functions
-
 - Fixes small bugs (interface types, type assertions)
 
 ## [0.2.11]
