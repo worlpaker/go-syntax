@@ -26450,3 +26450,41 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.4.9
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar128() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	var _ <-chan <-chan chan<- <-chan <-chan context.Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.channel.go
+#         ^^^^ source.go keyword.channel.go
+#             ^ source.go
+#              ^^ source.go keyword.operator.channel.go
+#                ^^^^ source.go keyword.channel.go
+#                    ^ source.go
+#                     ^^^^ source.go keyword.channel.go
+#                         ^^ source.go keyword.operator.channel.go
+#                           ^ source.go
+#                            ^^ source.go keyword.operator.channel.go
+#                              ^^^^ source.go keyword.channel.go
+#                                  ^ source.go
+#                                   ^^ source.go keyword.operator.channel.go
+#                                     ^^^^ source.go keyword.channel.go
+#                                         ^ source.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.other.period.go
+#                                                  ^^^^^^^ source.go entity.name.type.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

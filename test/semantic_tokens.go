@@ -2669,3 +2669,8 @@ func Bar126(a *[]chan context.Context) (*[]chan context.Context, []<-chan contex
 func Bar127(a *[]chan context.Context) (foo *[]chan context.Context, bar *[]<-chan context.Context) {
 	return &[]chan context.Context{}, nil
 }
+
+// v0.4.9
+func Bar128() {
+	var _ <-chan <-chan chan<- <-chan <-chan context.Context
+}
