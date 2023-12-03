@@ -2715,3 +2715,28 @@ func Bar131() {
 		val4
 	)
 }
+
+func Bar132() {
+	// import declarations with semicolon between -before formatting with gofmt
+
+	// // example-1
+	// package main
+	// import (foo "foobar/a"; bar "foobar/b")
+
+	// func main(){
+	// 	foo.Hello()
+	// 	bar.Hi()
+	// }
+
+	// // example-2
+	// package main
+	// import ("foo";"bar")
+
+	// // example-3
+	// package main
+	// import "foo"; import "bar"
+
+	// // example-4
+	// package main
+	// import foo "foobar/a"; import bar "foobar/b"
+}

@@ -957,10 +957,18 @@
 			"comment": "import package(s)",
 			"patterns": [
 				{
-					"match": "((?!\\s+\")[^\\s]*)?\\s*((\")([^\"]*)(\"))",
+					"match": "(\\s*[\\w\\.]+)?\\s*((\")([^\"]*)(\"))",
 					"captures": {
 						"1": {
-							"name": "variable.other.import.go"
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "variable.other.import.go"
+								}
+							]
 						},
 						"2": {
 							"name": "string.quoted.double.go"
