@@ -26915,3 +26915,681 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar134(foo []struct{ context.Context }) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^^^ source.go keyword.struct.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+#                         ^ source.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.period.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go
+#                                          ^ source.go punctuation.definition.end.bracket.curly.go
+#                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                            ^ source.go
+#                                             ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar135(foo *[]struct{ context.Context }) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go keyword.operator.arithmetic.go
+#                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                  ^ source.go punctuation.definition.end.bracket.square.go
+#                   ^^^^^^ source.go keyword.struct.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+#                          ^ source.go
+#                           ^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.other.period.go
+#                                   ^^^^^^^ source.go entity.name.type.go
+#                                          ^ source.go
+#                                           ^ source.go punctuation.definition.end.bracket.curly.go
+#                                            ^ source.go punctuation.definition.end.bracket.round.go
+#                                             ^ source.go
+#                                              ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar136(foo chan *[]struct{ context.Context }) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^^^ source.go keyword.channel.go
+#                    ^ source.go
+#                     ^ source.go keyword.operator.arithmetic.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^^^^ source.go keyword.struct.go
+#                              ^ source.go punctuation.definition.begin.bracket.curly.go
+#                               ^ source.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.other.period.go
+#                                        ^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go
+#                                                ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                  ^ source.go
+#                                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar137(foo <-chan *[]struct{ context.Context }) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^ source.go keyword.operator.channel.go
+#                  ^^^^ source.go keyword.channel.go
+#                      ^ source.go
+#                       ^ source.go keyword.operator.arithmetic.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^^^^^^ source.go keyword.struct.go
+#                                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                 ^ source.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.period.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go
+#                                                  ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                   ^ source.go punctuation.definition.end.bracket.round.go
+#                                                    ^ source.go
+#                                                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar138(foo []chan<- chan *[]struct{ context.Context }) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^ source.go keyword.channel.go
+#                      ^^ source.go keyword.operator.channel.go
+#                        ^ source.go
+#                         ^^^^ source.go keyword.channel.go
+#                             ^ source.go
+#                              ^ source.go keyword.operator.arithmetic.go
+#                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^^^^^^ source.go keyword.struct.go
+#                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                        ^ source.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.other.period.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go
+#                                                         ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                          ^ source.go punctuation.definition.end.bracket.round.go
+#                                                           ^ source.go
+#                                                            ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar139(foo []context.Context, bar Context, foobar []struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^ source.go variable.parameter.go
+#                                      ^ source.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^^^^^^ source.go variable.parameter.go
+#                                                      ^ source.go
+#                                                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                         ^^^^^^ source.go keyword.struct.go
+#                                                               ^ source.go
+#                                                                ^ source.go punctuation.definition.begin.bracket.curly.go
+>	A       context.Context `json:"example"`  // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                         ^^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	B       context.Context `json:"example2"` // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                          ^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	c, d, e context.Context
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.property.go
+#        ^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar140(foo []context.Context, bar Context, foobar *[]struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^ source.go variable.parameter.go
+#                                      ^ source.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^^^^^^ source.go variable.parameter.go
+#                                                      ^ source.go
+#                                                       ^ source.go keyword.operator.arithmetic.go
+#                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^^^^^^ source.go keyword.struct.go
+#                                                                ^ source.go
+#                                                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>	A       context.Context `json:"example"`  // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                         ^^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	B       context.Context `json:"example2"` // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                          ^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	c, d, e context.Context
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.property.go
+#        ^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar141(foo []context.Context, bar Context, foobar chan<- chan *[]struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^ source.go variable.parameter.go
+#                                      ^ source.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^^^^^^ source.go variable.parameter.go
+#                                                      ^ source.go
+#                                                       ^^^^ source.go keyword.channel.go
+#                                                           ^^ source.go keyword.operator.channel.go
+#                                                             ^ source.go
+#                                                              ^^^^ source.go keyword.channel.go
+#                                                                  ^ source.go
+#                                                                   ^ source.go keyword.operator.arithmetic.go
+#                                                                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                      ^^^^^^ source.go keyword.struct.go
+#                                                                            ^ source.go
+#                                                                             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	A       context.Context `json:"example"`  // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                         ^^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	B       context.Context `json:"example2"` // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                          ^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	c, d, e context.Context
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.property.go
+#        ^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar142(foo []context.Context, bar Context, foobar *[]chan<- chan *[]struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^ source.go punctuation.definition.end.bracket.square.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^^^ source.go variable.parameter.go
+#                                      ^ source.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^^^^^^ source.go variable.parameter.go
+#                                                      ^ source.go
+#                                                       ^ source.go keyword.operator.arithmetic.go
+#                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                          ^^^^ source.go keyword.channel.go
+#                                                              ^^ source.go keyword.operator.channel.go
+#                                                                ^ source.go
+#                                                                 ^^^^ source.go keyword.channel.go
+#                                                                     ^ source.go
+#                                                                      ^ source.go keyword.operator.arithmetic.go
+#                                                                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                         ^^^^^^ source.go keyword.struct.go
+#                                                                               ^ source.go
+#                                                                                ^ source.go punctuation.definition.begin.bracket.curly.go
+>	A       context.Context `json:"example"`  // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                         ^^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	B       context.Context `json:"example2"` // comment
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^^^^^^^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                          ^ source.go
+#                                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                             ^^^^^^^^ source.go comment.line.double-slash.go
+>	c, d, e context.Context
+#^ source.go
+# ^ source.go variable.other.property.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.property.go
+#        ^ source.go
+#         ^^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^^ source.go entity.name.type.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar143(foo chan<- *[]context.Context, bar func(a, b context.Context) context.Context, foobar []struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^^^ source.go keyword.channel.go
+#                    ^^ source.go keyword.operator.channel.go
+#                      ^ source.go
+#                       ^ source.go keyword.operator.arithmetic.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.period.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.comma.go
+#                                          ^ source.go
+#                                           ^^^ source.go variable.parameter.go
+#                                              ^ source.go
+#                                               ^^^^ source.go keyword.function.go
+#                                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                    ^ source.go variable.parameter.go
+#                                                     ^ source.go punctuation.other.comma.go
+#                                                      ^ source.go
+#                                                       ^ source.go variable.parameter.go
+#                                                        ^ source.go
+#                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                ^ source.go punctuation.other.period.go
+#                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                         ^ source.go
+#                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                         ^ source.go punctuation.other.comma.go
+#                                                                                          ^ source.go
+#                                                                                           ^^^^^^ source.go variable.parameter.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                    ^^^^^^ source.go keyword.struct.go
+#                                                                                                          ^ source.go
+#                                                                                                           ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Foo15
+#^ source.go
+# ^^^^^ source.go entity.name.type.go
+>	Foo17
+#^ source.go
+# ^^^^^ source.go entity.name.type.go
+>	Foo       Foo16
+#^ source.go
+# ^^^ source.go variable.other.property.go
+#    ^^^^^^^ source.go
+#           ^^^^^ source.go entity.name.type.go
+>	FFoo, Bar string
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^ source.go variable.other.property.go
+#          ^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar144(foo chan<- *[]context.Context, bar func(a, b context.Context) context.Context, foobar chan<- *[]struct {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^^^ source.go keyword.channel.go
+#                    ^^ source.go keyword.operator.channel.go
+#                      ^ source.go
+#                       ^ source.go keyword.operator.arithmetic.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.other.period.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.comma.go
+#                                          ^ source.go
+#                                           ^^^ source.go variable.parameter.go
+#                                              ^ source.go
+#                                               ^^^^ source.go keyword.function.go
+#                                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                    ^ source.go variable.parameter.go
+#                                                     ^ source.go punctuation.other.comma.go
+#                                                      ^ source.go
+#                                                       ^ source.go variable.parameter.go
+#                                                        ^ source.go
+#                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                ^ source.go punctuation.other.period.go
+#                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                        ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                         ^ source.go
+#                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                         ^ source.go punctuation.other.comma.go
+#                                                                                          ^ source.go
+#                                                                                           ^^^^^^ source.go variable.parameter.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^^^^ source.go keyword.channel.go
+#                                                                                                      ^^ source.go keyword.operator.channel.go
+#                                                                                                        ^ source.go
+#                                                                                                         ^ source.go keyword.operator.arithmetic.go
+#                                                                                                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^^^^^^ source.go keyword.struct.go
+#                                                                                                                  ^ source.go
+#                                                                                                                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Foo15
+#^ source.go
+# ^^^^^ source.go entity.name.type.go
+>	Foo17
+#^ source.go
+# ^^^^^ source.go entity.name.type.go
+>	Foo       Foo16
+#^ source.go
+# ^^^ source.go variable.other.property.go
+#    ^^^^^^^ source.go
+#           ^^^^^ source.go entity.name.type.go
+>	FFoo, Bar string
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^ source.go variable.other.property.go
+#          ^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+>}) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go
+#   ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar145(
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+>	foo chan<- *[]context.Context,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^ source.go keyword.channel.go
+#         ^^ source.go keyword.operator.channel.go
+#           ^ source.go
+#            ^ source.go keyword.operator.arithmetic.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^ source.go punctuation.definition.end.bracket.square.go
+#               ^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.other.period.go
+#                       ^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.other.comma.go
+>	bar func(a, b context.Context) context.Context,
+#^ source.go
+# ^^^ source.go variable.parameter.go
+#    ^ source.go
+#     ^^^^ source.go keyword.function.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.other.period.go
+#                       ^^^^^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.definition.end.bracket.round.go
+#                               ^ source.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.other.period.go
+#                                        ^^^^^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.other.comma.go
+>	foobar chan<- chan *[]struct {
+#^ source.go
+# ^^^^^^ source.go variable.parameter.go
+#       ^ source.go
+#        ^^^^ source.go keyword.channel.go
+#            ^^ source.go keyword.operator.channel.go
+#              ^ source.go
+#               ^^^^ source.go keyword.channel.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^^^^^^ source.go keyword.struct.go
+#                             ^ source.go
+#                              ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Foo15
+#^^ source.go
+#  ^^^^^ source.go entity.name.type.go
+>		Foo17
+#^^ source.go
+#  ^^^^^ source.go entity.name.type.go
+>		Foo       Foo16
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^^^^^^^ source.go
+#            ^^^^^ source.go entity.name.type.go
+>		FFoo, Bar string
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.comma.go
+#       ^ source.go
+#        ^^^ source.go variable.other.property.go
+#           ^ source.go
+#            ^^^^^^ source.go storage.type.string.go
+>	}) {
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

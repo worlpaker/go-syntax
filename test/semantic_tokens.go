@@ -2762,3 +2762,76 @@ func Bar133() {
 		c, d, e Context /* comment */
 	}
 }
+
+func Bar134(foo []struct{ context.Context }) {
+}
+
+func Bar135(foo *[]struct{ context.Context }) {
+}
+
+func Bar136(foo chan *[]struct{ context.Context }) {
+}
+
+func Bar137(foo <-chan *[]struct{ context.Context }) {
+}
+
+func Bar138(foo []chan<- chan *[]struct{ context.Context }) {
+}
+
+func Bar139(foo []context.Context, bar Context, foobar []struct {
+	A       context.Context `json:"example"`  // comment
+	B       context.Context `json:"example2"` // comment
+	c, d, e context.Context
+}) {
+}
+
+func Bar140(foo []context.Context, bar Context, foobar *[]struct {
+	A       context.Context `json:"example"`  // comment
+	B       context.Context `json:"example2"` // comment
+	c, d, e context.Context
+}) {
+}
+
+func Bar141(foo []context.Context, bar Context, foobar chan<- chan *[]struct {
+	A       context.Context `json:"example"`  // comment
+	B       context.Context `json:"example2"` // comment
+	c, d, e context.Context
+}) {
+}
+
+func Bar142(foo []context.Context, bar Context, foobar *[]chan<- chan *[]struct {
+	A       context.Context `json:"example"`  // comment
+	B       context.Context `json:"example2"` // comment
+	c, d, e context.Context
+}) {
+}
+
+func Bar143(foo chan<- *[]context.Context, bar func(a, b context.Context) context.Context, foobar []struct {
+	Foo15
+	Foo17
+	Foo       Foo16
+	FFoo, Bar string
+}) {
+
+}
+
+func Bar144(foo chan<- *[]context.Context, bar func(a, b context.Context) context.Context, foobar chan<- *[]struct {
+	Foo15
+	Foo17
+	Foo       Foo16
+	FFoo, Bar string
+}) {
+
+}
+
+func Bar145(
+	foo chan<- *[]context.Context,
+	bar func(a, b context.Context) context.Context,
+	foobar chan<- chan *[]struct {
+		Foo15
+		Foo17
+		Foo       Foo16
+		FFoo, Bar string
+	}) {
+
+}

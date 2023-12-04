@@ -1258,12 +1258,12 @@
 				},
 				{
 					"comment": "manual struct types declaration",
-					"match": "((?:(?:\\w+\\,\\s+)+)?\\w+)\\s+(?=(?:\\[\\])?\\bstruct\\b\\s*\\{)",
+					"match": "((?:(?:\\w+\\,\\s+)+)?\\w+)\\s+(?=(?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\*]+)?\\bstruct\\b\\s*\\{)",
 					"captures": {
 						"1": {
 							"patterns": [
 								{
-									"include": "#delimiters"
+									"include": "#type-declarations"
 								},
 								{
 									"match": "\\w+",
