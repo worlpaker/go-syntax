@@ -2982,3 +2982,30 @@ func Bar161() {
 
 	_ = myTypeVar
 }
+
+func Bar162() {
+	str := "foo"
+	str1, str2, str3 := "foo", "bar", "foobar"
+	
+	switch str {
+	case str1, str2: // comment
+
+	case str3: /* comment */
+
+	}
+
+	switch {
+	case str == str1: // comment
+
+	case str > str2: // comment
+	}
+
+	switch str {
+	case str1:
+		// Code to execute
+	case str2:
+		// Code to execute
+	case str3:
+		// Code to execute
+	}
+}

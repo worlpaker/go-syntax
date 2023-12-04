@@ -28786,3 +28786,160 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar162() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	str := "foo"
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#         ^^^ source.go string.quoted.double.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	str1, str2, str3 := "foo", "bar", "foobar"
+#^ source.go
+# ^^^^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^^ source.go variable.other.assignment.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^^ source.go variable.other.assignment.go
+#                 ^ source.go
+#                  ^^ source.go keyword.operator.assignment.go
+#                    ^ source.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                      ^^^ source.go string.quoted.double.go
+#                         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                             ^^^ source.go string.quoted.double.go
+#                                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                 ^ source.go punctuation.other.comma.go
+#                                  ^ source.go
+#                                   ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                    ^^^^^^ source.go string.quoted.double.go
+#                                          ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	
+>	switch str {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^ source.go variable.other.go
+#           ^ source.go
+#            ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case str1, str2: // comment
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^ source.go variable.other.go
+#          ^ source.go punctuation.other.comma.go
+#           ^ source.go
+#            ^^^^ source.go variable.other.go
+#                ^ source.go punctuation.other.colon.go
+#                 ^ source.go
+#                  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                    ^^^^^^^^ source.go comment.line.double-slash.go
+>
+>	case str3: /* comment */
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^ source.go variable.other.go
+#          ^ source.go punctuation.other.colon.go
+#           ^ source.go
+#            ^^ source.go comment.block.go punctuation.definition.comment.go
+#              ^^^^^^^^^ source.go comment.block.go
+#                       ^^ source.go comment.block.go punctuation.definition.comment.go
+>
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	switch {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case str == str1: // comment
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^ source.go variable.other.go
+#         ^ source.go
+#          ^^ source.go keyword.operator.comparison.go
+#            ^ source.go
+#             ^^^^ source.go variable.other.go
+#                 ^ source.go punctuation.other.colon.go
+#                  ^ source.go
+#                   ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                     ^^^^^^^^ source.go comment.line.double-slash.go
+>
+>	case str > str2: // comment
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^ source.go variable.other.go
+#         ^ source.go
+#          ^ source.go keyword.operator.comparison.go
+#           ^ source.go
+#            ^^^^ source.go variable.other.go
+#                ^ source.go punctuation.other.colon.go
+#                 ^ source.go
+#                  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                    ^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	switch str {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^ source.go variable.other.go
+#           ^ source.go
+#            ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case str1:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^ source.go variable.other.go
+#          ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	case str2:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^ source.go variable.other.go
+#          ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	case str3:
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^ source.go variable.other.go
+#          ^ source.go punctuation.other.colon.go
+>		// Code to execute
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

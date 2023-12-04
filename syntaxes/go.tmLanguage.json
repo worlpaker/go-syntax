@@ -2736,7 +2736,7 @@
 		},
 		"switch_normal_case_variables": {
 			"comment": "variables after case control keyword in switch expression",
-			"match": "(?:^\\s*(\\bcase\\b))(?:\\s+)([\\w\\.\\,\\*\\=\\<\\>\\!\\s]+)(:)$",
+			"match": "(?:(?:^\\s*(\\bcase\\b))(?:\\s+)([\\s\\S]+(?:\\:)\\s*(?:\/(?:\/|\\*).*)?)$)",
 			"captures": {
 				"1": {
 					"name": "keyword.control.go"
@@ -2751,9 +2751,6 @@
 							"name": "variable.other.go"
 						}
 					]
-				},
-				"3": {
-					"name": "punctuation.other.colon.go"
 				}
 			}
 		},
