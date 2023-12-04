@@ -2740,3 +2740,25 @@ func Bar132() {
 	// package main
 	// import foo "foobar/a"; import bar "foobar/b"
 }
+
+func Bar133() {
+	type foo struct {
+		Context `json:"example"`
+		x       context.Context
+	}
+	type bar struct {
+		Context `json:"example"` // comment
+		x       context.Context
+	}
+	type foobar struct {
+		Context `json:"example"` /* comment */
+		x       context.Context
+	}
+
+	// better property variables highlighting -before formatting with gofmt
+	type foobarx struct {
+		A       Context `json:"example"`  // comment
+		B       Context `json:"example2"` // comment
+		c, d, e Context /* comment */
+	}
+}

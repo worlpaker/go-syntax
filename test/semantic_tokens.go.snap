@@ -26763,3 +26763,155 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar133() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type foo struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Context `json:"example"`
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#           ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		x       context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^^^^^ source.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	type bar struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Context `json:"example"` // comment
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#           ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                          ^ source.go
+#                           ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                             ^^^^^^^^ source.go comment.line.double-slash.go
+>		x       context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^^^^^ source.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	type foobar struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^ source.go entity.name.type.go
+#            ^ source.go
+#             ^^^^^^ source.go keyword.struct.go
+#                   ^ source.go
+#                    ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Context `json:"example"` /* comment */
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#           ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                          ^ source.go
+#                           ^^ source.go comment.block.go punctuation.definition.comment.go
+#                             ^^^^^^^^^ source.go comment.block.go
+#                                      ^^ source.go comment.block.go punctuation.definition.comment.go
+>		x       context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^^^^^ source.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	// better property variables highlighting -before formatting with gofmt
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type foobarx struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go
+#              ^^^^^^ source.go keyword.struct.go
+#                    ^ source.go
+#                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>		A       Context `json:"example"`  // comment
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^^^^^ source.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go
+#                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                   ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                 ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                  ^^ source.go
+#                                    ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                      ^^^^^^^^ source.go comment.line.double-slash.go
+>		B       Context `json:"example2"` // comment
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^^^^^ source.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go
+#                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                   ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                                   ^ source.go
+#                                    ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                      ^^^^^^^^ source.go comment.line.double-slash.go
+>		c, d, e Context /* comment */
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.comma.go
+#       ^ source.go
+#        ^ source.go variable.other.property.go
+#         ^ source.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go
+#                  ^^ source.go comment.block.go punctuation.definition.comment.go
+#                    ^^^^^^^^^ source.go comment.block.go
+#                             ^^ source.go comment.block.go punctuation.definition.comment.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
