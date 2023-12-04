@@ -2123,7 +2123,7 @@
 			"patterns": [
 				{
 					"comment": "single type declaration",
-					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(\\[(?:.*)\\])?(?:\\s+)((?!\\bstruct\\b|\\binterface\\b)([\\s\\S]+)))",
+					"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(\\[(?:.*)\\])?(?:\\s+)((?!(?:[\\[\\]\\*]+)?(?:\\bstruct\\b|\\binterface\\b))([\\s\\S]+)))",
 					"captures": {
 						"1": {
 							"name": "keyword.type.go"

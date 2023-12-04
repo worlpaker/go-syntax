@@ -2878,3 +2878,48 @@ func Bar155() []*context.Context {
 func Bar156() *[]context.Context {
 	return &[]context.Context{}
 }
+
+func Bar157() {
+	type foo *[]struct {
+		a string
+		b context.Context
+	}
+
+	var c foo
+
+	c = &[]struct {
+		a string
+		b context.Context
+	}{
+		{a: "foo", b: context.TODO()},
+		{a: "bar", b: context.TODO()},
+	}
+
+	for _, item := range *c {
+		_ = fmt.Sprintf("f: %s, bar: %v\n", item.a, item.b)
+	}
+}
+
+func Bar158() {
+	type foo []struct {
+		a string
+		b context.Context
+	}
+
+	c := foo{{a: "foo", b: context.TODO()}, {a: "bar", b: context.TODO()}}
+	_ = fmt.Sprintln(c)
+}
+
+func Bar159() {
+	type foo []interface {
+		foox(a, b, c context.Context) context.Context
+	}
+
+	type bar []interface {
+		context.Context
+	}
+
+	type foobar *[]interface {
+		context.Context
+	}
+}
