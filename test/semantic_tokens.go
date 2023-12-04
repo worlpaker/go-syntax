@@ -2972,3 +2972,13 @@ func Bar160() {
 
 	_, _, _, _, _, _, _ = foo, bar, foo1, bar1, foox, barx, bary
 }
+
+func Bar161() {
+	type MyType int
+
+	var myInt int = 42
+
+	myTypeVar := (MyType)(myInt)
+
+	_ = myTypeVar
+}

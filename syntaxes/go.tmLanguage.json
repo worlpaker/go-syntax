@@ -16,6 +16,23 @@
 					"include": "#import"
 				},
 				{
+					"include": "#syntax_errors"
+				},
+				{
+					"include": "#group-functions"
+				},
+				{
+					"include": "#group-types"
+				},
+				{
+					"include": "#group-variables"
+				}
+			]
+		},
+		"group-functions": {
+			"comment": "all statements related to functions",
+			"patterns": [
+				{
 					"include": "#function_declaration"
 				},
 				{
@@ -32,7 +49,12 @@
 				},
 				{
 					"include": "#support_functions"
-				},
+				}
+			]
+		},
+		"group-types": {
+			"comment": "all statements related to types",
+			"patterns": [
 				{
 					"include": "#other_struct_interface_expressions"
 				},
@@ -52,16 +74,21 @@
 					"include": "#struct_interface_declaration"
 				},
 				{
-					"include": "#type-declarations"
-				},
-				{
-					"include": "#after_control_variables"
-				},
-				{
-					"include": "#syntax_errors"
+					"include": "#double_parentheses_types"
 				},
 				{
 					"include": "#switch_types"
+				},
+				{
+					"include": "#type-declarations"
+				}
+			]
+		},
+		"group-variables": {
+			"comment": "all statements related to variables",
+			"patterns": [
+				{
+					"include": "#after_control_variables"
 				},
 				{
 					"include": "#var_const_single_assignment"
@@ -81,6 +108,7 @@
 			]
 		},
 		"type-declarations": {
+			"comment": "includes all type declarations",
 			"patterns": [
 				{
 					"include": "#language_constants"
@@ -124,6 +152,7 @@
 			]
 		},
 		"type-declarations-without-brackets": {
+			"comment": "includes all type declarations without brackets (in some cases, brackets need to be captured manually)",
 			"patterns": [
 				{
 					"include": "#language_constants"
@@ -1756,9 +1785,6 @@
 		"other_struct_interface_expressions": {
 			"patterns": [
 				{
-					"include": "#brackets"
-				},
-				{
 					"include": "#storage_types"
 				},
 				{
@@ -2762,6 +2788,29 @@
 							"name": "variable.other.label.go"
 						}
 					]
+				}
+			}
+		},
+		"double_parentheses_types": {
+			"comment": "double parentheses types",
+			"match": "(?:(?:(\\()([^\\)]+)(\\)))(?=\\((?:[\\w\\.\\*\\&]+)\\)))",
+			"captures": {
+				"1": {
+					"name": "punctuation.definition.begin.bracket.round.go"
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "entity.name.type.go"
+						}
+					]
+				},
+				"3": {
+					"name": "punctuation.definition.end.bracket.round.go"
 				}
 			}
 		},

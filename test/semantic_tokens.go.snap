@@ -28735,3 +28735,54 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar161() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type MyType int
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^ source.go entity.name.type.go
+#            ^ source.go
+#             ^^^ source.go storage.type.numeric.go
+>
+>	var myInt int = 42
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^^^ source.go variable.other.assignment.go
+#          ^ source.go
+#           ^^^ source.go storage.type.numeric.go
+#              ^ source.go
+#               ^ source.go keyword.operator.assignment.go
+#                ^ source.go
+#                 ^^ source.go constant.numeric.decimal.go
+>
+>	myTypeVar := (MyType)(myInt)
+#^ source.go
+# ^^^^^^^^^ source.go variable.other.assignment.go
+#          ^ source.go
+#           ^^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.round.go
+#               ^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.end.bracket.round.go
+#                      ^ source.go punctuation.definition.begin.bracket.round.go
+#                       ^^^^^ source.go variable.other.go
+#                            ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	_ = myTypeVar
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^^^^^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
