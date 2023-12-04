@@ -2835,3 +2835,46 @@ func Bar145(
 	}) {
 
 }
+
+func Bar146() {
+	type foo1 *[]context.Context
+	type foo2 chan *[]context.Context
+	type foo3 *chan context.Context
+	type foo4 chan<- *[]context.Context
+	type foo5 chan<- *chan<- *[]context.Context
+
+	var _ *[]*<-chan context.Context
+	var _ *<-chan context.Context
+	var _ chan<- *context.Context
+
+}
+
+func Bar147(foo *[]context.Context) {}
+
+func Bar148(foo <-chan *[]context.Context) {}
+
+func Bar149(foo *[]<-chan *[]context.Context) {}
+
+func Bar150(foo *[]map[*[]FooX]interface{}) {}
+
+func Bar151(foo *[]map[string]string) {}
+
+func Bar152() *[]chan context.Context {
+	return &[]chan context.Context{}
+}
+
+func Bar153() *[]<-chan context.Context {
+	return &[]<-chan context.Context{}
+}
+
+func Bar154() *[]chan<- chan context.Context {
+	return &[]chan<- chan context.Context{}
+}
+
+func Bar155() []*context.Context {
+	return []*context.Context{}
+}
+
+func Bar156() *[]context.Context {
+	return &[]context.Context{}
+}

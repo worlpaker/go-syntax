@@ -388,7 +388,7 @@
 			"comment": "Note that the order here is very important!",
 			"patterns": [
 				{
-					"match": "((?:\\*|&)+)(?:(?!\\d)(?=\\w))",
+					"match": "((?:\\*|&)+)(?:(?!\\d)(?=(?:[\\w\\[\\]])|(?:\\<\\-)))",
 					"name": "keyword.operator.address.go"
 				},
 				{
