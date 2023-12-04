@@ -2923,3 +2923,52 @@ func Bar159() {
 		context.Context
 	}
 }
+
+func Bar160() {
+
+	var foo []struct {
+		a, b, c context.Context
+	}
+
+	var bar *[]struct {
+		a, b, c context.Context
+	}
+
+	var (
+		foo1 []struct {
+			a, b, c context.Context
+		}
+
+		bar1 *[]struct {
+			a, b, c context.Context
+		}
+	)
+
+	var foox []struct {
+		a string
+		b context.Context
+	} = []struct {
+		a string
+		b context.Context
+	}{{a: "foo", b: context.TODO()}}
+
+	var (
+		barx []struct {
+			a string
+			b context.Context
+		} = []struct {
+			a string
+			b context.Context
+		}{{a: "foo", b: context.TODO()}}
+
+		bary []struct {
+			a string
+			b context.Context
+		} = []struct {
+			a string
+			b context.Context
+		}{{a: "foo", b: context.TODO()}}
+	)
+
+	_, _, _, _, _, _, _ = foo, bar, foo1, bar1, foox, barx, bary
+}
