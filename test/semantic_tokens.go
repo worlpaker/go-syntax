@@ -2986,7 +2986,7 @@ func Bar161() {
 func Bar162() {
 	str := "foo"
 	str1, str2, str3 := "foo", "bar", "foobar"
-	
+
 	switch str {
 	case str1, str2: // comment
 
@@ -3008,4 +3008,30 @@ func Bar162() {
 	case str3:
 		// Code to execute
 	}
+}
+
+func Bar163(
+	context.Context, string, context.Context, // comment
+) {
+
+}
+
+func Bar164(
+	context.Context, // comment
+	string, // comment
+	func() chan<- context.Context, // comment
+) {
+}
+
+func Bar165(
+	foo, bar context.Context, // comment
+) {
+}
+
+func Bar166(
+	foo, //coni
+	bar, //cep
+	foobar context.Context, // comment
+) {
+
 }
