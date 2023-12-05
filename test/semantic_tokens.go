@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"go/ast"
 	"go/build"
+	"go/token"
 	"io"
 	"log"
 	"mime/multipart"
@@ -3089,4 +3090,137 @@ func Bar169() {
 		},
 	}
 	_ = map[string][]struct{ bar context.Context }{"foo": {{bar: context.TODO()}}}
+}
+
+func Bar170(func() context.Context, func() context.Context, func() context.Context) {}
+
+func Bar171(
+	func() chan context.Context,
+	func() context.Context, func() context.Context,
+) {
+}
+
+func Bar172(
+	foo func() context.Context,
+	bar context.Context,
+	foobar ...func(a, b, c chan context.Context) http.Handler,
+) {
+}
+
+func Bar173(
+	foo func(a context.Context, b context.Context) (context.Context, context.Context),
+	bar context.Context,
+	foobar ...func(a, b, c chan context.Context) (d, e, f chan context.Context),
+) {
+}
+
+type Options string
+
+func Bar174(fset *token.FileSet, filename string, src []byte, opt *Options) (*ast.File, func(orig, src []byte) []byte, error) {
+	return nil, nil, nil
+}
+
+func Bar175(*ast.File, func(orig, src []byte) byte) {
+}
+
+func Bar176(context.Context, func(http.Handler) http.Handler, context.Context) {
+}
+
+func Bar177(context.Context, func(http.Handler) chan<- http.Handler, chan context.Context) {
+}
+
+func Bar178(
+	context.Context, func(http.Handler) chan<- http.Handler, chan context.Context) {
+}
+
+func Bar179(
+	context.Context, func(a, b, c chan context.Context) (context.Context, context.Context), func(http.Handler) chan<- http.Handler, chan context.Context) {
+}
+
+func Bar180(func(a, b, c chan context.Context) (context.Context, context.Context), func(http.Handler) chan<- http.Handler, chan context.Context) {
+}
+
+func Bar181(func(a, b, c chan context.Context) (context.Context, context.Context), func(a, b, c chan context.Context) (context.Context, context.Context), func(a context.Context, b context.Context) (context.Context, context.Context)) {
+}
+
+func Bar182(
+	func(a, b, c chan context.Context) (context.Context, context.Context), func(http.Handler) chan<- http.Handler, chan context.Context) {
+}
+
+func Bar183(
+	func(a, b, c chan context.Context) (context.Context, context.Context), func(a, b, c chan context.Context) (context.Context, context.Context), func(a context.Context, b context.Context) (context.Context, context.Context)) {
+}
+
+type LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo context.Context
+
+func Bar184(LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, chan<- *[]LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo) {
+}
+
+func Bar185(a LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo, b chan<- *[]LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo) {
+}
+
+func Bar186(
+	a LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo,
+	b chan<- *[]LongFooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo) {
+}
+
+func Bar187(
+	func(a, b, c chan context.Context) (context.Context, context.Context),
+	func(http.Handler) chan<- http.Handler, chan context.Context,
+) {
+}
+
+func Bar188(
+	context.Context,
+	func(http.Handler) chan<- http.Handler, chan context.Context) {
+}
+
+func Bar189(
+	context.Context,
+	func(http.Handler) chan<- http.Handler,
+	chan context.Context,
+) {
+}
+
+func Bar190(context.Context, context.Context, ...func(http.Handler) (context.Context, error)) {
+}
+
+func Bar191(context.Context, context.Context, func(http.Handler) (context.Context, error), func(http.Handler) (context.Context, error)) {
+}
+
+func Bar192(context.Context, context.Context, context.Context) {
+}
+
+func Bar193(context.Context, func(), context.Context, func(http.Handler) (context.Context, error)) {
+}
+
+func Bar194(a, b, c func() func(a, b, c context.Context) context.Context) {}
+
+func Bar195(
+	a context.Context,
+	b func() func(context.Context, string) (context.Context, <-chan context.Context),
+) {
+}
+
+func Bar196(context.Context, func() func(context.Context, string)) {}
+
+func Bar197(func() func(context.Context, string)) {}
+
+func Bar198() func() func(context.Context, string)
+
+func Bar199(context.Context, func() func(context.Context, string) context.Context) {}
+
+func Bar200(context.Context, func() func(context.Context, string) (context.Context, <-chan context.Context)) {
+}
+
+func Bar201(
+	context.Context,
+	func() func(context.Context, string) (context.Context, <-chan context.Context),
+) {
+}
+
+func Bar202(
+	context.Context,
+	func() func(context.Context, string) (context.Context, <-chan context.Context),
+	func(a, b, c context.Context) func(context.Context, string) (context.Context, <-chan context.Context)) {
 }
