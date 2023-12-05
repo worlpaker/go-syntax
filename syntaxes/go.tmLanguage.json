@@ -1848,7 +1848,7 @@
 				},
 				{
 					"comment": "struct/interface types in-line (type assertion) | switch type keyword",
-					"match": "(?:(?<=\\.\\(|\\.\\(\\[\\])(?:(\\btype\\b)|([\\w\\.\\[\\]\\*]+))(?=\\)))",
+					"match": "(?:(?<=\\.\\()(?:(\\btype\\b)|((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?[\\w\\.\\[\\]\\*]+))(?=\\)))",
 					"captures": {
 						"1": {
 							"name": "keyword.type.go"

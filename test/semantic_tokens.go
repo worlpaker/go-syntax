@@ -3059,3 +3059,18 @@ func Bar167() {
 		return nil
 	}
 }
+
+func Bar168() {
+	var foo interface{}
+	_ = foo.(FooX)
+	_ = foo.(*FooX)
+	_ = foo.([]FooX)
+	_ = foo.(chan FooX)
+	_ = foo.(chan *FooX)
+	_ = foo.(chan<- []FooX)
+	_ = foo.(*[]chan<- *[]FooX)
+	_ = foo.(chan<- []FooX)
+	_ = foo.(func() FooX)
+	_ = foo.(func() *[]FooX)
+	_ = foo.(func() (string, FooX))
+}
