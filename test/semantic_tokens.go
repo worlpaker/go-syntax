@@ -3074,3 +3074,19 @@ func Bar168() {
 	_ = foo.(func() *[]FooX)
 	_ = foo.(func() (string, FooX))
 }
+
+func Bar169() {
+	_ = map[string]struct{ bar context.Context }{"foo": {bar: context.TODO()}}
+	_ = map[string]struct {
+		bar    context.Context
+		foobar chan<- *context.Context
+	}{
+		"a": {
+			bar: context.TODO(),
+		},
+		"b": {
+			foobar: make(chan<- *context.Context),
+		},
+	}
+	_ = map[string][]struct{ bar context.Context }{"foo": {{bar: context.TODO()}}}
+}
