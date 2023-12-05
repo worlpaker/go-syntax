@@ -3029,9 +3029,33 @@ func Bar165(
 }
 
 func Bar166(
-	foo, //coni
-	bar, //cep
+	foo, // comment
+	bar, // comment
 	foobar context.Context, // comment
 ) {
 
+}
+
+func Bar167() {
+	_ = func() []context.Context {
+		return nil
+	}
+	_ = func() *[]context.Context {
+		return nil
+	}
+	_ = func() []*context.Context {
+		return nil
+	}
+	_ = func() map[string]context.Context {
+		return nil
+	}
+	_ = func() *map[string]context.Context {
+		return nil
+	}
+	_ = func() *[]map[string]context.Context {
+		return nil
+	}
+	_ = func() []*map[string]context.Context {
+		return nil
+	}
 }
