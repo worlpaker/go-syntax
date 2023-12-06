@@ -2297,7 +2297,26 @@
 							"include": "#functions_inline"
 						},
 						{
-							"include": "#type-declarations"
+							"include": "#functions_inline_multi_return"
+						},
+						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"match": "\\{",
+							"name": "punctuation.definition.begin.bracket.curly.go"
+						},
+						{
+							"match": "\\}",
+							"name": "punctuation.definition.end.bracket.curly.go"
 						},
 						{
 							"match": "(?:\\w+)",

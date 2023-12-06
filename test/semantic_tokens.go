@@ -3239,3 +3239,22 @@ func Bar206[
 type Bar207[a Bar204[context.Context, Bar204[context.Context, context.Context]], b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]] interface{}
 
 type Bar208[a Bar204[context.Context, Bar203[context.Context, context.Context]], b Bar204[string, Bar203[context.Context, context.Context]]] chan *context.Context
+
+func Bar209() {
+	type (
+		a Bar204[context.Context, Bar203[context.Context, context.Context]]
+		b Bar204[string, Bar203[context.Context, context.Context]]
+		c map[string]interface{}
+		d func(a context.Context, b string, c context.Context) (d context.Context, e context.Context)
+		e func(a chan context.Context) context.Context
+	)
+
+	type (
+		f = Bar204[context.Context, Bar203[context.Context, context.Context]]
+		g = Bar204[string, Bar203[context.Context, context.Context]]
+		h = map[string]interface{}
+		j = func(a context.Context, b string, c context.Context) (d context.Context, e context.Context)
+		k = func(a chan context.Context) context.Context
+	)
+
+}
