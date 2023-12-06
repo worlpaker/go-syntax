@@ -3224,3 +3224,18 @@ func Bar202(
 	func() func(context.Context, string) (context.Context, <-chan context.Context),
 	func(a, b, c context.Context) func(context.Context, string) (context.Context, <-chan context.Context)) {
 }
+
+type Bar203[E, V context.Context] []E
+
+type Bar204[E, V any] []E
+
+func Bar205[a Bar204[context.Context, Bar204[context.Context, context.Context]], b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]]() {
+}
+func Bar206[
+	a Bar204[context.Context, Bar204[context.Context, context.Context]],
+	b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]]() {
+}
+
+type Bar207[a Bar204[context.Context, Bar204[context.Context, context.Context]], b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]] interface{}
+
+type Bar208[a Bar204[context.Context, Bar203[context.Context, context.Context]], b Bar204[string, Bar203[context.Context, context.Context]]] chan *context.Context

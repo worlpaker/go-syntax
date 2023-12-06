@@ -31234,3 +31234,308 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>type Bar203[E, V context.Context] []E
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go punctuation.other.comma.go
+#              ^ source.go
+#               ^ source.go variable.parameter.go
+#                ^ source.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.other.period.go
+#                         ^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                 ^ source.go
+#                                  ^ source.go punctuation.definition.begin.bracket.square.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                    ^ source.go entity.name.type.go
+>
+>type Bar204[E, V any] []E
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go punctuation.other.comma.go
+#              ^ source.go
+#               ^ source.go variable.parameter.go
+#                ^ source.go
+#                 ^^^ source.go entity.name.type.any.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^ source.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go entity.name.type.go
+>
+>func Bar205[a Bar204[context.Context, Bar204[context.Context, context.Context]], b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]]() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.period.go
+#                             ^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                                             ^^^^^^^ source.go entity.name.type.go
+#                                                    ^ source.go punctuation.other.period.go
+#                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                            ^ source.go punctuation.other.comma.go
+#                                                             ^ source.go
+#                                                              ^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.other.period.go
+#                                                                      ^^^^^^^ source.go entity.name.type.go
+#                                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                ^ source.go
+#                                                                                 ^ source.go variable.parameter.go
+#                                                                                  ^ source.go
+#                                                                                   ^^^^^^ source.go entity.name.type.go
+#                                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                          ^^^^^^ source.go entity.name.type.go
+#                                                                                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.other.period.go
+#                                                                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                                                 ^ source.go
+#                                                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                         ^ source.go punctuation.other.period.go
+#                                                                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                  ^ source.go punctuation.other.comma.go
+#                                                                                                                                   ^ source.go
+#                                                                                                                                    ^^^^^^ source.go entity.name.type.go
+#                                                                                                                                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                                           ^^^^^^ source.go storage.type.string.go
+#                                                                                                                                                 ^ source.go punctuation.other.comma.go
+#                                                                                                                                                  ^ source.go
+#                                                                                                                                                   ^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                         ^ source.go punctuation.other.comma.go
+#                                                                                                                                                                          ^ source.go
+#                                                                                                                                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                                  ^ source.go punctuation.other.period.go
+#                                                                                                                                                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                                             ^ source.go
+#                                                                                                                                                                                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                                                                                                                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                                                                                                ^ source.go
+#                                                                                                                                                                                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>func Bar206[
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+>	a Bar204[context.Context, Bar204[context.Context, context.Context]],
+#^ source.go
+# ^ source.go variable.parameter.go
+#  ^ source.go
+#   ^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^^ source.go entity.name.type.go
+#                 ^ source.go punctuation.other.period.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.comma.go
+#                          ^ source.go
+#                           ^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.period.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.other.comma.go
+#                                                  ^ source.go
+#                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.other.period.go
+#                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                  ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                   ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                    ^ source.go punctuation.other.comma.go
+>	b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]]() {
+#^ source.go
+# ^ source.go variable.parameter.go
+#  ^ source.go
+#   ^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.begin.bracket.square.go
+#                 ^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.other.period.go
+#                         ^^^^^^^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^^ source.go entity.name.type.go
+#                                         ^ source.go punctuation.other.period.go
+#                                          ^^^^^^^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                  ^ source.go punctuation.other.comma.go
+#                                                   ^ source.go
+#                                                    ^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                           ^^^^^^ source.go storage.type.string.go
+#                                                                 ^ source.go punctuation.other.comma.go
+#                                                                  ^ source.go
+#                                                                   ^^^^^^ source.go entity.name.type.go
+#                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                         ^ source.go punctuation.other.comma.go
+#                                                                                          ^ source.go
+#                                                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                                                  ^ source.go punctuation.other.period.go
+#                                                                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                             ^ source.go
+#                                                                                                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                                               ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                                ^ source.go
+#                                                                                                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type Bar207[a Bar204[context.Context, Bar204[context.Context, context.Context]], b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]] interface{}
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.period.go
+#                             ^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                                             ^^^^^^^ source.go entity.name.type.go
+#                                                    ^ source.go punctuation.other.period.go
+#                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                            ^ source.go punctuation.other.comma.go
+#                                                             ^ source.go
+#                                                              ^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.other.period.go
+#                                                                      ^^^^^^^ source.go entity.name.type.go
+#                                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                ^ source.go
+#                                                                                 ^ source.go variable.parameter.go
+#                                                                                  ^ source.go
+#                                                                                   ^^^^^^ source.go entity.name.type.go
+#                                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                          ^^^^^^ source.go entity.name.type.go
+#                                                                                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.other.period.go
+#                                                                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                                                 ^ source.go
+#                                                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                         ^ source.go punctuation.other.period.go
+#                                                                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                  ^ source.go punctuation.other.comma.go
+#                                                                                                                                   ^ source.go
+#                                                                                                                                    ^^^^^^ source.go entity.name.type.go
+#                                                                                                                                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                                           ^^^^^^ source.go storage.type.string.go
+#                                                                                                                                                 ^ source.go punctuation.other.comma.go
+#                                                                                                                                                  ^ source.go
+#                                                                                                                                                   ^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                         ^ source.go punctuation.other.comma.go
+#                                                                                                                                                                          ^ source.go
+#                                                                                                                                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                                  ^ source.go punctuation.other.period.go
+#                                                                                                                                                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                                            ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                                                                             ^ source.go
+#                                                                                                                                                                                              ^ source.go
+#                                                                                                                                                                                               ^^^^^^^^^ source.go keyword.interface.go
+#                                                                                                                                                                                                        ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                                                                                                                                                         ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type Bar208[a Bar204[context.Context, Bar203[context.Context, context.Context]], b Bar204[string, Bar203[context.Context, context.Context]]] chan *context.Context
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.period.go
+#                             ^^^^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^^^^^^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                                             ^^^^^^^ source.go entity.name.type.go
+#                                                    ^ source.go punctuation.other.period.go
+#                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                            ^ source.go punctuation.other.comma.go
+#                                                             ^ source.go
+#                                                              ^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go punctuation.other.period.go
+#                                                                      ^^^^^^^ source.go entity.name.type.go
+#                                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                              ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                               ^ source.go punctuation.other.comma.go
+#                                                                                ^ source.go
+#                                                                                 ^ source.go variable.parameter.go
+#                                                                                  ^ source.go
+#                                                                                   ^^^^^^ source.go entity.name.type.go
+#                                                                                         ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                          ^^^^^^ source.go storage.type.string.go
+#                                                                                                ^ source.go punctuation.other.comma.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^^^^^^ source.go entity.name.type.go
+#                                                                                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                         ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                ^ source.go punctuation.other.period.go
+#                                                                                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                        ^ source.go punctuation.other.comma.go
+#                                                                                                                         ^ source.go
+#                                                                                                                          ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                 ^ source.go punctuation.other.period.go
+#                                                                                                                                  ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                         ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                          ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                                            ^ source.go
+#                                                                                                                                             ^^^^ source.go keyword.channel.go
+#                                                                                                                                                 ^ source.go
+#                                                                                                                                                  ^ source.go keyword.operator.address.go
+#                                                                                                                                                   ^^^^^^^ source.go entity.name.type.go
+#                                                                                                                                                          ^ source.go punctuation.other.period.go
+#                                                                                                                                                           ^^^^^^^ source.go entity.name.type.go
+>

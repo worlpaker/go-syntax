@@ -1382,16 +1382,31 @@
 			]
 		},
 		"generic_param_types": {
+			"comment": "generic parameter variables and types",
 			"patterns": [
 				{
-					"include": "#functions_inline"
+					"include": "#type-declarations-without-brackets"
 				},
 				{
-					"include": "#generic_types"
+					"comment": "multiple parameters one type -with multilines",
+					"match": "(?:(?:(?<=\\()|^\\s*)((?:(?:\\w+\\,\\s*)+)(?:\/(?:\/|\\*).*)?)$)",
+					"captures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.parameter.go"
+								}
+							]
+						}
+					}
 				},
 				{
 					"comment": "multiple params and types | multiple types one param",
-					"match": "(?:((?:(?:\\w+\\,\\s+)+)?\\w+)(?:\\s+)((?:(?:[\\w\\[\\]\\.\\*]+)?(?:(?:\\bfunc\\b\\((?:[^\\)]+)?\\))(?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:\\s*))+(?:(?:(?:[\\w\\*\\.]+)))?)|(?:(?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\~\\*]+)?[\\w\\.\\*]+(?:\\[(?:(?:\\[\\])?(?:[\\w\\.\\*]+)(?:\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\])?(?:\\,\\s+)?)+\\])?))((?:(?!\\bfunc\\b)[\\w\\.\\*]+)?))",
+					"match": "(?:((?:(?:\\w+\\,\\s*)+)?\\w+)(?:\\s+)((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:(?:(?:[\\w\\[\\]\\.\\*]+)?(?:(?:\\bfunc\\b\\((?:[^\\)]+)?\\))(?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:\\s*))+(?:(?:(?:[\\w\\*\\.]+)|(?:\\((?:[^\\)]+)?\\))))?)|(?:(?:(?:[\\w\\*\\.\\~]+)|(?:\\[(?:(?:[\\w\\.\\*]+)?(?:\\[(?:[^\\]]+)?\\])?(?:\\,\\s+)?)+\\]))(?:[\\w\\.\\*]+)?)+)))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1473,13 +1488,54 @@
 					}
 				},
 				{
-					"comment": "generic types with or",
-					"match": "(?:(?:(?<=\\[)|^\\s*)([\\w\\.]+)(?=\\s+\\w+\\s\\|)|([\\w\\.]+(?=\\s*\\|)|(?<=\\|\\s)[\\w\\.]+(?=\\])|(?:[\\w\\.]+(?=\\]))))",
+					"include": "#functions"
+				},
+				{
+					"include": "#functions_inline"
+				},
+				{
+					"include": "#generic_types"
+				},
+				{
+					"match": "\\[",
+					"name": "punctuation.definition.begin.bracket.square.go"
+				},
+				{
+					"match": "\\]",
+					"name": "punctuation.definition.end.bracket.square.go"
+				},
+				{
+					"match": "\\{",
+					"name": "punctuation.definition.begin.bracket.curly.go"
+				},
+				{
+					"match": "\\}",
+					"name": "punctuation.definition.end.bracket.curly.go"
+				},
+				{
+					"begin": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.begin.bracket.round.go"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.round.go"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#function_param_types"
+						}
+					]
+				},
+				{
+					"comment": "other types",
+					"match": "([\\w\\.]+)",
 					"captures": {
 						"1": {
-							"name": "variable.parameter.go"
-						},
-						"2": {
 							"patterns": [
 								{
 									"include": "#type-declarations"
@@ -1493,7 +1549,7 @@
 					}
 				},
 				{
-					"include": "#parameter_variables"
+					"include": "$self"
 				}
 			]
 		},
@@ -2725,16 +2781,6 @@
 					]
 				}
 			}
-		},
-		"parameter_variables": {
-			"comment": "Parameter variables, can include specific types",
-			"match": "(?:\\w+)",
-			"name": "variable.parameter.go",
-			"patterns": [
-				{
-					"include": "$self"
-				}
-			]
 		},
 		"switch_normal_case_variables": {
 			"comment": "variables after case control keyword in switch expression",
