@@ -2671,7 +2671,7 @@ func Bar127(a *[]chan context.Context) (foo *[]chan context.Context, bar *[]<-ch
 	return &[]chan context.Context{}, nil
 }
 
-// v0.4.9
+// v0.5.0
 func Bar128() {
 	var _ <-chan <-chan chan<- <-chan <-chan context.Context
 }
@@ -3298,4 +3298,34 @@ func Bar212() {
 	_ = func(a, b, c func() func(a, b, c context.Context) context.Context) {
 
 	}
+}
+
+func Bar213() {
+	_ = func(a, b, c func() context.Context, e context.Context) {
+	}
+	_ = func(foo context.Context, a, b, c func() context.Context) {
+	}
+}
+
+func Bar214() {
+
+	type foo map[string]func(args ...interface{}) context.Context
+
+	_ = make(map[string]func(args context.Context) context.Context)
+	_ = make(map[string]func() (context.Context, context.Context))
+	_ = make(map[string]func() context.Context)
+
+	_ = func() func(context.Context, string) (context.Context, <-chan context.Context) {
+		a := func(context.Context, string) (context.Context, <-chan context.Context) {
+			return context.TODO(), make(<-chan context.Context)
+		}
+		return a
+	}
+
+	_ = func(a, b, c func(), e context.Context) {
+	}
+
+	_ = func(a, b, c func() (context.Context, context.Context), foo context.Context) {
+	}
+
 }
