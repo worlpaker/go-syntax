@@ -1555,7 +1555,7 @@
 		},
 		"functions_inline": {
 			"comment": "functions in-line with return single type",
-			"match": "(?:(\\bfunc\\b)((?:\\((?:[^\\)]+)?\\)))(?:\\s+)(?:(?:(?:(\\((?:.*)\\))|((?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\w\\.\\*]+)?(?:(?:\\[(?:.*)\\])?(?:[\\w\\.\\*]+)?)))))?)",
+			"match": "(?:(\\bfunc\\b)((?:\\((?:[^\\)]+)?\\)))(?:\\s+)(?:(?:(?:(?:((?:\\bfunc\\b)?\\((?:.*)\\)))|((?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\w\\.\\*]+)?(?:(?:\\[(?:.*)\\])?(?:[\\w\\.\\*]+)?)))))?)",
 			"captures": {
 				"1": {
 					"name": "keyword.function.go"
@@ -1589,6 +1589,9 @@
 				"3": {
 					"patterns": [
 						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
 							"begin": "\\(",
 							"beginCaptures": {
 								"0": {
@@ -1609,6 +1612,26 @@
 									"include": "$self"
 								}
 							]
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"match": "\\{",
+							"name": "punctuation.definition.begin.bracket.curly.go"
+						},
+						{
+							"match": "\\}",
+							"name": "punctuation.definition.end.bracket.curly.go"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
 						}
 					]
 				},
@@ -1633,7 +1656,7 @@
 		},
 		"functions_inline_multi_return": {
 			"comment": "functions in-line with multi return types",
-			"match": "(?:(\\bfunc\\b)(\\((?:.*)\\))(?:\\s+)(\\((?:.*)\\))(\\s+)(?=\\{))",
+			"match": "(?:(\\bfunc\\b)(\\((?:.*)\\))(?:\\s+)(\\((?:.*)\\))(?:\\s+)(?=\\{))",
 			"captures": {
 				"1": {
 					"name": "keyword.function.go"

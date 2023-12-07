@@ -3258,3 +3258,44 @@ func Bar209() {
 	)
 
 }
+
+func Bar210(
+	context.Context,
+	func() func(context.Context, string) (context.Context, <-chan context.Context),
+) (
+	context.Context,
+	func() func(context.Context, string) (context.Context, <-chan context.Context),
+) {
+	a := func() func(context.Context, string) (context.Context, <-chan context.Context) {
+		b := func(context.Context, string) (context.Context, <-chan context.Context) {
+			return context.TODO(), make(<-chan context.Context)
+		}
+		return b
+	}
+	return context.TODO(), a
+}
+
+func Bar211(
+	context.Context,
+	func() func(context.Context, string) (context.Context, <-chan context.Context),
+) (context.Context, func() func(context.Context, string) (context.Context, <-chan context.Context)) {
+	a := func() func(context.Context, string) (context.Context, <-chan context.Context) {
+		b := func(context.Context, string) (context.Context, <-chan context.Context) {
+			return context.TODO(), make(<-chan context.Context)
+		}
+		return b
+	}
+	return context.TODO(), a
+}
+
+func Bar212() {
+	_ = func() func(context.Context, string) (context.Context, <-chan context.Context) {
+		foo := func(context.Context, string) (context.Context, <-chan context.Context) {
+			return context.TODO(), make(<-chan context.Context)
+		}
+		return foo
+	}
+	_ = func(a, b, c func() func(a, b, c context.Context) context.Context) {
+
+	}
+}
