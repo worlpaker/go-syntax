@@ -3329,3 +3329,51 @@ func Bar214() {
 	}
 
 }
+
+func Bar215() {
+	_ = func() (context.Context, func(), error, context.Context) {
+		a := func() {}
+		return context.TODO(), a, nil, context.TODO()
+	}
+
+	_ = func() (context.Context, func() (context.Context, context.Context), error, context.Context) {
+		a := func() (context.Context, context.Context) {
+			return context.TODO(), context.TODO()
+		}
+		return context.TODO(), a, nil, context.TODO()
+	}
+
+	_ = func() (context.Context, func(a, b, c context.Context) (context.Context, context.Context), error, context.Context) {
+		a := func(a, b, c context.Context) (context.Context, context.Context) {
+			return context.TODO(), context.TODO()
+		}
+		return context.TODO(), a, nil, context.TODO()
+	}
+
+	_ = func() (a context.Context, b func(), c io.ReadCloser, d error, e context.Context) {
+		return
+	}
+
+	_ = func() (a func(), b context.Context, c io.ReadCloser, d error, e context.Context) {
+		return
+	}
+
+	_ = func() (func() (context.Context, context.Context), context.Context, error, context.Context) {
+		a := func() (context.Context, context.Context) {
+			return context.TODO(), context.TODO()
+		}
+		return a, context.TODO(), nil, context.TODO()
+	}
+
+	_ = func() (func(a, b, c context.Context) (context.Context, context.Context), context.Context, error, context.Context) {
+		foo := func(a, b, c context.Context) (context.Context, context.Context) {
+			return context.TODO(), context.TODO()
+		}
+		return foo, context.TODO(), nil, context.TODO()
+	}
+
+	_ = new(map[string]func(args context.Context) context.Context)
+	_ = new(map[string]func() (context.Context, context.Context))
+	_ = new(map[string]func() context.Context)
+	_ = make(map[string]func() (context.Context, string))
+}
