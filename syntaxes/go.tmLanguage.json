@@ -2011,7 +2011,7 @@
 			"patterns": [
 				{
 					"comment": "Struct variable for struct in struct types",
-					"begin": "(?:\\s*)?([\\s\\,\\w]+)(?:\\s+)(?:\\*)?(?:(?:\\[\\])+)?(\\bstruct\\b)\\s*(\\{)",
+					"begin": "(?:\\s*)?([\\s\\,\\w]+)(?:\\s+)(?:(?:[\\[\\]\\*])+)?(\\bstruct\\b)\\s*(\\{)",
 					"beginCaptures": {
 						"1": {
 							"match": "(?:\\w+)",
