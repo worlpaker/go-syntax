@@ -1731,64 +1731,6 @@
 				}
 			}
 		},
-		"single_function": {
-			"comment": "single function type without `{` bracket --for types only",
-			"match": "(?:(\\bfunc\\b)((?:\\((?:.*)?\\))(?:[\\s\\S]+)))",
-			"captures": {
-				"1": {
-					"name": "keyword.function.go"
-				},
-				"2": {
-					"patterns": [
-						{
-							"include": "#type-declarations-without-brackets"
-						},
-						{
-							"begin": "\\(",
-							"beginCaptures": {
-								"0": {
-									"name": "punctuation.definition.begin.bracket.round.go"
-								}
-							},
-							"end": "\\)",
-							"endCaptures": {
-								"0": {
-									"name": "punctuation.definition.end.bracket.round.go"
-								}
-							},
-							"patterns": [
-								{
-									"include": "#function_param_types"
-								},
-								{
-									"include": "$self"
-								}
-							]
-						},
-						{
-							"match": "\\[",
-							"name": "punctuation.definition.begin.bracket.square.go"
-						},
-						{
-							"match": "\\]",
-							"name": "punctuation.definition.end.bracket.square.go"
-						},
-						{
-							"match": "\\{",
-							"name": "punctuation.definition.begin.bracket.curly.go"
-						},
-						{
-							"match": "\\}",
-							"name": "punctuation.definition.end.bracket.curly.go"
-						},
-						{
-							"match": "(?:\\w+)",
-							"name": "entity.name.type.go"
-						}
-					]
-				}
-			}
-		},
 		"other_struct_interface_expressions": {
 			"patterns": [
 				{
@@ -2220,10 +2162,26 @@
 						"4": {
 							"patterns": [
 								{
-									"include": "#single_function"
-								},
-								{
-									"include": "#functions"
+									"begin": "\\(",
+									"beginCaptures": {
+										"0": {
+											"name": "punctuation.definition.begin.bracket.round.go"
+										}
+									},
+									"end": "\\)",
+									"endCaptures": {
+										"0": {
+											"name": "punctuation.definition.end.bracket.round.go"
+										}
+									},
+									"patterns": [
+										{
+											"include": "#function_param_types"
+										},
+										{
+											"include": "$self"
+										}
+									]
 								},
 								{
 									"include": "#type-declarations"
@@ -2234,9 +2192,6 @@
 								{
 									"match": "(?:\\w+)",
 									"name": "entity.name.type.go"
-								},
-								{
-									"include": "$self"
 								}
 							]
 						}
