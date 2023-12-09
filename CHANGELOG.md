@@ -2,6 +2,20 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.0]
+
+- Enhances function and struct declaration
+- Refactors function and generic parameter types
+- Supports double parentheses types
+- Corrects keyword operator behaviors
+- Optimizes code
+- Improves documentation
+- Removes unnecessary sections
+- Adds more tests
+- Fixes import declaration with semicolon (before formatting with gofmt)
+- Fixes minor bugs in variable declaration, switch case variables, multi type declaration, type assertion, and function in-line
+- Fixes bugs related to struct types within function parameters, struct declaration, map types, and variables
+
 ## [0.4.8]
 
 - Fixes function declaration
