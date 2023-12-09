@@ -2692,7 +2692,7 @@
 		},
 		"generic_types": {
 			"comment": "Generic support for all types",
-			"match": "(?:([\\w\\.\\*]+)(\\[(?:(?:[\\w\\.\\*]+)(?:\\,\\s+)?)+\\]))",
+			"match": "(?:([\\w\\.\\*]+)(\\[(?:(?:[\\w\\.\\*]+)(?:\\,)?\\s*)+\\]))",
 			"captures": {
 				"1": {
 					"patterns": [
