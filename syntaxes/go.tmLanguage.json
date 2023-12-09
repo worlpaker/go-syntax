@@ -189,6 +189,71 @@
 				}
 			]
 		},
+		"parameter-variable-types": {
+			"comment": "function and generic parameter types",
+			"patterns": [
+				{
+					"match": "\\{",
+					"name": "punctuation.definition.begin.bracket.curly.go"
+				},
+				{
+					"match": "\\}",
+					"name": "punctuation.definition.end.bracket.curly.go"
+				},
+				{
+					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+					"beginCaptures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
+								}
+							]
+						},
+						"2": {
+							"name": "punctuation.definition.begin.bracket.square.go"
+						}
+					},
+					"end": "\\]",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.square.go"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#generic_param_types"
+						},
+						{
+							"include": "$self"
+						}
+					]
+				},
+				{
+					"begin": "\\(",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.begin.bracket.round.go"
+						}
+					},
+					"end": "\\)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.round.go"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#function_param_types"
+						}
+					]
+				}
+			]
+		},
 		"language_constants": {
 			"comment": "Language constants",
 			"match": "\\b(true|false|nil|iota)\\b",
@@ -238,9 +303,6 @@
 									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"include": "#generic_types"
-								},
-								{
 									"match": "\\[",
 									"name": "punctuation.definition.begin.bracket.square.go"
 								},
@@ -274,9 +336,6 @@
 							"patterns": [
 								{
 									"include": "#type-declarations"
-								},
-								{
-									"include": "#generic_types"
 								},
 								{
 									"match": "\\w+",
@@ -1074,13 +1133,13 @@
 										"2": {
 											"patterns": [
 												{
-													"include": "#type-declarations"
+													"include": "#type-declarations-without-brackets"
 												},
 												{
-													"include": "#generic_types"
+													"include": "#parameter-variable-types"
 												},
 												{
-													"match": "\\w+",
+													"match": "(?:\\w+)",
 													"name": "entity.name.type.go"
 												}
 											]
@@ -1112,10 +1171,67 @@
 				"1": {
 					"patterns": [
 						{
-							"include": "#type-declarations"
+							"include": "#type-declarations-without-brackets"
 						},
 						{
-							"include": "#generic_types"
+							"match": "\\{",
+							"name": "punctuation.definition.begin.bracket.curly.go"
+						},
+						{
+							"match": "\\}",
+							"name": "punctuation.definition.end.bracket.curly.go"
+						},
+						{
+							"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+							"beginCaptures": {
+								"1": {
+									"patterns": [
+										{
+											"include": "#type-declarations"
+										},
+										{
+											"match": "(?:\\w+)",
+											"name": "entity.name.type.go"
+										}
+									]
+								},
+								"2": {
+									"name": "punctuation.definition.begin.bracket.square.go"
+								}
+							},
+							"end": "\\]",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.square.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#generic_param_types"
+								},
+								{
+									"include": "$self"
+								}
+							]
+						},
+						{
+							"begin": "\\(",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.begin.bracket.round.go"
+								}
+							},
+							"end": "\\)",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.round.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#function_param_types"
+								}
+							]
 						},
 						{
 							"match": "(?:\\w+)",
@@ -1148,9 +1264,20 @@
 					]
 				},
 				{
-					"begin": "\\[",
+					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
 					"beginCaptures": {
-						"0": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
+								}
+							]
+						},
+						"2": {
 							"name": "punctuation.definition.begin.bracket.square.go"
 						}
 					},
@@ -1176,10 +1303,10 @@
 						"1": {
 							"patterns": [
 								{
-									"include": "#type-declarations"
+									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"include": "#generic_types"
+									"include": "#parameter-variable-types"
 								},
 								{
 									"match": "(?:\\w+)",
@@ -1188,9 +1315,6 @@
 							]
 						}
 					}
-				},
-				{
-					"include": "#generic_types"
 				},
 				{
 					"include": "$self"
@@ -1258,48 +1382,10 @@
 						"2": {
 							"patterns": [
 								{
-									"include": "#functions"
-								},
-								{
 									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"include": "#generic_types"
-								},
-								{
-									"match": "\\[",
-									"name": "punctuation.definition.begin.bracket.square.go"
-								},
-								{
-									"match": "\\]",
-									"name": "punctuation.definition.end.bracket.square.go"
-								},
-								{
-									"match": "\\{",
-									"name": "punctuation.definition.begin.bracket.curly.go"
-								},
-								{
-									"match": "\\}",
-									"name": "punctuation.definition.end.bracket.curly.go"
-								},
-								{
-									"begin": "\\(",
-									"beginCaptures": {
-										"0": {
-											"name": "punctuation.definition.begin.bracket.round.go"
-										}
-									},
-									"end": "\\)",
-									"endCaptures": {
-										"0": {
-											"name": "punctuation.definition.end.bracket.round.go"
-										}
-									},
-									"patterns": [
-										{
-											"include": "#function_param_types"
-										}
-									]
+									"include": "#parameter-variable-types"
 								},
 								{
 									"match": "(?:\\w+)",
@@ -1310,45 +1396,7 @@
 					}
 				},
 				{
-					"include": "#functions"
-				},
-				{
-					"include": "#generic_types"
-				},
-				{
-					"match": "\\[",
-					"name": "punctuation.definition.begin.bracket.square.go"
-				},
-				{
-					"match": "\\]",
-					"name": "punctuation.definition.end.bracket.square.go"
-				},
-				{
-					"match": "\\{",
-					"name": "punctuation.definition.begin.bracket.curly.go"
-				},
-				{
-					"match": "\\}",
-					"name": "punctuation.definition.end.bracket.curly.go"
-				},
-				{
-					"begin": "\\(",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.begin.bracket.round.go"
-						}
-					},
-					"end": "\\)",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.end.bracket.round.go"
-						}
-					},
-					"patterns": [
-						{
-							"include": "#function_param_types"
-						}
-					]
+					"include": "#parameter-variable-types"
 				},
 				{
 					"comment": "other types",
@@ -1413,48 +1461,10 @@
 						"2": {
 							"patterns": [
 								{
-									"include": "#functions"
-								},
-								{
 									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"include": "#generic_types"
-								},
-								{
-									"match": "\\[",
-									"name": "punctuation.definition.begin.bracket.square.go"
-								},
-								{
-									"match": "\\]",
-									"name": "punctuation.definition.end.bracket.square.go"
-								},
-								{
-									"match": "\\{",
-									"name": "punctuation.definition.begin.bracket.curly.go"
-								},
-								{
-									"match": "\\}",
-									"name": "punctuation.definition.end.bracket.curly.go"
-								},
-								{
-									"begin": "\\(",
-									"beginCaptures": {
-										"0": {
-											"name": "punctuation.definition.begin.bracket.round.go"
-										}
-									},
-									"end": "\\)",
-									"endCaptures": {
-										"0": {
-											"name": "punctuation.definition.end.bracket.round.go"
-										}
-									},
-									"patterns": [
-										{
-											"include": "#function_param_types"
-										}
-									]
+									"include": "#parameter-variable-types"
 								},
 								{
 									"match": "(?:\\w+)",
@@ -1476,45 +1486,7 @@
 					}
 				},
 				{
-					"include": "#functions"
-				},
-				{
-					"include": "#generic_types"
-				},
-				{
-					"match": "\\[",
-					"name": "punctuation.definition.begin.bracket.square.go"
-				},
-				{
-					"match": "\\]",
-					"name": "punctuation.definition.end.bracket.square.go"
-				},
-				{
-					"match": "\\{",
-					"name": "punctuation.definition.begin.bracket.curly.go"
-				},
-				{
-					"match": "\\}",
-					"name": "punctuation.definition.end.bracket.curly.go"
-				},
-				{
-					"begin": "\\(",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.begin.bracket.round.go"
-						}
-					},
-					"end": "\\)",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.end.bracket.round.go"
-						}
-					},
-					"patterns": [
-						{
-							"include": "#function_param_types"
-						}
-					]
+					"include": "#parameter-variable-types"
 				},
 				{
 					"comment": "other types",
@@ -1561,42 +1533,7 @@
 							"include": "#type-declarations-without-brackets"
 						},
 						{
-							"begin": "\\(",
-							"beginCaptures": {
-								"0": {
-									"name": "punctuation.definition.begin.bracket.round.go"
-								}
-							},
-							"end": "\\)",
-							"endCaptures": {
-								"0": {
-									"name": "punctuation.definition.end.bracket.round.go"
-								}
-							},
-							"patterns": [
-								{
-									"include": "#function_param_types"
-								},
-								{
-									"include": "$self"
-								}
-							]
-						},
-						{
-							"match": "\\[",
-							"name": "punctuation.definition.begin.bracket.square.go"
-						},
-						{
-							"match": "\\]",
-							"name": "punctuation.definition.end.bracket.square.go"
-						},
-						{
-							"match": "\\{",
-							"name": "punctuation.definition.begin.bracket.curly.go"
-						},
-						{
-							"match": "\\}",
-							"name": "punctuation.definition.end.bracket.curly.go"
+							"include": "#parameter-variable-types"
 						},
 						{
 							"match": "(?:\\w+)",
@@ -1607,26 +1544,7 @@
 			},
 			"patterns": [
 				{
-					"begin": "\\(",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.begin.bracket.round.go"
-						}
-					},
-					"end": "\\)",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.end.bracket.round.go"
-						}
-					},
-					"patterns": [
-						{
-							"include": "#function_param_types"
-						},
-						{
-							"include": "$self"
-						}
-					]
+					"include": "#parameter-variable-types"
 				}
 			]
 		},
@@ -1970,32 +1888,10 @@
 						"2": {
 							"patterns": [
 								{
-									"begin": "\\(",
-									"beginCaptures": {
-										"0": {
-											"name": "punctuation.definition.begin.bracket.round.go"
-										}
-									},
-									"end": "\\)",
-									"endCaptures": {
-										"0": {
-											"name": "punctuation.definition.end.bracket.round.go"
-										}
-									},
-									"patterns": [
-										{
-											"include": "#function_param_types"
-										},
-										{
-											"include": "$self"
-										}
-									]
+									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"include": "#type-declarations"
-								},
-								{
-									"include": "#generic_types"
+									"include": "#parameter-variable-types"
 								},
 								{
 									"match": "(?:\\w+)",
@@ -2369,31 +2265,7 @@
 									"include": "#type-declarations-without-brackets"
 								},
 								{
-									"include": "#generic_types"
-								},
-								{
-									"match": "\\[",
-									"name": "punctuation.definition.begin.bracket.square.go"
-								},
-								{
-									"match": "\\]",
-									"name": "punctuation.definition.end.bracket.square.go"
-								},
-								{
-									"match": "\\(",
-									"name": "punctuation.definition.begin.bracket.round.go"
-								},
-								{
-									"match": "\\)",
-									"name": "punctuation.definition.end.bracket.round.go"
-								},
-								{
-									"match": "\\{",
-									"name": "punctuation.definition.begin.bracket.curly.go"
-								},
-								{
-									"match": "\\}",
-									"name": "punctuation.definition.end.bracket.curly.go"
+									"include": "#parameter-variable-types"
 								},
 								{
 									"match": "\\w+",
@@ -2692,7 +2564,7 @@
 		},
 		"generic_types": {
 			"comment": "Generic support for all types",
-			"match": "(?:([\\w\\.\\*]+)(\\[(?:(?:[\\w\\.\\*]+)(?:\\,)?\\s*)+\\]))",
+			"match": "(?:([\\w\\.\\*]+)(\\[(?:[^\\]]+)?\\]))",
 			"captures": {
 				"1": {
 					"patterns": [
@@ -2708,22 +2580,7 @@
 				"2": {
 					"patterns": [
 						{
-							"include": "#type-declarations-without-brackets"
-						},
-						{
-							"match": "\\w+",
-							"name": "entity.name.type.go"
-						},
-						{
-							"match": "\\[",
-							"name": "punctuation.definition.begin.bracket.square.go"
-						},
-						{
-							"match": "\\]",
-							"name": "punctuation.definition.end.bracket.square.go"
-						},
-						{
-							"include": "$self"
+							"include": "#parameter-variable-types"
 						}
 					]
 				}

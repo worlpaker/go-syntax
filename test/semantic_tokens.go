@@ -3377,3 +3377,19 @@ func Bar215() {
 	_ = new(map[string]func() context.Context)
 	_ = make(map[string]func() (context.Context, string))
 }
+
+func Bar216() Bar204[context.Context, Bar204[context.Context, context.Context]] {
+	return nil
+}
+
+func Bar217() Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]] {
+	return nil
+}
+
+func Bar218() (a Bar204[context.Context, Bar204[context.Context, context.Context]], b Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]) {
+	return
+}
+
+func Bar219() *[]chan<- *[]Bar204[Bar204[context.Context, context.Context], context.Context] {
+	return nil
+}
