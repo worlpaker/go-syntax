@@ -62,10 +62,10 @@
 					"include": "#interface_variables_types"
 				},
 				{
-					"include": "#single_type_declaration"
+					"include": "#single_type"
 				},
 				{
-					"include": "#multi_type_declaration"
+					"include": "#multi_types"
 				},
 				{
 					"include": "#struct_interface_declaration"
@@ -2113,7 +2113,7 @@
 				}
 			]
 		},
-		"single_type_declaration": {
+		"single_type": {
 			"patterns": [
 				{
 					"comment": "single type declaration",
@@ -2199,7 +2199,7 @@
 				}
 			]
 		},
-		"multi_type_declaration": {
+		"multi_types": {
 			"patterns": [
 				{
 					"comment": "multi type declaration",
