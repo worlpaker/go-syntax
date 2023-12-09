@@ -3393,3 +3393,18 @@ func Bar218() (a Bar204[context.Context, Bar204[context.Context, context.Context
 func Bar219() *[]chan<- *[]Bar204[Bar204[context.Context, context.Context], context.Context] {
 	return nil
 }
+
+func Bar220() {
+	var a, b, c func(context.Context, string) (context.Context, context.Context) // comment
+
+	var foo func(context.Context, string) (context.Context, context.Context)
+	var bar func() func(context.Context, string) (context.Context, <-chan context.Context)
+
+	var (
+		ax, bx, cx func(context.Context, string) (context.Context, context.Context)
+		foox       func(context.Context, string) (context.Context, context.Context)
+		barx       func() func(context.Context, string) (context.Context, <-chan context.Context)
+	)
+
+	_, _, _, _, _, _, _, _, _, _ = a, b, c, ax, bx, cx, foo, bar, foox, barx
+}
