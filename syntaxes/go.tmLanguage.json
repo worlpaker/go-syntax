@@ -227,9 +227,6 @@
 					"patterns": [
 						{
 							"include": "#generic_param_types"
-						},
-						{
-							"include": "$self"
 						}
 					]
 				},
