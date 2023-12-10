@@ -33949,3 +33949,386 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.5.1
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar221() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type Bar struct{}
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                 ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type AppConfig struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go
+#                ^^^^^^ source.go keyword.struct.go
+#                      ^ source.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Brand    string                 `json:"brand"`
+#^^ source.go
+#  ^^^^^ source.go variable.other.property.go
+#       ^^^^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+#                 ^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                               ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		BundleID string                 `json:"bundleId"`
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+#                 ^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                  ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		AppName  string                 `json:"appName"`
+#^^ source.go
+#  ^^^^^^^ source.go variable.other.property.go
+#         ^^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+#                 ^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                 ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		Skin     string                 `json:"skin"`
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+#                 ^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                              ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		Foo      *string                `json:"foo"`
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^ source.go keyword.operator.address.go
+#            ^^^^^^ source.go storage.type.string.go
+#                  ^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^ source.go string.quoted.raw.go
+#                                             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		FooX     chan<- context.Context `json:"foox"`
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^ source.go
+#           ^^^^ source.go keyword.channel.go
+#               ^^ source.go keyword.operator.channel.go
+#                 ^ source.go
+#                  ^^^^^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^^^ source.go entity.name.type.go
+#                                 ^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                              ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		Ctx      context.Context        `json:"ctx"`
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^ source.go entity.name.type.go
+#                          ^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^ source.go string.quoted.raw.go
+#                                             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		Bar      Bar                    `json:"bar"`
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^^^^^^ source.go
+#           ^^^ source.go entity.name.type.go
+#              ^^^^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^ source.go string.quoted.raw.go
+#                                             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		Barx     *Bar                   `json:"barx"`
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^ source.go
+#           ^ source.go keyword.operator.address.go
+#            ^^^ source.go entity.name.type.go
+#               ^^^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                              ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		FooBar   *Bar                   `json:"foobar"`
+#^^ source.go
+#  ^^^^^^ source.go variable.other.property.go
+#        ^^^ source.go
+#           ^ source.go keyword.operator.address.go
+#            ^^^ source.go entity.name.type.go
+#               ^^^^^^^^^^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		TimerFoo time.Duration          `json:"timerfoo"`
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go
+#           ^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.other.period.go
+#                ^^^^^^^^ source.go entity.name.type.go
+#                        ^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                  ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		TimerBar time.Duration          `json:"timerbar"`
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go
+#           ^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.other.period.go
+#                ^^^^^^^^ source.go entity.name.type.go
+#                        ^^^^^^^^^^ source.go
+#                                  ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                                   ^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                  ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	config := AppConfig{
+#^ source.go
+# ^^^^^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^ source.go keyword.operator.assignment.go
+#          ^ source.go
+#           ^^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Brand:    "foo",
+#^^ source.go
+#  ^^^^^ source.go variable.other.property.go
+#       ^ source.go punctuation.other.colon.go
+#        ^^^^ source.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#             ^^^ source.go string.quoted.double.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                 ^ source.go punctuation.other.comma.go
+>		BundleID: "foo",
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go punctuation.other.colon.go
+#           ^ source.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#             ^^^ source.go string.quoted.double.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                 ^ source.go punctuation.other.comma.go
+>		AppName:  "foo",
+#^^ source.go
+#  ^^^^^^^ source.go variable.other.property.go
+#         ^ source.go punctuation.other.colon.go
+#          ^^ source.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#             ^^^ source.go string.quoted.double.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                 ^ source.go punctuation.other.comma.go
+>		Skin:     "foo",
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^^^^^ source.go
+#            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#             ^^^ source.go string.quoted.double.go
+#                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                 ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	appConfig := AppConfig{
+#^ source.go
+# ^^^^^^^^^ source.go variable.other.assignment.go
+#          ^ source.go
+#           ^^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Brand:    config.Brand,    // comment
+#^^ source.go
+#  ^^^^^ source.go variable.other.property.go
+#       ^ source.go punctuation.other.colon.go
+#        ^^^^ source.go
+#            ^^^^^^ source.go variable.other.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^ source.go variable.other.property.field.go
+#                        ^ source.go punctuation.other.comma.go
+#                         ^^^^ source.go
+#                             ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                               ^^^^^^^^ source.go comment.line.double-slash.go
+>		BundleID: config.BundleID, /* comment */
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go punctuation.other.colon.go
+#           ^ source.go
+#            ^^^^^^ source.go variable.other.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^^ source.go variable.other.property.field.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^^ source.go comment.block.go punctuation.definition.comment.go
+#                               ^^^^^^^^^ source.go comment.block.go
+#                                        ^^ source.go comment.block.go punctuation.definition.comment.go
+>		AppName:  config.AppName,
+#^^ source.go
+#  ^^^^^^^ source.go variable.other.property.go
+#         ^ source.go punctuation.other.colon.go
+#          ^^ source.go
+#            ^^^^^^ source.go variable.other.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^ source.go variable.other.property.field.go
+#                          ^ source.go punctuation.other.comma.go
+>		Skin:     config.Skin,
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^^^^^ source.go
+#            ^^^^^^ source.go variable.other.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^ source.go variable.other.property.field.go
+#                       ^ source.go punctuation.other.comma.go
+>		Foo:      &config.Brand,
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^^^^^ source.go
+#            ^ source.go keyword.operator.address.go
+#             ^^^^^^ source.go variable.other.go
+#                   ^ source.go punctuation.other.period.go
+#                    ^^^^^ source.go variable.other.property.field.go
+#                         ^ source.go punctuation.other.comma.go
+>		FooX:     make(chan<- context.Context),
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^^^^^ source.go
+#            ^^^^ source.go entity.name.function.support.builtin.go
+#                ^ source.go punctuation.definition.begin.bracket.round.go
+#                 ^^^^ source.go keyword.channel.go
+#                     ^^ source.go keyword.operator.channel.go
+#                       ^ source.go
+#                        ^^^^^^^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.period.go
+#                                ^^^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                        ^ source.go punctuation.other.comma.go
+>		Ctx:      context.TODO(),
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^^^^^ source.go
+#            ^^^^^^^ source.go variable.other.go
+#                   ^ source.go punctuation.other.period.go
+#                    ^^^^ source.go entity.name.function.support.go
+#                        ^ source.go punctuation.definition.begin.bracket.round.go
+#                         ^ source.go punctuation.definition.end.bracket.round.go
+#                          ^ source.go punctuation.other.comma.go
+>		Bar:      Bar{},
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^^^^^ source.go
+#            ^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.begin.bracket.curly.go
+#                ^ source.go punctuation.definition.end.bracket.curly.go
+#                 ^ source.go punctuation.other.comma.go
+>		Barx:     &Bar{},
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^^^^^ source.go
+#            ^ source.go keyword.operator.address.go
+#             ^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+#                 ^ source.go punctuation.definition.end.bracket.curly.go
+#                  ^ source.go punctuation.other.comma.go
+>		FooBar:   new(Bar),
+#^^ source.go
+#  ^^^^^^ source.go variable.other.property.go
+#        ^ source.go punctuation.other.colon.go
+#         ^^^ source.go
+#            ^^^ source.go entity.name.function.support.builtin.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.end.bracket.round.go
+#                    ^ source.go punctuation.other.comma.go
+>
+>		// Local package and third-party imported variables/constants
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		// will be scoped "variable.other.property.field.go" as well.
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		// See the examples below:
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		// Since "config.Brand" and "time.Second" are not different,
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		// "Second" will be scoped as "variable.other.property.field.go" here.
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		TimerFoo: time.Second,     // "Second" will be scoped as "variable.other.property.field.go"
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go punctuation.other.colon.go
+#           ^ source.go
+#            ^^^^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^^ source.go variable.other.property.field.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^^^^^ source.go
+#                             ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		TimerBar: 5 * time.Second, // But in here, "Second" will be scoped as "variable.other.go"
+#^^ source.go
+#  ^^^^^^^^ source.go variable.other.property.go
+#          ^ source.go punctuation.other.colon.go
+#           ^ source.go
+#            ^ source.go constant.numeric.decimal.go
+#             ^ source.go
+#              ^ source.go keyword.operator.arithmetic.go
+#               ^ source.go
+#                ^^^^ source.go variable.other.go
+#                    ^ source.go punctuation.other.period.go
+#                     ^^^^^^ source.go variable.other.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	_ = appConfig
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^^^^^^^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

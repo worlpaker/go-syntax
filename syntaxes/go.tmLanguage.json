@@ -2535,25 +2535,53 @@
 			}
 		},
 		"property_variables": {
-			"comment": "Property variables in struct",
-			"match": "(?:((?:[\\w\\.]+)(?:\\:))(?!\\=))",
-			"captures": {
-				"1": {
-					"patterns": [
-						{
-							"include": "#type-declarations"
-						},
-						{
-							"match": "\\w+",
-							"name": "variable.other.property.go"
+			"patterns": [
+				{
+					"comment": "Property variables in struct",
+					"match": "(?:((?:[\\w\\.]+)(?:\\:))(?!\\=))",
+					"captures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.property.go"
+								}
+							]
 						}
-					]
+					}
+				},
+				{
+					"comment": "property variables as parameter field in struct initialization",
+					"match": "(?<=[\\w\\.]\\:)(?:\\s*)([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\())",
+					"captures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "$self"
+								}
+							]
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "variable.other.property.field.go"
+								}
+							]
+						}
+					}
 				}
-			}
+			]
 		},
 		"label_loop_variable": {
 			"comment": "labeled loop variable name",
-			"match": "((?:^\\s*\\w+:$)|(?:^\\s*(?:\\bbreak\\b|\\bgoto\\b|\\bcontinue\\b)\\s+\\w+(?:\\s*\/(?:\/|\\*)\\s*.*)?$))",
+			"match": "((?:^\\s*\\w+:\\s*$)|(?:^\\s*(?:\\bbreak\\b|\\bgoto\\b|\\bcontinue\\b)\\s+\\w+(?:\\s*\/(?:\/|\\*)\\s*.*)?$))",
 			"captures": {
 				"1": {
 					"patterns": [

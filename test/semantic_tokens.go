@@ -3408,3 +3408,53 @@ func Bar220() {
 
 	_, _, _, _, _, _, _, _, _, _ = a, b, c, ax, bx, cx, foo, bar, foox, barx
 }
+
+// v0.5.1
+func Bar221() {
+	type Bar struct{}
+
+	type AppConfig struct {
+		Brand    string                 `json:"brand"`
+		BundleID string                 `json:"bundleId"`
+		AppName  string                 `json:"appName"`
+		Skin     string                 `json:"skin"`
+		Foo      *string                `json:"foo"`
+		FooX     chan<- context.Context `json:"foox"`
+		Ctx      context.Context        `json:"ctx"`
+		Bar      Bar                    `json:"bar"`
+		Barx     *Bar                   `json:"barx"`
+		FooBar   *Bar                   `json:"foobar"`
+		TimerFoo time.Duration          `json:"timerfoo"`
+		TimerBar time.Duration          `json:"timerbar"`
+	}
+
+	config := AppConfig{
+		Brand:    "foo",
+		BundleID: "foo",
+		AppName:  "foo",
+		Skin:     "foo",
+	}
+
+	appConfig := AppConfig{
+		Brand:    config.Brand,    // comment
+		BundleID: config.BundleID, /* comment */
+		AppName:  config.AppName,
+		Skin:     config.Skin,
+		Foo:      &config.Brand,
+		FooX:     make(chan<- context.Context),
+		Ctx:      context.TODO(),
+		Bar:      Bar{},
+		Barx:     &Bar{},
+		FooBar:   new(Bar),
+
+		// Local package and third-party imported variables/constants
+		// will be scoped "variable.other.property.field.go" as well.
+		// See the examples below:
+		// Since "config.Brand" and "time.Second" are not different,
+		// "Second" will be scoped as "variable.other.property.field.go" here.
+		TimerFoo: time.Second,     // "Second" will be scoped as "variable.other.property.field.go"
+		TimerBar: 5 * time.Second, // But in here, "Second" will be scoped as "variable.other.go"
+	}
+
+	_ = appConfig
+}
