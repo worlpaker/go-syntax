@@ -3590,3 +3590,92 @@ func Bar223() {
 		bar func(a context.Context) error
 	}
 }
+
+func Bar224(a []struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+}, b context.Context) {
+
+}
+
+func Bar225(a, b, c context.Context) ([]struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+}, error) {
+	return nil, nil
+}
+
+func Bar226() []struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+}
+
+func Bar227(a, b, c context.Context) []struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+} {
+	return nil
+}
+
+func Bar228() *[]struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+}
+
+func Bar229(a, b, c context.Context) *[]struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+} {
+	return nil
+}
+
+func Bar230() *[]<-chan []struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+}
+
+func Bar231(a, b, c context.Context) *[]chan<- *[]struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+} {
+	return nil
+}
+
+func Bar232(a, b, c context.Context) struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+} {
+	return struct {
+		context.Context
+		a   chan context.Context
+		b   chan context.Context
+		c   chan context.Context
+		foo context.Context
+		bar func(a context.Context) error
+	}{}
+}
+
+func Bar233() struct {
+	context.Context
+	a, b, c chan context.Context
+	foo     context.Context
+	bar     func(a context.Context) error
+}
