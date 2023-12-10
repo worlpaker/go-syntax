@@ -2044,37 +2044,13 @@
 					},
 					"patterns": [
 						{
-							"include": "#functions"
-						},
-						{
 							"include": "#struct_variables_types"
 						},
 						{
 							"include": "#type-declarations-without-brackets"
 						},
 						{
-							"match": "\\(",
-							"name": "punctuation.definition.begin.bracket.round.go"
-						},
-						{
-							"match": "\\)",
-							"name": "punctuation.definition.end.bracket.round.go"
-						},
-						{
-							"match": "\\[",
-							"name": "punctuation.definition.begin.bracket.square.go"
-						},
-						{
-							"match": "\\]",
-							"name": "punctuation.definition.end.bracket.square.go"
-						},
-						{
-							"match": "\\{",
-							"name": "punctuation.definition.begin.bracket.curly.go"
-						},
-						{
-							"match": "\\}",
-							"name": "punctuation.definition.end.bracket.curly.go"
+							"include": "#parameter-variable-types"
 						},
 						{
 							"match": "(?:\\w+)",
@@ -2087,6 +2063,55 @@
 							"name": "punctuation.definition.end.bracket.round.go"
 						}
 					}
+				},
+				{
+					"comment": "single type declaration with multi-lines generics",
+					"begin": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(?=\\[))",
+					"beginCaptures": {
+						"1": {
+							"name": "keyword.type.go"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#type-declarations-without-brackets"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
+								}
+							]
+						}
+					},
+					"end": "(?:(?<=\\])((?:\\s+)(?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:(?!(?:[\\[\\]\\*]+)?(?:\\bstruct\\b|\\binterface\\b|\\bfunc\\b))[\\w\\.\\-\\*\\[\\]]+))?)",
+					"endCaptures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-declarations-without-brackets"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
+								}
+							]
+						}
+					},
+					"patterns": [
+						{
+							"include": "#struct_variables_types"
+						},
+						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"include": "#parameter-variable-types"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
+						}
+					]
 				}
 			]
 		},

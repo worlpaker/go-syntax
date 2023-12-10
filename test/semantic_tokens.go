@@ -3458,3 +3458,122 @@ func Bar221() {
 
 	_ = appConfig
 }
+
+func Bar222() {
+	type Foo[
+		Input, Output context.Context,
+	] func(ctx context.Context, input Input) (output Output, err error)
+
+	type Foo2[
+		Input, Output context.Context,
+	] context.Context
+
+	type Foo3[
+		Input,
+		Output context.Context,
+	] *[]<-chan *[]context.Context
+
+	type Foo4[
+		Input, Output context.Context,
+	] struct {
+		context.Context
+		a, b, c chan context.Context
+		foo     context.Context
+		bar     func(a context.Context) error
+	}
+
+	type Foo5[
+		Input,
+		Output context.Context,
+	] *[]struct {
+		context.Context
+		a, b, c chan context.Context
+		foo     context.Context
+		bar     func(a context.Context) error
+	}
+
+	type Foo6[
+		Input,
+		Output context.Context] *[]chan<- *[]struct {
+		context.Context
+		a, b, c chan context.Context
+		foo     context.Context
+		bar     func(a context.Context) error
+	}
+
+	type Foo7[
+		Input, Output context.Context,
+	] *[]<-chan *map[context.Context]context.Context
+
+	type Foo8[
+		Input, Output context.Context,
+	] *[]<-chan *[]func(ctx context.Context, input Input) (output Output, err error)
+
+	type Foo9[
+		Input, Output context.Context,
+	] *[]<-chan *map[context.Context]map[context.Context]interface{}
+
+	type Foo10[
+		Input,
+		Output context.Context] map[context.Context]interface{}
+
+	type (
+		Bar[
+			Input, Output context.Context,
+		] func(ctx context.Context, input Input) (output Output, err error)
+
+		Bar2[
+			Input, Output context.Context,
+		] context.Context
+
+		Bar3[
+			Input,
+			Output context.Context,
+		] *[]<-chan *[]context.Context
+
+		Bar4[
+			Input, Output context.Context,
+		] struct {
+			context.Context
+			a, b, c chan context.Context
+			foo     context.Context
+			bar     func(a context.Context) error
+		}
+
+		Bar5[
+			Input,
+			Output context.Context,
+		] *[]struct {
+			context.Context
+			a, b, c chan context.Context
+			foo     context.Context
+			bar     func(a context.Context) error
+		}
+
+		Bar6[
+			Input,
+			Output context.Context] *[]chan<- *[]struct {
+			context.Context
+			a, b, c chan context.Context
+			foo     context.Context
+			bar     func(a context.Context) error
+		}
+
+		Bar7[
+			Input, Output context.Context,
+		] *[]<-chan *map[context.Context]context.Context
+
+		Bar8[
+			Input, Output context.Context,
+		] *[]<-chan *[]func(ctx context.Context, input Input) (output Output, err error)
+
+		Bar9[
+			Input, Output context.Context,
+		] *[]<-chan *map[context.Context]map[context.Context]interface{}
+
+		Bar10[
+			Input,
+			Output context.Context] map[context.Context]interface{}
+	)
+
+}
