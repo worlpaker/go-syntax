@@ -3577,3 +3577,16 @@ func Bar222() {
 	)
 
 }
+
+func Bar223() {
+	// before formatting with gofmt
+	// type foo struct{context.Context; a chan context.Context; b chan context.Context; c chan context.Context; foo context.Context; bar func(a context.Context) error}
+	type foo struct {
+		context.Context
+		a   chan context.Context
+		b   chan context.Context
+		c   chan context.Context
+		foo context.Context
+		bar func(a context.Context) error
+	}
+}

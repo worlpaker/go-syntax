@@ -35304,3 +35304,87 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar223() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// before formatting with gofmt
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// type foo struct{context.Context; a chan context.Context; b chan context.Context; c chan context.Context; foo context.Context; bar func(a context.Context) error}
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type foo struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		context.Context
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.other.period.go
+#          ^^^^^^^ source.go entity.name.type.go
+>		a   chan context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^ source.go
+#      ^^^^ source.go keyword.channel.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^ source.go entity.name.type.go
+>		b   chan context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^ source.go
+#      ^^^^ source.go keyword.channel.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^ source.go entity.name.type.go
+>		c   chan context.Context
+#^^ source.go
+#  ^ source.go variable.other.property.go
+#   ^^^ source.go
+#      ^^^^ source.go keyword.channel.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go punctuation.other.period.go
+#                   ^^^^^^^ source.go entity.name.type.go
+>		foo context.Context
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.other.period.go
+#              ^^^^^^^ source.go entity.name.type.go
+>		bar func(a context.Context) error
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go
+#      ^^^^ source.go keyword.function.go
+#          ^ source.go punctuation.definition.begin.bracket.round.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go
+#             ^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.other.period.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.definition.end.bracket.round.go
+#                             ^ source.go
+#                              ^^^^^ source.go storage.type.error.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
