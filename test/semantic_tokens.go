@@ -3679,3 +3679,13 @@ func Bar233() struct {
 	foo     context.Context
 	bar     func(a context.Context) error
 }
+
+func Bar234() {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	select {
+	case <-ctx.Done():
+	}
+
+}

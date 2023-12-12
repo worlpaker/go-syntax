@@ -1595,7 +1595,7 @@
 					"include": "#property_variables"
 				},
 				{
-					"include": "#switch_normal_case_variables"
+					"include": "#switch_select_case_variables"
 				},
 				{
 					"include": "#after_control_variables"
@@ -2539,8 +2539,8 @@
 				}
 			}
 		},
-		"switch_normal_case_variables": {
-			"comment": "variables after case control keyword in switch expression",
+		"switch_select_case_variables": {
+			"comment": "variables after case control keyword in switch/select expression",
 			"match": "(?:(?:^\\s*(\\bcase\\b))(?:\\s+)([\\s\\S]+(?:\\:)\\s*(?:\/(?:\/|\\*).*)?)$)",
 			"captures": {
 				"1": {
@@ -2550,6 +2550,9 @@
 					"patterns": [
 						{
 							"include": "#type-declarations"
+						},
+						{
+							"include": "#support_functions"
 						},
 						{
 							"match": "\\w+",
