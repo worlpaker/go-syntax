@@ -2,6 +2,19 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.1]
+
+Enhances struct property variables (See [#4](https://github.com/worlpaker/go-syntax/issues/4)):
+
+- struct initialization property variables field will be scoped as `"variable.other.property.field.go"`
+
+Fixes:
+
+- minor bugs related to struct types within function declaration
+- switch/select case variables with support functions
+- early highlighting of struct declaration and variables after control keywords (before formatting with gofmt)
+- type declaration with generics on multi-lines
+
 ## [0.5.0]
 
 - Enhances function and struct declaration
