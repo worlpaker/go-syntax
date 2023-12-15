@@ -36205,3 +36205,247 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar235() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// better pre-highlighting variables after control keywords -before formatting with gofmt
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	arr := []bool{true, false}
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go punctuation.definition.begin.bracket.square.go
+#         ^ source.go punctuation.definition.end.bracket.square.go
+#          ^^^^ source.go storage.type.boolean.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+#               ^^^^ source.go constant.language.go
+#                   ^ source.go punctuation.other.comma.go
+#                    ^ source.go
+#                     ^^^^^ source.go constant.language.go
+#                          ^ source.go punctuation.definition.end.bracket.curly.go
+>	num := 1
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go constant.numeric.decimal.go
+>	a, b := 0, 0
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^^ source.go keyword.operator.assignment.go
+#        ^ source.go
+#         ^ source.go constant.numeric.decimal.go
+#          ^ source.go punctuation.other.comma.go
+#           ^ source.go
+#            ^ source.go constant.numeric.decimal.go
+>
+>	// if arr[num-1]{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if arr[num+1]{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if arr[num%1]{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if arr[num/1]{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// if num > a+ b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if num > a% b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if num > a/ b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if num > a- b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if num > a* b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// for i:=0; i<10; a+= b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// for i:=0; i<10; a-= b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// for i:=0; i<10; a/= b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// for i:=0; i<10; a*= b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// for i:=0; i<10; a%= b{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	if arr[num+1] {
+#^ source.go
+# ^^ source.go keyword.control.go
+#   ^ source.go
+#    ^^^ source.go variable.other.go
+#       ^ source.go punctuation.definition.begin.bracket.square.go
+#        ^^^ source.go variable.other.go
+#           ^ source.go keyword.operator.arithmetic.go
+#            ^ source.go constant.numeric.decimal.go
+#             ^ source.go punctuation.definition.end.bracket.square.go
+#              ^ source.go
+#               ^ source.go punctuation.definition.begin.bracket.curly.go
+>		// implement
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	if num > a*b {
+#^ source.go
+# ^^ source.go keyword.control.go
+#   ^ source.go
+#    ^^^ source.go variable.other.go
+#       ^ source.go
+#        ^ source.go keyword.operator.comparison.go
+#         ^ source.go
+#          ^ source.go variable.other.go
+#           ^ source.go keyword.operator.address.go
+#            ^ source.go variable.other.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>		// implement
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	for i := 0; i < 10; a += b {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.terminator.go
+#            ^ source.go
+#             ^ source.go variable.other.go
+#              ^ source.go
+#               ^ source.go keyword.operator.comparison.go
+#                ^ source.go
+#                 ^^ source.go constant.numeric.decimal.go
+#                   ^ source.go punctuation.terminator.go
+#                    ^ source.go
+#                     ^ source.go variable.other.go
+#                      ^ source.go
+#                       ^^ source.go keyword.operator.assignment.go
+#                         ^ source.go
+#                          ^ source.go variable.other.go
+#                           ^ source.go
+#                            ^ source.go punctuation.definition.begin.bracket.curly.go
+>		// implement
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

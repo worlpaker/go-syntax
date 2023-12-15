@@ -3689,3 +3689,58 @@ func Bar234() {
 	}
 
 }
+
+func Bar235() {
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+	arr := []bool{true, false}
+	num := 1
+	a, b := 0, 0
+
+	// if arr[num-1]{
+	// }
+	// if arr[num+1]{
+	// }
+	// if arr[num%1]{
+	// }
+	// if arr[num/1]{
+	// }
+
+	// if num > a+ b{
+	// }
+	// if num > a% b{
+	// }
+	// if num > a/ b{
+	// }
+	// if num > a- b{
+	// }
+	// if num > a* b{
+	// }
+
+	// for i:=0; i<10; a+= b{
+	// }
+
+	// for i:=0; i<10; a-= b{
+	// }
+
+	// for i:=0; i<10; a/= b{
+	// }
+
+	// for i:=0; i<10; a*= b{
+	// }
+
+	// for i:=0; i<10; a%= b{
+	// }
+
+	if arr[num+1] {
+		// implement
+	}
+
+	if num > a*b {
+		// implement
+	}
+
+	for i := 0; i < 10; a += b {
+		// implement
+	}
+
+}
