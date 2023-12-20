@@ -36449,3 +36449,161 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.5.2
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar236() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// better pre-highlighting variables after control keywords -before formatting with gofmt
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	nums := []int{1, 2, 3, 4, 5}
+#^ source.go
+# ^^^^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^^ source.go keyword.operator.assignment.go
+#        ^ source.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go punctuation.definition.end.bracket.square.go
+#           ^^^ source.go storage.type.numeric.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+#               ^ source.go constant.numeric.decimal.go
+#                ^ source.go punctuation.other.comma.go
+#                 ^ source.go
+#                  ^ source.go constant.numeric.decimal.go
+#                   ^ source.go punctuation.other.comma.go
+#                    ^ source.go
+#                     ^ source.go constant.numeric.decimal.go
+#                      ^ source.go punctuation.other.comma.go
+#                       ^ source.go
+#                        ^ source.go constant.numeric.decimal.go
+#                         ^ source.go punctuation.other.comma.go
+#                          ^ source.go
+#                           ^ source.go constant.numeric.decimal.go
+#                            ^ source.go punctuation.definition.end.bracket.curly.go
+>	ok, notOk := true, false
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^^^^ source.go variable.other.assignment.go
+#          ^ source.go
+#           ^^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^^^ source.go constant.language.go
+#                  ^ source.go punctuation.other.comma.go
+#                   ^ source.go
+#                    ^^^^^ source.go constant.language.go
+>	// for i := range nums {
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// 	for j := range nums[i+1:]{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// 		_ = j
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^ source.go comment.line.double-slash.go
+>	// 	}
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	// if ok || notOk{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>	// if ok && notOk{
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// }
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^ source.go comment.line.double-slash.go
+>
+>	for i := range nums {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^^^^^ source.go keyword.control.go
+#               ^ source.go
+#                ^^^^ source.go variable.other.go
+#                    ^ source.go
+#                     ^ source.go punctuation.definition.begin.bracket.curly.go
+>		for j := range nums[i+1:] {
+#^^ source.go
+#  ^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^ source.go keyword.operator.assignment.go
+#          ^ source.go
+#           ^^^^^ source.go keyword.control.go
+#                ^ source.go
+#                 ^^^^ source.go variable.other.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^ source.go variable.other.go
+#                       ^ source.go keyword.operator.arithmetic.go
+#                        ^ source.go constant.numeric.decimal.go
+#                         ^ source.go punctuation.other.colon.go
+#                          ^ source.go punctuation.definition.end.bracket.square.go
+#                           ^ source.go
+#                            ^ source.go punctuation.definition.begin.bracket.curly.go
+>			_ = j
+#^^^ source.go
+#   ^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^ source.go keyword.operator.assignment.go
+#      ^ source.go
+#       ^ source.go variable.other.go
+>		}
+#^^ source.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	if ok || notOk {
+#^ source.go
+# ^^ source.go keyword.control.go
+#   ^ source.go
+#    ^^ source.go variable.other.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.logical.go
+#         ^ source.go
+#          ^^^^^ source.go variable.other.go
+#               ^ source.go
+#                ^ source.go punctuation.definition.begin.bracket.curly.go
+>		// implement
+#^^ source.go
+#  ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#    ^^^^^^^^^^ source.go comment.line.double-slash.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

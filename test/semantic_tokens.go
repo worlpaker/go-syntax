@@ -3744,3 +3744,31 @@ func Bar235() {
 	}
 
 }
+
+// v0.5.2
+func Bar236() {
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+	nums := []int{1, 2, 3, 4, 5}
+	ok, notOk := true, false
+	// for i := range nums {
+	// 	for j := range nums[i+1:]{
+	// 		_ = j
+	// 	}
+	// }
+
+	// if ok || notOk{
+	// }
+	// if ok && notOk{
+	// }
+
+	for i := range nums {
+		for j := range nums[i+1:] {
+			_ = j
+		}
+	}
+
+	if ok || notOk {
+		// implement
+	}
+
+}
