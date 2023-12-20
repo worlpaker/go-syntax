@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.2]
+
+Fixes early highlighting of variables after control keywords (before formatting with gofmt)
+
 ## [0.5.1]
 
 Enhances struct property variables (See [#4](https://github.com/worlpaker/go-syntax/issues/4)):
