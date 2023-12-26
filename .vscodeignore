@@ -2,3 +2,5 @@
 .vscode-test/**
 .gitignore
 Makefile
+examples/**
+test/**
