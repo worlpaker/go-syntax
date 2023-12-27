@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.3]
+
+Updates `.vscodeignore` to exclude unnecessary files and folders (`examples`, `test`)
+
 ## [0.5.2]
 
 Fixes early highlighting of variables after control keywords (before formatting with gofmt)
