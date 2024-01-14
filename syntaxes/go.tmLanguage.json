@@ -135,7 +135,7 @@
 					"include": "#storage_types"
 				},
 				{
-					"include": "#raw_strings_literals"
+					"include": "#raw_string_literals"
 				},
 				{
 					"include": "#string_literals"
@@ -176,7 +176,7 @@
 					"include": "#storage_types"
 				},
 				{
-					"include": "#raw_strings_literals"
+					"include": "#raw_string_literals"
 				},
 				{
 					"include": "#string_literals"
@@ -576,7 +576,7 @@
 				}
 			]
 		},
-		"raw_strings_literals": {
+		"raw_string_literals": {
 			"comment": "Raw string literals",
 			"begin": "`",
 			"beginCaptures": {
