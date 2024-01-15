@@ -3772,3 +3772,35 @@ func Bar236() {
 	}
 
 }
+
+// v0.5.4
+func Bar237() {
+	var a1 string
+	var a2, a3, a4 string = "foo", "foo", "foo"
+	var a5 = "foo"
+	var a6 string = "foo"
+
+	a1, a2, a3 = a3, a4, a5
+	a3, a4 = a1, a2
+	a5 = a6
+
+	b1, b2, b3, b4, b5 := "foo", "foo", "foo", "foo", "foo"
+	b6 := "foo"
+
+	b1, b2, b3 = b3, b4, b5
+	b3, b4 = b1, b2
+	b5 = b6
+
+	var (
+		c1, c2, c3                 = "foo", "foo", "foo"
+		c4, c5     string          = "foo", "foo"
+		c6         context.Context = context.TODO()
+	)
+
+	c1, c2, c3 = c3, c4, c5
+	c4, c5 = c1, c2
+	_ = c6
+
+	a, b, c := new(string), new(string), new(string)
+	*a, *b, *c = "foo", "foo", "foo"
+}

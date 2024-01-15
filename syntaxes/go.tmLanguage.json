@@ -85,19 +85,22 @@
 			"comment": "all statements related to variables",
 			"patterns": [
 				{
+					"include": "#var_const_assignment"
+				},
+				{
+					"include": "#variable_assignment"
+				},
+				{
+					"include": "#label_loop_variables"
+				},
+				{
+					"include": "#property_variables"
+				},
+				{
+					"include": "#switch_select_case_variables"
+				},
+				{
 					"include": "#after_control_variables"
-				},
-				{
-					"include": "#var_const_single_assignment"
-				},
-				{
-					"include": "#var_assignment"
-				},
-				{
-					"include": "#var_other_assignment"
-				},
-				{
-					"include": "#var_const_multi_assignment"
 				},
 				{
 					"include": "#other_variables"
@@ -1589,18 +1592,6 @@
 					"include": "#storage_types"
 				},
 				{
-					"include": "#label_loop_variable"
-				},
-				{
-					"include": "#property_variables"
-				},
-				{
-					"include": "#switch_select_case_variables"
-				},
-				{
-					"include": "#after_control_variables"
-				},
-				{
 					"comment": "struct expression before curly bracket",
 					"match": "((?:(?:\\w+\\.)+)?\\w+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
@@ -2379,90 +2370,40 @@
 				}
 			]
 		},
-		"var_const_single_assignment": {
-			"comment": "var and const with single type assignment",
-			"match": "(?:(?<=\\bvar\\b|\\bconst\\b)(?:\\s*)([\\w\\.]+(?:(?:\\,\\s*[\\w\\.]+)+)?)(?:\\s*)(?:(?!(?:(?:[\\[\\]\\*]+)?\\bstruct\\b\\s*\\{)|(?:(?:[\\[\\]\\*]+)?\\bfunc\\b))((?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:(?:(?:[\\w\\.\\*]+)?(?:\\[(?:.*)\\])?(?:[\\w\\.\\*]+)?))?\\s*(?:\\=)?))?)",
-			"captures": {
-				"1": {
-					"patterns": [
-						{
-							"include": "#delimiters"
-						},
-						{
-							"match": "(?:\\w+)",
-							"name": "variable.other.assignment.go"
-						}
-					]
-				},
-				"2": {
-					"patterns": [
-						{
-							"include": "#type-declarations"
-						},
-						{
-							"include": "#generic_types"
-						},
-						{
-							"match": "(?:\\w+)",
-							"name": "entity.name.type.go"
-						}
-					]
-				}
-			}
-		},
-		"var_assignment": {
-			"comment": "variable assignment",
-			"match": "(?<!var)\\s*(\\w+(?:\\.\\w+)*(?>,\\s*\\w+(?:\\.\\w+)*)*)(?=\\s*=(?!=))",
-			"captures": {
-				"1": {
-					"patterns": [
-						{
-							"match": "\\d\\w*",
-							"name": "invalid.illegal.identifier.go"
-						},
-						{
-							"match": "\\w+(?:\\.\\w+)*",
-							"name": "variable.other.assignment.go",
-							"captures": {
-								"0": {
-									"patterns": [
-										{
-											"include": "#delimiters"
-										}
-									]
-								}
-							}
-						},
-						{
-							"include": "#delimiters"
-						}
-					]
-				}
-			}
-		},
-		"var_other_assignment": {
-			"comment": "variable other assignment",
-			"match": "\\b\\w+(?:,\\s*\\w+)*(?=\\s*:=)",
-			"captures": {
-				"0": {
-					"patterns": [
-						{
-							"match": "\\d\\w*",
-							"name": "invalid.illegal.identifier.go"
-						},
-						{
-							"match": "\\w+",
-							"name": "variable.other.assignment.go"
-						},
-						{
-							"include": "#delimiters"
-						}
-					]
-				}
-			}
-		},
-		"var_const_multi_assignment": {
+		"var_const_assignment": {
+			"comment": "variable assignment with var and const keyword",
 			"patterns": [
+				{
+					"comment": "var and const with single type assignment",
+					"match": "(?:(?<=\\bvar\\b|\\bconst\\b)(?:\\s*)([\\w\\.]+(?:(?:\\,\\s*[\\w\\.]+)+)?)(?:\\s*)(?:(?!(?:(?:[\\[\\]\\*]+)?\\bstruct\\b\\s*\\{)|(?:(?:[\\[\\]\\*]+)?\\bfunc\\b))((?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:(?:(?:[\\w\\.\\*]+)?(?:\\[(?:.*)\\])?(?:[\\w\\.\\*]+)?))?\\s*(?:\\=)?))?)",
+					"captures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "variable.other.assignment.go"
+								}
+							]
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"include": "#generic_types"
+								},
+								{
+									"match": "(?:\\w+)",
+									"name": "entity.name.type.go"
+								}
+							]
+						}
+					}
+				},
 				{
 					"comment": "var and const with multi type assignment",
 					"begin": "(?:(?<=\\bvar\\b|\\bconst\\b)(?:\\s*)(\\())",
@@ -2512,6 +2453,56 @@
 							"include": "$self"
 						}
 					]
+				}
+			]
+		},
+		"variable_assignment": {
+			"comment": "variable assignment",
+			"patterns": [
+				{
+					"comment": "variable assignment with :=",
+					"match": "\\b\\w+(?:\\,\\s*\\w+)*(?=\\s*:=)",
+					"captures": {
+						"0": {
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"match": "\\d\\w*",
+									"name": "invalid.illegal.identifier.go"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.assignment.go"
+								}
+							]
+						}
+					}
+				},
+				{
+					"comment": "variable assignment with =",
+					"match": "\\b[\\w\\.\\*]+(?:\\,\\s*[\\w\\.\\*]+)*(?=\\s*=(?!=))",
+					"captures": {
+						"0": {
+							"patterns": [
+								{
+									"include": "#delimiters"
+								},
+								{
+									"include": "#operators"
+								},
+								{
+									"match": "\\d\\w*",
+									"name": "invalid.illegal.identifier.go"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.assignment.go"
+								}
+							]
+						}
+					}
 				}
 			]
 		},
@@ -2566,7 +2557,7 @@
 			"patterns": [
 				{
 					"comment": "Property variables in struct",
-					"match": "(?:((?:[\\w\\.]+)(?:\\:))(?!\\=))",
+					"match": "(?:((?:\\b[\\w\\.]+))(?=\\:(?!\\=)))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -2607,7 +2598,7 @@
 				}
 			]
 		},
-		"label_loop_variable": {
+		"label_loop_variables": {
 			"comment": "labeled loop variable name",
 			"match": "((?:^\\s*\\w+:\\s*$)|(?:^\\s*(?:\\bbreak\\b|\\bgoto\\b|\\bcontinue\\b)\\s+\\w+(?:\\s*\/(?:\/|\\*)\\s*.*)?$))",
 			"captures": {

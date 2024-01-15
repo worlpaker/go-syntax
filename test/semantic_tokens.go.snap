@@ -36607,3 +36607,373 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.5.4
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar237() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	var a1 string
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^^^^ source.go storage.type.string.go
+>	var a2, a3, a4 string = "foo", "foo", "foo"
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^^ source.go variable.other.assignment.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^ source.go variable.other.assignment.go
+#               ^ source.go
+#                ^^^^^^ source.go storage.type.string.go
+#                      ^ source.go
+#                       ^ source.go keyword.operator.assignment.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                          ^^^ source.go string.quoted.double.go
+#                             ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                 ^^^ source.go string.quoted.double.go
+#                                    ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                     ^ source.go punctuation.other.comma.go
+#                                      ^ source.go
+#                                       ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                        ^^^ source.go string.quoted.double.go
+#                                           ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	var a5 = "foo"
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#           ^^^ source.go string.quoted.double.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	var a6 string = "foo"
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^^^^^^ source.go storage.type.string.go
+#              ^ source.go
+#               ^ source.go keyword.operator.assignment.go
+#                ^ source.go
+#                 ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                  ^^^ source.go string.quoted.double.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>
+>	a1, a2, a3 = a3, a4, a5
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^ source.go variable.other.go
+#                ^ source.go punctuation.other.comma.go
+#                 ^ source.go
+#                  ^^ source.go variable.other.go
+#                    ^ source.go punctuation.other.comma.go
+#                     ^ source.go
+#                      ^^ source.go variable.other.go
+>	a3, a4 = a1, a2
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^^ source.go variable.other.go
+#            ^ source.go punctuation.other.comma.go
+#             ^ source.go
+#              ^^ source.go variable.other.go
+>	a5 = a6
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go
+#    ^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^ source.go variable.other.go
+>
+>	b1, b2, b3, b4, b5 := "foo", "foo", "foo", "foo", "foo"
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^^ source.go variable.other.assignment.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^ source.go variable.other.assignment.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^^ source.go variable.other.assignment.go
+#                   ^ source.go
+#                    ^^ source.go keyword.operator.assignment.go
+#                      ^ source.go
+#                       ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                        ^^^ source.go string.quoted.double.go
+#                           ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                            ^ source.go punctuation.other.comma.go
+#                             ^ source.go
+#                              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                               ^^^ source.go string.quoted.double.go
+#                                  ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                      ^^^ source.go string.quoted.double.go
+#                                         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                          ^ source.go punctuation.other.comma.go
+#                                           ^ source.go
+#                                            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                             ^^^ source.go string.quoted.double.go
+#                                                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                                 ^ source.go punctuation.other.comma.go
+#                                                  ^ source.go
+#                                                   ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                                    ^^^ source.go string.quoted.double.go
+#                                                       ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>	b6 := "foo"
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go
+#    ^^ source.go keyword.operator.assignment.go
+#      ^ source.go
+#       ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#        ^^^ source.go string.quoted.double.go
+#           ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>
+>	b1, b2, b3 = b3, b4, b5
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^ source.go variable.other.go
+#                ^ source.go punctuation.other.comma.go
+#                 ^ source.go
+#                  ^^ source.go variable.other.go
+#                    ^ source.go punctuation.other.comma.go
+#                     ^ source.go
+#                      ^^ source.go variable.other.go
+>	b3, b4 = b1, b2
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^^ source.go variable.other.go
+#            ^ source.go punctuation.other.comma.go
+#             ^ source.go
+#              ^^ source.go variable.other.go
+>	b5 = b6
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go
+#    ^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^ source.go variable.other.go
+>
+>	var (
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+>		c1, c2, c3                 = "foo", "foo", "foo"
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^ source.go variable.other.assignment.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^^ source.go variable.other.assignment.go
+#            ^^^^^^^^^^^^^^^^^ source.go
+#                             ^ source.go keyword.operator.assignment.go
+#                              ^ source.go
+#                               ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                ^^^ source.go string.quoted.double.go
+#                                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                       ^^^ source.go string.quoted.double.go
+#                                          ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                           ^ source.go punctuation.other.comma.go
+#                                            ^ source.go
+#                                             ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                              ^^^ source.go string.quoted.double.go
+#                                                 ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>		c4, c5     string          = "foo", "foo"
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^ source.go variable.other.assignment.go
+#        ^^^^^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+#                   ^^^^^^^^^^ source.go
+#                             ^ source.go keyword.operator.assignment.go
+#                              ^ source.go
+#                               ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                ^^^ source.go string.quoted.double.go
+#                                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                                       ^^^ source.go string.quoted.double.go
+#                                          ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>		c6         context.Context = context.TODO()
+#^^ source.go
+#  ^^ source.go variable.other.assignment.go
+#    ^^^^^^^^^ source.go
+#             ^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.other.period.go
+#                     ^^^^^^^ source.go entity.name.type.go
+#                            ^ source.go
+#                             ^ source.go keyword.operator.assignment.go
+#                              ^ source.go
+#                               ^^^^^^^ source.go variable.other.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^ source.go entity.name.function.support.go
+#                                           ^ source.go punctuation.definition.begin.bracket.round.go
+#                                            ^ source.go punctuation.definition.end.bracket.round.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	c1, c2, c3 = c3, c4, c5
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^^ source.go variable.other.go
+#                ^ source.go punctuation.other.comma.go
+#                 ^ source.go
+#                  ^^ source.go variable.other.go
+#                    ^ source.go punctuation.other.comma.go
+#                     ^ source.go
+#                      ^^ source.go variable.other.go
+>	c4, c5 = c1, c2
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^^ source.go variable.other.assignment.go
+#       ^ source.go
+#        ^ source.go keyword.operator.assignment.go
+#         ^ source.go
+#          ^^ source.go variable.other.go
+#            ^ source.go punctuation.other.comma.go
+#             ^ source.go
+#              ^^ source.go variable.other.go
+>	_ = c6
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^ source.go variable.other.go
+>
+>	a, b, c := new(string), new(string), new(string)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^ source.go keyword.operator.assignment.go
+#           ^ source.go
+#            ^^^ source.go entity.name.function.support.builtin.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^^^^^^ source.go storage.type.string.go
+#                      ^ source.go punctuation.definition.end.bracket.round.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^^^ source.go entity.name.function.support.builtin.go
+#                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                             ^^^^^^ source.go storage.type.string.go
+#                                   ^ source.go punctuation.definition.end.bracket.round.go
+#                                    ^ source.go punctuation.other.comma.go
+#                                     ^ source.go
+#                                      ^^^ source.go entity.name.function.support.builtin.go
+#                                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                                          ^^^^^^ source.go storage.type.string.go
+#                                                ^ source.go punctuation.definition.end.bracket.round.go
+>	*a, *b, *c = "foo", "foo", "foo"
+#^ source.go
+# ^ source.go keyword.operator.address.go
+#  ^ source.go variable.other.assignment.go
+#   ^ source.go punctuation.other.comma.go
+#    ^ source.go
+#     ^ source.go keyword.operator.address.go
+#      ^ source.go variable.other.assignment.go
+#       ^ source.go punctuation.other.comma.go
+#        ^ source.go
+#         ^ source.go keyword.operator.address.go
+#          ^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^ source.go keyword.operator.assignment.go
+#             ^ source.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^ source.go string.quoted.double.go
+#                  ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                   ^ source.go punctuation.other.comma.go
+#                    ^ source.go
+#                     ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                      ^^^ source.go string.quoted.double.go
+#                         ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                             ^^^ source.go string.quoted.double.go
+#                                ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
