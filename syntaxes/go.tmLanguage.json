@@ -1593,7 +1593,7 @@
 				},
 				{
 					"comment": "struct expression before curly bracket",
-					"match": "((?:(?:\\w+\\.)+)?\\w+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
+					"match": "((?:(?:\\b\\w+\\.)+)?\\b\\w+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
 					"captures": {
 						"1": {
 							"patterns": [
