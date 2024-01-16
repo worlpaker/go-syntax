@@ -97,6 +97,9 @@
 					"include": "#label_loop_variables"
 				},
 				{
+					"include": "#slice_index_variables"
+				},
+				{
 					"include": "#property_variables"
 				},
 				{
@@ -2540,6 +2543,23 @@
 						},
 						{
 							"include": "#support_functions"
+						},
+						{
+							"match": "\\w+",
+							"name": "variable.other.go"
+						}
+					]
+				}
+			}
+		},
+		"slice_index_variables": {
+			"comment": "slice index and capacity variables, to not scope them as property variables",
+			"match": "(?<=\\w\\[)((?:(?:\\b[\\w\\.\\*]+\\:)|(?:\\:[\\w\\.\\*]+))(?:[\\w\\.\\*]+)?(?:\\:[\\w\\.\\*]+)?)(?=\\])",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
 						},
 						{
 							"match": "\\w+",

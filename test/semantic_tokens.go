@@ -3804,3 +3804,24 @@ func Bar237() {
 	a, b, c := new(string), new(string), new(string)
 	*a, *b, *c = "foo", "foo", "foo"
 }
+
+func Bar238() {
+	arr := []int{1, 2, 3, 4, 5}
+	start := 0
+	capacity := 3
+	end := 2
+	_ = arr[start:]
+	_ = arr[:end]
+	_ = arr[start:end]
+	_ = arr[start:end:capacity]
+
+	type Foo struct {
+		end int
+	}
+
+	e := Foo{end: 2}
+	_ = arr[e.end:]
+	_ = arr[:e.end]
+	_ = arr[start:e.end]
+	_ = arr[start:e.end:capacity]
+}
