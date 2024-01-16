@@ -56,6 +56,9 @@
 					"include": "#other_struct_interface_expressions"
 				},
 				{
+					"include": "#type_assertion_inline"
+				},
+				{
 					"include": "#struct_variables_types"
 				},
 				{
@@ -1587,15 +1590,35 @@
 			}
 		},
 		"other_struct_interface_expressions": {
-			"patterns": [
-				{
-					"include": "#storage_types"
+			"comment": "struct and interface expression in-line (before curly bracket)",
+			"match": "(\\b[\\w\\.]+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b)",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "entity.name.type.go"
+						}
+					]
 				},
-				{
-					"comment": "struct expression before curly bracket",
-					"match": "((?:(?:\\b\\w+\\.)+)?\\b\\w+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b|\\bnil\\b|\\belse\\b|\\bif\\b|\\bfor\\b|\\bselect\\b|\\bswitch\\b|\\brange\\b|\\bcase\\b|\\bgo\\b|\\bdefault\\b|\\bdefer\\b|\\breturn\\b)",
-					"captures": {
-						"1": {
+				"2": {
+					"patterns": [
+						{
+							"begin": "\\[",
+							"beginCaptures": {
+								"0": {
+									"name": "punctuation.definition.begin.bracket.square.go"
+								}
+							},
+							"end": "\\]",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.square.go"
+								}
+							},
 							"patterns": [
 								{
 									"include": "#type-declarations"
@@ -1603,62 +1626,35 @@
 								{
 									"match": "\\w+",
 									"name": "entity.name.type.go"
-								}
-							]
-						},
-						"2": {
-							"patterns": [
-								{
-									"begin": "\\[",
-									"beginCaptures": {
-										"0": {
-											"name": "punctuation.definition.begin.bracket.square.go"
-										}
-									},
-									"end": "\\]",
-									"endCaptures": {
-										"0": {
-											"name": "punctuation.definition.end.bracket.square.go"
-										}
-									},
-									"patterns": [
-										{
-											"include": "#type-declarations"
-										},
-										{
-											"match": "\\w+",
-											"name": "entity.name.type.go"
-										},
-										{
-											"include": "$self"
-										}
-									]
-								}
-							]
-						}
-					}
-				},
-				{
-					"comment": "struct/interface types in-line (type assertion) | switch type keyword",
-					"match": "(?:(?<=\\.\\()(?:(\\btype\\b)|((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?[\\w\\.\\[\\]\\*]+))(?=\\)))",
-					"captures": {
-						"1": {
-							"name": "keyword.type.go"
-						},
-						"2": {
-							"patterns": [
-								{
-									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
-									"name": "entity.name.type.go"
+									"include": "$self"
 								}
 							]
 						}
-					}
+					]
 				}
-			]
+			}
+		},
+		"type_assertion_inline": {
+			"comment": "struct/interface types in-line (type assertion) | switch type keyword",
+			"match": "(?:(?<=\\.\\()(?:(\\btype\\b)|((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?[\\w\\.\\[\\]\\*]+))(?=\\)))",
+			"captures": {
+				"1": {
+					"name": "keyword.type.go"
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "entity.name.type.go"
+						}
+					]
+				}
+			}
 		},
 		"struct_variables_types": {
 			"patterns": [
@@ -2554,49 +2550,43 @@
 			}
 		},
 		"property_variables": {
-			"patterns": [
-				{
-					"comment": "Property variables in struct",
-					"match": "(?:((?:\\b[\\w\\.]+))(?=\\:(?!\\=)))",
-					"captures": {
-						"1": {
-							"patterns": [
-								{
-									"include": "#type-declarations"
-								},
-								{
-									"match": "\\w+",
-									"name": "variable.other.property.go"
-								}
-							]
-						}
-					}
-				},
-				{
-					"comment": "property variables as parameter field in struct initialization",
-					"match": "(?<=[\\w\\.]\\:)(?:\\s*)([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\())",
-					"captures": {
-						"1": {
-							"patterns": [
-								{
-									"include": "$self"
-								}
-							]
+			"comment": "Property variables in struct | parameter field in struct initialization",
+			"match": "(?:(?:((?:\\b[\\w\\.]+)(?:\\:(?!\\=))))(?:\\s*([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))?)",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
 						},
-						"2": {
-							"patterns": [
-								{
-									"include": "#type-declarations"
-								},
-								{
-									"match": "(?:\\w+)",
-									"name": "variable.other.property.field.go"
-								}
-							]
+						{
+							"match": "\\w+",
+							"name": "variable.other.property.go"
 						}
-					}
+					]
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "variable.other.go"
+						}
+					]
+				},
+				"3": {
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "variable.other.property.field.go"
+						}
+					]
 				}
-			]
+			}
 		},
 		"label_loop_variables": {
 			"comment": "labeled loop variable name",
