@@ -2,6 +2,13 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.4]
+
+- Refactors variable assignment and other struct/interface expressions
+- Optimizes performance for faster opening of large files, especially those with long lines of variables, parameters, and types
+- Implements stress testing to ensure stability and reliability
+- Fixes variables
+
 ## [0.5.3]
 
 Updates `.vscodeignore` to exclude unnecessary files and folders (`examples`, `test`)
