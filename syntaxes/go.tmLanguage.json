@@ -2627,24 +2627,34 @@
 		},
 		"double_parentheses_types": {
 			"comment": "double parentheses types",
-			"match": "(?:(?:(\\()([^\\)]+)(\\)))(?=\\((?:[\\w\\.\\*\\&]+)\\)))",
+			"match": "(?:(\\((?:[\\w\\.\\[\\]\\*\\&]+)\\))(?=\\())",
 			"captures": {
 				"1": {
-					"name": "punctuation.definition.begin.bracket.round.go"
-				},
-				"2": {
 					"patterns": [
 						{
-							"include": "#type-declarations"
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"match": "\\(",
+							"name": "punctuation.definition.begin.bracket.round.go"
+						},
+						{
+							"match": "\\)",
+							"name": "punctuation.definition.end.bracket.round.go"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
 						},
 						{
 							"match": "\\w+",
 							"name": "entity.name.type.go"
 						}
 					]
-				},
-				"3": {
-					"name": "punctuation.definition.end.bracket.round.go"
 				}
 			}
 		},

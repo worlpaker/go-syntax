@@ -14,6 +14,7 @@ import (
 	"log"
 	"mime/multipart"
 	"net/http"
+	"reflect"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -3824,4 +3825,10 @@ func Bar238() {
 	_ = arr[:e.end]
 	_ = arr[start:e.end]
 	_ = arr[start:e.end:capacity]
+}
+
+// v0.5.5
+func Bar239[T any]() {
+	t := reflect.TypeOf((*T)(nil)).Elem()
+	_ = fmt.Sprintf("%v: %v", reflect.TypeOf((*T)(nil)), t)
 }
