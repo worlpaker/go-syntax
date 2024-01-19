@@ -6,5 +6,7 @@ snap:
 	vscode-tmgrammar-snap ./test/semantic_tokens.go -u
 new-snap:
 	vscode-tmgrammar-snap ./test/semantic_tokens.go
+stress:
+	vscode-tmgrammar-test ./test/stress.go && vscode-tmgrammar-snap ./test/stress.go -u
 ready:
 	vscode-tmgrammar-test ./test/semantic_tokens.go && vscode-tmgrammar-snap ./test/semantic_tokens.go -u
