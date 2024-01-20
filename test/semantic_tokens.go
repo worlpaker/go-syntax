@@ -3857,3 +3857,18 @@ func Bar240() {
 
 	_ = b
 }
+
+func Bar241() {
+	arr := []int{1, 2, 3, 4, 5}
+
+	type Foo struct {
+		min, max int
+	}
+
+	f := Foo{min: 1, max: 4}
+
+	_ = arr[f.max+f.min]
+	_ = arr[f.max-f.min:]
+	_ = arr[f.max+f.min:]
+	_ = arr[f.max/f.min:]
+}
