@@ -37248,3 +37248,262 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar240() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type Foo struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		min, max int
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.comma.go
+#      ^ source.go
+#       ^^^ source.go variable.other.property.go
+#          ^ source.go
+#           ^^^ source.go storage.type.numeric.go
+>		nums     []Foo
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^^^^^ source.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go punctuation.definition.end.bracket.square.go
+#             ^^^ source.go entity.name.type.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	type Bar struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a1, a2, a3 bool
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^ source.go variable.other.property.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^^ source.go storage.type.boolean.go
+>		a4, a5, a6 int
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^ source.go variable.other.property.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	a := Foo{min: 2, max: 4, nums: []Foo{{min: 1, max: 2}}}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.curly.go
+#          ^^^ source.go variable.other.property.go
+#             ^ source.go punctuation.other.colon.go
+#              ^ source.go
+#               ^ source.go constant.numeric.decimal.go
+#                ^ source.go punctuation.other.comma.go
+#                 ^ source.go
+#                  ^^^ source.go variable.other.property.go
+#                     ^ source.go punctuation.other.colon.go
+#                      ^ source.go
+#                       ^ source.go constant.numeric.decimal.go
+#                        ^ source.go punctuation.other.comma.go
+#                         ^ source.go
+#                          ^^^^ source.go variable.other.property.go
+#                              ^ source.go punctuation.other.colon.go
+#                               ^ source.go
+#                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^^^ source.go entity.name.type.go
+#                                     ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                       ^^^ source.go variable.other.property.go
+#                                          ^ source.go punctuation.other.colon.go
+#                                           ^ source.go
+#                                            ^ source.go constant.numeric.decimal.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^^^ source.go variable.other.property.go
+#                                                  ^ source.go punctuation.other.colon.go
+#                                                   ^ source.go
+#                                                    ^ source.go constant.numeric.decimal.go
+#                                                     ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                      ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                       ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	b := Bar{
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.curly.go
+>		a1: a.max == a.min,
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^ source.go variable.other.property.field.go
+#           ^ source.go
+#            ^^ source.go keyword.operator.comparison.go
+#              ^ source.go
+#               ^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^ source.go variable.other.property.field.go
+#                    ^ source.go punctuation.other.comma.go
+>		a2: a.max == a.min || a.max > a.min,
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^ source.go variable.other.property.field.go
+#           ^ source.go
+#            ^^ source.go keyword.operator.comparison.go
+#              ^ source.go
+#               ^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^ source.go variable.other.property.field.go
+#                    ^ source.go
+#                     ^^ source.go keyword.operator.logical.go
+#                       ^ source.go
+#                        ^ source.go variable.other.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^ source.go variable.other.property.field.go
+#                             ^ source.go
+#                              ^ source.go keyword.operator.comparison.go
+#                               ^ source.go
+#                                ^ source.go variable.other.go
+#                                 ^ source.go punctuation.other.period.go
+#                                  ^^^ source.go variable.other.property.field.go
+#                                     ^ source.go punctuation.other.comma.go
+>		a3: a.min != a.max && a.min <= a.max,
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^ source.go variable.other.property.field.go
+#           ^ source.go
+#            ^^ source.go keyword.operator.comparison.go
+#              ^ source.go
+#               ^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^ source.go variable.other.property.field.go
+#                    ^ source.go
+#                     ^^ source.go keyword.operator.logical.go
+#                       ^ source.go
+#                        ^ source.go variable.other.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^ source.go variable.other.property.field.go
+#                             ^ source.go
+#                              ^^ source.go keyword.operator.comparison.go
+#                                ^ source.go
+#                                 ^ source.go variable.other.go
+#                                  ^ source.go punctuation.other.period.go
+#                                   ^^^ source.go variable.other.property.field.go
+#                                      ^ source.go punctuation.other.comma.go
+>		a4: a.max + a.min,
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^ source.go variable.other.property.field.go
+#           ^ source.go
+#            ^ source.go keyword.operator.arithmetic.go
+#             ^ source.go
+#              ^ source.go variable.other.go
+#               ^ source.go punctuation.other.period.go
+#                ^^^ source.go variable.other.property.field.go
+#                   ^ source.go punctuation.other.comma.go
+>		a5: a.max / a.min,
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^ source.go variable.other.property.field.go
+#           ^ source.go
+#            ^ source.go keyword.operator.arithmetic.go
+#             ^ source.go
+#              ^ source.go variable.other.go
+#               ^ source.go punctuation.other.period.go
+#                ^^^ source.go variable.other.property.field.go
+#                   ^ source.go punctuation.other.comma.go
+>		a6: a.nums[0].min - a.nums[0].max,
+#^^ source.go
+#  ^^ source.go variable.other.property.go
+#    ^ source.go punctuation.other.colon.go
+#     ^ source.go
+#      ^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^^ source.go variable.other.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^ source.go constant.numeric.decimal.go
+#              ^ source.go punctuation.definition.end.bracket.square.go
+#               ^ source.go punctuation.other.period.go
+#                ^^^ source.go variable.other.property.field.go
+#                   ^ source.go
+#                    ^ source.go keyword.operator.arithmetic.go
+#                     ^ source.go
+#                      ^ source.go variable.other.go
+#                       ^ source.go punctuation.other.period.go
+#                        ^^^^ source.go variable.other.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go constant.numeric.decimal.go
+#                              ^ source.go punctuation.definition.end.bracket.square.go
+#                               ^ source.go punctuation.other.period.go
+#                                ^^^ source.go variable.other.property.field.go
+#                                   ^ source.go punctuation.other.comma.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>	_ = b
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

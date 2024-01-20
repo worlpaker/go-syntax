@@ -3832,3 +3832,28 @@ func Bar239[T any]() {
 	t := reflect.TypeOf((*T)(nil)).Elem()
 	_ = fmt.Sprintf("%v: %v", reflect.TypeOf((*T)(nil)), t)
 }
+
+func Bar240() {
+	type Foo struct {
+		min, max int
+		nums     []Foo
+	}
+
+	type Bar struct {
+		a1, a2, a3 bool
+		a4, a5, a6 int
+	}
+
+	a := Foo{min: 2, max: 4, nums: []Foo{{min: 1, max: 2}}}
+
+	b := Bar{
+		a1: a.max == a.min,
+		a2: a.max == a.min || a.max > a.min,
+		a3: a.min != a.max && a.min <= a.max,
+		a4: a.max + a.min,
+		a5: a.max / a.min,
+		a6: a.nums[0].min - a.nums[0].max,
+	}
+
+	_ = b
+}
