@@ -3909,3 +3909,21 @@ func Bar244() {
 
 	_, _ = arr[f.max|f.min:], arr[f.max&f.min:]
 }
+
+func Bar245() {
+	var foo1 chan<- struct {
+		a context.Context
+	}
+	var foo2 <-chan func(a context.Context)
+	var foo3 []<-chan *[]func(a, b, c context.Context) <-chan context.Context
+
+	var (
+		bar1 chan<- struct {
+			a context.Context
+		}
+		bar2 <-chan func(a context.Context)
+		bar3 []<-chan *[]func(a, b, c context.Context) <-chan context.Context
+	)
+
+	_, _, _, _, _, _ = foo1, foo2, foo3, bar1, bar2, bar3
+}
