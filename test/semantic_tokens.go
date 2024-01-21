@@ -3872,3 +3872,40 @@ func Bar241() {
 	_ = arr[f.max+f.min:]
 	_ = arr[f.max/f.min:]
 }
+
+// v0.5.6
+func Bar242() {
+	type Foo struct {
+		min, max int
+	}
+
+	f := Foo{min: 1, max: 4}
+	_ = Foo{
+		max: f.max | f.min,
+		min: f.max & f.min,
+	}
+}
+
+func Bar243() {
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+	ok, notOk := true, false
+	// if ok&&notOk{
+	// }
+
+	if ok || notOk {
+		// implement
+	}
+
+}
+
+func Bar244() {
+	arr := []int{1, 2, 3, 4, 5}
+
+	type Foo struct {
+		min, max int
+	}
+
+	f := Foo{min: 1, max: 4}
+
+	_, _ = arr[f.max|f.min:], arr[f.max&f.min:]
+}

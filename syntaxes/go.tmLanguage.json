@@ -106,9 +106,6 @@
 					"include": "#switch_select_case_variables"
 				},
 				{
-					"include": "#after_control_variables"
-				},
-				{
 					"include": "#other_variables"
 				}
 			]
@@ -1594,34 +1591,14 @@
 		},
 		"other_struct_interface_expressions": {
 			"comment": "struct and interface expression in-line (before curly bracket)",
-			"match": "(\\b[\\w\\.]+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b)",
-			"captures": {
-				"1": {
-					"patterns": [
-						{
-							"include": "#type-declarations"
-						},
-						{
-							"match": "\\w+",
-							"name": "entity.name.type.go"
-						}
-					]
+			"patterns": [
+				{
+					"include": "#after_control_variables"
 				},
-				"2": {
-					"patterns": [
-						{
-							"begin": "\\[",
-							"beginCaptures": {
-								"0": {
-									"name": "punctuation.definition.begin.bracket.square.go"
-								}
-							},
-							"end": "\\]",
-							"endCaptures": {
-								"0": {
-									"name": "punctuation.definition.end.bracket.square.go"
-								}
-							},
+				{
+					"match": "(\\b[\\w\\.]+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b)",
+					"captures": {
+						"1": {
 							"patterns": [
 								{
 									"include": "#type-declarations"
@@ -1629,15 +1606,42 @@
 								{
 									"match": "\\w+",
 									"name": "entity.name.type.go"
-								},
+								}
+							]
+						},
+						"2": {
+							"patterns": [
 								{
-									"include": "$self"
+									"begin": "\\[",
+									"beginCaptures": {
+										"0": {
+											"name": "punctuation.definition.begin.bracket.square.go"
+										}
+									},
+									"end": "\\]",
+									"endCaptures": {
+										"0": {
+											"name": "punctuation.definition.end.bracket.square.go"
+										}
+									},
+									"patterns": [
+										{
+											"include": "#type-declarations"
+										},
+										{
+											"match": "\\w+",
+											"name": "entity.name.type.go"
+										},
+										{
+											"include": "$self"
+										}
+									]
 								}
 							]
 						}
-					]
+					}
 				}
-			}
+			]
 		},
 		"type_assertion_inline": {
 			"comment": "struct/interface types in-line (type assertion) | switch type keyword",
@@ -2109,7 +2113,7 @@
 			"patterns": [
 				{
 					"comment": "After control variables, to not highlight as a struct/interface",
-					"match": "(?:(?<=\\brange\\b|\\bswitch\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\w(?:\\+|\/|\\-|\\*|\\%)(?:\\=)?|\\|\\||\\&\\&)(?:\\s*)([[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*\/\\+\\%\\:]+)(?:\\s*)(?=\\{))",
+					"match": "(?:(?<=\\brange\\b|\\bswitch\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\w(?:\\+|\/|\\-|\\*|\\%)|\\w(?:\\+|\/|\\-|\\*|\\%)\\=|\\|\\||\\&\\&)(?:\\s*)([[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*\/\\+\\%\\:]+)(?:\\s*)(?=\\{))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -2554,7 +2558,7 @@
 		},
 		"slice_index_variables": {
 			"comment": "slice index and capacity variables, to not scope them as property variables",
-			"match": "(?<=\\w\\[)((?:(?:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\&]+\\:)|(?:\\:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\&]+))(?:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\&]+)?(?:\\:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\&]+)?)(?=\\])",
+			"match": "(?<=\\w\\[)((?:(?:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\|\\&]+\\:)|(?:\\:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\|\\&]+))(?:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\|\\&]+)?(?:\\:\\b[\\w\\.\\*\\+\/\\-\\*\\%\\<\\>\\|\\&]+)?)(?=\\])",
 			"captures": {
 				"1": {
 					"patterns": [
@@ -2571,7 +2575,7 @@
 		},
 		"property_variables": {
 			"comment": "Property variables in struct | parameter field in struct initialization",
-			"match": "(?:(?:((?:\\b[\\w\\.]+)(?:\\:(?!\\=))))(?:(?:\\s*([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))((?:\\s*(?:\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\|\\||\\&\\&|\\+|\/|\\-|\\*|\\%)\\s*(?:[\\w\\.\\*\\&\\[\\]]+)(?:\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))*))?)",
+			"match": "(?:(?:((?:\\b[\\w\\.]+)(?:\\:(?!\\=))))(?:(?:\\s*([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))((?:\\s*(?:\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\|\\||\\&\\&|\\+|\/|\\-|\\*|\\%|\\||\\&)\\s*(?:[\\w\\.\\*\\&\\[\\]]+)(?:\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))*))?)",
 			"captures": {
 				"1": {
 					"patterns": [
