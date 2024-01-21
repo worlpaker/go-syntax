@@ -2,6 +2,14 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.5]
+
+Fixes:
+
+- Minor bugs in types related to double parentheses
+- Property field variables with comparison operators
+- Slice index variables when using arithmetic operators
+
 ## [0.5.4]
 
 - Refactors variable assignment and other struct/interface expressions
