@@ -2,6 +2,13 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.6]
+
+Fixes:
+
+- Minor bugs related to chan keyword in variable assignment
+- Property field variables and slice index variables with operators
+
 ## [0.5.5]
 
 Fixes:
