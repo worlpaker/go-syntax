@@ -3927,3 +3927,8 @@ func Bar245() {
 
 	_, _, _, _, _, _ = foo1, foo2, foo3, bar1, bar2, bar3
 }
+
+// v0.5.7
+func Bar246() {
+	type foo map[string]int // [bar.foo] foo.bar
+}

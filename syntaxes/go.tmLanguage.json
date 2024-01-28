@@ -120,7 +120,7 @@
 					"include": "#comments"
 				},
 				{
-					"include": "#map_other_types"
+					"include": "#map_types"
 				},
 				{
 					"include": "#brackets"
@@ -164,7 +164,7 @@
 					"include": "#comments"
 				},
 				{
-					"include": "#map_other_types"
+					"include": "#map_types"
 				},
 				{
 					"include": "#delimiters"
@@ -291,62 +291,79 @@
 				}
 			]
 		},
-		"map_other_types": {
+		"map_types": {
+			"comment": "map types",
+			"begin": "(?:(\\bmap\\b)(\\[))",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.map.go"
+				},
+				"2": {
+					"name": "punctuation.definition.begin.bracket.square.go"
+				}
+			},
+			"end": "(?:(\\])((?!(?:[\\[\\]\\*]+)?\\b(?:func|struct|map)\\b)[\\w\\.\\[\\]\\*]+)?)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.end.bracket.square.go"
+				},
+				"2": {
+					"patterns": [
+						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"match": "\\w+",
+							"name": "entity.name.type.go"
+						}
+					]
+				}
+			},
 			"patterns": [
 				{
-					"comment": "Other map type names (struct/interface)",
-					"match": "(?:(\\bmap\\b)(\\[(?:.*)\\])?((?!\\bfunc\\b|\\bstruct\\b)[\\w\\.\\*]+)?)",
-					"captures": {
-						"1": {
-							"name": "keyword.map.go"
-						},
-						"2": {
-							"patterns": [
-								{
-									"include": "#type-declarations-without-brackets"
-								},
-								{
-									"match": "\\[",
-									"name": "punctuation.definition.begin.bracket.square.go"
-								},
-								{
-									"match": "\\]",
-									"name": "punctuation.definition.end.bracket.square.go"
-								},
-								{
-									"match": "\\{",
-									"name": "punctuation.definition.begin.bracket.curly.go"
-								},
-								{
-									"match": "\\}",
-									"name": "punctuation.definition.end.bracket.curly.go"
-								},
-								{
-									"match": "\\(",
-									"name": "punctuation.definition.begin.bracket.round.go"
-								},
-								{
-									"match": "\\)",
-									"name": "punctuation.definition.end.bracket.round.go"
-								},
-								{
-									"match": "\\w+",
-									"name": "entity.name.type.go"
-								}
-							]
-						},
-						"3": {
-							"patterns": [
-								{
-									"include": "#type-declarations"
-								},
-								{
-									"match": "\\w+",
-									"name": "entity.name.type.go"
-								}
-							]
-						}
-					}
+					"include": "#type-declarations-without-brackets"
+				},
+				{
+					"include": "#generic_types"
+				},
+				{
+					"include": "#functions"
+				},
+				{
+					"match": "\\[",
+					"name": "punctuation.definition.begin.bracket.square.go"
+				},
+				{
+					"match": "\\]",
+					"name": "punctuation.definition.end.bracket.square.go"
+				},
+				{
+					"match": "\\{",
+					"name": "punctuation.definition.begin.bracket.curly.go"
+				},
+				{
+					"match": "\\}",
+					"name": "punctuation.definition.end.bracket.curly.go"
+				},
+				{
+					"match": "\\(",
+					"name": "punctuation.definition.begin.bracket.round.go"
+				},
+				{
+					"match": "\\)",
+					"name": "punctuation.definition.end.bracket.round.go"
+				},
+				{
+					"match": "\\w+",
+					"name": "entity.name.type.go"
 				}
 			]
 		},
