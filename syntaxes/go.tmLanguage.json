@@ -1593,6 +1593,7 @@
 			"comment": "struct and interface expression in-line (before curly bracket)",
 			"patterns": [
 				{
+					"comment": "after control variables must be added exactly here, do not move it! (changing may not affect tests, so be careful!)",
 					"include": "#after_control_variables"
 				},
 				{
@@ -2110,33 +2111,29 @@
 			]
 		},
 		"after_control_variables": {
-			"patterns": [
-				{
-					"comment": "After control variables, to not highlight as a struct/interface",
-					"match": "(?:(?<=\\brange\\b|\\bswitch\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\w(?:\\+|\/|\\-|\\*|\\%)|\\w(?:\\+|\/|\\-|\\*|\\%)\\=|\\|\\||\\&\\&)(?:\\s*)([[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*\/\\+\\%\\:]+)(?:\\s*)(?=\\{))",
-					"captures": {
-						"1": {
-							"patterns": [
-								{
-									"include": "#type-declarations-without-brackets"
-								},
-								{
-									"match": "\\[",
-									"name": "punctuation.definition.begin.bracket.square.go"
-								},
-								{
-									"match": "\\]",
-									"name": "punctuation.definition.end.bracket.square.go"
-								},
-								{
-									"match": "(?:\\w+)",
-									"name": "variable.other.go"
-								}
-							]
+			"comment": "After control variables, to not highlight as a struct/interface (before formatting with gofmt)",
+			"match": "(?:(?<=\\brange\\b|\\bswitch\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\w(?:\\+|\/|\\-|\\*|\\%)|\\w(?:\\+|\/|\\-|\\*|\\%)\\=|\\|\\||\\&\\&)(?:\\s*)([[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*\/\\+\\%\\:]+)(?:\\s*)(?=\\{))",
+			"captures": {
+				"1": {
+					"patterns": [
+						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"match": "(?:\\w+)",
+							"name": "variable.other.go"
 						}
-					}
+					]
 				}
-			]
+			}
 		},
 		"syntax_errors": {
 			"patterns": [
