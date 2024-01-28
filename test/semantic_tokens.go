@@ -3932,3 +3932,15 @@ func Bar245() {
 func Bar246() {
 	type foo map[string]int // [bar.foo] foo.bar
 }
+
+func Bar247() {
+	var a map[string]interface{}                // [bar.foo] foo.bar
+	var b map[string][][][][][]*context.Context /* [bar.foo] foo.bar */
+
+	var (
+		c map[string]interface{}                // [bar.foo] foo.bar
+		d map[string][][][][][]*context.Context /* [bar.foo] foo.bar */
+	)
+
+	_, _, _, _ = a, b, c, d
+}
