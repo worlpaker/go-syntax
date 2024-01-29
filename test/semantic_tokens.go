@@ -3981,3 +3981,9 @@ func Bar252() {
 	)
 	_, _ = a, b
 }
+
+func Bar253() {
+	_ = func() (error, string) { // func() (error, string) { return nil, "" } foo.bar
+		return nil, ""
+	}
+}

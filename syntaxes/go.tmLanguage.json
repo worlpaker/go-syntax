@@ -1507,7 +1507,7 @@
 		},
 		"functions_inline": {
 			"comment": "functions in-line with multi return types",
-			"match": "(?:(\\bfunc\\b)((?:\\((?:.*)\\))(?:\\s+)(?:\\((?:.*)\\)))(?:\\s+)(?=\\{))",
+			"match": "(?:(\\bfunc\\b)((?:\\((?:[^\/]*)\\))(?:\\s+)(?:\\((?:[^\/]*)\\)))(?:\\s+)(?=\\{))",
 			"captures": {
 				"1": {
 					"name": "keyword.function.go"
