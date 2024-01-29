@@ -3967,3 +3967,8 @@ func Bar250() {
 	type Foo[a any] struct{}    // [bar.foo] foo.bar
 	type Boo[a any] interface{} // [bar.foo] foo.bar
 }
+
+func Bar251() {
+	type foo string
+	_ = make(chan (foo))
+}
