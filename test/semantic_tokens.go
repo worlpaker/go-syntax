@@ -3944,3 +3944,9 @@ func Bar247() {
 
 	_, _, _, _ = a, b, c, d
 }
+
+func Bar248() {
+	type foo[a any] string // [bar.foo] foo.bar
+
+	type bar foo[context.Context] // [bar.foo] foo.bar
+}

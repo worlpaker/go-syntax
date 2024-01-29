@@ -34438,12 +34438,14 @@
 # ^ source.go punctuation.definition.end.bracket.square.go
 #  ^ source.go
 #   ^ source.go keyword.operator.address.go
-#    ^^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.square.go
+#     ^ source.go punctuation.definition.end.bracket.square.go
 #      ^^ source.go keyword.operator.channel.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
 #             ^ source.go keyword.operator.address.go
-#              ^^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.square.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
 #                ^^^^^^^ source.go entity.name.type.go
 #                       ^ source.go punctuation.other.period.go
 #                        ^^^^^^^ source.go entity.name.type.go
@@ -34610,7 +34612,8 @@
 #                        ^ source.go punctuation.definition.end.bracket.square.go
 #                         ^ source.go
 #                          ^ source.go keyword.operator.address.go
-#                           ^^ source.go
+#                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                            ^ source.go punctuation.definition.end.bracket.square.go
 #                             ^^^^ source.go keyword.channel.go
 #                                 ^^ source.go keyword.operator.channel.go
 #                                   ^ source.go
@@ -34687,7 +34690,8 @@
 # ^ source.go punctuation.definition.end.bracket.square.go
 #  ^ source.go
 #   ^ source.go keyword.operator.address.go
-#    ^^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.square.go
+#     ^ source.go punctuation.definition.end.bracket.square.go
 #      ^^ source.go keyword.operator.channel.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
@@ -34724,7 +34728,8 @@
 # ^ source.go punctuation.definition.end.bracket.square.go
 #  ^ source.go
 #   ^ source.go keyword.operator.address.go
-#    ^^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.square.go
+#     ^ source.go punctuation.definition.end.bracket.square.go
 #      ^^ source.go keyword.operator.channel.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
@@ -34778,7 +34783,8 @@
 # ^ source.go punctuation.definition.end.bracket.square.go
 #  ^ source.go
 #   ^ source.go keyword.operator.address.go
-#    ^^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.square.go
+#     ^ source.go punctuation.definition.end.bracket.square.go
 #      ^^ source.go keyword.operator.channel.go
 #        ^^^^ source.go keyword.channel.go
 #            ^ source.go
@@ -38267,6 +38273,48 @@
 #                     ^ source.go punctuation.other.comma.go
 #                      ^ source.go
 #                       ^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar248() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type foo[a any] string // [bar.foo] foo.bar
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go
+#            ^^^ source.go entity.name.type.any.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^ source.go
+#                 ^^^^^^ source.go storage.type.string.go
+#                       ^ source.go
+#                        ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                          ^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
+>	type bar foo[context.Context] // [bar.foo] foo.bar
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.other.period.go
+#                      ^^^^^^^ source.go entity.name.type.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go
+#                               ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                 ^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
