@@ -302,7 +302,7 @@
 					"name": "punctuation.definition.begin.bracket.square.go"
 				}
 			},
-			"end": "(?:(\\])((?!(?:[\\[\\]\\*]+)?\\b(?:func|struct|map)\\b)[\\w\\.\\[\\]\\*]+)?)",
+			"end": "(?:(\\])((?:(?:(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?!(?:[\\[\\]\\*]+)?\\b(?:func|struct|map)\\b)[\\w\\.\\[\\]\\*]+)?)",
 			"endCaptures": {
 				"1": {
 					"name": "punctuation.definition.end.bracket.square.go"

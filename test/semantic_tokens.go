@@ -3950,3 +3950,15 @@ func Bar248() {
 
 	type bar foo[context.Context] // [bar.foo] foo.bar
 }
+
+func Bar249() {
+	var a map[context.Context]chan<- context.Context
+	var b map[context.Context][]*chan<- context.Context
+
+	var (
+		c map[context.Context]chan<- context.Context
+		d map[context.Context][]*chan<- context.Context
+	)
+
+	_, _, _, _ = a, b, c, d
+}
