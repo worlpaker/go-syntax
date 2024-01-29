@@ -3972,3 +3972,12 @@ func Bar251() {
 	type foo string
 	_ = make(chan (foo))
 }
+
+func Bar252() {
+	type foo string
+	var a chan (foo)
+	var (
+		b chan (foo)
+	)
+	_, _ = a, b
+}

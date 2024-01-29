@@ -38515,3 +38515,62 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>func Bar252() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type foo string
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go storage.type.string.go
+>	var a chan (foo)
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^^^ source.go keyword.channel.go
+#           ^ source.go
+#            ^ source.go punctuation.definition.begin.bracket.round.go
+#             ^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.end.bracket.round.go
+>	var (
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.round.go
+>		b chan (foo)
+#^^ source.go
+#  ^ source.go variable.other.assignment.go
+#   ^ source.go
+#    ^^^^ source.go keyword.channel.go
+#        ^ source.go
+#         ^ source.go punctuation.definition.begin.bracket.round.go
+#          ^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.end.bracket.round.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>	_, _ = a, b
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go variable.other.go
+#         ^ source.go punctuation.other.comma.go
+#          ^ source.go
+#           ^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
