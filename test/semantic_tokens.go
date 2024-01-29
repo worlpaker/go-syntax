@@ -3930,7 +3930,7 @@ func Bar245() {
 
 // v0.5.7
 func Bar246() {
-	type foo map[string]int // [bar.foo] foo.bar
+	type Foo map[string]int // [bar.foo] foo.bar
 }
 
 func Bar247() {
@@ -3946,9 +3946,9 @@ func Bar247() {
 }
 
 func Bar248() {
-	type foo[a any] string // [bar.foo] foo.bar
+	type Foo[a any] string // [bar.foo] foo.bar
 
-	type bar foo[context.Context] // [bar.foo] foo.bar
+	type Bar Foo[context.Context] // [bar.foo] foo.bar
 }
 
 func Bar249() {
@@ -3961,4 +3961,9 @@ func Bar249() {
 	)
 
 	_, _, _, _ = a, b, c, d
+}
+
+func Bar250() {
+	type Foo[a any] struct{}    // [bar.foo] foo.bar
+	type Boo[a any] interface{} // [bar.foo] foo.bar
 }

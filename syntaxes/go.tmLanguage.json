@@ -2257,8 +2257,8 @@
 			]
 		},
 		"struct_interface_declaration": {
-			"comment": "struct, interface type declarations",
-			"match": "(?:(?:^|\\s+)(\\btype\\b)(?:\\s+)([\\w\\.]+)(\\[(?:.*)\\])?)",
+			"comment": "struct, interface type declarations (related to: struct_variables_types, interface_variables_types)",
+			"match": "(?:(?:^\\s*)(\\btype\\b)(?:\\s*)([\\w\\.]+))",
 			"captures": {
 				"1": {
 					"name": "keyword.type.go"
@@ -2266,34 +2266,11 @@
 				"2": {
 					"patterns": [
 						{
+							"include": "#type-declarations"
+						},
+						{
 							"match": "\\w+",
 							"name": "entity.name.type.go"
-						}
-					]
-				},
-				"3": {
-					"patterns": [
-						{
-							"begin": "\\[",
-							"beginCaptures": {
-								"0": {
-									"name": "punctuation.definition.begin.bracket.square.go"
-								}
-							},
-							"end": "\\]",
-							"endCaptures": {
-								"0": {
-									"name": "punctuation.definition.end.bracket.square.go"
-								}
-							},
-							"patterns": [
-								{
-									"include": "#generic_param_types"
-								},
-								{
-									"include": "$self"
-								}
-							]
 						}
 					]
 				}

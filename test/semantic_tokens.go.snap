@@ -38129,7 +38129,7 @@
 #            ^ source.go punctuation.definition.end.bracket.round.go
 #             ^ source.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
->	type foo map[string]int // [bar.foo] foo.bar
+>	type Foo map[string]int // [bar.foo] foo.bar
 #^ source.go
 # ^^^^ source.go keyword.type.go
 #     ^ source.go
@@ -38284,7 +38284,7 @@
 #            ^ source.go punctuation.definition.end.bracket.round.go
 #             ^ source.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
->	type foo[a any] string // [bar.foo] foo.bar
+>	type Foo[a any] string // [bar.foo] foo.bar
 #^ source.go
 # ^^^^ source.go keyword.type.go
 #     ^ source.go
@@ -38300,7 +38300,7 @@
 #                        ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
 #                          ^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >
->	type bar foo[context.Context] // [bar.foo] foo.bar
+>	type Bar Foo[context.Context] // [bar.foo] foo.bar
 #^ source.go
 # ^^^^ source.go keyword.type.go
 #     ^ source.go
@@ -38435,6 +38435,51 @@
 #                     ^ source.go punctuation.other.comma.go
 #                      ^ source.go
 #                       ^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar250() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type Foo[a any] struct{}    // [bar.foo] foo.bar
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go
+#            ^^^ source.go entity.name.type.any.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^ source.go
+#                 ^^^^^^ source.go keyword.struct.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                        ^ source.go punctuation.definition.end.bracket.curly.go
+#                         ^^^^ source.go
+#                             ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                               ^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type Boo[a any] interface{} // [bar.foo] foo.bar
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go
+#            ^^^ source.go entity.name.type.any.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^ source.go
+#                 ^^^^^^^^^ source.go keyword.interface.go
+#                          ^ source.go punctuation.definition.begin.bracket.curly.go
+#                           ^ source.go punctuation.definition.end.bracket.curly.go
+#                            ^ source.go
+#                             ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                               ^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
