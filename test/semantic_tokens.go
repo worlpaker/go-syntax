@@ -3987,3 +3987,23 @@ func Bar253() {
 		return nil, ""
 	}
 }
+
+func Bar254[a any](b a) a {
+	return b
+}
+
+func Bar255() {
+	type foo struct {
+		s1 map[string]func(args ...interface{}) context.Context
+		s2 map[rune]func(args ...interface{}) context.Context
+		s3 map[int]func(args ...interface{}) context.Context
+	}
+	bar := foo{}
+	bar.s1["foo"]()
+	bar.s2['f']()
+	bar.s3[0]()
+
+	type foox string
+	var barx map[foox]interface{}
+	_, _ = Bar254[map[foox]interface{}](barx), Bar254[string]("bar") // [foo.bar](foo) bar.foo
+}
