@@ -4007,3 +4007,17 @@ func Bar255() {
 	var barx map[foox]interface{}
 	_, _ = Bar254[map[foox]interface{}](barx), Bar254[string]("bar") // [foo.bar](foo) bar.foo
 }
+
+func Bar256() {
+	type foo struct{}
+	type bar[a context.Context, b foo] struct{}
+
+	var a bar[context.Context, foo]
+
+	var (
+		b bar[context.Context, foo]
+	)
+
+	_, _ = Bar254[bar[context.Context, foo]](a), Bar254[bar[context.Context, foo]](b)
+
+}
