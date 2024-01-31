@@ -2,6 +2,14 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.7]
+
+- Refactors map types
+- Enhances generics types
+- Fixes variable assignment with generic types
+- Fixes support functions and functions inline
+- Fixes minor bugs in types
+
 ## [0.5.6]
 
 Fixes:
