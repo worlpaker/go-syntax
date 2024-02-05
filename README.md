@@ -44,9 +44,9 @@ Yes, please! Feel free to contribute.
 
 ## Credits
 
-This extension added new features to the original [vscode-go-syntax](https://github.com/microsoft/vscode/blob/main/extensions/go/syntaxes/go.tmLanguage.json) which is forked from [better-go-syntax](https://github.com/jeff-hykin/better-go-syntax).
+This extension enhances [better-go-syntax](https://github.com/jeff-hykin/better-go-syntax) with new features.
 
-Go syntax semantic tokens tested thanks to the [vscode-tmgrammar-test](https://github.com/PanAeon/vscode-tmgrammar-test).
+Semantic tokens tested thanks to the [vscode-tmgrammar-test](https://github.com/PanAeon/vscode-tmgrammar-test).
 
 ## License
 
