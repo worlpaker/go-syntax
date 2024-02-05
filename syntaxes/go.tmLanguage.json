@@ -2567,7 +2567,7 @@
 			}
 		},
 		"switch_select_case_variables": {
-			"comment": "variables after case control keyword in switch/select expression",
+			"comment": "variables after case control keyword in switch/select expression, to not scope them as property variables",
 			"match": "(?:(?:^\\s*(\\bcase\\b))(?:\\s+)([\\s\\S]+(?:\\:)\\s*(?:\/(?:\/|\\*).*)?)$)",
 			"captures": {
 				"1": {
