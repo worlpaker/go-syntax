@@ -38952,3 +38952,189 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.5.8
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar257() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	var c Context
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^ source.go variable.other.assignment.go
+#      ^ source.go
+#       ^^^^^^^ source.go entity.name.type.go
+>
+>	type (
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.round.go
+>		context1 Context
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+>		context2 Context
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+>		context3 Context
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+>		context4 Context
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+>		context5 Context
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^ source.go entity.name.type.go
+>		context6 cancelCtx
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^^^ source.go entity.name.type.go
+>		context7 cancelCtx
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^^^ source.go entity.name.type.go
+>		context8 cancelCtx
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^^^ source.go entity.name.type.go
+>		context9 cancelCtx
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^^^^ source.go entity.name.type.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	switch ctx := c.(type) {
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^ source.go variable.other.assignment.go
+#           ^ source.go
+#            ^^ source.go keyword.operator.assignment.go
+#              ^ source.go
+#               ^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                  ^^^^ source.go keyword.type.go
+#                      ^ source.go punctuation.definition.end.bracket.round.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>	case context1, context2, /* foo */
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.comma.go
+#               ^ source.go
+#                ^^^^^^^^ source.go entity.name.type.go
+#                        ^ source.go punctuation.other.comma.go
+#                         ^ source.go
+#                          ^^ source.go comment.block.go punctuation.definition.comment.go
+#                            ^^^^^ source.go comment.block.go
+#                                 ^^ source.go comment.block.go punctuation.definition.comment.go
+>		context3, context4: // bar
+#^^ source.go
+#  ^^^^^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.other.comma.go
+#           ^ source.go
+#            ^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.other.colon.go
+#                     ^ source.go
+#                      ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                        ^^^^ source.go comment.line.double-slash.go
+>		fmt.Println(ctx)
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^ source.go variable.other.go
+#                 ^ source.go punctuation.definition.end.bracket.round.go
+>	case context5: // foo
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.colon.go
+#               ^ source.go
+#                ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                  ^^^^ source.go comment.line.double-slash.go
+>		fmt.Println(ctx)
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^ source.go variable.other.go
+#                 ^ source.go punctuation.definition.end.bracket.round.go
+>	case *context6, // foo
+#^ source.go
+# ^^^^ source.go keyword.control.go
+#     ^ source.go
+#      ^ source.go keyword.operator.address.go
+#       ^^^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                   ^^^^ source.go comment.line.double-slash.go
+>		*context7, // bar
+#^^ source.go
+#  ^ source.go keyword.operator.address.go
+#   ^^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#               ^^^^ source.go comment.line.double-slash.go
+>		*context8, /* foo */
+#^^ source.go
+#  ^ source.go keyword.operator.address.go
+#   ^^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^ source.go comment.block.go punctuation.definition.comment.go
+#               ^^^^^ source.go comment.block.go
+#                    ^^ source.go comment.block.go punctuation.definition.comment.go
+>		*context9: /* bar */
+#^^ source.go
+#  ^ source.go keyword.operator.address.go
+#   ^^^^^^^^ source.go entity.name.type.go
+#           ^ source.go punctuation.other.colon.go
+#            ^ source.go
+#             ^^ source.go comment.block.go punctuation.definition.comment.go
+#               ^^^^^ source.go comment.block.go
+#                    ^^ source.go comment.block.go punctuation.definition.comment.go
+>		fmt.Println(ctx)
+#^^ source.go
+#  ^^^ source.go variable.other.go
+#     ^ source.go punctuation.other.period.go
+#      ^^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^^^ source.go variable.other.go
+#                 ^ source.go punctuation.definition.end.bracket.round.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

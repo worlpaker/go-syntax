@@ -2285,6 +2285,7 @@
 			}
 		},
 		"switch_types": {
+			"comment": "switch type assertions, only highlights types after case keyword",
 			"begin": "(?<=\\bswitch\\b)(?:\\s*)(?:(\\w+\\s*\\:\\=)?\\s*([\\w\\.\\*\\(\\)\\[\\]]+))(\\.\\(\\btype\\b\\)\\s*)(\\{)",
 			"beginCaptures": {
 				"1": {
@@ -2293,7 +2294,7 @@
 							"include": "#operators"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "variable.other.assignment.go"
 						}
 					]
@@ -2307,7 +2308,7 @@
 							"include": "#type-declarations"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "variable.other.go"
 						}
 					]
@@ -2338,9 +2339,7 @@
 			},
 			"patterns": [
 				{
-					"include": "#type-declarations"
-				},
-				{
+					"comment": "types after case keyword with single line",
 					"match": "(?:^\\s*(\\bcase\\b))(?:\\s+)([\\w\\.\\,\\*\\=\\<\\>\\!\\s]+)(:)(\\s*\/(?:\/|\\*)\\s*.*)?$",
 					"captures": {
 						"1": {
@@ -2368,6 +2367,30 @@
 							]
 						}
 					}
+				},
+				{
+					"comment": "types after case keyword with multi lines",
+					"begin": "\\bcase\\b",
+					"beginCaptures": {
+						"0": {
+							"name": "keyword.control.go"
+						}
+					},
+					"end": "\\:",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.other.colon.go"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#type-declarations"
+						},
+						{
+							"match": "\\w+",
+							"name": "entity.name.type.go"
+						}
+					]
 				},
 				{
 					"include": "$self"

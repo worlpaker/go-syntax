@@ -4021,3 +4021,33 @@ func Bar256() {
 	_, _ = Bar254[bar[context.Context, foo]](a), Bar254[bar[context.Context, foo]](b)
 
 }
+
+// v0.5.8
+func Bar257() {
+	var c Context
+
+	type (
+		context1 Context
+		context2 Context
+		context3 Context
+		context4 Context
+		context5 Context
+		context6 cancelCtx
+		context7 cancelCtx
+		context8 cancelCtx
+		context9 cancelCtx
+	)
+
+	switch ctx := c.(type) {
+	case context1, context2, /* foo */
+		context3, context4: // bar
+		fmt.Println(ctx)
+	case context5: // foo
+		fmt.Println(ctx)
+	case *context6, // foo
+		*context7, // bar
+		*context8, /* foo */
+		*context9: /* bar */
+		fmt.Println(ctx)
+	}
+}
