@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.8]
+
+- Enhances types after the case keyword in the switch type statement
+
 ## [0.5.7]
 
 - Refactors map types
