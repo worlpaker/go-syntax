@@ -4051,3 +4051,19 @@ func Bar257() {
 		fmt.Println(ctx)
 	}
 }
+
+// v0.5.9
+func Bar258() {
+	foo := func(i int) func(func(int, string) bool) {
+		return func(f func(int, string) bool) {
+			result := f(i, "foo")
+			fmt.Println("result:", result)
+		}
+	}
+
+	value := 10
+
+	foo(value)(func(i int, s string) bool {
+		return i == 10
+	})
+}

@@ -2727,7 +2727,7 @@
 		},
 		"double_parentheses_types": {
 			"comment": "double parentheses types",
-			"match": "(?:(\\((?:[\\w\\.\\[\\]\\*\\&]+)\\))(?=\\())",
+			"match": "(?:(?<!\\w)(\\((?:[\\w\\.\\[\\]\\*\\&]+)\\))(?=\\())",
 			"captures": {
 				"1": {
 					"patterns": [
