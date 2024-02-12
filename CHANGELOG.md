@@ -2,6 +2,11 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.5.9]
+
+- Fixes a minor bug in double parentheses type
+- Improves performance for large files, especially those with long lines of support functions
+
 ## [0.5.8]
 
 - Enhances types after the case keyword in the switch type statement
