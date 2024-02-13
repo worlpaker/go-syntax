@@ -2607,6 +2607,9 @@
 							"include": "#support_functions"
 						},
 						{
+							"include": "#variable_assignment"
+						},
+						{
 							"match": "\\w+",
 							"name": "variable.other.go"
 						}

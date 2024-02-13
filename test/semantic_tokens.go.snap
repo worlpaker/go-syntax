@@ -39277,3 +39277,132 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.6.0
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar259() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	ch := make(chan string)
+#^ source.go
+# ^^ source.go variable.other.assignment.go
+#   ^ source.go
+#    ^^ source.go keyword.operator.assignment.go
+#      ^ source.go
+#       ^^^^ source.go entity.name.function.support.builtin.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^^ source.go keyword.channel.go
+#                ^ source.go
+#                 ^^^^^^ source.go storage.type.string.go
+#                       ^ source.go punctuation.definition.end.bracket.round.go
+>	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go punctuation.other.comma.go
+#     ^ source.go
+#      ^^^^^^ source.go variable.other.assignment.go
+#            ^ source.go
+#             ^^ source.go keyword.operator.assignment.go
+#               ^ source.go
+#                ^^^^^^^ source.go variable.other.go
+#                       ^ source.go punctuation.other.period.go
+#                        ^^^^^^^^^^^ source.go entity.name.function.support.go
+#                                   ^ source.go punctuation.definition.begin.bracket.round.go
+#                                    ^^^^^^^ source.go variable.other.go
+#                                           ^ source.go punctuation.other.period.go
+#                                            ^^^^^^^^^^ source.go entity.name.function.support.go
+#                                                      ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                       ^ source.go punctuation.definition.end.bracket.round.go
+#                                                        ^ source.go punctuation.other.comma.go
+#                                                         ^ source.go
+#                                                          ^^^^ source.go variable.other.go
+#                                                              ^ source.go punctuation.other.period.go
+#                                                               ^^^^^^ source.go variable.other.go
+#                                                                     ^ source.go keyword.operator.arithmetic.go
+#                                                                      ^^ source.go constant.numeric.decimal.go
+#                                                                        ^ source.go punctuation.definition.end.bracket.round.go
+>	defer cancel()
+#^ source.go
+# ^^^^^ source.go keyword.control.go
+#      ^ source.go
+#       ^^^^^^ source.go entity.name.function.support.go
+#             ^ source.go punctuation.definition.begin.bracket.round.go
+#              ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	for {
+#^ source.go
+# ^^^ source.go keyword.control.go
+#    ^ source.go
+#     ^ source.go punctuation.definition.begin.bracket.curly.go
+>		select {
+#^^ source.go
+#  ^^^^^^ source.go keyword.control.go
+#        ^ source.go
+#         ^ source.go punctuation.definition.begin.bracket.curly.go
+>		case s, ok := <-ch:
+#^^ source.go
+#  ^^^^ source.go keyword.control.go
+#      ^ source.go
+#       ^ source.go variable.other.assignment.go
+#        ^ source.go punctuation.other.comma.go
+#         ^ source.go
+#          ^^ source.go variable.other.assignment.go
+#            ^ source.go
+#             ^^ source.go keyword.operator.assignment.go
+#               ^ source.go
+#                ^^ source.go keyword.operator.channel.go
+#                  ^^ source.go variable.other.go
+#                    ^ source.go punctuation.other.colon.go
+>			if ok {
+#^^^ source.go
+#   ^^ source.go keyword.control.go
+#     ^ source.go
+#      ^^ source.go variable.other.go
+#        ^ source.go
+#         ^ source.go punctuation.definition.begin.bracket.curly.go
+>				fmt.Println(s)
+#^^^^ source.go
+#    ^^^ source.go variable.other.go
+#       ^ source.go punctuation.other.period.go
+#        ^^^^^^^ source.go entity.name.function.support.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go variable.other.go
+#                 ^ source.go punctuation.definition.end.bracket.round.go
+>			}
+#^^^ source.go
+#   ^ source.go punctuation.definition.end.bracket.curly.go
+>		case <-ctx.Done():
+#^^ source.go
+#  ^^^^ source.go keyword.control.go
+#      ^ source.go
+#       ^^ source.go keyword.operator.channel.go
+#         ^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.period.go
+#             ^^^^ source.go entity.name.function.support.go
+#                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                  ^ source.go punctuation.definition.end.bracket.round.go
+#                   ^ source.go punctuation.other.colon.go
+>			fmt.Println("foo")
+#^^^ source.go
+#   ^^^ source.go variable.other.go
+#      ^ source.go punctuation.other.period.go
+#       ^^^^^^^ source.go entity.name.function.support.go
+#              ^ source.go punctuation.definition.begin.bracket.round.go
+#               ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#                ^^^ source.go string.quoted.double.go
+#                   ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                    ^ source.go punctuation.definition.end.bracket.round.go
+>		}
+#^^ source.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

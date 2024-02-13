@@ -4067,3 +4067,21 @@ func Bar258() {
 		return i == 10
 	})
 }
+
+// v0.6.0
+func Bar259() {
+	ch := make(chan string)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
+	defer cancel()
+
+	for {
+		select {
+		case s, ok := <-ch:
+			if ok {
+				fmt.Println(s)
+			}
+		case <-ctx.Done():
+			fmt.Println("foo")
+		}
+	}
+}
