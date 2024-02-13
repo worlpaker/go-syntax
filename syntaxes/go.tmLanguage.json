@@ -2759,16 +2759,8 @@
 			}
 		},
 		"other_variables": {
-			"match": "(?:\\w+)",
-			"name": "variable.other.go",
-			"patterns": [
-				{
-					"include": "#storage_types"
-				},
-				{
-					"include": "$self"
-				}
-			]
+			"match": "\\w+",
+			"name": "variable.other.go"
 		}
 	}
 }
