@@ -8863,8 +8863,8 @@
 #               ^ source.go punctuation.definition.end.bracket.round.go
 >	bar0     struct {
 #^ source.go
-# ^^^^^^^^ source.go variable.other.property.go
-#         ^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^^^^^ source.go
 #          ^^^^^^ source.go keyword.struct.go
 #                ^ source.go
 #                 ^ source.go punctuation.definition.begin.bracket.curly.go
@@ -10124,8 +10124,8 @@
 #                                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >								Dimensions   struct {
 #^^^^^^^^ source.go
-#        ^^^^^^^^^^^^ source.go variable.other.property.go
-#                    ^ source.go
+#        ^^^^^^^^^^ source.go variable.other.property.go
+#                  ^^^ source.go
 #                     ^^^^^^ source.go keyword.struct.go
 #                           ^ source.go
 #                            ^ source.go punctuation.definition.begin.bracket.curly.go
@@ -10251,8 +10251,8 @@
 #                                       ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >				Edges    []struct {
 #^^^^ source.go
-#    ^^^^^^^^ source.go variable.other.property.go
-#            ^^^ source.go
+#    ^^^^^ source.go variable.other.property.go
+#         ^^^^^^ source.go
 #               ^^^^^^ source.go keyword.struct.go
 #                     ^ source.go
 #                      ^ source.go punctuation.definition.begin.bracket.curly.go
@@ -10301,8 +10301,8 @@
 #                                                    ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
 >						Dimensions   struct {
 #^^^^^^ source.go
-#      ^^^^^^^^^^^^ source.go variable.other.property.go
-#                  ^ source.go
+#      ^^^^^^^^^^ source.go variable.other.property.go
+#                ^^^ source.go
 #                   ^^^^^^ source.go keyword.struct.go
 #                         ^ source.go
 #                          ^ source.go punctuation.definition.begin.bracket.curly.go

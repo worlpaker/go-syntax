@@ -1861,11 +1861,18 @@
 			"patterns": [
 				{
 					"comment": "Struct variable for struct in struct types",
-					"begin": "(?:\\s*)?([\\s\\,\\w]+)(?:\\s+)(?:(?:[\\[\\]\\*])+)?(\\bstruct\\b)\\s*(\\{)",
+					"begin": "(?:(\\w+(?:\\,\\s*\\w+)*)(?:\\s+)(?:(?:[\\[\\]\\*])+)?(\\bstruct\\b)(?:\\s*)(\\{))",
 					"beginCaptures": {
 						"1": {
-							"match": "(?:\\w+)",
-							"name": "variable.other.property.go"
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.property.go"
+								}
+							]
 						},
 						"2": {
 							"name": "keyword.struct.go"
