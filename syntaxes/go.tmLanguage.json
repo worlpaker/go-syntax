@@ -1120,11 +1120,6 @@
 			"comment": "Function declarations",
 			"begin": "(?:^(\\bfunc\\b)(?:\\s*(\\([^\\)]+\\)\\s*)?(?:(\\w+)(?=\\(|\\[))?))",
 			"beginCaptures": {
-				"patterns": [
-					{
-						"include": "#type-declarations"
-					}
-				],
 				"1": {
 					"name": "keyword.function.go"
 				},
