@@ -4085,3 +4085,40 @@ func Bar259() {
 		}
 	}
 }
+
+func Bar260() {
+	for _, s := range []string{"foo", "bar"} {
+		fmt.Println(s)
+	}
+
+	type foo struct {
+		num int
+	}
+
+	for _, i := range []foo{{1}, {2}, {3}} {
+		fmt.Println(i.num)
+	}
+
+	type bar []string
+
+	for _, s := range []bar{[]string{"foo", "bar"}} {
+		fmt.Println(s)
+	}
+
+	type foobar map[string]interface{}
+
+	a := foobar{
+		"name": "Foo",
+		"age":  100,
+	}
+
+	b := foobar{
+		"name": "Bar",
+		"age":  100,
+	}
+
+	for _, s := range []foobar{a, b} {
+		fmt.Println(s)
+	}
+
+}
