@@ -2,6 +2,12 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.0]
+
+- Fixes variables after case keyword in the switch statement
+- Fixes variables and types after control keywords
+- Removes unnecessary sections
+
 ## [0.5.9]
 
 - Fixes a minor bug in double parentheses type
