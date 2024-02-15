@@ -4127,3 +4127,17 @@ func Bar260() {
 
 // better pre-highlighting types after function declaration -before formatting with gofmt
 // func Bar()context.Context
+
+func Bar261() {
+	// better pre-highlighting variables after control keywords -before formatting with gofmt
+	foo := new(bool)
+	bar := true
+	foo = &bar
+
+	// if *foo{
+	// }
+
+	if *foo {
+		fmt.Println("foo")
+	}
+}
