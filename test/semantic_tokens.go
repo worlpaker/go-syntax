@@ -4122,3 +4122,8 @@ func Bar260() {
 	}
 
 }
+
+// v0.6.1
+
+// better pre-highlighting types after function declaration -before formatting with gofmt
+// func Bar()context.Context

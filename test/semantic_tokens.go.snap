@@ -39691,3 +39691,14 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.6.1
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>
+>// better pre-highlighting types after function declaration -before formatting with gofmt
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// func Bar()context.Context
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
