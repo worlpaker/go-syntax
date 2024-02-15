@@ -2764,6 +2764,7 @@
 			}
 		},
 		"other_variables": {
+			"comment": "all other variables",
 			"match": "\\w+",
 			"name": "variable.other.go"
 		}
