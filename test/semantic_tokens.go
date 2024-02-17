@@ -4141,3 +4141,16 @@ func Bar261() {
 		fmt.Println("foo")
 	}
 }
+
+func Bar262() {
+	_ = make([]float64, 1024*10)
+	_ = make([]context.Context, 10/2)
+	_ = make([]context.Context, 10*2)
+	_ = make([]context.Context, 10-2)
+	_ = make([]context.Context, 10+2)
+	_ = make([]context.Context, 10%2)
+	_ = make([]context.Context, 10|2)
+	_ = make([]context.Context, 10&2)
+	_ = make([]context.Context, 10<<2)
+	_ = make([]context.Context, 10>>2)
+}
