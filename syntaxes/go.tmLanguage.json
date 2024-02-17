@@ -1908,6 +1908,42 @@
 					},
 					"patterns": [
 						{
+							"include": "#support_functions"
+						},
+						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+							"beginCaptures": {
+								"1": {
+									"patterns": [
+										{
+											"include": "#type-declarations"
+										},
+										{
+											"match": "(?:\\w+)",
+											"name": "entity.name.type.go"
+										}
+									]
+								},
+								"2": {
+									"name": "punctuation.definition.begin.bracket.square.go"
+								}
+							},
+							"end": "\\]",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.definition.end.bracket.square.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#generic_param_types"
+								}
+							]
+						},
+						{
 							"begin": "\\(",
 							"beginCaptures": {
 								"0": {
@@ -1923,18 +1959,12 @@
 							"patterns": [
 								{
 									"include": "#function_param_types"
-								},
-								{
-									"include": "$self"
 								}
 							]
 						},
 						{
-							"include": "#support_functions"
-						},
-						{
-							"comment": "single declaration | with or declarations",
-							"match": "((?:\\s+\\|)?(?:[\\w\\.\\[\\]\\*]+)(?:\\s+\\|)?)",
+							"comment": "other types",
+							"match": "([\\w\\.]+)",
 							"captures": {
 								"1": {
 									"patterns": [
@@ -1942,10 +1972,7 @@
 											"include": "#type-declarations"
 										},
 										{
-											"include": "#generic_types"
-										},
-										{
-											"match": "(?:\\w+)",
+											"match": "\\w+",
 											"name": "entity.name.type.go"
 										}
 									]

@@ -4154,3 +4154,19 @@ func Bar262() {
 	_ = make([]context.Context, 10<<2)
 	_ = make([]context.Context, 10>>2)
 }
+
+type Bar263 interface {
+	map[context.Context]func(a context.Context) context.Context | map[string]func(a, b, c context.Context)
+}
+
+type Bar264 interface {
+	Bar204[string, Bar203[context.Context, context.Context]]
+}
+
+type Bar265 interface {
+	Bar204[Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]], Bar204[string, Bar204[context.Context, context.Context]]]
+}
+
+type Bar266 interface {
+	Bar204[string, Bar203[context.Context, context.Context]] | Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]
+}
