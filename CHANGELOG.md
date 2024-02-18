@@ -2,6 +2,14 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.1]
+
+Fixes:
+
+- Minor bugs in interface types and make built-in function
+- Early highlighting of variables after control keywords (before formatting with gofmt)
+- Early highlighting of types after function declaration (before formatting with gofmt)
+
 ## [0.6.0]
 
 - Fixes variables after case keyword in the switch statement
