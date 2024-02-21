@@ -4170,3 +4170,26 @@ type Bar265 interface {
 type Bar266 interface {
 	Bar204[string, Bar203[context.Context, context.Context]] | Bar204[Bar204[context.Context, context.Context], Bar204[string, Bar204[context.Context, context.Context]]]
 }
+
+// v0.6.2
+func Bar267() {
+	// functions inline with multi return types -before formatting with gofmt
+	// _ = func(a, b, c string) (func(a string) (context.Context, error), error) { a = "foo"; b = "bar"; return func(a string) (context.Context, error) { fmt.Println(a, b, c); return context.Background(), nil }, nil } // foo
+	_ = func(a, b, c string) (func(a string) (context.Context, error), error) {
+		a = "foo"
+		b = "bar"
+		return func(a string) (context.Context, error) { fmt.Println(a, b, c); return context.Background(), nil }, nil
+	}
+
+	_ = func() (context.Context, func(), error, context.Context) {
+		a := func() {}
+		return context.TODO(), a, nil, context.TODO()
+	}
+
+	_ = func(func(a, b, c string) context.Context) (func() context.Context, context.Context) {
+		f := func() context.Context {
+			return context.TODO()
+		}
+		return f, context.TODO()
+	}
+}
