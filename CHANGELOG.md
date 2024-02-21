@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.2]
+
+- Fixes a minor bug in functions inline
+
 ## [0.6.1]
 
 Fixes:
