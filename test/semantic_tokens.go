@@ -4205,3 +4205,9 @@ func Bar268(foo func(a string, b interface {
 })) {
 
 }
+
+func Bar269[T interface {
+	Bar() context.Context
+}](foo T) {
+	foo.Bar()
+}
