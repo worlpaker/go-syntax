@@ -4198,3 +4198,10 @@ func Bar267() {
 		return f, context.TODO()
 	}
 }
+
+// v0.6.3
+func Bar268(foo func(a string, b interface {
+	Bar() context.Context
+})) {
+
+}

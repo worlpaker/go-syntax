@@ -1280,11 +1280,14 @@
 					"include": "#struct_variables_types"
 				},
 				{
+					"include": "#interface_variables_types"
+				},
+				{
 					"include": "#type-declarations-without-brackets"
 				},
 				{
-					"comment": "struct type declaration",
-					"match": "((?:(?:\\b\\w+\\,\\s*)+)?\\b\\w+)\\s+(?=(?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\*]+)?\\bstruct\\b\\s*\\{)",
+					"comment": "struct/interface type declaration",
+					"match": "((?:(?:\\b\\w+\\,\\s*)+)?\\b\\w+)\\s+(?=(?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\*]+)?\\b(?:struct|interface)\\b\\s*\\{)",
 					"captures": {
 						"1": {
 							"patterns": [

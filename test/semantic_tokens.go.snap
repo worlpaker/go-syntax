@@ -40623,3 +40623,44 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.6.3
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar268(foo func(a string, b interface {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^^^ source.go keyword.function.go
+#                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                     ^ source.go variable.parameter.go
+#                      ^ source.go
+#                       ^^^^^^ source.go storage.type.string.go
+#                             ^ source.go punctuation.other.comma.go
+#                              ^ source.go
+#                               ^ source.go variable.parameter.go
+#                                ^ source.go
+#                                 ^^^^^^^^^ source.go keyword.interface.go
+#                                          ^ source.go
+#                                           ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Bar() context.Context
+#^ source.go
+# ^^^ source.go entity.name.function.support.go
+#    ^ source.go punctuation.definition.begin.bracket.round.go
+#     ^ source.go punctuation.definition.end.bracket.round.go
+#      ^ source.go
+#       ^^^^^^^ source.go entity.name.type.go
+#              ^ source.go punctuation.other.period.go
+#               ^^^^^^^ source.go entity.name.type.go
+>})) {
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+#   ^ source.go
+#    ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
