@@ -4211,3 +4211,17 @@ func Bar269[T interface {
 }](foo T) {
 	foo.Bar()
 }
+
+type Bar270 struct {
+	foo interface {
+		A() context.Context
+	}
+	bar context.Context
+}
+
+type Bar271 struct {
+	foo func(a string, b interface {
+		A() context.Context
+	})
+	bar context.Context
+}
