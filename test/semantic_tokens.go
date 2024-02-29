@@ -1196,12 +1196,12 @@ func Foo46() {
 
 func Foo47() {
 	var a interface{}
-	_ = a.(FooX)
-	_ = a.(*FooX)
-	_ = a.(*[]FooX)
-	_ = a.([]FooX)
-	_ = a.([]*FooX)
-	_ = a.(map[FooX]interface{})
+	_, _ = a.(FooX)
+	_, _ = a.(*FooX)
+	_, _ = a.(*[]FooX)
+	_, _ = a.([]FooX)
+	_, _ = a.([]*FooX)
+	_, _ = a.(map[FooX]interface{})
 }
 
 // v0.2.14
@@ -1826,7 +1826,7 @@ func overlaps[E any](a, b []E) bool {
 		uintptr(unsafe.Pointer(&b[0])) <= uintptr(unsafe.Pointer(&a[len(a)-1]))+(elemSize-1)
 }
 
-func startIdx[E any](haystack, needle []E) int { return 0 }
+func startIdx[E any](haystack, needle []E) int { _, _ = haystack, needle; return 0 }
 
 func Reverse[S ~[]E, E any](s S) {}
 
@@ -2499,6 +2499,7 @@ func Bar105() {
 	}
 
 	_ = func(a func(context.Context), b context.Context) (foo context.Context, bar context.Context) {
+		_, _ = a, b
 		return context.TODO(), context.Background()
 	}
 
@@ -2517,6 +2518,7 @@ func Bar105() {
 	}
 
 	_ = func(a context.Context, b func(string, context.Context), c io.Writer) func(foo context.Context, bar context.Context) {
+		_, _, _ = a, b, c
 		d := func(context.Context, context.Context) {}
 		return d
 	}
@@ -2529,12 +2531,14 @@ func Bar105() {
 	}
 
 	_ = func(a context.Context, b func(string, context.Context), c io.Writer) func(c context.Context, d context.Context) chan chan context.Context {
+		_, _, _ = a, b, c
 		e := func(f context.Context, g context.Context) chan chan context.Context {
 			return make(chan chan context.Context)
 		}
 		return e
 	}
 	_ = func(foo func(context.Context), bar []struct{ context.Context }, foobar context.Context) context.Context {
+		_, _, _ = foo, bar, foobar
 		return context.TODO()
 	}
 	_ = func(foo func(context.Context),
@@ -2543,6 +2547,7 @@ func Bar105() {
 			b context.Context
 			c <-chan func() context.Context
 		}) context.Context {
+		_, _ = foo, bar
 		return context.TODO()
 	}
 }
@@ -3064,17 +3069,17 @@ func Bar167() {
 
 func Bar168() {
 	var foo interface{}
-	_ = foo.(FooX)
-	_ = foo.(*FooX)
-	_ = foo.([]FooX)
-	_ = foo.(chan FooX)
-	_ = foo.(chan *FooX)
-	_ = foo.(chan<- []FooX)
-	_ = foo.(*[]chan<- *[]FooX)
-	_ = foo.(chan<- []FooX)
-	_ = foo.(func() FooX)
-	_ = foo.(func() *[]FooX)
-	_ = foo.(func() (string, FooX))
+	_, _ = foo.(FooX)
+	_, _ = foo.(*FooX)
+	_, _ = foo.([]FooX)
+	_, _ = foo.(chan FooX)
+	_, _ = foo.(chan *FooX)
+	_, _ = foo.(chan<- []FooX)
+	_, _ = foo.(*[]chan<- *[]FooX)
+	_, _ = foo.(chan<- []FooX)
+	_, _ = foo.(func() FooX)
+	_, _ = foo.(func() *[]FooX)
+	_, _ = foo.(func() (string, FooX))
 }
 
 func Bar169() {
