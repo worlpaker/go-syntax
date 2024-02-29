@@ -1685,34 +1685,30 @@
 			}
 		},
 		"struct_variables_types": {
+			"comment": "Struct variable type",
+			"begin": "(\\bstruct\\b)\\s*(\\{)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.struct.go"
+				},
+				"2": {
+					"name": "punctuation.definition.begin.bracket.curly.go"
+				}
+			},
 			"patterns": [
 				{
-					"comment": "Struct variable type",
-					"begin": "(\\bstruct\\b)\\s*(\\{)",
-					"beginCaptures": {
-						"1": {
-							"name": "keyword.struct.go"
-						},
-						"2": {
-							"name": "punctuation.definition.begin.bracket.curly.go"
-						}
-					},
-					"patterns": [
-						{
-							"include": "#struct_variables_types_fields"
-						},
-						{
-							"include": "$self"
-						}
-					],
-					"end": "\\}",
-					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.end.bracket.curly.go"
-						}
-					}
+					"include": "#struct_variables_types_fields"
+				},
+				{
+					"include": "$self"
 				}
-			]
+			],
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.end.bracket.curly.go"
+				}
+			}
 		},
 		"struct_variables_types_fields": {
 			"comment": "Struct variable type fields",
