@@ -2,6 +2,13 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.3]
+
+Fixes:
+
+- Minor bugs in struct type
+- Interface type in functions and generics
+
 ## [0.6.2]
 
 - Fixes a minor bug in functions inline
