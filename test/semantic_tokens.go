@@ -4225,3 +4225,50 @@ type Bar271 struct {
 	})
 	bar context.Context
 }
+
+// v0.6.4
+func Bar272(foo func(a string, b chan<- interface {
+	Bar() context.Context
+})) {
+
+}
+
+func Bar273[T chan interface {
+	Bar() context.Context
+}](foo T) {
+
+}
+
+type Bar274 struct {
+	foo chan interface {
+		A() context.Context
+	}
+	bar context.Context
+}
+
+type Bar275 struct {
+	foo chan func(a string, b chan interface {
+		A() context.Context
+	})
+	bar context.Context
+}
+
+type Bar276 struct {
+	foo chan struct {
+		foo chan<- func(a string, b <-chan interface {
+			A() context.Context
+		})
+		bar chan<- context.Context
+	}
+	bar context.Context
+}
+
+type Bar277 struct {
+	foo *[]chan<- *[]struct {
+		foo *[]chan<- *[]func(a string, b <-chan interface {
+			A() context.Context
+		})
+		bar chan<- context.Context
+	}
+	bar context.Context
+}
