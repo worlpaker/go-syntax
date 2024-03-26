@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.5]
+
+- Fixes a minor bug related to map types in functions
+
 ## [0.6.4]
 
 - Fixes a minor bug in struct type
