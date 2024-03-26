@@ -4272,3 +4272,22 @@ type Bar277 struct {
 	}
 	bar context.Context
 }
+
+// v0.6.5
+type Type string
+
+type Type1 string
+
+func Bar278[T ~[]Type | ~map[Type]Type1](t T) {}
+
+func Bar279[T *[]Type | ~map[Type]string](t T) {}
+
+func Bar280[T *[]Type | ~map[*[]Type]map[*[]Type]Type](t T) {}
+
+func Bar281[T *[]map[*[]func(a context.Context) (b string, c context.Context)]interface{}](foo T) {
+
+}
+
+func Bar282(foo *[]map[*[]func(a context.Context) (b string, c context.Context)]interface{}) {
+
+}

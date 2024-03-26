@@ -41125,3 +41125,219 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.6.5
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>type Type string
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go storage.type.string.go
+>
+>type Type1 string
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^ source.go entity.name.type.go
+#          ^ source.go
+#           ^^^^^^ source.go storage.type.string.go
+>
+>func Bar278[T ~[]Type | ~map[Type]Type1](t T) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^ source.go keyword.operator.arithmetic.bitwise.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^^^^ source.go entity.name.type.go
+#                     ^ source.go
+#                      ^ source.go keyword.operator.arithmetic.bitwise.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
+#                         ^^^ source.go keyword.map.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^^^^^ source.go entity.name.type.go
+#                                       ^ source.go punctuation.definition.end.bracket.square.go
+#                                        ^ source.go punctuation.definition.begin.bracket.round.go
+#                                         ^ source.go variable.parameter.go
+#                                          ^ source.go
+#                                           ^ source.go entity.name.type.go
+#                                            ^ source.go punctuation.definition.end.bracket.round.go
+#                                             ^ source.go
+#                                              ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                               ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar279[T *[]Type | ~map[Type]string](t T) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^ source.go keyword.operator.address.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^^^^ source.go entity.name.type.go
+#                     ^ source.go
+#                      ^ source.go keyword.operator.arithmetic.bitwise.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
+#                         ^^^ source.go keyword.map.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^^^^ source.go entity.name.type.go
+#                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                  ^^^^^^ source.go storage.type.string.go
+#                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                         ^ source.go punctuation.definition.begin.bracket.round.go
+#                                          ^ source.go variable.parameter.go
+#                                           ^ source.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.definition.end.bracket.round.go
+#                                              ^ source.go
+#                                               ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar280[T *[]Type | ~map[*[]Type]map[*[]Type]Type](t T) {}
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^ source.go keyword.operator.address.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^^^^ source.go entity.name.type.go
+#                     ^ source.go
+#                      ^ source.go keyword.operator.arithmetic.bitwise.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
+#                         ^^^ source.go keyword.map.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^ source.go keyword.operator.address.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                ^^^^ source.go entity.name.type.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^^^ source.go keyword.map.go
+#                                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                                         ^ source.go keyword.operator.address.go
+#                                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                                           ^ source.go punctuation.definition.end.bracket.square.go
+#                                            ^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.definition.end.bracket.square.go
+#                                                 ^^^^ source.go entity.name.type.go
+#                                                     ^ source.go punctuation.definition.end.bracket.square.go
+#                                                      ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                       ^ source.go variable.parameter.go
+#                                                        ^ source.go
+#                                                         ^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.definition.end.bracket.round.go
+#                                                           ^ source.go
+#                                                            ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                             ^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar281[T *[]map[*[]func(a context.Context) (b string, c context.Context)]interface{}](foo T) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.square.go
+#            ^ source.go variable.parameter.go
+#             ^ source.go
+#              ^ source.go keyword.operator.address.go
+#               ^ source.go punctuation.definition.begin.bracket.square.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^^^ source.go keyword.map.go
+#                    ^ source.go punctuation.definition.begin.bracket.square.go
+#                     ^ source.go keyword.operator.address.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^^^^ source.go keyword.function.go
+#                            ^ source.go punctuation.definition.begin.bracket.round.go
+#                             ^ source.go variable.parameter.go
+#                              ^ source.go
+#                               ^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                               ^ source.go
+#                                                ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                 ^ source.go variable.parameter.go
+#                                                  ^ source.go
+#                                                   ^^^^^^ source.go storage.type.string.go
+#                                                         ^ source.go punctuation.other.comma.go
+#                                                          ^ source.go
+#                                                           ^ source.go variable.parameter.go
+#                                                            ^ source.go
+#                                                             ^^^^^^^ source.go entity.name.type.go
+#                                                                    ^ source.go punctuation.other.period.go
+#                                                                     ^^^^^^^ source.go entity.name.type.go
+#                                                                            ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                              ^^^^^^^^^ source.go keyword.interface.go
+#                                                                                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                                        ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                                                         ^ source.go
+#                                                                                          ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                                           ^^^ source.go variable.parameter.go
+#                                                                                              ^ source.go
+#                                                                                               ^ source.go entity.name.type.go
+#                                                                                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                                 ^ source.go
+#                                                                                                  ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar282(foo *[]map[*[]func(a context.Context) (b string, c context.Context)]interface{}) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go variable.parameter.go
+#               ^ source.go
+#                ^ source.go keyword.operator.address.go
+#                 ^ source.go punctuation.definition.begin.bracket.square.go
+#                  ^ source.go punctuation.definition.end.bracket.square.go
+#                   ^^^ source.go keyword.map.go
+#                      ^ source.go punctuation.definition.begin.bracket.square.go
+#                       ^ source.go keyword.operator.address.go
+#                        ^ source.go punctuation.definition.begin.bracket.square.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+#                          ^^^^ source.go keyword.function.go
+#                              ^ source.go punctuation.definition.begin.bracket.round.go
+#                               ^ source.go variable.parameter.go
+#                                ^ source.go
+#                                 ^^^^^^^ source.go entity.name.type.go
+#                                        ^ source.go punctuation.other.period.go
+#                                         ^^^^^^^ source.go entity.name.type.go
+#                                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                                 ^ source.go
+#                                                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                   ^ source.go variable.parameter.go
+#                                                    ^ source.go
+#                                                     ^^^^^^ source.go storage.type.string.go
+#                                                           ^ source.go punctuation.other.comma.go
+#                                                            ^ source.go
+#                                                             ^ source.go variable.parameter.go
+#                                                              ^ source.go
+#                                                               ^^^^^^^ source.go entity.name.type.go
+#                                                                      ^ source.go punctuation.other.period.go
+#                                                                       ^^^^^^^ source.go entity.name.type.go
+#                                                                              ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                               ^ source.go
+#                                                                                ^^^^^^^^^ source.go keyword.interface.go
+#                                                                                         ^ source.go punctuation.definition.begin.bracket.curly.go
+#                                                                                          ^ source.go punctuation.definition.end.bracket.curly.go
+#                                                                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                                            ^ source.go
+#                                                                                             ^ source.go punctuation.definition.begin.bracket.curly.go
+>
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
