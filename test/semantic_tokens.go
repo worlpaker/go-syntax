@@ -4291,3 +4291,8 @@ func Bar281[T *[]map[*[]func(a context.Context) (b string, c context.Context)]in
 func Bar282(foo *[]map[*[]func(a context.Context) (b string, c context.Context)]interface{}) {
 
 }
+
+// v0.6.6
+
+// better support for struct type one line with semicolon(;) -before formatting with gofmt
+// type oneLineSemi struct{a1, a2, a3 context.Context; a4, a5 string; a6 context.Context; a7 context.Context; context.Context; a8, a9 context.Context}

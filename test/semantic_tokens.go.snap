@@ -41341,3 +41341,14 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.6.6
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>
+>// better support for struct type one line with semicolon(;) -before formatting with gofmt
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// type oneLineSemi struct{a1, a2, a3 context.Context; a4, a5 string; a6 context.Context; a7 context.Context; context.Context; a8, a9 context.Context}
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
