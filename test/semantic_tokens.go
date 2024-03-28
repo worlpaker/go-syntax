@@ -4296,3 +4296,21 @@ func Bar282(foo *[]map[*[]func(a context.Context) (b string, c context.Context)]
 
 // better support for struct type one line with semicolon(;) -before formatting with gofmt
 // type oneLineSemi struct{a1, a2, a3 context.Context; a4, a5 string; a6 context.Context; a7 context.Context; context.Context; a8, a9 context.Context}
+
+type Bar283 = struct{ context.Context }
+
+type Bar284 = struct{ foo context.Context }
+
+type Bar285 = []struct{ foo <-chan context.Context }
+
+type Bar286 = struct {
+	foo    context.Context
+	bar    string
+	foobar *[]<-chan *[]context.Context
+}
+
+type Bar287 = []struct {
+	foo    context.Context
+	bar    string
+	foobar *[]<-chan *[]context.Context
+}

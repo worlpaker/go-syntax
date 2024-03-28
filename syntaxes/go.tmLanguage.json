@@ -2100,7 +2100,7 @@
 			"patterns": [
 				{
 					"comment": "single type declaration",
-					"match": "(?:(?:^\\s*)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(?:\\s+)(?!(?:[\\[\\]\\*]+)?\\b(?:struct|interface)\\b)([\\s\\S]+))",
+					"match": "(?:(?:^\\s*)(\\btype\\b)(?:\\s*)([\\w\\.\\*]+)(?:\\s+)(?!(?:\\=\\s*)?(?:[\\[\\]\\*]+)?\\b(?:struct|interface)\\b)([\\s\\S]+))",
 					"captures": {
 						"1": {
 							"name": "keyword.type.go"
