@@ -2321,6 +2321,11 @@
 					"name": "entity.name.function.support.builtin.go"
 				},
 				{
+					"comment": "types conversion",
+					"match": "\\b(byte|complex(64|128)|float(32|64)|u?int(8|16|32|64)?|rune|string|uintptr)\\b(?=\\()",
+					"name": "entity.name.function.support.builtin.go"
+				},
+				{
 					"comment": "new keyword",
 					"begin": "(?:(\\bnew\\b)(\\())",
 					"beginCaptures": {
