@@ -258,9 +258,35 @@
 			]
 		},
 		"language_constants": {
-			"comment": "Language constants",
-			"match": "\\b(true|false|nil|iota)\\b",
-			"name": "constant.language.go"
+			"patterns": [
+				{
+					"name": "constant.language.go",
+					"match": "\\b(true|false)\\b",
+					"captures": {
+						"0": {
+							"name": "constant.language.boolean.go"
+						}
+					}
+				},
+				{
+					"match": "\\b(nil)\\b",
+					"name": "constant.language.go",
+					"captures": {
+						"0": {
+							"name": "constant.language.null.go"
+						}
+					}
+				},
+				{
+					"match": "\\b(iota)\\b",
+					"name": "constant.language.go",
+					"captures": {
+						"0": {
+							"name": "constant.language.iota.go"
+						}
+					}
+				}
+			]
 		},
 		"comments": {
 			"patterns": [
