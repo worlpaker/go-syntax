@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.7]
+
+- Improves contstants definitions ([PR 10](https://github.com/worlpaker/go-syntax/pull/10) by [@butuzov](https://github.com/butuzov))
+
 ## [0.6.6]
 
 - Fixes minor bugs in struct and single types
