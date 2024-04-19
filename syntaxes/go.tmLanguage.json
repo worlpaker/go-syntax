@@ -258,35 +258,19 @@
 			]
 		},
 		"language_constants": {
-			"patterns": [
-				{
-					"name": "constant.language.go",
-					"match": "\\b(true|false)\\b",
-					"captures": {
-						"0": {
-							"name": "constant.language.boolean.go"
-						}
-					}
+			"comment": "Language constants",
+			"match": "\\b(?:(true|false)|(nil)|(iota))\\b",
+			"captures": {
+				"1": {
+					"name": "constant.language.boolean.go"
 				},
-				{
-					"match": "\\b(nil)\\b",
-					"name": "constant.language.go",
-					"captures": {
-						"0": {
-							"name": "constant.language.null.go"
-						}
-					}
+				"2": {
+					"name": "constant.language.null.go"
 				},
-				{
-					"match": "\\b(iota)\\b",
-					"name": "constant.language.go",
-					"captures": {
-						"0": {
-							"name": "constant.language.iota.go"
-						}
-					}
+				"3": {
+					"name": "constant.language.iota.go"
 				}
-			]
+			}
 		},
 		"comments": {
 			"patterns": [
