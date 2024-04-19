@@ -259,8 +259,18 @@
 		},
 		"language_constants": {
 			"comment": "Language constants",
-			"match": "\\b(true|false|nil|iota)\\b",
-			"name": "constant.language.go"
+			"match": "\\b(?:(true|false)|(nil)|(iota))\\b",
+			"captures": {
+				"1": {
+					"name": "constant.language.boolean.go"
+				},
+				"2": {
+					"name": "constant.language.null.go"
+				},
+				"3": {
+					"name": "constant.language.iota.go"
+				}
+			}
 		},
 		"comments": {
 			"patterns": [
