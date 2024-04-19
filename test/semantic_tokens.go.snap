@@ -1005,7 +1005,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -1727,7 +1727,7 @@
 #        ^ source.go variable.other.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^^^ source.go constant.language.go
+#           ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -2097,7 +2097,7 @@
 #          ^ source.go
 #           ^^ source.go keyword.operator.comparison.go
 #             ^ source.go
-#              ^^^ source.go constant.language.go
+#              ^^^ source.go constant.language.null.go
 #                 ^ source.go
 #                  ^ source.go punctuation.definition.begin.bracket.curly.go
 >		panic("cannot create context from nil parent")
@@ -2119,7 +2119,7 @@
 #       ^ source.go
 #        ^^ source.go keyword.operator.comparison.go
 #          ^ source.go
-#           ^^^ source.go constant.language.go
+#           ^^^ source.go constant.language.null.go
 #              ^ source.go
 #               ^ source.go punctuation.definition.begin.bracket.curly.go
 >		panic("nil key")
@@ -2187,17 +2187,17 @@
 #                              ^ source.go
 #                               ^^ source.go keyword.operator.comparison.go
 #                                 ^ source.go
-#                                  ^^^ source.go constant.language.go
+#                                  ^^^ source.go constant.language.null.go
 #                                     ^ source.go
 #                                      ^ source.go punctuation.definition.begin.bracket.curly.go
 >		return nil, false
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^^^^^ source.go constant.language.go
+#              ^^^^^ source.go constant.language.boolean.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -2234,10 +2234,10 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^^^^^ source.go constant.language.go
+#              ^^^^^ source.go constant.language.boolean.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -2280,10 +2280,10 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^^^^^ source.go constant.language.go
+#              ^^^^^ source.go constant.language.boolean.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -2294,7 +2294,7 @@
 #        ^ source.go variable.other.go
 #         ^ source.go punctuation.other.comma.go
 #          ^ source.go
-#           ^^^^ source.go constant.language.go
+#           ^^^^ source.go constant.language.boolean.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -4286,7 +4286,7 @@
 #^ source.go
 # ^^^^^^^ source.go entity.name.function.support.go
 #        ^ source.go punctuation.definition.begin.bracket.round.go
-#         ^^^^ source.go constant.language.go
+#         ^^^^ source.go constant.language.boolean.go
 #             ^ source.go punctuation.definition.end.bracket.round.go
 >	whatAmI(3222)
 #^ source.go
@@ -4461,7 +4461,7 @@
 #              ^ source.go
 #               ^^ source.go keyword.operator.comparison.go
 #                 ^ source.go
-#                  ^^^ source.go constant.language.go
+#                  ^^^ source.go constant.language.null.go
 #                     ^ source.go
 #                      ^ source.go punctuation.definition.begin.bracket.curly.go
 >			fmt.Println("expected panic()")
@@ -5121,7 +5121,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -14239,7 +14239,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -14904,13 +14904,13 @@
 #         ^ source.go punctuation.definition.end.bracket.square.go
 #          ^^^^ source.go storage.type.boolean.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
-#               ^^^^ source.go constant.language.go
+#               ^^^^ source.go constant.language.boolean.go
 #                   ^ source.go punctuation.other.comma.go
 #                    ^ source.go
-#                     ^^^^^ source.go constant.language.go
+#                     ^^^^^ source.go constant.language.boolean.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^^ source.go constant.language.go
+#                            ^^^^ source.go constant.language.boolean.go
 #                                ^ source.go punctuation.definition.end.bracket.curly.go
 >	_ = min(10, 20)
 #^ source.go
@@ -15471,7 +15471,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^^ source.go constant.language.go
+#        ^^^^ source.go constant.language.boolean.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -15534,7 +15534,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^^ source.go constant.language.go
+#        ^^^^ source.go constant.language.boolean.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -16335,7 +16335,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^^^ source.go constant.language.go
+#         ^^^^^ source.go constant.language.boolean.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -16369,7 +16369,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^^^ source.go constant.language.go
+#         ^^^^^ source.go constant.language.boolean.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -17891,7 +17891,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -17967,10 +17967,10 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^^^ source.go constant.language.go
+#              ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -18006,13 +18006,13 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
-#              ^^^ source.go constant.language.go
+#              ^^^ source.go constant.language.null.go
 #                 ^ source.go punctuation.other.comma.go
 #                  ^ source.go
-#                   ^^^ source.go constant.language.go
+#                   ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -21828,7 +21828,7 @@
 #       ^ source.go
 #        ^^^^^^^^^ source.go entity.name.function.support.go
 #                 ^ source.go punctuation.definition.begin.bracket.round.go
-#                  ^^^ source.go constant.language.go
+#                  ^^^ source.go constant.language.null.go
 #                     ^ source.go punctuation.definition.end.bracket.round.go
 #                      ^ source.go punctuation.other.period.go
 #                       ^ source.go punctuation.definition.begin.bracket.round.go
@@ -23937,7 +23937,7 @@
 #  ^ source.go variable.other.property.go
 #   ^ source.go punctuation.other.colon.go
 #    ^ source.go
-#     ^^^ source.go constant.language.go
+#     ^^^ source.go constant.language.null.go
 #        ^ source.go punctuation.other.comma.go
 >	}
 #^ source.go
@@ -26587,7 +26587,7 @@
 #                                ^ source.go punctuation.definition.end.bracket.curly.go
 #                                 ^ source.go punctuation.other.comma.go
 #                                  ^ source.go
-#                                   ^^^ source.go constant.language.go
+#                                   ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -26805,7 +26805,7 @@
 #      ^ source.go
 #       ^ source.go keyword.operator.assignment.go
 #        ^ source.go
-#         ^^^^ source.go constant.language.go
+#         ^^^^ source.go constant.language.iota.go
 >		val2
 #^^ source.go
 #  ^^^^ source.go variable.other.assignment.go
@@ -29254,7 +29254,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -29280,7 +29280,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -29306,7 +29306,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -29333,7 +29333,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -29361,7 +29361,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -29391,7 +29391,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -29421,7 +29421,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -30122,13 +30122,13 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 #           ^ source.go punctuation.other.comma.go
 #            ^ source.go
-#             ^^^ source.go constant.language.go
+#             ^^^ source.go constant.language.null.go
 #                ^ source.go punctuation.other.comma.go
 #                 ^ source.go
-#                  ^^^ source.go constant.language.go
+#                  ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -32946,7 +32946,7 @@
 #                         ^ source.go variable.other.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go constant.language.go
+#                            ^^^ source.go constant.language.null.go
 #                               ^ source.go punctuation.other.comma.go
 #                                ^ source.go
 #                                 ^^^^^^^ source.go variable.other.go
@@ -33054,7 +33054,7 @@
 #                         ^ source.go variable.other.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go constant.language.go
+#                            ^^^ source.go constant.language.null.go
 #                               ^ source.go punctuation.other.comma.go
 #                                ^ source.go
 #                                 ^^^^^^^ source.go variable.other.go
@@ -33184,7 +33184,7 @@
 #                         ^ source.go variable.other.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go constant.language.go
+#                            ^^^ source.go constant.language.null.go
 #                               ^ source.go punctuation.other.comma.go
 #                                ^ source.go
 #                                 ^^^^^^^ source.go variable.other.go
@@ -33396,7 +33396,7 @@
 #                         ^ source.go punctuation.definition.end.bracket.round.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go constant.language.go
+#                            ^^^ source.go constant.language.null.go
 #                               ^ source.go punctuation.other.comma.go
 #                                ^ source.go
 #                                 ^^^^^^^ source.go variable.other.go
@@ -33526,7 +33526,7 @@
 #                           ^ source.go punctuation.definition.end.bracket.round.go
 #                            ^ source.go punctuation.other.comma.go
 #                             ^ source.go
-#                              ^^^ source.go constant.language.go
+#                              ^^^ source.go constant.language.null.go
 #                                 ^ source.go punctuation.other.comma.go
 #                                  ^ source.go
 #                                   ^^^^^^^ source.go variable.other.go
@@ -33670,7 +33670,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -33720,7 +33720,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -33840,7 +33840,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -35698,10 +35698,10 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 #           ^ source.go punctuation.other.comma.go
 #            ^ source.go
-#             ^^^ source.go constant.language.go
+#             ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -35833,7 +35833,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -35967,7 +35967,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -36112,7 +36112,7 @@
 #^ source.go
 # ^^^^^^ source.go keyword.control.go
 #       ^ source.go
-#        ^^^ source.go constant.language.go
+#        ^^^ source.go constant.language.null.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
@@ -36391,10 +36391,10 @@
 #         ^ source.go punctuation.definition.end.bracket.square.go
 #          ^^^^ source.go storage.type.boolean.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
-#               ^^^^ source.go constant.language.go
+#               ^^^^ source.go constant.language.boolean.go
 #                   ^ source.go punctuation.other.comma.go
 #                    ^ source.go
-#                     ^^^^^ source.go constant.language.go
+#                     ^^^^^ source.go constant.language.boolean.go
 #                          ^ source.go punctuation.definition.end.bracket.curly.go
 >	num := 1
 #^ source.go
@@ -36661,10 +36661,10 @@
 #          ^ source.go
 #           ^^ source.go keyword.operator.assignment.go
 #             ^ source.go
-#              ^^^^ source.go constant.language.go
+#              ^^^^ source.go constant.language.boolean.go
 #                  ^ source.go punctuation.other.comma.go
 #                   ^ source.go
-#                    ^^^^^ source.go constant.language.go
+#                    ^^^^^ source.go constant.language.boolean.go
 >	// for i := range nums {
 #^ source.go
 # ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
@@ -37364,7 +37364,7 @@
 #                       ^ source.go entity.name.type.go
 #                        ^ source.go punctuation.definition.end.bracket.round.go
 #                         ^ source.go punctuation.definition.begin.bracket.round.go
-#                          ^^^ source.go constant.language.go
+#                          ^^^ source.go constant.language.null.go
 #                             ^ source.go punctuation.definition.end.bracket.round.go
 #                              ^ source.go punctuation.definition.end.bracket.round.go
 #                               ^ source.go punctuation.other.period.go
@@ -37397,7 +37397,7 @@
 #                                            ^ source.go entity.name.type.go
 #                                             ^ source.go punctuation.definition.end.bracket.round.go
 #                                              ^ source.go punctuation.definition.begin.bracket.round.go
-#                                               ^^^ source.go constant.language.go
+#                                               ^^^ source.go constant.language.null.go
 #                                                  ^ source.go punctuation.definition.end.bracket.round.go
 #                                                   ^ source.go punctuation.definition.end.bracket.round.go
 #                                                    ^ source.go punctuation.other.comma.go
@@ -37926,10 +37926,10 @@
 #          ^ source.go
 #           ^^ source.go keyword.operator.assignment.go
 #             ^ source.go
-#              ^^^^ source.go constant.language.go
+#              ^^^^ source.go constant.language.boolean.go
 #                  ^ source.go punctuation.other.comma.go
 #                   ^ source.go
-#                    ^^^^^ source.go constant.language.go
+#                    ^^^^^ source.go constant.language.boolean.go
 >	// if ok&&notOk{
 #^ source.go
 # ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
@@ -38760,7 +38760,7 @@
 #^^ source.go
 #  ^^^^^^ source.go keyword.control.go
 #        ^ source.go
-#         ^^^ source.go constant.language.go
+#         ^^^ source.go constant.language.null.go
 #            ^ source.go punctuation.other.comma.go
 #             ^ source.go
 #              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
@@ -39883,7 +39883,7 @@
 #    ^ source.go
 #     ^^ source.go keyword.operator.assignment.go
 #       ^ source.go
-#        ^^^^ source.go constant.language.go
+#        ^^^^ source.go constant.language.boolean.go
 >	foo = &bar
 #^ source.go
 # ^^^ source.go variable.other.assignment.go
@@ -40464,12 +40464,12 @@
 #                                                                                                   ^ source.go punctuation.definition.end.bracket.round.go
 #                                                                                                    ^ source.go punctuation.other.comma.go
 #                                                                                                     ^ source.go
-#                                                                                                      ^^^ source.go constant.language.go
+#                                                                                                      ^^^ source.go constant.language.null.go
 #                                                                                                         ^ source.go
 #                                                                                                          ^ source.go punctuation.definition.end.bracket.curly.go
 #                                                                                                           ^ source.go punctuation.other.comma.go
 #                                                                                                            ^ source.go
-#                                                                                                             ^^^ source.go constant.language.go
+#                                                                                                             ^^^ source.go constant.language.null.go
 >	}
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.curly.go
@@ -40530,7 +40530,7 @@
 #                         ^ source.go variable.other.go
 #                          ^ source.go punctuation.other.comma.go
 #                           ^ source.go
-#                            ^^^ source.go constant.language.go
+#                            ^^^ source.go constant.language.null.go
 #                               ^ source.go punctuation.other.comma.go
 #                                ^ source.go
 #                                 ^^^^^^^ source.go variable.other.go
