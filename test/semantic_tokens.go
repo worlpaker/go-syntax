@@ -4314,3 +4314,10 @@ type Bar287 = []struct {
 	bar    string
 	foobar *[]<-chan *[]context.Context
 }
+
+// v0.6.8
+func Bar288() {
+	// better highlighting struct properties and types when hovering with the mouse
+	type Foo struct{ name context.Context }
+	_ = Foo{name: context.TODO()}
+}
