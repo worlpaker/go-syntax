@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.6.9]
+
+- Fixes minor bugs in make built-in function
+
 ## [0.6.8]
 
 - Fixes struct field when hovering with the mouse
