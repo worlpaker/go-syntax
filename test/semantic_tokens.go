@@ -4321,3 +4321,22 @@ func Bar288() {
 	type Foo struct{ name context.Context }
 	_ = Foo{name: context.TODO()}
 }
+
+// v0.6.9
+func Bar289() {
+	a1 := []int{10}
+	a2 := 20
+	foo := func([]byte) error {
+		return nil
+	}
+
+	var (
+		_ = foo(make([]byte, len(a1)*int(a2)))
+	)
+
+	if 5 > 10 {
+
+	}
+
+	fmt.Println("Hello World!")
+}
