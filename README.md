@@ -4,13 +4,17 @@ Rich Syntax Highlighting for [Go](https://go.dev/) language
 
 With this extension, your favorite theme will be able to color your code better.
 
+> [!NOTE]
+> Go Syntax became the default [Go grammar](https://github.com/microsoft/vscode/blob/main/extensions/go/syntaxes/go.tmLanguage.json) in the official VS Code in v1.86 ([release note](https://code.visualstudio.com/updates/v1_86#_new-go-grammar)).
+
 ## About
 
 Go Syntax improves your coding experience by providing client-side syntax highlighting based on [TextMate rules](https://macromates.com/manual/en/language_grammars). This means you can enjoy advanced code coloring without relying on the Language Server Protocol (LSP).
 
 Go Syntax is compatible with various platforms, including web-based code editors like [vscode.dev](https://vscode.dev) and [github.dev](https://github.dev).
 
-**⚠️ Note**: [Gopls' `ui.semanticTokens` setting](https://github.com/golang/vscode-go/wiki/settings#uisemantictokens) is disabled by default and shouldn't be enabled if you want to use this extension.
+> [!Warning]
+> [Gopls' `ui.semanticTokens` setting](https://github.com/golang/vscode-go/wiki/settings#uisemantictokens) is disabled by default and shouldn't be enabled if you want to use this extension.
 
 ## Comparisons (Before - After)
 
