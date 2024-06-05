@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.1]
+
+- Updates `README.md`
+
 ## [0.7.0]
 
 - Fixes minor bugs related to multi-line struct tags
