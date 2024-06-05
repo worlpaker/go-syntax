@@ -1856,7 +1856,7 @@
 				},
 				{
 					"comment": "property variables and types",
-					"match": "(?:((?:(?:\\w+\\,\\s*)+)?(?:\\w+\\s+))([\\s\\S]+))",
+					"match": "(?:((?:(?:\\w+\\,\\s*)+)?(?:\\w+\\s+))([^\\`]+))",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1998,6 +1998,29 @@
 						},
 						{
 							"include": "$self"
+						}
+					]
+				},
+				{
+					"comment": "one type only with multi line raw string",
+					"begin": "(?:((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?<!\\,\\s*)(?:[\\w\\.\\*]+)\\s*)(?=\\`))",
+					"beginCaptures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"match": "\\w+",
+									"name": "entity.name.type.go"
+								}
+							]
+						}
+					},
+					"end": "(?=\\`)",
+					"patterns": [
+						{
+							"include": "#raw_string_literals"
 						}
 					]
 				},

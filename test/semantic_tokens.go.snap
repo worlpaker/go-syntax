@@ -41663,3 +41663,104 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.7.0
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>// Despite the warnings, the following syntax still should be supported without causing any bugs.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// Warning: struct field tag "json:\"bar\n\t,omitempty\"" not compatible with reflect.StructTag.Get: bad syntax for struct tag value
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>type Bar290 struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^ source.go keyword.struct.go
+#                  ^ source.go
+#                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	FooX `json:"foox
+#^ source.go
+# ^^^^ source.go entity.name.type.go
+#     ^ source.go
+#      ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#       ^^^^^^^^^^^ source.go string.quoted.raw.go
+>	,omitempty"` // foo
+#^^^^^^^^^^^^ source.go string.quoted.raw.go
+#            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#             ^ source.go
+#              ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                ^^^^ source.go comment.line.double-slash.go
+>	Type `json:"type"
+#^ source.go
+# ^^^^ source.go entity.name.type.go
+#     ^ source.go
+#      ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#       ^^^^^^^^^^^^ source.go string.quoted.raw.go
+>	,omitempty"`
+#^^^^^^^^^^^^ source.go string.quoted.raw.go
+#            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>	Bar string `json:"bar
+#^ source.go
+# ^^^ source.go variable.other.property.go
+#    ^ source.go
+#     ^^^^^^ source.go storage.type.string.go
+#           ^ source.go
+#            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#             ^^^^^^^^^^ source.go string.quoted.raw.go
+>	,omitempty"` // bar
+#^^^^^^^^^^^^ source.go string.quoted.raw.go
+#            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#             ^ source.go
+#              ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                ^^^^ source.go comment.line.double-slash.go
+>	Foobar string `json"foobar
+#^ source.go
+# ^^^^^^ source.go variable.other.property.go
+#       ^ source.go
+#        ^^^^^^ source.go storage.type.string.go
+#              ^ source.go
+#               ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                ^^^^^^^^^^^^ source.go string.quoted.raw.go
+>	,omitempty"`
+#^^^^^^^^^^^^ source.go string.quoted.raw.go
+#            ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type Bar291 struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^ source.go keyword.struct.go
+#                  ^ source.go
+#                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Foo string `json:"foo"
+#^ source.go
+# ^^^ source.go variable.other.property.go
+#    ^ source.go
+#     ^^^^^^ source.go storage.type.string.go
+#           ^ source.go
+#            ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#             ^^^^^^^^^^^ source.go string.quoted.raw.go
+>		foo bar 'string'
+#^^^^^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+>	` // foo bar
+#^ source.go string.quoted.raw.go
+# ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#  ^ source.go
+#   ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#     ^^^^^^^^ source.go comment.line.double-slash.go
+>	Bar string // foo bar
+#^ source.go
+# ^^^ source.go variable.other.property.go
+#    ^ source.go
+#     ^^^^^^ source.go storage.type.string.go
+#           ^ source.go
+#            ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#              ^^^^^^^^ source.go comment.line.double-slash.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

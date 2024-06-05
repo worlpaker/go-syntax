@@ -4340,3 +4340,24 @@ func Bar289() {
 
 	fmt.Println("Hello World!")
 }
+
+// v0.7.0
+// Despite the warnings, the following syntax still should be supported without causing any bugs.
+// Warning: struct field tag "json:\"bar\n\t,omitempty\"" not compatible with reflect.StructTag.Get: bad syntax for struct tag value
+type Bar290 struct {
+	FooX `json:"foox
+	,omitempty"` // foo
+	Type `json:"type"
+	,omitempty"`
+	Bar string `json:"bar
+	,omitempty"` // bar
+	Foobar string `json"foobar
+	,omitempty"`
+}
+
+type Bar291 struct {
+	Foo string `json:"foo"
+		foo bar 'string'
+	` // foo bar
+	Bar string // foo bar
+}
