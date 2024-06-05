@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.0]
+
+- Fixes minor bugs related to multi-line struct tags
+
 ## [0.6.9]
 
 - Fixes minor bugs in make built-in function
