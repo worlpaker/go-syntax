@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.2]
+
+- Fixes minor bugs in struct field hover and generic type
+
 ## [0.7.1]
 
 - Updates `README.md`
