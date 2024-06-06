@@ -4378,3 +4378,11 @@ func Bar292() {
 	_ = f.a
 	_ = f.b
 }
+
+func Bar293() {
+	type bar[a, b any] struct{}
+
+	type foo[a, b string] bar[context.Context, context.Context]
+
+	type foobar[a, b string] chan<- bar[context.Context, context.Context]
+}
