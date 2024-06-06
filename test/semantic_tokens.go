@@ -4361,3 +4361,20 @@ type Bar291 struct {
 	` // foo bar
 	Bar string // foo bar
 }
+
+// v0.7.2
+func Bar292() {
+	// struct field hover with generics and functions
+	type bar1 struct{}
+	type bar2 struct{}
+
+	type bar[b1 bar1, b2 bar2] struct{}
+
+	type foo struct {
+		a func(foo, bar, foobar context.Context)
+		b bar[bar1, bar2]
+	}
+	f := foo{}
+	_ = f.a
+	_ = f.b
+}

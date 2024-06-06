@@ -2949,11 +2949,14 @@
 				"2": {
 					"patterns": [
 						{
-							"include": "#type-declarations"
-						},
-						{
 							"match": "\\binvalid\\b\\s+\\btype\\b",
 							"name": "invalid.field.go"
+						},
+						{
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"include": "#parameter-variable-types"
 						},
 						{
 							"match": "\\w+",
