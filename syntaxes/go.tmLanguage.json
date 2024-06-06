@@ -2803,8 +2803,8 @@
 			}
 		},
 		"property_variables": {
-			"comment": "Property variables in struct | parameter field in struct initialization",
-			"match": "(?:(?:((?:\\b[\\w\\.]+)(?:\\:(?!\\=))))(?:(?:\\s*([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))((?:\\s*(?:\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\|\\||\\&\\&|\\+|\/|\\-|\\*|\\%|\\||\\&)\\s*(?:[\\w\\.\\*\\&\\[\\]]+)(?:\\.\\w+)(?![\\w\\.\\*\\&\\[\\]]*(?:\\{|\\()))*))?)",
+			"comment": "Property variables in struct",
+			"match": "((?:\\b[\\w\\.]+)(?:\\:(?!\\=)))",
 			"captures": {
 				"1": {
 					"patterns": [
@@ -2814,68 +2814,6 @@
 						{
 							"match": "\\w+",
 							"name": "variable.other.property.go"
-						}
-					]
-				},
-				"2": {
-					"patterns": [
-						{
-							"include": "#type-declarations"
-						},
-						{
-							"match": "\\w+",
-							"name": "variable.other.go"
-						},
-						{
-							"include": "$self"
-						}
-					]
-				},
-				"3": {
-					"patterns": [
-						{
-							"include": "#type-declarations"
-						},
-						{
-							"match": "\\w+",
-							"name": "variable.other.property.field.go"
-						},
-						{
-							"include": "$self"
-						}
-					]
-				},
-				"4": {
-					"patterns": [
-						{
-							"match": "([\\w\\.\\*\\&\\[\\]]+)(\\.\\w+)",
-							"captures": {
-								"1": {
-									"patterns": [
-										{
-											"include": "#type-declarations"
-										},
-										{
-											"match": "\\w+",
-											"name": "variable.other.go"
-										}
-									]
-								},
-								"2": {
-									"patterns": [
-										{
-											"include": "#type-declarations"
-										},
-										{
-											"match": "\\w+",
-											"name": "variable.other.property.field.go"
-										}
-									]
-								}
-							}
-						},
-						{
-							"include": "$self"
 						}
 					]
 				}

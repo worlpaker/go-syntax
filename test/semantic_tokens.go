@@ -3441,6 +3441,7 @@ func Bar221() {
 		Skin:     "foo",
 	}
 
+	// Update(v0.7.3): "variable.other.property.field.go" is deprecated.
 	appConfig := AppConfig{
 		Brand:    config.Brand,    // comment
 		BundleID: config.BundleID, /* comment */
@@ -3452,14 +3453,8 @@ func Bar221() {
 		Bar:      Bar{},
 		Barx:     &Bar{},
 		FooBar:   new(Bar),
-
-		// Local package and third-party imported variables/constants
-		// will be scoped "variable.other.property.field.go" as well.
-		// See the examples below:
-		// Since "config.Brand" and "time.Second" are not different,
-		// "Second" will be scoped as "variable.other.property.field.go" here.
-		TimerFoo: time.Second,     // "Second" will be scoped as "variable.other.property.field.go"
-		TimerBar: 5 * time.Second, // But in here, "Second" will be scoped as "variable.other.go"
+		TimerFoo: time.Second,
+		TimerBar: 5 * time.Second,
 	}
 
 	_ = appConfig
@@ -4385,4 +4380,17 @@ func Bar293() {
 	type foo[a, b string] bar[context.Context, context.Context]
 
 	type foobar[a, b string] chan<- bar[context.Context, context.Context]
+}
+
+// v0.7.3
+func Bar294() {
+	type Bar struct{}
+
+	type Foo struct {
+		bar map[context.Context]chan *Bar
+	}
+
+	_ = &Foo{
+		bar: map[context.Context]chan *Bar{},
+	}
 }
