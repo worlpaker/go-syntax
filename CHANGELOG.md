@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.3]
+
+- Fixes property variables (`variable.other.property.field.go` is deprecated)
+
 ## [0.7.2]
 
 - Fixes minor bugs in struct field hover and generic type
