@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.4]
+
+- Fixes a minor bug in interface type
+
 ## [0.7.3]
 
 - Fixes property variables (`variable.other.property.field.go` is deprecated)
