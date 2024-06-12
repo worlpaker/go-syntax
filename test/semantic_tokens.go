@@ -4394,3 +4394,13 @@ func Bar294() {
 		bar: map[context.Context]chan *Bar{},
 	}
 }
+
+// v0.7.4
+func Bar295() {
+	type (
+		FooBar interface {
+			Foo(ctx context.Context) context.Context
+			Bar(ctx context.Context) <-chan context.Context
+		}
+	)
+}

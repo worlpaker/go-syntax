@@ -2289,6 +2289,9 @@
 					"include": "#struct_variables_types"
 				},
 				{
+					"include": "#interface_variables_types"
+				},
+				{
 					"include": "#type-declarations-without-brackets"
 				},
 				{
