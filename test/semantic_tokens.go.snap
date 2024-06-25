@@ -42224,3 +42224,93 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.7.6
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar297() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type Foo string
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go storage.type.string.go
+>	type Bar[T any] string
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go
+#            ^^^ source.go entity.name.type.any.go
+#               ^ source.go punctuation.definition.end.bracket.square.go
+#                ^ source.go
+#                 ^^^^^^ source.go storage.type.string.go
+>	type Baz string
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go storage.type.string.go
+>
+>	var foo map[Foo]*Bar[Baz]
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^ source.go keyword.operator.address.go
+#                  ^^^ source.go entity.name.type.go
+#                     ^ source.go punctuation.definition.begin.bracket.square.go
+#                      ^^^ source.go entity.name.type.go
+#                         ^ source.go punctuation.definition.end.bracket.square.go
+>	var bar map[Foo]newGen[newstruct1, newstruct1, newstruct2]
+#^ source.go
+# ^^^ source.go keyword.var.go
+#    ^ source.go
+#     ^^^ source.go variable.other.assignment.go
+#        ^ source.go
+#         ^^^ source.go keyword.map.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^^^ source.go entity.name.type.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.definition.begin.bracket.square.go
+#                        ^^^^^^^^^^ source.go entity.name.type.go
+#                                  ^ source.go punctuation.other.comma.go
+#                                   ^ source.go
+#                                    ^^^^^^^^^^ source.go entity.name.type.go
+#                                              ^ source.go punctuation.other.comma.go
+#                                               ^ source.go
+#                                                ^^^^^^^^^^ source.go entity.name.type.go
+#                                                          ^ source.go punctuation.definition.end.bracket.square.go
+>
+>	_, _ = foo, bar
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go punctuation.other.comma.go
+#   ^ source.go
+#    ^ source.go variable.other.assignment.go
+#     ^ source.go
+#      ^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^^^ source.go variable.other.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^^^ source.go variable.other.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

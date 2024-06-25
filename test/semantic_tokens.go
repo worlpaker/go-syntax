@@ -4425,3 +4425,15 @@ func Bar296() {
 		fmt.Println(c)
 	}
 }
+
+// v0.7.6
+func Bar297() {
+	type Foo string
+	type Bar[T any] string
+	type Baz string
+
+	var foo map[Foo]*Bar[Baz]
+	var bar map[Foo]newGen[newstruct1, newstruct1, newstruct2]
+
+	_, _ = foo, bar
+}
