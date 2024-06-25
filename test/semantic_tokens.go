@@ -4404,3 +4404,24 @@ func Bar295() {
 		}
 	)
 }
+
+// v0.7.5
+func Bar296() {
+	ctx := []Context{context.TODO(), context.TODO()}
+
+	type (
+		context1 Context
+		context2 cancelCtx
+	)
+
+	i := 0
+	switch c := ctx[i+1].(type) {
+	case context1,
+		context2:
+		fmt.Println(c)
+	case Context:
+		fmt.Println(c)
+	default:
+		fmt.Println(c)
+	}
+}
