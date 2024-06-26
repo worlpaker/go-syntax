@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.6]
+
+- Fixes a minor bug in map type
+
 ## [0.7.5]
 
 - Fixes a minor bug in switch type
