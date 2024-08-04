@@ -4437,3 +4437,47 @@ func Bar297() {
 
 	_, _ = foo, bar
 }
+
+// v0.7.7
+func Bar298() {
+	type (
+		bar1 string
+		bar2 string
+		bar3 string
+		bar4 string
+		bar5 string
+		bar6 string
+		bar7 string
+		bar8 string
+		bar9 string
+	)
+
+	type Foo struct {
+		bar1 `"foo"`
+		bar2 "`foo`" // `foo` bar
+		bar3 `foo`   /* `foo` bar */
+		bar4 `foo
+		bar "foobar"
+		foo bar baz` // `foo` "bar"
+		bar5 // `"foo"` bar
+		bar6 // "`foo`" bar
+		bar7 // `foo` bar
+		bar8 /* `foo bar` foo bar */
+		bar9 /* foo
+		`foo` `bar` baz
+		"`foobar`" `"baz"` */
+		foo1 string `"foo"`
+		foo2 string "`foo`" // `foo` bar
+		foo3 string `foo`   /* `bar` bar */
+		foo4 string `foo
+		bar "foobar"
+		foo bar baz` // `foo` "bar"
+		foo5 string // `"foo"` bar
+		foo6 string // "`foo`" bar
+		foo7 string // `foo` bar
+		foo8 string /* `foo bar` foo bar */
+		foo9 string /* foo
+		`foo` `bar` baz
+		"`foobar`" `"baz"` */
+	}
+}

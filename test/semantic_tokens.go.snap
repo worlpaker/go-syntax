@@ -42314,3 +42314,257 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.7.7
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar298() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type (
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.round.go
+>		bar1 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar2 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar3 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar4 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar5 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar6 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar7 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar8 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>		bar9 string
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	type Foo struct {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go
+#          ^^^^^^ source.go keyword.struct.go
+#                ^ source.go
+#                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>		bar1 `"foo"`
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#        ^^^^^ source.go string.quoted.raw.go
+#             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		bar2 "`foo`" // `foo` bar
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#        ^^^^^ source.go string.quoted.double.go
+#             ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#              ^ source.go
+#               ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                 ^^^^^^^^^^ source.go comment.line.double-slash.go
+>		bar3 `foo`   /* `foo` bar */
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#        ^^^ source.go string.quoted.raw.go
+#           ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#            ^^^ source.go
+#               ^^ source.go comment.block.go punctuation.definition.comment.go
+#                 ^^^^^^^^^^^ source.go comment.block.go
+#                            ^^ source.go comment.block.go punctuation.definition.comment.go
+>		bar4 `foo
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#        ^^^^ source.go string.quoted.raw.go
+>		bar "foobar"
+#^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+>		foo bar baz` // `foo` "bar"
+#^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#              ^ source.go
+#               ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                 ^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		bar5 // `"foo"` bar
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#         ^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		bar6 // "`foo`" bar
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#         ^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		bar7 // `foo` bar
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#         ^^^^^^^^^^ source.go comment.line.double-slash.go
+>		bar8 /* `foo bar` foo bar */
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^ source.go comment.block.go punctuation.definition.comment.go
+#         ^^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                            ^^ source.go comment.block.go punctuation.definition.comment.go
+>		bar9 /* foo
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go
+#       ^^ source.go comment.block.go punctuation.definition.comment.go
+#         ^^^^^ source.go comment.block.go
+>		`foo` `bar` baz
+#^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+>		"`foobar`" `"baz"` */
+#^^^^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                     ^^ source.go comment.block.go punctuation.definition.comment.go
+>		foo1 string `"foo"`
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#               ^^^^^ source.go string.quoted.raw.go
+#                    ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>		foo2 string "`foo`" // `foo` bar
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#               ^^^^^ source.go string.quoted.double.go
+#                    ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                     ^ source.go
+#                      ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                        ^^^^^^^^^^ source.go comment.line.double-slash.go
+>		foo3 string `foo`   /* `bar` bar */
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#               ^^^ source.go string.quoted.raw.go
+#                  ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                   ^^^ source.go
+#                      ^^ source.go comment.block.go punctuation.definition.comment.go
+#                        ^^^^^^^^^^^ source.go comment.block.go
+#                                   ^^ source.go comment.block.go punctuation.definition.comment.go
+>		foo4 string `foo
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#               ^^^^ source.go string.quoted.raw.go
+>		bar "foobar"
+#^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+>		foo bar baz` // `foo` "bar"
+#^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#              ^ source.go
+#               ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                 ^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		foo5 string // `"foo"` bar
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                ^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		foo6 string // "`foo`" bar
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                ^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		foo7 string // `foo` bar
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                ^^^^^^^^^^ source.go comment.line.double-slash.go
+>		foo8 string /* `foo bar` foo bar */
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^^ source.go comment.block.go punctuation.definition.comment.go
+#                ^^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                                   ^^ source.go comment.block.go punctuation.definition.comment.go
+>		foo9 string /* foo
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go
+#       ^^^^^^ source.go storage.type.string.go
+#             ^ source.go
+#              ^^ source.go comment.block.go punctuation.definition.comment.go
+#                ^^^^^ source.go comment.block.go
+>		`foo` `bar` baz
+#^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+>		"`foobar`" `"baz"` */
+#^^^^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                     ^^ source.go comment.block.go punctuation.definition.comment.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
