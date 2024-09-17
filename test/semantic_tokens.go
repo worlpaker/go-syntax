@@ -4481,3 +4481,42 @@ func Bar298() {
 		"`foobar`" `"baz"` */
 	}
 }
+
+// v0.7.8
+func Bar299() {
+	type anyX[a any] any
+	type Constraint = int
+	type G[P Constraint] = anyX[string]
+
+	type Map[K comparable, V any] context.Context
+	type Set[K comparable] = Map[K, bool]
+
+	type integers interface {
+		~int | ~int8 | ~int16 | ~int32 | ~int64
+	}
+	type IntSet[K integers] = Set[K]
+
+	type Point3D[E any] = struct{ x, y, z E }
+	p := Point3D[float64]{1.0, 2.71828, 3.14159}
+	fmt.Println(p)
+
+	type IntSet1[A, B integers, C, D string] = Set[A]
+	type IntSet2[A, B integers, C, D string] = Set[B] // foo  "" `` '' [] bar
+	type IntSet3[A, B integers, C, D string] = Set[C] /* foo  "" `` '' [] bar */
+	type IntSet4[A, B integers, C, D string] = Set[D] /* foo
+	"" `` '' [] bar */
+
+	type Foo1[T comparable] = Map[T, string]
+
+	type (
+		Foo2[T comparable] = Map[T, string]
+
+		IntSet5[A, B integers, C, D string] = Set[A]
+		IntSet6[A, B integers, C, D string] = Set[B] // foo  "" `` '' [] bar
+		IntSet7[A, B integers, C, D string] = Set[C] /* foo  "" `` '' [] bar */
+		IntSet8[A, B integers, C, D string] = Set[D] /* foo
+		"" `` '' [] bar */
+	)
+
+	fmt.Println("Hello, World!")
+}

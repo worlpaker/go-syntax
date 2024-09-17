@@ -42568,3 +42568,513 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.7.8
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar299() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type anyX[a any] any
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go
+#             ^^^ source.go entity.name.type.any.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^ source.go
+#                  ^^^ source.go entity.name.type.any.go
+>	type Constraint = int
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
+#                 ^ source.go keyword.operator.assignment.go
+#                  ^ source.go
+#                   ^^^ source.go storage.type.numeric.go
+>	type G[P Constraint] = anyX[string]
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^ source.go entity.name.type.go
+#       ^ source.go punctuation.definition.begin.bracket.square.go
+#        ^ source.go variable.parameter.go
+#         ^ source.go
+#          ^^^^^^^^^^ source.go entity.name.type.go
+#                    ^ source.go punctuation.definition.end.bracket.square.go
+#                     ^ source.go
+#                      ^ source.go keyword.operator.assignment.go
+#                       ^ source.go
+#                        ^^^^ source.go entity.name.type.go
+#                            ^ source.go punctuation.definition.begin.bracket.square.go
+#                             ^^^^^^ source.go storage.type.string.go
+#                                   ^ source.go punctuation.definition.end.bracket.square.go
+>
+>	type Map[K comparable, V any] context.Context
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.other.comma.go
+#                       ^ source.go
+#                        ^ source.go variable.parameter.go
+#                         ^ source.go
+#                          ^^^ source.go entity.name.type.any.go
+#                             ^ source.go punctuation.definition.end.bracket.square.go
+#                              ^ source.go
+#                               ^^^^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^^^^ source.go entity.name.type.go
+>	type Set[K comparable] = Map[K, bool]
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go
+#            ^^^^^^^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.definition.end.bracket.square.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.assignment.go
+#                         ^ source.go
+#                          ^^^ source.go entity.name.type.go
+#                             ^ source.go punctuation.definition.begin.bracket.square.go
+#                              ^ source.go entity.name.type.go
+#                               ^ source.go punctuation.other.comma.go
+#                                ^ source.go
+#                                 ^^^^ source.go storage.type.boolean.go
+#                                     ^ source.go punctuation.definition.end.bracket.square.go
+>
+>	type integers interface {
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^^ source.go entity.name.type.go
+#              ^ source.go
+#               ^^^^^^^^^ source.go keyword.interface.go
+#                        ^ source.go
+#                         ^ source.go punctuation.definition.begin.bracket.curly.go
+>		~int | ~int8 | ~int16 | ~int32 | ~int64
+#^^ source.go
+#  ^ source.go keyword.operator.arithmetic.bitwise.go
+#   ^^^ source.go storage.type.numeric.go
+#      ^ source.go
+#       ^ source.go keyword.operator.arithmetic.bitwise.go
+#        ^ source.go
+#         ^ source.go keyword.operator.arithmetic.bitwise.go
+#          ^^^^ source.go storage.type.numeric.go
+#              ^ source.go
+#               ^ source.go keyword.operator.arithmetic.bitwise.go
+#                ^ source.go
+#                 ^ source.go keyword.operator.arithmetic.bitwise.go
+#                  ^^^^^ source.go storage.type.numeric.go
+#                       ^ source.go
+#                        ^ source.go keyword.operator.arithmetic.bitwise.go
+#                         ^ source.go
+#                          ^ source.go keyword.operator.arithmetic.bitwise.go
+#                           ^^^^^ source.go storage.type.numeric.go
+#                                ^ source.go
+#                                 ^ source.go keyword.operator.arithmetic.bitwise.go
+#                                  ^ source.go
+#                                   ^ source.go keyword.operator.arithmetic.bitwise.go
+#                                    ^^^^^ source.go storage.type.numeric.go
+>	}
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+>	type IntSet[K integers] = Set[K]
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^ source.go entity.name.type.go
+#            ^ source.go punctuation.definition.begin.bracket.square.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go
+#                         ^ source.go keyword.operator.assignment.go
+#                          ^ source.go
+#                           ^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go entity.name.type.go
+#                                ^ source.go punctuation.definition.end.bracket.square.go
+>
+>	type Point3D[E any] = struct{ x, y, z E }
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go
+#                ^^^ source.go entity.name.type.any.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^ source.go
+#                     ^ source.go keyword.operator.assignment.go
+#                      ^ source.go
+#                       ^^^^^^ source.go keyword.struct.go
+#                             ^ source.go punctuation.definition.begin.bracket.curly.go
+#                              ^ source.go
+#                               ^ source.go variable.other.property.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^ source.go variable.other.property.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^ source.go variable.other.property.go
+#                                      ^ source.go
+#                                       ^ source.go entity.name.type.go
+#                                        ^ source.go
+#                                         ^ source.go punctuation.definition.end.bracket.curly.go
+>	p := Point3D[float64]{1.0, 2.71828, 3.14159}
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^^ source.go keyword.operator.assignment.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^^^^^^^ source.go storage.type.numeric.go
+#                     ^ source.go punctuation.definition.end.bracket.square.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                       ^ source.go constant.numeric.decimal.go
+#                        ^ source.go constant.numeric.decimal.point.go
+#                         ^ source.go constant.numeric.decimal.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go constant.numeric.decimal.go
+#                             ^ source.go constant.numeric.decimal.point.go
+#                              ^^^^^ source.go constant.numeric.decimal.go
+#                                   ^ source.go punctuation.other.comma.go
+#                                    ^ source.go
+#                                     ^ source.go constant.numeric.decimal.go
+#                                      ^ source.go constant.numeric.decimal.point.go
+#                                       ^^^^^ source.go constant.numeric.decimal.go
+#                                            ^ source.go punctuation.definition.end.bracket.curly.go
+>	fmt.Println(p)
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^ source.go punctuation.other.period.go
+#     ^^^^^^^ source.go entity.name.function.support.go
+#            ^ source.go punctuation.definition.begin.bracket.round.go
+#             ^ source.go variable.other.go
+#              ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	type IntSet1[A, B integers, C, D string] = Set[A]
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^ source.go variable.parameter.go
+#                  ^ source.go
+#                   ^^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^ source.go variable.parameter.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^^^ source.go storage.type.string.go
+#                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                         ^ source.go
+#                                          ^ source.go keyword.operator.assignment.go
+#                                           ^ source.go
+#                                            ^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                ^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.square.go
+>	type IntSet2[A, B integers, C, D string] = Set[B] // foo  "" `` '' [] bar
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^ source.go variable.parameter.go
+#                  ^ source.go
+#                   ^^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^ source.go variable.parameter.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^^^ source.go storage.type.string.go
+#                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                         ^ source.go
+#                                          ^ source.go keyword.operator.assignment.go
+#                                           ^ source.go
+#                                            ^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                ^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                  ^ source.go
+#                                                   ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                     ^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	type IntSet3[A, B integers, C, D string] = Set[C] /* foo  "" `` '' [] bar */
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^ source.go variable.parameter.go
+#                  ^ source.go
+#                   ^^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^ source.go variable.parameter.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^^^ source.go storage.type.string.go
+#                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                         ^ source.go
+#                                          ^ source.go keyword.operator.assignment.go
+#                                           ^ source.go
+#                                            ^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                ^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                  ^ source.go
+#                                                   ^^ source.go comment.block.go punctuation.definition.comment.go
+#                                                     ^^^^^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                                                                           ^^ source.go comment.block.go punctuation.definition.comment.go
+>	type IntSet4[A, B integers, C, D string] = Set[D] /* foo
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^^ source.go entity.name.type.go
+#             ^ source.go punctuation.definition.begin.bracket.square.go
+#              ^ source.go variable.parameter.go
+#               ^ source.go punctuation.other.comma.go
+#                ^ source.go
+#                 ^ source.go variable.parameter.go
+#                  ^ source.go
+#                   ^^^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^ source.go variable.parameter.go
+#                              ^ source.go punctuation.other.comma.go
+#                               ^ source.go
+#                                ^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^^^ source.go storage.type.string.go
+#                                        ^ source.go punctuation.definition.end.bracket.square.go
+#                                         ^ source.go
+#                                          ^ source.go keyword.operator.assignment.go
+#                                           ^ source.go
+#                                            ^^^ source.go entity.name.type.go
+#                                               ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                ^ source.go entity.name.type.go
+#                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                  ^ source.go
+#                                                   ^^ source.go comment.block.go punctuation.definition.comment.go
+#                                                     ^^^^^ source.go comment.block.go
+>	"" `` '' [] bar */
+#^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                 ^^ source.go comment.block.go punctuation.definition.comment.go
+>
+>	type Foo1[T comparable] = Map[T, string]
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^ source.go entity.name.type.go
+#          ^ source.go punctuation.definition.begin.bracket.square.go
+#           ^ source.go variable.parameter.go
+#            ^ source.go
+#             ^^^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.definition.end.bracket.square.go
+#                        ^ source.go
+#                         ^ source.go keyword.operator.assignment.go
+#                          ^ source.go
+#                           ^^^ source.go entity.name.type.go
+#                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                               ^ source.go entity.name.type.go
+#                                ^ source.go punctuation.other.comma.go
+#                                 ^ source.go
+#                                  ^^^^^^ source.go storage.type.string.go
+#                                        ^ source.go punctuation.definition.end.bracket.square.go
+>
+>	type (
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^ source.go punctuation.definition.begin.bracket.round.go
+>		Foo2[T comparable] = Map[T, string]
+#^^ source.go
+#  ^^^^ source.go entity.name.type.go
+#      ^ source.go punctuation.definition.begin.bracket.square.go
+#       ^ source.go variable.parameter.go
+#        ^ source.go
+#         ^^^^^^^^^^ source.go entity.name.type.go
+#                   ^ source.go punctuation.definition.end.bracket.square.go
+#                    ^ source.go
+#                     ^ source.go keyword.operator.assignment.go
+#                      ^ source.go
+#                       ^^^ source.go entity.name.type.go
+#                          ^ source.go punctuation.definition.begin.bracket.square.go
+#                           ^ source.go entity.name.type.go
+#                            ^ source.go punctuation.other.comma.go
+#                             ^ source.go
+#                              ^^^^^^ source.go storage.type.string.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+>
+>		IntSet5[A, B integers, C, D string] = Set[A]
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^ source.go variable.parameter.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go variable.parameter.go
+#                             ^ source.go
+#                              ^^^^^^ source.go storage.type.string.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go
+#                                      ^ source.go keyword.operator.assignment.go
+#                                       ^ source.go
+#                                        ^^^ source.go entity.name.type.go
+#                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.definition.end.bracket.square.go
+>		IntSet6[A, B integers, C, D string] = Set[B] // foo  "" `` '' [] bar
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^ source.go variable.parameter.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go variable.parameter.go
+#                             ^ source.go
+#                              ^^^^^^ source.go storage.type.string.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go
+#                                      ^ source.go keyword.operator.assignment.go
+#                                       ^ source.go
+#                                        ^^^ source.go entity.name.type.go
+#                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                              ^ source.go
+#                                               ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                 ^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>		IntSet7[A, B integers, C, D string] = Set[C] /* foo  "" `` '' [] bar */
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^ source.go variable.parameter.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go variable.parameter.go
+#                             ^ source.go
+#                              ^^^^^^ source.go storage.type.string.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go
+#                                      ^ source.go keyword.operator.assignment.go
+#                                       ^ source.go
+#                                        ^^^ source.go entity.name.type.go
+#                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                              ^ source.go
+#                                               ^^ source.go comment.block.go punctuation.definition.comment.go
+#                                                 ^^^^^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                                                                       ^^ source.go comment.block.go punctuation.definition.comment.go
+>		IntSet8[A, B integers, C, D string] = Set[D] /* foo
+#^^ source.go
+#  ^^^^^^^ source.go entity.name.type.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^ source.go variable.parameter.go
+#           ^ source.go punctuation.other.comma.go
+#            ^ source.go
+#             ^ source.go variable.parameter.go
+#              ^ source.go
+#               ^^^^^^^^ source.go entity.name.type.go
+#                       ^ source.go punctuation.other.comma.go
+#                        ^ source.go
+#                         ^ source.go variable.parameter.go
+#                          ^ source.go punctuation.other.comma.go
+#                           ^ source.go
+#                            ^ source.go variable.parameter.go
+#                             ^ source.go
+#                              ^^^^^^ source.go storage.type.string.go
+#                                    ^ source.go punctuation.definition.end.bracket.square.go
+#                                     ^ source.go
+#                                      ^ source.go keyword.operator.assignment.go
+#                                       ^ source.go
+#                                        ^^^ source.go entity.name.type.go
+#                                           ^ source.go punctuation.definition.begin.bracket.square.go
+#                                            ^ source.go entity.name.type.go
+#                                             ^ source.go punctuation.definition.end.bracket.square.go
+#                                              ^ source.go
+#                                               ^^ source.go comment.block.go punctuation.definition.comment.go
+#                                                 ^^^^^ source.go comment.block.go
+>		"" `` '' [] bar */
+#^^^^^^^^^^^^^^^^^^ source.go comment.block.go
+#                  ^^ source.go comment.block.go punctuation.definition.comment.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>
+>	fmt.Println("Hello, World!")
+#^ source.go
+# ^^^ source.go variable.other.go
+#    ^ source.go punctuation.other.period.go
+#     ^^^^^^^ source.go entity.name.function.support.go
+#            ^ source.go punctuation.definition.begin.bracket.round.go
+#             ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#              ^^^^^^^^^^^^^ source.go string.quoted.double.go
+#                           ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#                            ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
