@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.7.9]
+
+- Fixes minor bugs related to functions ([#17](https://github.com/worlpaker/go-syntax/issues/17))
+
 ## [0.7.8]
 
 - Supports generic alias types
