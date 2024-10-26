@@ -4520,3 +4520,30 @@ func Bar299() {
 
 	fmt.Println("Hello, World!")
 }
+
+// v0.7.9
+func Bar300() func() int {
+	return func() int {
+		return 5
+	}
+}
+
+var _ = Bar301()(func() {
+	fmt.Println("")
+	fmt.Println("")
+	fmt.Println("")
+})
+
+func Bar301() func(...interface{}) bool {
+	return func(...interface{}) bool {
+		return true
+	}
+}
+
+func Bar302() func() { return nil }
+
+var _ = (func() {
+	fmt.Println("")
+	fmt.Println("")
+	fmt.Println("")
+})
