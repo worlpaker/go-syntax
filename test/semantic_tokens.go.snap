@@ -2308,7 +2308,7 @@
 #      ^ source.go punctuation.definition.begin.bracket.round.go
 >	CMDSet Command = "FOO"
 #^ source.go
-# ^^^^^^ source.go variable.other.assignment.go
+# ^^^^^^ source.go variable.other.constant.go
 #       ^ source.go
 #        ^^^^^^^ source.go entity.name.type.go
 #               ^ source.go
@@ -2319,7 +2319,7 @@
 #                      ^ source.go string.quoted.double.go punctuation.definition.string.end.go
 >	CMD            = "FOO"
 #^ source.go
-# ^^^ source.go variable.other.assignment.go
+# ^^^ source.go variable.other.constant.go
 #    ^^^^^^^^^^^^ source.go
 #                ^ source.go keyword.operator.assignment.go
 #                 ^ source.go
@@ -2362,7 +2362,7 @@
 #      ^ source.go punctuation.definition.begin.bracket.round.go
 >	Fooo = "FOO"
 #^ source.go
-# ^^^^ source.go variable.other.assignment.go
+# ^^^^ source.go variable.other.constant.go
 #     ^ source.go
 #      ^ source.go keyword.operator.assignment.go
 #       ^ source.go
@@ -2371,7 +2371,7 @@
 #            ^ source.go string.quoted.double.go punctuation.definition.string.end.go
 >	Barr = 911
 #^ source.go
-# ^^^^ source.go variable.other.assignment.go
+# ^^^^ source.go variable.other.constant.go
 #     ^ source.go
 #      ^ source.go keyword.operator.assignment.go
 #       ^ source.go
@@ -2409,7 +2409,7 @@
 >const CMDSet3 Command = "FOO"
 #^^^^^ source.go keyword.const.go
 #     ^ source.go
-#      ^^^^^^^ source.go variable.other.assignment.go
+#      ^^^^^^^ source.go variable.other.constant.go
 #             ^ source.go
 #              ^^^^^^^ source.go entity.name.type.go
 #                     ^ source.go
@@ -2422,7 +2422,7 @@
 >const ntCatchAll nodeTyp = 3
 #^^^^^ source.go keyword.const.go
 #     ^ source.go
-#      ^^^^^^^^^^ source.go variable.other.assignment.go
+#      ^^^^^^^^^^ source.go variable.other.constant.go
 #                ^ source.go
 #                 ^^^^^^^ source.go entity.name.type.go
 #                        ^ source.go
@@ -14853,7 +14853,7 @@
 #^ source.go
 # ^^^^^ source.go keyword.const.go
 #      ^ source.go
-#       ^ source.go variable.other.assignment.go
+#       ^ source.go variable.other.constant.go
 #        ^ source.go
 #         ^ source.go keyword.operator.assignment.go
 #          ^ source.go
@@ -14862,7 +14862,7 @@
 #^ source.go
 # ^^^^^ source.go keyword.const.go
 #      ^ source.go
-#       ^ source.go variable.other.assignment.go
+#       ^ source.go variable.other.constant.go
 #        ^ source.go
 #         ^ source.go keyword.operator.assignment.go
 #          ^ source.go
@@ -26790,10 +26790,6 @@
 #            ^ source.go punctuation.definition.end.bracket.round.go
 #             ^ source.go
 #              ^ source.go punctuation.definition.begin.bracket.curly.go
->	// all values should be variable.other.assignment.go
-#^ source.go
-# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
-#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
 >	const (
 #^ source.go
 # ^^^^^ source.go keyword.const.go
@@ -26801,20 +26797,20 @@
 #       ^ source.go punctuation.definition.begin.bracket.round.go
 >		val1 = iota
 #^^ source.go
-#  ^^^^ source.go variable.other.assignment.go
+#  ^^^^ source.go variable.other.constant.go
 #      ^ source.go
 #       ^ source.go keyword.operator.assignment.go
 #        ^ source.go
 #         ^^^^ source.go constant.language.iota.go
 >		val2
 #^^ source.go
-#  ^^^^ source.go variable.other.assignment.go
+#  ^^^^ source.go variable.other.constant.go
 >		val3
 #^^ source.go
-#  ^^^^ source.go variable.other.assignment.go
+#  ^^^^ source.go variable.other.constant.go
 >		val4
 #^^ source.go
-#  ^^^^ source.go variable.other.assignment.go
+#  ^^^^ source.go variable.other.constant.go
 >	)
 #^ source.go
 # ^ source.go punctuation.definition.end.bracket.round.go
@@ -43270,4 +43266,45 @@
 >})
 #^ source.go punctuation.definition.end.bracket.curly.go
 # ^ source.go punctuation.definition.end.bracket.round.go
+>
+>// v0.8.0
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>func Bar303() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	const foo = "bar"
+#^ source.go
+# ^^^^^ source.go keyword.const.go
+#      ^ source.go
+#       ^^^ source.go variable.other.constant.go
+#          ^ source.go
+#           ^ source.go keyword.operator.assignment.go
+#            ^ source.go
+#             ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#              ^^^ source.go string.quoted.double.go
+#                 ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+>
+>	const (
+#^ source.go
+# ^^^^^ source.go keyword.const.go
+#      ^ source.go
+#       ^ source.go punctuation.definition.begin.bracket.round.go
+>		BAR = 1
+#^^ source.go
+#  ^^^ source.go variable.other.constant.go
+#     ^ source.go
+#      ^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^ source.go constant.numeric.decimal.go
+>	)
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
 >

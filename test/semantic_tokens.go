@@ -2714,7 +2714,6 @@ func Bar130() {
 }
 
 func Bar131() {
-	// all values should be variable.other.assignment.go
 	const (
 		val1 = iota
 		val2
@@ -4547,3 +4546,12 @@ var _ = (func() {
 	fmt.Println("")
 	fmt.Println("")
 })
+
+// v0.8.0
+func Bar303() {
+	const foo = "bar"
+
+	const (
+		BAR = 1
+	)
+}
