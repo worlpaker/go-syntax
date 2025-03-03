@@ -2,6 +2,11 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.8.1]
+
+- Supports the comparable type as `entity.name.type.comparable.go`
+- Fixes minor bugs related to generic types in double parentheses and structs
+
 ## [0.8.0]
 
 - Supports constant variables
