@@ -15453,7 +15453,7 @@
 #                  ^ source.go
 #                   ^ source.go variable.parameter.go
 #                    ^ source.go
-#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                     ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                               ^ source.go punctuation.definition.end.bracket.square.go
 #                                ^ source.go punctuation.definition.begin.bracket.round.go
 #                                 ^^ source.go variable.parameter.go
@@ -15655,7 +15655,7 @@
 #                  ^ source.go
 #                   ^ source.go variable.parameter.go
 #                    ^ source.go
-#                     ^^^^^^^^^^ source.go entity.name.type.go
+#                     ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                               ^ source.go punctuation.definition.end.bracket.square.go
 #                                ^ source.go punctuation.definition.begin.bracket.round.go
 #                                 ^ source.go variable.parameter.go
@@ -15740,7 +15740,7 @@
 #                     ^ source.go
 #                      ^ source.go variable.parameter.go
 #                       ^ source.go
-#                        ^^^^^^^^^^ source.go entity.name.type.go
+#                        ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                                  ^ source.go punctuation.definition.end.bracket.square.go
 #                                   ^ source.go punctuation.definition.begin.bracket.round.go
 #                                    ^ source.go variable.parameter.go
@@ -16056,7 +16056,7 @@
 #                    ^ source.go
 #                     ^ source.go variable.parameter.go
 #                      ^ source.go
-#                       ^^^^^^^^^^ source.go entity.name.type.go
+#                       ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                                 ^ source.go punctuation.definition.end.bracket.square.go
 #                                  ^ source.go punctuation.definition.begin.bracket.round.go
 #                                   ^ source.go variable.parameter.go
@@ -22836,7 +22836,7 @@
 #                      ^ source.go
 #                       ^ source.go variable.parameter.go
 #                        ^ source.go
-#                         ^^^^^^^^^^ source.go entity.name.type.go
+#                         ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                                   ^ source.go punctuation.other.comma.go
 #                                    ^ source.go
 #                                     ^ source.go variable.parameter.go
@@ -22938,7 +22938,7 @@
 #                                           ^ source.go
 #                                            ^ source.go variable.parameter.go
 #                                             ^ source.go
-#                                              ^^^^^^^^^^ source.go entity.name.type.go
+#                                              ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                                                        ^ source.go punctuation.other.comma.go
 #                                                         ^ source.go
 #                                                          ^ source.go variable.parameter.go
@@ -42622,7 +42622,7 @@
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go variable.parameter.go
 #           ^ source.go
-#            ^^^^^^^^^^ source.go entity.name.type.go
+#            ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                      ^ source.go punctuation.other.comma.go
 #                       ^ source.go
 #                        ^ source.go variable.parameter.go
@@ -42641,7 +42641,7 @@
 #         ^ source.go punctuation.definition.begin.bracket.square.go
 #          ^ source.go variable.parameter.go
 #           ^ source.go
-#            ^^^^^^^^^^ source.go entity.name.type.go
+#            ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                      ^ source.go punctuation.definition.end.bracket.square.go
 #                       ^ source.go
 #                        ^ source.go keyword.operator.assignment.go
@@ -42903,7 +42903,7 @@
 #          ^ source.go punctuation.definition.begin.bracket.square.go
 #           ^ source.go variable.parameter.go
 #            ^ source.go
-#             ^^^^^^^^^^ source.go entity.name.type.go
+#             ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                       ^ source.go punctuation.definition.end.bracket.square.go
 #                        ^ source.go
 #                         ^ source.go keyword.operator.assignment.go
@@ -42927,7 +42927,7 @@
 #      ^ source.go punctuation.definition.begin.bracket.square.go
 #       ^ source.go variable.parameter.go
 #        ^ source.go
-#         ^^^^^^^^^^ source.go entity.name.type.go
+#         ^^^^^^^^^^ source.go entity.name.type.comparable.go
 #                   ^ source.go punctuation.definition.end.bracket.square.go
 #                    ^ source.go
 #                     ^ source.go keyword.operator.assignment.go
@@ -43307,4 +43307,14 @@
 # ^ source.go punctuation.definition.end.bracket.round.go
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// v0.8.1
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>type Bar304 comparable
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^^^^^ source.go entity.name.type.comparable.go
 >

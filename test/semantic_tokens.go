@@ -4555,3 +4555,6 @@ func Bar303() {
 		BAR = 1
 	)
 }
+
+// v0.8.1
+type Bar304 comparable

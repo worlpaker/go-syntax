@@ -612,6 +612,10 @@
 				{
 					"match": "\\bany\\b",
 					"name": "entity.name.type.any.go"
+				},
+				{
+					"match": "\\bcomparable\\b",
+					"name": "entity.name.type.comparable.go"
 				}
 			]
 		},
