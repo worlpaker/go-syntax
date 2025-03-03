@@ -1755,7 +1755,7 @@
 					"include": "#after_control_variables"
 				},
 				{
-					"match": "(\\b[\\w\\.]+)(\\[(?:[^\\]]+)?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b)",
+					"match": "(\\b[\\w\\.]+)(\\[(?:(?:[\\w\\.\\*\\[\\]\\{\\}]+)(?:(?:\\,\\s*(?:[\\w\\.\\*\\[\\]\\{\\}]+))*))?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b)",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1771,30 +1771,27 @@
 						"2": {
 							"patterns": [
 								{
-									"begin": "\\[",
-									"beginCaptures": {
-										"0": {
-											"name": "punctuation.definition.begin.bracket.square.go"
-										}
-									},
-									"end": "\\]",
-									"endCaptures": {
-										"0": {
-											"name": "punctuation.definition.end.bracket.square.go"
-										}
-									},
-									"patterns": [
-										{
-											"include": "#type-declarations"
-										},
-										{
-											"match": "\\w+",
-											"name": "entity.name.type.go"
-										},
-										{
-											"include": "$self"
-										}
-									]
+									"include": "#type-declarations-without-brackets"
+								},
+								{
+									"match": "\\[",
+									"name": "punctuation.definition.begin.bracket.square.go"
+								},
+								{
+									"match": "\\]",
+									"name": "punctuation.definition.end.bracket.square.go"
+								},
+								{
+									"match": "\\{",
+									"name": "punctuation.definition.begin.bracket.curly.go"
+								},
+								{
+									"match": "\\}",
+									"name": "punctuation.definition.end.bracket.curly.go"
+								},
+								{
+									"match": "\\w+",
+									"name": "entity.name.type.go"
 								}
 							]
 						}
@@ -3035,7 +3032,7 @@
 		},
 		"double_parentheses_types": {
 			"comment": "double parentheses types",
-			"match": "(?:(?<!\\w)(\\((?:[\\w\\.\\[\\]\\*\\&]+)\\))(?=\\())",
+			"match": "(?:(?<!\\w)(\\((?:[\\[\\]\\*]+)?(?:[\\w\\.]+)(?:\\[(?:(?:[\\w\\.\\*\\[\\]\\{\\}]+)(?:(?:\\,\\s*(?:[\\w\\.\\*\\[\\]\\{\\}]+))*))?\\])?\\))(?=\\())",
 			"captures": {
 				"1": {
 					"patterns": [
@@ -3057,6 +3054,14 @@
 						{
 							"match": "\\]",
 							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"match": "\\{",
+							"name": "punctuation.definition.begin.bracket.curly.go"
+						},
+						{
+							"match": "\\}",
+							"name": "punctuation.definition.end.bracket.curly.go"
 						},
 						{
 							"match": "\\w+",

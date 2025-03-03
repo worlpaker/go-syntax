@@ -4558,3 +4558,75 @@ func Bar303() {
 
 // v0.8.1
 type Bar304 comparable
+
+type slot[K comparable, V any] struct {
+	key   K
+	value V
+}
+
+type group[K comparable, V any] struct {
+	slots [10]slot[K, V]
+}
+
+func (g *group[K, V]) Bar305(i uint32) *slot[K, V] {
+	return (*slot[K, V])(unsafe.Add(unsafe.Pointer(&g.slots[0]), uintptr(i)*unsafe.Sizeof(g.slots[0])))
+}
+
+func Bar306() {
+	type foo[K, V, M any] struct{}
+	type foox int
+	type fooy string
+	bar1 := foo[foox, fooy, string]{}
+	bar2 := &foo[foox, fooy, string]{}
+	bar3 := &[]foo[foox, fooy, string]{}
+	bar4 := []foo[foox, fooy, string]{}
+	bar5 := &foo[foox, fooy, map[foox]struct{}]{}
+	_ = (foo[foox, fooy, string])(bar1)
+	_ = (*foo[foox, fooy, string])(bar2)
+	_ = (*[]foo[foox, fooy, string])(bar3)
+	_ = (*[]foo[foox, fooy, string])(&bar4)
+	_ = ([]foo[foox, fooy, string])(bar4)
+	_ = (*foo[foox, fooy, map[foox]struct{}])(bar5)
+}
+
+func Bar307() {
+	type foo[T any] struct{}
+	type bar int
+	type baz[T any] string
+	type foobar[K, V any] bool
+	type foobarbaz[K, V, M any] struct{}
+	_ = foo[map[bar]struct{}]{}
+	_ = []foo[map[string]struct{}]{}
+	_ = &foo[map[string]struct{}]{}
+	_ = &foo[map[bar]bar]{}
+	_ = &foo[baz[baz[bar]]]{}
+	_ = &foo[foobar[bar, baz[struct{}]]]{}
+	_ = &[]foobarbaz[foo[bar], foo[bar], bool]{}
+	_ = &foobarbaz[foo[bar], baz[bar], foobar[string, bar]]{}
+	_ = &foobarbaz[foo[bar], baz[bar], foobar[string, bar]]{}
+	_ = foo[foobar[foobar[foobar[foobar[foobar[foobar[foobar[bar, string], map[string]interface{}], map[string]struct{}], struct{}], bar], bar], bar]]{}
+}
+
+func Bar308() {
+	type foo[T any] struct{}
+	type baz[T any] struct{}
+	type foobar[K, V, M any] struct{}
+	type foox int
+	type fooy string
+	type fooz bool
+
+	bar1 := &foobar[foo[string], baz[int], fooz]{}
+	bar2 := &foobar[foo[foox], baz[fooy], foobar[foox, fooy, fooz]]{}
+	bar3 := &[]foobar[foo[foox], baz[fooy], foobar[foox, fooy, fooz]]{}
+	bar4 := foobar[foo[map[string]interface{}], map[string]struct{}, foobar[foox, fooy, map[string]struct{}]]{}
+	bar5 := &foobar[foobar[foobar[foobar[foobar[foobar[foobar[foox, fooy, fooz], fooy, fooz], fooy, fooz], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]]{}
+	_ = (*foobar[foo[string], baz[int], foox])(bar1)
+	_ = (foobar[foo[string], baz[int], fooy])(*bar1)
+	_ = (*foobar[foo[foox], baz[fooy], foobar[foox, fooy, fooz]])(bar2)
+	_ = (*foobar[foo[foox], baz[fooy], foobar[foox, fooy, fooz]])(bar2)
+	_ = (*[]foobar[foo[foox], baz[fooy], foobar[foox, fooy, fooz]])(bar3)
+	_ = ([]foobar[foo[foox], baz[fooy], foobar[foox, fooy, fooz]])(*bar3)
+	_ = (foobar[foo[map[string]interface{}], map[string]struct{}, foobar[foox, fooy, map[string]struct{}]])(bar4)
+	_ = (*foobar[foobar[foobar[foobar[foobar[foobar[foobar[foox, fooy, fooz], fooy, fooz], fooy, fooz], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]])(bar5)
+	_ = (foobar[foobar[foobar[foobar[foobar[foobar[foobar[foox, fooy, fooz], fooy, fooz], fooy, fooz], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]])(*bar5)
+}
