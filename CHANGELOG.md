@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.8.2]
+
+- Fixes minor bugs in keyword operators
+
 ## [0.8.1]
 
 - Supports the comparable type as `entity.name.type.comparable.go`
