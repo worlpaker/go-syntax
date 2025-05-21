@@ -213,7 +213,7 @@
 					"name": "punctuation.definition.end.bracket.curly.go"
 				},
 				{
-					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+					"begin": "([\\w\\.\\*]+)?(\\[)",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
@@ -221,7 +221,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -309,7 +309,7 @@
 		},
 		"map_types": {
 			"comment": "map types",
-			"begin": "(?:(\\bmap\\b)(\\[))",
+			"begin": "(\\bmap\\b)(\\[)",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.map.go"
@@ -509,7 +509,7 @@
 			"comment": "Note that the order here is very important!",
 			"patterns": [
 				{
-					"match": "((?:\\*|\\&)+)(?:(?!\\d)(?=(?:[\\w\\[\\]])|(?:\\<\\-)))",
+					"match": "(?:\\*|\\&)+(?:(?!\\d)(?=(?:[\\w\\[\\]])|(?:\\<\\-)))",
 					"name": "keyword.operator.address.go"
 				},
 				{
@@ -1090,7 +1090,7 @@
 									"include": "#delimiters"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "variable.other.import.go"
 								}
 							]
@@ -1174,7 +1174,7 @@
 													"include": "#parameter-variable-types"
 												},
 												{
-													"match": "(?:\\w+)",
+													"match": "\\w+",
 													"name": "entity.name.type.go"
 												}
 											]
@@ -1212,7 +1212,7 @@
 							"include": "#parameter-variable-types"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "entity.name.type.go"
 						}
 					]
@@ -1239,7 +1239,7 @@
 					]
 				},
 				{
-					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+					"begin": "([\\w\\.\\*]+)?(\\[)",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
@@ -1247,7 +1247,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1363,7 +1363,7 @@
 									"include": "#parameter-variable-types"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1371,7 +1371,7 @@
 					}
 				},
 				{
-					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+					"begin": "([\\w\\.\\*]+)?(\\[)",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
@@ -1379,7 +1379,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1429,7 +1429,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1511,7 +1511,7 @@
 									"include": "#parameter-variable-types"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1522,7 +1522,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1530,7 +1530,7 @@
 					}
 				},
 				{
-					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+					"begin": "([\\w\\.\\*]+)?(\\[)",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
@@ -1538,7 +1538,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1580,7 +1580,7 @@
 				},
 				{
 					"comment": "other types",
-					"match": "(?:\\b([\\w\\.]+))",
+					"match": "\\b([\\w\\.]+)",
 					"captures": {
 						"1": {
 							"patterns": [
@@ -1588,7 +1588,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1602,7 +1602,7 @@
 		},
 		"functions": {
 			"comment": "Functions",
-			"begin": "(?:(\\bfunc\\b)(?=\\())",
+			"begin": "(\\bfunc\\b)(?=\\()",
 			"beginCaptures": {
 				"1": {
 					"name": "keyword.function.go"
@@ -1626,7 +1626,7 @@
 							"include": "#parameter-variable-types"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "entity.name.type.go"
 						}
 					]
@@ -1689,7 +1689,7 @@
 							"name": "punctuation.definition.end.bracket.curly.go"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "entity.name.type.go"
 						}
 					]
@@ -1812,7 +1812,7 @@
 							"include": "#type-declarations"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "entity.name.type.go"
 						}
 					]
@@ -1861,7 +1861,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1878,7 +1878,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "variable.other.property.go"
 								}
 							]
@@ -1889,7 +1889,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1911,7 +1911,7 @@
 													"include": "#type-declarations"
 												},
 												{
-													"match": "(?:\\w+)",
+													"match": "\\w+",
 													"name": "variable.other.property.go"
 												}
 											]
@@ -1922,7 +1922,7 @@
 													"include": "#type-declarations"
 												},
 												{
-													"match": "(?:\\w+)",
+													"match": "\\w+",
 													"name": "entity.name.type.go"
 												}
 											]
@@ -1943,7 +1943,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -1960,7 +1960,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "variable.other.property.go"
 								}
 							]
@@ -1974,7 +1974,7 @@
 									"include": "#parameter-variable-types"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -2138,7 +2138,7 @@
 					"include": "#type-declarations-without-brackets"
 				},
 				{
-					"begin": "(?:([\\w\\.\\*]+)?(\\[))",
+					"begin": "([\\w\\.\\*]+)?(\\[)",
 					"beginCaptures": {
 						"1": {
 							"patterns": [
@@ -2146,7 +2146,7 @@
 									"include": "#type-declarations"
 								},
 								{
-									"match": "(?:\\w+)",
+									"match": "\\w+",
 									"name": "entity.name.type.go"
 								}
 							]
@@ -2371,7 +2371,7 @@
 					"include": "#parameter-variable-types"
 				},
 				{
-					"match": "(?:\\w+)",
+					"match": "\\w+",
 					"name": "entity.name.type.go"
 				}
 			],
@@ -2400,7 +2400,7 @@
 							"name": "punctuation.definition.end.bracket.square.go"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "variable.other.go"
 						}
 					]
@@ -2434,7 +2434,7 @@
 				},
 				{
 					"comment": "new keyword",
-					"begin": "(?:(\\bnew\\b)(\\())",
+					"begin": "(\\bnew\\b)(\\()",
 					"beginCaptures": {
 						"1": {
 							"name": "entity.name.function.support.builtin.go"
@@ -2463,7 +2463,7 @@
 							"include": "#generic_types"
 						},
 						{
-							"match": "(?:\\w+)",
+							"match": "\\w+",
 							"name": "entity.name.type.go"
 						},
 						{
@@ -2577,7 +2577,7 @@
 					"name": "punctuation.definition.begin.bracket.curly.go"
 				}
 			},
-			"end": "(?:\\})",
+			"end": "\\}",
 			"endCaptures": {
 				"0": {
 					"name": "punctuation.definition.end.bracket.curly.go"
