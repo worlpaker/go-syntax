@@ -12,6 +12,7 @@ import (
 	"go/token"
 	"io"
 	"log"
+	"math"
 	"mime/multipart"
 	"net/http"
 	"reflect"
@@ -4629,4 +4630,21 @@ func Bar308() {
 	_ = (foobar[foo[map[string]interface{}], map[string]struct{}, foobar[foox, fooy, map[string]struct{}]])(bar4)
 	_ = (*foobar[foobar[foobar[foobar[foobar[foobar[foobar[foox, fooy, fooz], fooy, fooz], fooy, fooz], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]])(bar5)
 	_ = (foobar[foobar[foobar[foobar[foobar[foobar[foobar[foox, fooy, fooz], fooy, fooz], fooy, fooz], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]], foo[foox], baz[fooy]])(*bar5)
+}
+
+// v0.8.2
+func Bar309() {
+	a := 100
+	b := 50
+	c := 30
+	_ = 100 - 50&30
+	_ = a - b&c
+
+	type foo struct {
+		x, y float64
+	}
+
+	f := &foo{x: 100, y: 20}
+	_ = math.Sqrt(f.x*f.x + f.y*f.y)
+	_ = math.Sqrt((f.x * f.x) + (f.y * f.y))
 }
