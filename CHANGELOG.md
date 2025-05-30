@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.8.3]
+
+- Fixes minor bugs in generic type assertions
+
 ## [0.8.2]
 
 - Fixes minor bugs in keyword operators
