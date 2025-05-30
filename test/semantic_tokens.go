@@ -4648,3 +4648,29 @@ func Bar309() {
 	_ = math.Sqrt(f.x*f.x + f.y*f.y)
 	_ = math.Sqrt((f.x * f.x) + (f.y * f.y))
 }
+
+// v0.8.3
+func Bar310() {
+
+	type (
+		foo[x, y, z any]    struct{}
+		foobar[K, V, M any] struct{}
+		baz[T any]          struct{}
+
+		x int
+		y int
+		z int
+	)
+
+	var bar any
+
+	_, _ = bar.(foo[x, y, z])
+	_, _ = bar.(*foo[x, y, z])
+	_, _ = bar.([]foo[x, y, z])
+	_, _ = bar.([]*foo[x, y, z])
+	_, _ = bar.(*[]foo[x, y, z])
+	_, _ = bar.(foobar[foobar[foobar[foobar[foobar[foobar[foobar[x, y, z], x, y], x, y], foo[x, y, z], baz[x]], baz[y], baz[z]], foo[x, y, z], baz[y]], foo[x, y, z], baz[z]])
+	_, _ = bar.(*foobar[foobar[foobar[foobar[foobar[foobar[foobar[x, y, z], x, y], x, y], foo[x, y, z], baz[x]], baz[y], baz[z]], foo[x, y, z], baz[y]], foo[x, y, z], baz[z]])
+	_, _ = bar.([]*foobar[foobar[foobar[foobar[foobar[foobar[foobar[x, y, z], x, y], x, y], foo[x, y, z], baz[x]], baz[y], baz[z]], foo[x, y, z], baz[y]], foo[x, y, z], baz[z]])
+	_, _ = bar.(*[]foobar[foobar[foobar[foobar[foobar[foobar[foobar[x, y, z], x, y], x, y], foo[x, y, z], baz[x]], baz[y], baz[z]], foo[x, y, z], baz[y]], foo[x, y, z], baz[z]])
+}

@@ -1801,7 +1801,7 @@
 		},
 		"type_assertion_inline": {
 			"comment": "struct/interface types in-line (type assertion) | switch type keyword",
-			"match": "(?:(?<=\\.\\()(?:(\\btype\\b)|((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?[\\w\\.\\[\\]\\*]+))(?=\\)))",
+			"match": "(?:(?<=\\.\\()(?:(\\btype\\b)|((?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[\\[\\]\\*]+)?(?:[\\w\\.]+)(?:\\[(?:(?:[\\w\\.\\*\\[\\]\\{\\}]+)(?:(?:\\,\\s*(?:[\\w\\.\\*\\[\\]\\{\\}]+))*))?\\])?))(?=\\)))",
 			"captures": {
 				"1": {
 					"name": "keyword.type.go"
@@ -1809,7 +1809,31 @@
 				"2": {
 					"patterns": [
 						{
-							"include": "#type-declarations"
+							"include": "#type-declarations-without-brackets"
+						},
+						{
+							"match": "\\(",
+							"name": "punctuation.definition.begin.bracket.round.go"
+						},
+						{
+							"match": "\\)",
+							"name": "punctuation.definition.end.bracket.round.go"
+						},
+						{
+							"match": "\\[",
+							"name": "punctuation.definition.begin.bracket.square.go"
+						},
+						{
+							"match": "\\]",
+							"name": "punctuation.definition.end.bracket.square.go"
+						},
+						{
+							"match": "\\{",
+							"name": "punctuation.definition.begin.bracket.curly.go"
+						},
+						{
+							"match": "\\}",
+							"name": "punctuation.definition.end.bracket.curly.go"
 						},
 						{
 							"match": "\\w+",
