@@ -4674,3 +4674,9 @@ func Bar310() {
 	_, _ = bar.([]*foobar[foobar[foobar[foobar[foobar[foobar[foobar[x, y, z], x, y], x, y], foo[x, y, z], baz[x]], baz[y], baz[z]], foo[x, y, z], baz[y]], foo[x, y, z], baz[z]])
 	_, _ = bar.(*[]foobar[foobar[foobar[foobar[foobar[foobar[foobar[x, y, z], x, y], x, y], foo[x, y, z], baz[x]], baz[y], baz[z]], foo[x, y, z], baz[y]], foo[x, y, z], baz[z]])
 }
+
+// v0.8.4
+func Bar311() {
+	type foo struct { //nolint:bgolint // foo bar
+	}
+}
