@@ -18,7 +18,7 @@ It is compatible with various platforms, including web-based code editors like [
 
 ## Contributing
 
-Yes, please! Feel free to contribute.
+Yes, please! Feel free to contribute. Check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Credits
 
