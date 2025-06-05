@@ -4680,3 +4680,213 @@ func Bar311() {
 	type foo struct { //nolint:bgolint // foo bar
 	}
 }
+
+func Bar312() {
+	variable := 10
+	value1, value2, value3, value4 := 10, 20, 30, 40
+
+	switch variable {
+	case value1,
+		value2,
+		value3:
+		// Code to execute
+	case value4:
+		// Code to execute
+	}
+
+	switch variable {
+	case value1,
+		value2, value3:
+		// Code to execute
+	case value4:
+		// Code to execute
+	}
+
+	switch {
+	case value1 == value2:
+		// Code to execute
+	case value4 >= value4:
+		// Code to execute
+	}
+
+	switch value1 {
+	case 10:
+		fallthrough
+	case 20:
+		// Code to execute
+	default:
+		// Code to execute
+	}
+
+	switch num := 10; num {
+	case value1,
+		value2, value3:
+		// Code to execute
+	case value4:
+		// Code to execute
+	}
+
+	switch num := value4; num {
+	case value1,
+		value2, value3:
+		// Code to execute
+	case value4:
+		// Code to execute
+	}
+
+	char := 'a'
+	switch char {
+	case 'a', 'e', 'i', 'o', 'u':
+		// Code to execute
+	default:
+		// Code to execute
+	}
+
+	s := "foo"
+	switch s {
+	case "bar":
+		// Code to execute
+	case "foo",
+		"baz", "foobar":
+		// Code to execute
+	default:
+		// Code to execute
+	}
+
+	var bar any
+	ok1, ok2, ok3, ok4, ok5 := true, true, false, false, false
+	switch foo, ok := bar.(int); ok {
+	case ok:
+		// Code to execute
+	case ok1, ok2:
+		// Code to execute
+	case ok3,
+		ok4, ok5:
+		// Code to execute
+	default:
+		_ = foo
+	}
+
+	var baz time.Time
+	switch {
+	case baz.IsZero():
+		// Code to execute
+	case baz.IsDST():
+		// Code to execute
+	}
+
+	switch {
+	case baz.IsZero(),
+		baz.IsDST():
+		// Code to execute
+	}
+	switch {
+	case baz.IsZero(), baz.IsDST():
+		// Code to execute
+	}
+
+	switch {
+	case baz.IsZero(), ok1:
+		// Code to execute
+	case ok2, baz.IsDST():
+		// Code to execute
+	}
+
+	switch {
+	case baz.IsZero(),
+		ok1, ok2:
+		// Code to execute
+	case ok3, baz.IsDST():
+		// Code to execute
+	case ok4,
+		ok5, baz.IsDST():
+		// Code to execute
+	}
+
+	switch {
+	case baz.IsZero(),
+		ok1, ok2:
+		// Code to execute
+	case baz.IsDST(), ok3:
+		// Code to execute
+	case ok4,
+		baz.IsDST(), ok5:
+		// Code to execute
+	}
+
+	switch foobar := baz; foobar.IsZero() {
+	case foobar.IsZero():
+		// Code to execute
+	case ok1,
+		ok2, ok3:
+		// Code to execute
+	case ok4,
+		ok5:
+		// Code to execute
+	}
+
+	switch foobar := baz.IsZero(); foobar {
+	case foobar:
+		// Code to execute
+	case ok1,
+		ok2, ok3:
+		// Code to execute
+	case ok4,
+		ok5:
+		// Code to execute
+	}
+
+	ok6, ok7, ok8 := true, true, false
+	switch ok1 || ok2 {
+	case ok3:
+		// Code to execute
+	case ok4,
+		ok5:
+		// Code to execute
+	case ok6,
+		ok7, ok8:
+		// Code to execute
+	}
+
+	switch ok1 && ok2 {
+	case ok3:
+		// Code to execute
+	case ok4,
+		ok5:
+		// Code to execute
+	case ok6,
+		ok7, ok8:
+		// Code to execute
+	}
+
+	switch ok1 || ok2 || ok3 {
+	case ok4,
+		ok5:
+		// Code to execute
+	case ok6,
+		ok7, ok8:
+		// Code to execute
+	}
+
+	switch value1 >= value2 {
+	case ok1,
+		ok2, ok3:
+		// Code to execute
+	case ok4,
+		ok5:
+		// Code to execute
+	}
+
+	switch value1 == value2 || value3 == value4 {
+	case ok1:
+		// Code to execute
+	case ok2, ok3:
+		// Code to execute
+	case ok4,
+		ok5:
+		// Code to execute
+	case ok6,
+		ok7, ok8:
+		// Code to execute
+	}
+}

@@ -109,7 +109,7 @@
 					"include": "#property_variables"
 				},
 				{
-					"include": "#switch_select_case_variables"
+					"include": "#switch_variables"
 				},
 				{
 					"include": "#other_variables"
@@ -2408,7 +2408,7 @@
 		},
 		"after_control_variables": {
 			"comment": "After control variables, to not highlight as a struct/interface (before formatting with gofmt)",
-			"match": "(?:(?<=\\brange\\b|\\bswitch\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\w(?:\\+|\/|\\-|\\*|\\%)|\\w(?:\\+|\/|\\-|\\*|\\%)\\=|\\|\\||\\&\\&)(?:\\s*)((?![\\[\\]]+)[[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*\/\\+\\%\\:]+)(?:\\s*)(?=\\{))",
+			"match": "(?:(?<=\\brange\\b|\\;|\\bif\\b|\\bfor\\b|\\<|\\>|\\<\\=|\\>\\=|\\=\\=|\\!\\=|\\w(?:\\+|\/|\\-|\\*|\\%)|\\w(?:\\+|\/|\\-|\\*|\\%)\\=|\\|\\||\\&\\&)(?:\\s*)((?![\\[\\]]+)[[:alnum:]\\-\\_\\!\\.\\[\\]\\<\\>\\=\\*\/\\+\\%\\:]+)(?:\\s*)(?=\\{))",
 			"captures": {
 				"1": {
 					"patterns": [
@@ -2664,6 +2664,103 @@
 				},
 				{
 					"include": "$self"
+				}
+			]
+		},
+		"switch_variables": {
+			"comment": "variables after case control keyword in switch/select expression, to not scope them as property variables",
+			"patterns": [
+				{
+					"comment": "single line",
+					"match": "(?:(?:^\\s*(\\bcase\\b))(?:\\s+)([\\s\\S]+(?:\\:)\\s*(?:\/(?:\/|\\*).*)?)$)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.go"
+						},
+						"2": {
+							"patterns": [
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"include": "#support_functions"
+								},
+								{
+									"include": "#variable_assignment"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.go"
+								}
+							]
+						}
+					}
+				},
+				{
+					"comment": "multi lines",
+					"begin": "(?<=\\bswitch\\b)(?:\\s*)((?:[\\w\\.]+(?:\\s*(?:[\\:\\=\\!\\,\\+\/\\-\\%\\<\\>\\|\\&]+)\\s*[\\w\\.]+)*\\s*(?:[\\:\\=\\!\\,\\+\/\\-\\%\\<\\>\\|\\&]+))?(?:\\s*(?:[\\w\\.\\*\\(\\)\\[\\]\\+\/\\-\\%\\<\\>\\|\\&]+)?\\s*(?:\\;\\s*(?:[\\w\\.\\*\\(\\)\\[\\]\\+\/\\-\\%\\<\\>\\|\\&]+)\\s*)?))(\\{)",
+					"beginCaptures": {
+						"1": {
+							"patterns": [
+								{
+									"include": "#support_functions"
+								},
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"include": "#variable_assignment"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.go"
+								}
+							]
+						},
+						"2": {
+							"name": "punctuation.definition.begin.bracket.curly.go"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.end.bracket.curly.go"
+						}
+					},
+					"patterns": [
+						{
+							"begin": "\\bcase\\b",
+							"beginCaptures": {
+								"0": {
+									"name": "keyword.control.go"
+								}
+							},
+							"end": "\\:",
+							"endCaptures": {
+								"0": {
+									"name": "punctuation.other.colon.go"
+								}
+							},
+							"patterns": [
+								{
+									"include": "#support_functions"
+								},
+								{
+									"include": "#type-declarations"
+								},
+								{
+									"include": "#variable_assignment"
+								},
+								{
+									"match": "\\w+",
+									"name": "variable.other.go"
+								}
+							]
+						},
+						{
+							"include": "$self"
+						}
+					]
 				}
 			]
 		},
@@ -2972,32 +3069,6 @@
 					"patterns": [
 						{
 							"include": "#parameter-variable-types"
-						}
-					]
-				}
-			}
-		},
-		"switch_select_case_variables": {
-			"comment": "variables after case control keyword in switch/select expression, to not scope them as property variables",
-			"match": "(?:(?:^\\s*(\\bcase\\b))(?:\\s+)([\\s\\S]+(?:\\:)\\s*(?:\/(?:\/|\\*).*)?)$)",
-			"captures": {
-				"1": {
-					"name": "keyword.control.go"
-				},
-				"2": {
-					"patterns": [
-						{
-							"include": "#type-declarations"
-						},
-						{
-							"include": "#support_functions"
-						},
-						{
-							"include": "#variable_assignment"
-						},
-						{
-							"match": "\\w+",
-							"name": "variable.other.go"
 						}
 					]
 				}
