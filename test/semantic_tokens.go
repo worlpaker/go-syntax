@@ -4890,3 +4890,9 @@ func Bar312() {
 		// Code to execute
 	}
 }
+
+// v0.8.5
+func Bar313() (FooX, error) {
+	// better highlighting return types when hovering with the mouse
+	return FooX{}, nil
+}
