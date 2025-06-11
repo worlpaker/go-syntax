@@ -1698,7 +1698,7 @@
 		},
 		"support_functions": {
 			"comment": "Support Functions",
-			"match": "(?:(?:((?<=\\.)\\b\\w+)|(\\b\\w+))(\\[(?:(?:[\\w\\.\\*\\[\\]\\{\\}\"\\']+)(?:(?:\\,\\s*(?:[\\w\\.\\*\\[\\]\\{\\}]+))*))?\\])?(?=\\())",
+			"match": "(?:(?:((?<=\\.)\\b\\w+)|(\\b\\w+))(?<brackets>\\[(?:[^\\[\\]]|\\g<brackets>)*\\])?(?=\\())",
 			"captures": {
 				"1": {
 					"name": "entity.name.function.support.go"
@@ -1755,7 +1755,8 @@
 					"include": "#after_control_variables"
 				},
 				{
-					"match": "(\\b[\\w\\.]+)(\\[(?:(?:[\\w\\.\\*\\[\\]\\{\\}]+)(?:(?:\\,\\s*(?:[\\w\\.\\*\\[\\]\\{\\}]+))*))?\\])?(?=\\{)(?<!\\bstruct\\b|\\binterface\\b)",
+					"comment": "uses a named group to recursively match generic type with nested brackets, like 'Foo[A[B, C]]{}'",
+					"match": "\\b(?!struct\\b|interface\\b)([\\w\\.]+)(?<brackets>\\[(?:[^\\[\\]]|\\g<brackets>)*\\])?(?=\\{)",
 					"captures": {
 						"1": {
 							"patterns": [

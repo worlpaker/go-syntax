@@ -4896,3 +4896,42 @@ func Bar313() (FooX, error) {
 	// better highlighting return types when hovering with the mouse
 	return FooX{}, nil
 }
+
+func Bar314[a, b any]() int {
+	return 0
+}
+
+func Bar315() {
+	type (
+		foo[a, b any] struct{}
+		x             int
+		y             string
+	)
+
+	bar := func(_ string, _ int, _ foo[x, y]) int {
+		return 0
+	}
+	baz := func(_ string, _ func() int, _ foo[x, y]) int {
+		return 0
+	}
+	foobar := func(_ string, _ func() int, _ int) int {
+		return 0
+	}
+
+	nums := []int{0, 1, 2, 3}
+	size := 2
+	name := "foobar"
+
+	_ = bar(name, nums[size], foo[x, y]{})
+	_ = bar(name, nums[2], foo[x, y]{})
+	_ = baz(name, Bar314[x, y], foo[x, y]{})
+	_ = foobar(name, Bar314[x, y], Bar314[x, y]())
+	_, _, _ = nums[size], foo[x, y]{}, foo[x, y]{}
+	_, _, _ = nums[0], foo[x, y]{}, foo[x, y]{}
+	_, _, _ = foo[x, y]{}, nums[size], foo[x, y]{}
+	_, _, _ = foo[x, y]{}, nums[0], foo[x, y]{}
+	_, _, _ = nums[size], Bar314[x, y](), foo[x, y]{}
+	_, _, _ = nums[0], Bar314[x, y](), foo[x, y]{}
+	_, _ = nums[size], Bar314[x, y]()
+	_, _ = nums[2], Bar314[x, y]()
+}
