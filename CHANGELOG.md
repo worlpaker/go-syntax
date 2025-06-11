@@ -2,6 +2,11 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.8.5]
+
+- Supports highlighting return types on hover
+- Fixes minor bugs in generic types
+
 ## [0.8.4]
 
 - Fixes catastrophic backtracking regex pattern ([#21](https://github.com/worlpaker/go-syntax/pull/21))
