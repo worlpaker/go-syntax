@@ -47696,3 +47696,311 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// v0.8.6
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^ source.go comment.line.double-slash.go
+>// Go 1.26 (https://tip.golang.org/doc/go1.26): The built-in `new` function, which creates a new variable,
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// now allows its operand to be an expression, specifying the initial value of the variable.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
+>type Person struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.type.go
+#           ^ source.go
+#            ^^^^^^ source.go keyword.struct.go
+#                  ^ source.go
+#                   ^ source.go punctuation.definition.begin.bracket.curly.go
+>	Name string `json:"name"`
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^ source.go
+#      ^^^^^^ source.go storage.type.string.go
+#            ^ source.go
+#             ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#              ^^^^^^^^^^^ source.go string.quoted.raw.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>	Age  *int   `json:"age"` // age if known; nil otherwise
+#^ source.go
+# ^^^ source.go variable.other.property.go
+#    ^^ source.go
+#      ^ source.go keyword.operator.address.go
+#       ^^^ source.go storage.type.numeric.go
+#          ^^^ source.go
+#             ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#              ^^^^^^^^^^ source.go string.quoted.raw.go
+#                        ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#                         ^ source.go
+#                          ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func yearsSince(t time.Time) int {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^ source.go variable.parameter.go
+#                 ^ source.go
+#                  ^^^^ source.go entity.name.type.go
+#                      ^ source.go punctuation.other.period.go
+#                       ^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.definition.end.bracket.round.go
+#                            ^ source.go
+#                             ^^^ source.go storage.type.numeric.go
+#                                ^ source.go
+#                                 ^ source.go punctuation.definition.begin.bracket.curly.go
+>	return int(time.Since(t).Hours() / (365.25 * 24)) // approximately
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^ source.go storage.type.numeric.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^^ source.go variable.other.go
+#                ^ source.go punctuation.other.period.go
+#                 ^^^^^ source.go entity.name.function.support.go
+#                      ^ source.go punctuation.definition.begin.bracket.round.go
+#                       ^ source.go variable.other.go
+#                        ^ source.go punctuation.definition.end.bracket.round.go
+#                         ^ source.go punctuation.other.period.go
+#                          ^^^^^ source.go entity.name.function.support.go
+#                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                 ^ source.go
+#                                  ^ source.go keyword.operator.arithmetic.go
+#                                   ^ source.go
+#                                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                                     ^^^ source.go constant.numeric.decimal.go
+#                                        ^ source.go constant.numeric.decimal.point.go
+#                                         ^^ source.go constant.numeric.decimal.go
+#                                           ^ source.go
+#                                            ^ source.go keyword.operator.arithmetic.go
+#                                             ^ source.go
+#                                              ^^ source.go constant.numeric.decimal.go
+#                                                ^ source.go punctuation.definition.end.bracket.round.go
+#                                                 ^ source.go punctuation.definition.end.bracket.round.go
+#                                                  ^ source.go
+#                                                   ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#                                                     ^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func personJSON(name string, born time.Time) ([]byte, error) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^^^^^ source.go entity.name.function.go
+#               ^ source.go punctuation.definition.begin.bracket.round.go
+#                ^^^^ source.go variable.parameter.go
+#                    ^ source.go
+#                     ^^^^^^ source.go storage.type.string.go
+#                           ^ source.go punctuation.other.comma.go
+#                            ^ source.go
+#                             ^^^^ source.go variable.parameter.go
+#                                 ^ source.go
+#                                  ^^^^ source.go entity.name.type.go
+#                                      ^ source.go punctuation.other.period.go
+#                                       ^^^^ source.go entity.name.type.go
+#                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                            ^ source.go
+#                                             ^ source.go punctuation.definition.begin.bracket.round.go
+#                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                ^^^^ source.go storage.type.byte.go
+#                                                    ^ source.go punctuation.other.comma.go
+#                                                     ^ source.go
+#                                                      ^^^^^ source.go storage.type.error.go
+#                                                           ^ source.go punctuation.definition.end.bracket.round.go
+#                                                            ^ source.go
+#                                                             ^ source.go punctuation.definition.begin.bracket.curly.go
+>	return json.Marshal(Person{
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.period.go
+#             ^^^^^^^ source.go entity.name.function.support.go
+#                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                     ^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Name: name,
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^ source.go
+#        ^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.comma.go
+>		Age:  new(yearsSince(born)),
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^ source.go
+#        ^^^ source.go entity.name.function.support.builtin.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^^^^^^^^ source.go entity.name.function.support.go
+#                      ^ source.go punctuation.definition.begin.bracket.round.go
+#                       ^^^^ source.go variable.other.go
+#                           ^ source.go punctuation.definition.end.bracket.round.go
+#                            ^ source.go punctuation.definition.end.bracket.round.go
+#                             ^ source.go punctuation.other.comma.go
+>	})
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>func Bar316() {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^ source.go entity.name.function.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+#             ^ source.go
+#              ^ source.go punctuation.definition.begin.bracket.curly.go
+>	type myType string
+#^ source.go
+# ^^^^ source.go keyword.type.go
+#     ^ source.go
+#      ^^^^^^ source.go entity.name.type.go
+#            ^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+>	_ = new("foo")
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go string.quoted.double.go punctuation.definition.string.begin.go
+#          ^^^ source.go string.quoted.double.go
+#             ^ source.go string.quoted.double.go punctuation.definition.string.end.go
+#              ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = new(`bar`)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#          ^^^ source.go string.quoted.raw.go
+#             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+#              ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = new('a')
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^ source.go string.quoted.rune.go punctuation.definition.string.begin.go
+#          ^ source.go string.quoted.rune.go constant.other.rune.go
+#           ^ source.go string.quoted.rune.go punctuation.definition.string.end.go
+#            ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = new(10)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^^ source.go constant.numeric.decimal.go
+#           ^ source.go punctuation.definition.end.bracket.round.go
+>	_ = new(myType)
+#^ source.go
+# ^ source.go variable.other.assignment.go
+#  ^ source.go
+#   ^ source.go keyword.operator.assignment.go
+#    ^ source.go
+#     ^^^ source.go entity.name.function.support.builtin.go
+#        ^ source.go punctuation.definition.begin.bracket.round.go
+#         ^^^^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>// However, there is no difference between `new(age)` and `new(myType)`. We cannot distinguish (yet)
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// whether it is a variable or a type. Therefore, it will highlight variables as types.
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>func weDontKnowIfIsTypeOrVariable(name string, born time.Time) ([]byte, error) {
+#^^^^ source.go keyword.function.go
+#    ^ source.go
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go entity.name.function.go
+#                                 ^ source.go punctuation.definition.begin.bracket.round.go
+#                                  ^^^^ source.go variable.parameter.go
+#                                      ^ source.go
+#                                       ^^^^^^ source.go storage.type.string.go
+#                                             ^ source.go punctuation.other.comma.go
+#                                              ^ source.go
+#                                               ^^^^ source.go variable.parameter.go
+#                                                   ^ source.go
+#                                                    ^^^^ source.go entity.name.type.go
+#                                                        ^ source.go punctuation.other.period.go
+#                                                         ^^^^ source.go entity.name.type.go
+#                                                             ^ source.go punctuation.definition.end.bracket.round.go
+#                                                              ^ source.go
+#                                                               ^ source.go punctuation.definition.begin.bracket.round.go
+#                                                                ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                 ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                  ^^^^ source.go storage.type.byte.go
+#                                                                      ^ source.go punctuation.other.comma.go
+#                                                                       ^ source.go
+#                                                                        ^^^^^ source.go storage.type.error.go
+#                                                                             ^ source.go punctuation.definition.end.bracket.round.go
+#                                                                              ^ source.go
+#                                                                               ^ source.go punctuation.definition.begin.bracket.curly.go
+>	age := yearsSince(born)
+#^ source.go
+# ^^^ source.go variable.other.assignment.go
+#    ^ source.go
+#     ^^ source.go keyword.operator.assignment.go
+#       ^ source.go
+#        ^^^^^^^^^^ source.go entity.name.function.support.go
+#                  ^ source.go punctuation.definition.begin.bracket.round.go
+#                   ^^^^ source.go variable.other.go
+#                       ^ source.go punctuation.definition.end.bracket.round.go
+>	return json.Marshal(Person{
+#^ source.go
+# ^^^^^^ source.go keyword.control.go
+#       ^ source.go
+#        ^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.period.go
+#             ^^^^^^^ source.go entity.name.function.support.go
+#                    ^ source.go punctuation.definition.begin.bracket.round.go
+#                     ^^^^^^ source.go entity.name.type.go
+#                           ^ source.go punctuation.definition.begin.bracket.curly.go
+>		Name: name,
+#^^ source.go
+#  ^^^^ source.go variable.other.property.go
+#      ^ source.go punctuation.other.colon.go
+#       ^ source.go
+#        ^^^^ source.go variable.other.go
+#            ^ source.go punctuation.other.comma.go
+>		Age:  new(age),
+#^^ source.go
+#  ^^^ source.go variable.other.property.go
+#     ^ source.go punctuation.other.colon.go
+#      ^^ source.go
+#        ^^^ source.go entity.name.function.support.builtin.go
+#           ^ source.go punctuation.definition.begin.bracket.round.go
+#            ^^^ source.go entity.name.type.go
+#               ^ source.go punctuation.definition.end.bracket.round.go
+#                ^ source.go punctuation.other.comma.go
+>	})
+#^ source.go
+# ^ source.go punctuation.definition.end.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.round.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>

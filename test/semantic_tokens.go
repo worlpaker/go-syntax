@@ -4935,3 +4935,42 @@ func Bar315() {
 	_, _ = nums[size], Bar314[x, y]()
 	_, _ = nums[2], Bar314[x, y]()
 }
+
+// v0.8.6
+// Go 1.26 (https://tip.golang.org/doc/go1.26): The built-in `new` function, which creates a new variable,
+// now allows its operand to be an expression, specifying the initial value of the variable.
+
+type Person struct {
+	Name string `json:"name"`
+	Age  *int   `json:"age"` // age if known; nil otherwise
+}
+
+func yearsSince(t time.Time) int {
+	return int(time.Since(t).Hours() / (365.25 * 24)) // approximately
+}
+
+func personJSON(name string, born time.Time) ([]byte, error) {
+	return json.Marshal(Person{
+		Name: name,
+		Age:  new(yearsSince(born)),
+	})
+}
+
+func Bar316() {
+	type myType string
+	_ = new("foo")
+	_ = new(`bar`)
+	_ = new('a')
+	_ = new(10)
+	_ = new(myType)
+}
+
+// However, there is no difference between `new(age)` and `new(myType)`. We cannot distinguish (yet)
+// whether it is a variable or a type. Therefore, it will highlight variables as types.
+func weDontKnowIfIsTypeOrVariable(name string, born time.Time) ([]byte, error) {
+	age := yearsSince(born)
+	return json.Marshal(Person{
+		Name: name,
+		Age:  new(age),
+	})
+}
