@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.8.6]
+
+- Supports expressions in the built-in `new` function ([Go 1.26](https://tip.golang.org/doc/go1.26))
+
 ## [0.8.5]
 
 - Supports highlighting return types on hover
