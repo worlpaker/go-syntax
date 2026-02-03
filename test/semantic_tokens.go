@@ -4974,3 +4974,14 @@ func weDontKnowIfIsTypeOrVariable(name string, born time.Time) ([]byte, error) {
 		Age:  new(age),
 	})
 }
+
+// Shiki JS engine catastrophic backtracking with long struct tags
+// See: https://github.com/shikijs/shiki/issues/1026 (similar issue with comments)
+// Time grows exponentially O(4^n) with tag length when using JavaScript regex engine
+
+type BacktrackTest struct {
+	ShortTag    string      `json:"short"`
+	MediumTag   string      `json:"medium_length_tag"`
+	LongTag     interface{} `json:"this_is_a_very_long_tag_name"`
+	WithOptions interface{} `json:"field_name,omitempty"`
+}
