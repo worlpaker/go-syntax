@@ -48004,3 +48004,64 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// Shiki JS engine catastrophic backtracking with long struct tags
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// See: https://github.com/shikijs/shiki/issues/1026 (similar issue with comments)
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// Time grows exponentially O(4^n) with tag length when using JavaScript regex engine
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
+>type BacktrackTest struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^^^^ source.go entity.name.type.go
+#                  ^ source.go
+#                   ^^^^^^ source.go keyword.struct.go
+#                         ^ source.go
+#                          ^ source.go punctuation.definition.begin.bracket.curly.go
+>	ShortTag    string      `json:"short"`
+#^ source.go
+# ^^^^^^^^ source.go variable.other.property.go
+#         ^^^^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+#                   ^^^^^^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                      ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>	MediumTag   string      `json:"medium_length_tag"`
+#^ source.go
+# ^^^^^^^^^ source.go variable.other.property.go
+#          ^^^ source.go
+#             ^^^^^^ source.go storage.type.string.go
+#                   ^^^^^^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                  ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>	LongTag     interface{} `json:"this_is_a_very_long_tag_name"`
+#^ source.go
+# ^^^^^^^ source.go variable.other.property.go
+#        ^^^^^ source.go
+#             ^^^^^^^^^ source.go keyword.interface.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                       ^ source.go punctuation.definition.end.bracket.curly.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                             ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>	WithOptions interface{} `json:"field_name,omitempty"`
+#^ source.go
+# ^^^^^^^^^^^ source.go variable.other.property.go
+#            ^ source.go
+#             ^^^^^^^^^ source.go keyword.interface.go
+#                      ^ source.go punctuation.definition.begin.bracket.curly.go
+#                       ^ source.go punctuation.definition.end.bracket.curly.go
+#                        ^ source.go
+#                         ^ source.go string.quoted.raw.go punctuation.definition.string.begin.go
+#                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go string.quoted.raw.go
+#                                                     ^ source.go string.quoted.raw.go punctuation.definition.string.end.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
