@@ -2,6 +2,10 @@
 
 All notable changes to the "go-syntax" extension will be documented in this file.
 
+## [0.8.7]
+
+- Fixes catastrophic backtracking due to struct tags in libraries (e.g., Shiki) powered by JS Engine ([#23](https://github.com/worlpaker/go-syntax/pull/23))
+
 ## [0.8.6]
 
 - Supports expressions in the built-in `new` function ([Go 1.26](https://tip.golang.org/doc/go1.26))
