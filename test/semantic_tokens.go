@@ -4985,3 +4985,16 @@ type BacktrackTest struct {
 	LongTag     interface{} `json:"this_is_a_very_long_tag_name"`
 	WithOptions interface{} `json:"field_name,omitempty"`
 }
+
+// One-line struct bodies, and "{" followed by text with no closing "}" on the line
+// See: struct_variables_types_fields, "one line with semicolon" pattern
+
+type OneLineFields struct{ A, B int; C chan<- struct{}; D []string; sync.Mutex }
+
+type SplitOneLine struct { A int; B string
+}
+
+type CommentedFields struct {
+	// set is a map[string]struct{} keyed by name
+	set map[string]struct{}
+}

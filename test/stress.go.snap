@@ -478,3 +478,163 @@
 >}
 #^ source.go punctuation.definition.end.bracket.curly.go
 >
+>// Shiki JS engine catastrophic backtracking in the one-line struct rule when
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// "{" is followed by several tokens and no "}" it can end at: a comment inside
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// a struct body that mentions struct{} or {N}, or a one-line struct body that
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>// continues on the next line
+#^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>
+>type StressFoo12 struct {
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
+#                 ^^^^^^ source.go keyword.struct.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+>	// seen is a map[string]struct{} keyed by lower-cased host name and refreshed from the upstream resolver every few minutes
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	// the per-request hostname (req-{N}.internal.example.dev) does not resolve from inside the sandbox so we fall back here
+#^ source.go
+# ^^ source.go comment.line.double-slash.go punctuation.definition.comment.go
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.go comment.line.double-slash.go
+>	seen map[string]struct{}
+#^ source.go
+# ^^^^ source.go variable.other.property.go
+#     ^ source.go
+#      ^^^ source.go keyword.map.go
+#         ^ source.go punctuation.definition.begin.bracket.square.go
+#          ^^^^^^ source.go storage.type.string.go
+#                ^ source.go punctuation.definition.end.bracket.square.go
+#                 ^^^^^^ source.go keyword.struct.go
+#                       ^ source.go punctuation.definition.begin.bracket.curly.go
+#                        ^ source.go punctuation.definition.end.bracket.curly.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>type StressFoo13 struct { A int; B string; C float64; D bool; E byte; F rune; G int8; H int16; I int32; J int64; K uint
+#^^^^ source.go keyword.type.go
+#    ^ source.go
+#     ^^^^^^^^^^^ source.go entity.name.type.go
+#                ^ source.go
+#                 ^^^^^^ source.go keyword.struct.go
+#                       ^ source.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+#                         ^ source.go
+#                          ^ source.go variable.other.property.go
+#                           ^ source.go
+#                            ^^^ source.go storage.type.numeric.go
+#                               ^ source.go punctuation.terminator.go
+#                                ^ source.go
+#                                 ^ source.go entity.name.type.go
+#                                  ^ source.go
+#                                   ^^^^^^ source.go storage.type.string.go
+#                                         ^ source.go punctuation.terminator.go
+#                                          ^ source.go
+#                                           ^ source.go entity.name.type.go
+#                                            ^ source.go
+#                                             ^^^^^^^ source.go storage.type.numeric.go
+#                                                    ^ source.go punctuation.terminator.go
+#                                                     ^ source.go
+#                                                      ^ source.go entity.name.type.go
+#                                                       ^ source.go
+#                                                        ^^^^ source.go storage.type.boolean.go
+#                                                            ^ source.go punctuation.terminator.go
+#                                                             ^ source.go
+#                                                              ^ source.go entity.name.type.go
+#                                                               ^ source.go
+#                                                                ^^^^ source.go storage.type.byte.go
+#                                                                    ^ source.go punctuation.terminator.go
+#                                                                     ^ source.go
+#                                                                      ^ source.go entity.name.type.go
+#                                                                       ^ source.go
+#                                                                        ^^^^ source.go storage.type.rune.go
+#                                                                            ^ source.go punctuation.terminator.go
+#                                                                             ^ source.go
+#                                                                              ^ source.go entity.name.type.go
+#                                                                               ^ source.go
+#                                                                                ^^^^ source.go storage.type.numeric.go
+#                                                                                    ^ source.go punctuation.terminator.go
+#                                                                                     ^ source.go
+#                                                                                      ^ source.go entity.name.type.go
+#                                                                                       ^ source.go
+#                                                                                        ^^^^^ source.go storage.type.numeric.go
+#                                                                                             ^ source.go punctuation.terminator.go
+#                                                                                              ^ source.go
+#                                                                                               ^ source.go entity.name.type.go
+#                                                                                                ^ source.go
+#                                                                                                 ^^^^^ source.go storage.type.numeric.go
+#                                                                                                      ^ source.go punctuation.terminator.go
+#                                                                                                       ^ source.go
+#                                                                                                        ^ source.go entity.name.type.go
+#                                                                                                         ^ source.go
+#                                                                                                          ^^^^^ source.go storage.type.numeric.go
+#                                                                                                               ^ source.go punctuation.terminator.go
+#                                                                                                                ^ source.go
+#                                                                                                                 ^ source.go entity.name.type.go
+#                                                                                                                  ^ source.go
+#                                                                                                                   ^^^^ source.go storage.type.numeric.go
+>}
+#^ source.go punctuation.definition.end.bracket.curly.go
+>
+>var stressFoo14 = struct{ Host string; Port int; Retries int; Timeout int; Verbose bool; Tags []string; Extra []int
+#^^^ source.go keyword.var.go
+#   ^ source.go
+#    ^^^^^^^^^^^ source.go variable.other.assignment.go
+#               ^ source.go
+#                ^ source.go keyword.operator.assignment.go
+#                 ^ source.go
+#                  ^^^^^^ source.go keyword.struct.go
+#                        ^ source.go punctuation.definition.begin.bracket.curly.go
+#                         ^ source.go
+#                          ^^^^ source.go variable.other.property.go
+#                              ^ source.go
+#                               ^^^^^^ source.go storage.type.string.go
+#                                     ^ source.go punctuation.terminator.go
+#                                      ^ source.go
+#                                       ^^^^ source.go entity.name.type.go
+#                                           ^ source.go
+#                                            ^^^ source.go storage.type.numeric.go
+#                                               ^ source.go punctuation.terminator.go
+#                                                ^ source.go
+#                                                 ^^^^^^^ source.go entity.name.type.go
+#                                                        ^ source.go
+#                                                         ^^^ source.go storage.type.numeric.go
+#                                                            ^ source.go punctuation.terminator.go
+#                                                             ^ source.go
+#                                                              ^^^^^^^ source.go entity.name.type.go
+#                                                                     ^ source.go
+#                                                                      ^^^ source.go storage.type.numeric.go
+#                                                                         ^ source.go punctuation.terminator.go
+#                                                                          ^ source.go
+#                                                                           ^^^^^^^ source.go entity.name.type.go
+#                                                                                  ^ source.go
+#                                                                                   ^^^^ source.go storage.type.boolean.go
+#                                                                                       ^ source.go punctuation.terminator.go
+#                                                                                        ^ source.go
+#                                                                                         ^^^^ source.go entity.name.type.go
+#                                                                                             ^ source.go
+#                                                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                ^^^^^^ source.go storage.type.string.go
+#                                                                                                      ^ source.go punctuation.terminator.go
+#                                                                                                       ^ source.go
+#                                                                                                        ^^^^^ source.go entity.name.type.go
+#                                                                                                             ^ source.go
+#                                                                                                              ^ source.go punctuation.definition.begin.bracket.square.go
+#                                                                                                               ^ source.go punctuation.definition.end.bracket.square.go
+#                                                                                                                ^^^ source.go storage.type.numeric.go
+>}{}
+#^ source.go punctuation.definition.end.bracket.curly.go
+# ^ source.go punctuation.definition.begin.bracket.curly.go
+#  ^ source.go punctuation.definition.end.bracket.curly.go
+>
