@@ -1923,7 +1923,7 @@
 				},
 				{
 					"comment": "one line with semicolon(;) without formatting gofmt - single type | property variables and types",
-					"match": "(?:(?<=\\{)((?:\\s*(?:(?:(?:\\w+\\,\\s*)+)?(?:\\w+\\s+))?(?:(?:(?:\\s*(?:[\\*\\[\\]]+)?(?:\\<\\-\\s*)?\\bchan\\b(?:\\s*\\<\\-)?\\s*)+)?(?:[^\\s/\\`\"]+)(?:\\;)?))+)\\s*(?=\\}))",
+					"match": "(?:(?<=\\{)([^/\\`\"]*[^\\s/\\`\"])\\s*(?=\\}))",
 					"captures": {
 						"1": {
 							"patterns": [
